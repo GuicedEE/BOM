@@ -148,15 +148,15 @@
                 <version>${project.version}</version>
             </dependency>
 
-            <!-- Applications -->
+
+            <!-- Third Party Services -->
             <dependency>
-                <groupId>com.guicedee.applications</groupId>
-                <artifactId>guicedee-bayfin-ui</artifactId>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>h2</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
 
-            <!-- Third Party Services -->
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.annotation-api</artifactId>
@@ -563,6 +563,21 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-core</artifactId>
+
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>hibernate-ehcache</artifactId>
+
+                <version>${project.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>hibernate-c3p0</artifactId>
 
                 <version>${project.version}</version>
             </dependency>
