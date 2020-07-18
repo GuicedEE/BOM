@@ -267,30 +267,9 @@
             </dependency>
 
             <dependency>
-                <groupId>com.guicedee.services.extensions</groupId>
+                <groupId>com.guicedee.services</groupId>
                 <artifactId>extensions-parent</artifactId>
                 <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>guice</artifactId>
-                <version>${project.version}</version>
-
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services.extensions</groupId>
-                <artifactId>guice-persist</artifactId>
-                <version>${project.version}</version>
-
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services.extensions</groupId>
-                <artifactId>guice-servlet</artifactId>
-                <version>${project.version}</version>
-
             </dependency>
 
             <dependency>
@@ -517,7 +496,7 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
-                <artifactId>sl4j</artifactId>
+                <artifactId>slf4j</artifactId>
 
                 <version>${project.version}</version>
             </dependency>
@@ -737,6 +716,53 @@
 
                 <version>${project.version}</version>
             </dependency>
+
+
+
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>guice</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>guice-assistedinject</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>guice-grapher</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>guice-jmx</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>guice-jndi</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>guice-persist</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>guice-servlet</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
     <licenses>
