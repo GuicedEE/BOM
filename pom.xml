@@ -97,7 +97,7 @@
 
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
-                <artifactId>guiced-swagger</artifactId>
+                <artifactId>guiced-openapi</artifactId>
                 <version>${project.version}</version>
 
             </dependency>
