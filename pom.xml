@@ -719,6 +719,13 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
+                <artifactId>mapstruct</artifactId>
+
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
                 <artifactId>interceptor-api</artifactId>
 
                 <version>${project.version}</version>
