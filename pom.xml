@@ -534,6 +534,14 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
+                <artifactId>zstd-jni</artifactId>
+
+                <version>${project.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.persistence-api</artifactId>
 
                 <version>${project.version}</version>
@@ -557,6 +565,12 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-c3p0</artifactId>
+
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>kafka-client</artifactId>
 
                 <version>${project.version}</version>
             </dependency>
