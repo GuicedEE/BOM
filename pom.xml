@@ -55,7 +55,7 @@
 
         <jpa21.version>1.0.2.Final</jpa21.version>
 
-        <hazelcast.version>4.0.2</hazelcast.version>
+        <hazelcast.version>4.0.1</hazelcast.version>
         <hazelcast.hibernate.version>2.1.1</hazelcast.hibernate.version>
 
         <log4j2.version>2.13.1</log4j2.version>
