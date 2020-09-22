@@ -16,7 +16,7 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
         <jakarta.activation.version>2.0.0-RC3</jakarta.activation.version>
-        <maven.asm.version>8.0.1</maven.asm.version>
+        <maven.asm.version>9.0</maven.asm.version>
         <jaxb.version>2.3.3</jaxb.version>
         <poi.version>4.1.2</poi.version>
         <mapstruct.version>1.4.0.CR1</mapstruct.version>
