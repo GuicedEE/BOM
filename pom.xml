@@ -19,7 +19,7 @@
         <maven.asm.version>9.0</maven.asm.version>
         <jaxb.version>2.3.3</jaxb.version>
         <poi.version>4.1.2</poi.version>
-        <mapstruct.version>1.4.0.CR1</mapstruct.version>
+        <mapstruct.version>1.4.0.Final</mapstruct.version>
 
         <jsr305.version>2.0.3</jsr305.version>
         <jsr311.api.version>1.1.1</jsr311.api.version>
@@ -29,7 +29,7 @@
         <javax.transaction.transactionapi>1.3</javax.transaction.transactionapi>
 
         <h2.db.api>1.4.200</h2.db.api>
-        <bytebuddy.version>1.10.15</bytebuddy.version>
+        <bytebuddy.version>1.10.16</bytebuddy.version>
         <jpa21.version>1.0.2.Final</jpa21.version>
         <ehcache.version>3.8.0</ehcache.version>
 
@@ -82,7 +82,7 @@
         <junit.jupiter.version>5.7.0</junit.jupiter.version>
         <hamcrest.version>1.3</hamcrest.version>
         <assertj.version>3.17.1</assertj.version>
-        <mockito.version>3.5.10</mockito.version>
+        <mockito.version>3.5.13</mockito.version>
         <mockito.all.version>2.0.2-beta</mockito.all.version>
 
         <selenium.version>3.141.59</selenium.version>
@@ -102,7 +102,9 @@
         <opensaml.openws.version>1.5.4</opensaml.openws.version>
         <neethi.version>3.1.1</neethi.version>
 
-        <jersey.version>2.31</jersey.version>
+        <wss4j.version>2.3.0</wss4j.version>
+
+        <jersey.version>2.32</jersey.version>
         <oauth.version>20100527</oauth.version>
 
         <xmlschema.core.version>2.2.5</xmlschema.core.version>
@@ -1406,6 +1408,12 @@
                 <artifactId>cxf-rt-frontend-jaxrs</artifactId>
                 <version>3.4.0</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -1413,6 +1421,12 @@
                 <artifactId>cxf-rt-rs-security-jose</artifactId>
                 <version>3.4.0</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -1420,13 +1434,12 @@
                 <artifactId>cxf-rt-rs-json-basic</artifactId>
                 <version>3.4.0</version>
                 <optional>true</optional>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-rt-security</artifactId>
-                <version>3.4.0</version>
-                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -1892,6 +1905,18 @@
                         <artifactId>jakarta.activation-api</artifactId>
                         <groupId>jakarta.activation</groupId>
                     </exclusion>
+                    <exclusion>
+                        <groupId>commons-lang</groupId>
+                        <artifactId>commons-lang</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>joda-time</groupId>
+                        <artifactId>joda-time</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
                 </exclusions>
             </dependency>
 
@@ -1901,7 +1926,6 @@
                 <version>${neethi.version}</version>
                 <optional>true</optional>
             </dependency>
-
             <dependency>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-server</artifactId>
@@ -1909,6 +1933,7 @@
                 <optional>true</optional>
             </dependency>
 
+            <!-- Jetty is removed, but for versioning  -->
             <dependency>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-continuation</artifactId>
@@ -1987,23 +2012,110 @@
             </dependency>
 
             <dependency>
-                <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-rt-transports-http-undertow</artifactId>
-                <version>${cxf.rt.version}</version>
-                <optional>true</optional>
-            </dependency>
-
-            <dependency>
                 <groupId>org.apache.wss4j</groupId>
                 <artifactId>wss4j-policy</artifactId>
                 <version>${wss4j.policy.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.apache.wss4j</groupId>
                 <artifactId>wss4j-ws-security-stax</artifactId>
                 <version>${wss4j.policy.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.ehcache</groupId>
+                        <artifactId>ehcache</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-transports-http-hc</artifactId>
+                <version>3.4.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-rs-service-description-openapi-v3</artifactId>
+                <version>3.4.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.swagger</groupId>
+                        <artifactId>swagger-jaxrs</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.swagger.core.v3</groupId>
+                        <artifactId>swagger-jaxrs2</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-tools-validator</artifactId>
+                <version>3.4.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2011,6 +2123,16 @@
                 <artifactId>wss4j-ws-security-policy-stax</artifactId>
                 <version>${wss4j.policy.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
@@ -2031,12 +2153,44 @@
                 <artifactId>opensaml</artifactId>
                 <version>${opensaml.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-lang</groupId>
+                        <artifactId>commons-lang</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-lang</groupId>
+                        <artifactId>commons-lang</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-collections</groupId>
+                        <artifactId>commons-collections</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>joda-time</groupId>
+                        <artifactId>joda-time</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.apache.santuario</groupId>
                 <artifactId>xmlsec</artifactId>
                 <version>${xmlsec.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2044,6 +2198,20 @@
                 <artifactId>wss4j-ws-security-dom</artifactId>
                 <version>${wss4j.policy.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.ehcache</groupId>
+                        <artifactId>ehcache</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2051,6 +2219,24 @@
                 <artifactId>wss4j-ws-security-common</artifactId>
                 <version>2.3.0</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.geronimo.javamail</groupId>
+                        <artifactId>geronimo-javamail_1.4_mail</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2058,6 +2244,22 @@
                 <artifactId>cxf-rt-frontend-jaxws</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf.services.sts</groupId>
+                <artifactId>cxf-services-sts-core</artifactId>
+                <version>3.4.0</version>
             </dependency>
 
             <dependency>
@@ -2065,16 +2267,50 @@
                 <artifactId>cxf-rt-transports-http</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>jakarta.servlet</groupId>
+                        <artifactId>servlet-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
-
-
 
             <!-- Jetty is needed if you're are not using the CXFServlet -->
             <dependency>
                 <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-rt-transports-http-jetty</artifactId>
-                <version>${cxf.rt.version}</version>
+                <artifactId>cxf-rt-transports-http-undertow</artifactId>
+                <version>3.4.0</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>io.undertow</groupId>
+                        <artifactId>undertow-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.undertow</groupId>
+                        <artifactId>undertow-servlet</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>jakarta.servlet</groupId>
+                        <artifactId>servlet-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2092,27 +2328,126 @@
 
             <dependency>
                 <groupId>org.apache.wss4j</groupId>
+                <artifactId>wss4j-bindings</artifactId>
+                <optional>true</optional>
+                <version>${wss4j.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-rs-service-description</artifactId>
+                <version>3.4.0</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-rs-extension-providers</artifactId>
+                <version>3.4.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.wss4j</groupId>
                 <artifactId>wss4j-bindings-wss10</artifactId>
                 <optional>true</optional>
                 <version>2.0.0-rc1</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
+
             <dependency>
                 <groupId>org.apache.wss4j</groupId>
                 <artifactId>wss4j-bindings-wsu10</artifactId>
                 <optional>true</optional>
                 <version>2.0.0-rc1</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.apache.wss4j</groupId>
                 <artifactId>wss4j-bindings-wss11</artifactId>
                 <optional>true</optional>
                 <version>2.0.0-rc1</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.apache.wss4j</groupId>
                 <artifactId>wss4j-bindings-wssc</artifactId>
                 <optional>true</optional>
                 <version>2.0.0-rc1</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2120,6 +2455,16 @@
                 <artifactId>cxf-rt-ws-policy</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2127,6 +2472,20 @@
                 <artifactId>cxf-rt-ws-security</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.ehcache</groupId>
+                        <artifactId>ehcache</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2134,6 +2493,16 @@
                 <artifactId>cxf-rt-rs-security-oauth2</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2141,6 +2510,16 @@
                 <artifactId>cxf-rt-rs-security-oauth</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2148,6 +2527,16 @@
                 <artifactId>cxf-rt-rs-extension-providers</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2155,6 +2544,16 @@
                 <artifactId>cxf-rt-rs-extension-search</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
 
@@ -2163,6 +2562,17 @@
                 <artifactId>cxf-rt-databinding-jaxb</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
+
             </dependency>
 
             <dependency>
@@ -2170,6 +2580,16 @@
                 <artifactId>cxf-rt-rs-sse</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2177,6 +2597,16 @@
                 <artifactId>cxf-rt-ws-addr</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2184,6 +2614,16 @@
                 <artifactId>cxf-rt-wsdl</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2191,6 +2631,16 @@
                 <artifactId>cxf-rt-ws-mex</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2198,6 +2648,24 @@
                 <artifactId>cxf-rt-rs-security-sso-saml</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>jakarta.servlet</groupId>
+                        <artifactId>servlet-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.ehcache</groupId>
+                        <artifactId>ehcache</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2205,6 +2673,16 @@
                 <artifactId>cxf-rt-rs-security-xml</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2212,6 +2690,33 @@
                 <artifactId>cxf-rt-security-saml</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-security</artifactId>
+                <version>${cxf.rt.version}</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2219,6 +2724,16 @@
                 <artifactId>cxf-rt-databinding-xmlbeans</artifactId>
                 <version>3.1.18</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2235,6 +2750,18 @@
                         <groupId>org.glassfish.jaxb</groupId>
                         <artifactId>jaxb-runtime</artifactId>
                     </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-collections</groupId>
+                        <artifactId>commons-collections</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
                 </exclusions>
             </dependency>
 
@@ -2243,6 +2770,24 @@
                 <artifactId>velocity-engine-core</artifactId>
                 <version>2.2</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-lang</groupId>
+                        <artifactId>commons-lang</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-lang</groupId>
+                        <artifactId>commons-lang</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-collections</groupId>
+                        <artifactId>commons-collections</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2250,6 +2795,16 @@
                 <artifactId>cxf-rt-frontend-js</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2257,6 +2812,16 @@
                 <artifactId>cxf-rt-rs-security-oauth2-saml</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2264,6 +2829,20 @@
                 <artifactId>cxf-rt-transports-websocket</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>jakarta.servlet</groupId>
+                        <artifactId>servlet-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2271,6 +2850,16 @@
                 <artifactId>cxf-rt-features-metrics</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2278,6 +2867,16 @@
                 <artifactId>opensaml-xmlsec-api</artifactId>
                 <version>3.4.5</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.xml.bind</groupId>
+                        <artifactId>jakarta.xml.bind-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2285,6 +2884,16 @@
                 <artifactId>opensaml-messaging-api</artifactId>
                 <version>3.4.5</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>joda-time</groupId>
+                        <artifactId>joda-time</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2292,6 +2901,12 @@
                 <artifactId>opensaml-security-api</artifactId>
                 <version>3.4.5</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2299,6 +2914,7 @@
                 <artifactId>cryptacular</artifactId>
                 <version>1.2.4</version>
                 <optional>true</optional>
+
             </dependency>
 
             <dependency>
@@ -2306,6 +2922,16 @@
                 <artifactId>cxf-rt-core</artifactId>
                 <version>2.7.18</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2313,13 +2939,47 @@
                 <artifactId>cxf-api</artifactId>
                 <version>2.7.18</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-core</artifactId>
+                <version>${cxf.rt.version}</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
 
             <dependency>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-rt-rs-client</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2327,6 +2987,16 @@
                 <artifactId>cxf-rt-management</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2334,6 +3004,16 @@
                 <artifactId>cxf-rt-transports-local</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2341,6 +3021,16 @@
                 <artifactId>cxf-rt-transports-jms</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2348,6 +3038,16 @@
                 <artifactId>cxf-rt-transports-udp</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2355,6 +3055,16 @@
                 <artifactId>cxf-rt-ws-rm</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -2362,6 +3072,16 @@
                 <artifactId>cxf-rt-javascript</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <!--  -->
@@ -3161,7 +3881,7 @@
             <dependency>
                 <groupId>com.github.librepdf</groupId>
                 <artifactId>openpdf</artifactId>
-                <version>1.3.21</version>
+                <version>1.3.22</version>
                 <optional>true</optional>
             </dependency>
 
@@ -3511,6 +4231,27 @@
                 <artifactId>zstd-jni</artifactId>
                 <version>1.4.5-6</version>
                 <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>net.shibboleth.utilities</groupId>
+                <artifactId>java-support</artifactId>
+                <version>7.5.1</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>joda-time</groupId>
+                        <artifactId>joda-time</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.google.code.findbugs</groupId>
+                        <artifactId>jsr305</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
 
