@@ -42,8 +42,8 @@
         <io.swagger.version>2.1.4</io.swagger.version>
         <snakeyaml.version>1.26</snakeyaml.version>
 
-        <undertow.version>2.1.4.Final</undertow.version>
-        <io.undertow.version>2.1.4.Final</io.undertow.version>
+        <undertow.version>2.2.0.Final</undertow.version>
+        <io.undertow.version>2.2.0.Final</io.undertow.version>
         <xnio.version>3.8.2.Final</xnio.version>
 
         <jsr.250>1.0</jsr.250>
