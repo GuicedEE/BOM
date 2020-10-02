@@ -68,14 +68,16 @@
 
         <jmh.version>1.25.2</jmh.version>
 
-        <maven.hibernate.version>5.4.21.Final</maven.hibernate.version>
-        <maven.hibernate.validator.version>6.1.5.Final</maven.hibernate.validator.version>
+        <maven.hibernate.version>5.4.22.Final</maven.hibernate.version>
+        <maven.hibernate.validator.version>6.1.6.Final</maven.hibernate.validator.version>
         <maven.hibernate.annotations.version>5.1.0.Final</maven.hibernate.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
-        <maven.hibernate.enhance.version>5.4.21.Final</maven.hibernate.enhance.version>
+        <maven.hibernate.enhance.version>5.4.22.Final</maven.hibernate.enhance.version>
         <maven-owasp-plugin-version>4.0.2</maven-owasp-plugin-version>
 
         <jackson.version>2.11.2</jackson.version>
+
+        <jakarta.servlet.version>5.0.0</jakarta.servlet.version>
 
         <guava.version>29.0-jre</guava.version>
 
@@ -828,6 +830,13 @@
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.validation-api</artifactId>
                 <version>${project.version}</version>
+
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator-annotation-processor</artifactId>
+                <version>${maven.hibernate.validator.version}</version>
 
             </dependency>
 
@@ -1839,7 +1848,7 @@
             <dependency>
                 <groupId>org.apache.ant</groupId>
                 <artifactId>ant</artifactId>
-                <version>1.10.8</version>
+                <version>1.10.9</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -3536,7 +3545,7 @@
             <dependency>
                 <groupId>jakarta.servlet</groupId>
                 <artifactId>jakarta.servlet-api</artifactId>
-                <version>4.0.4</version>
+                <version>${jakarta.servlet.version}</version>
                 <optional>true</optional>
             </dependency>
 
