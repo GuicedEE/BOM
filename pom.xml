@@ -39,7 +39,7 @@
         <uadetector.detector.version>2014.10</uadetector.detector.version>
         <sl4j.version>1.7.30</sl4j.version>
 
-        <io.swagger.version>2.1.4</io.swagger.version>
+        <io.swagger.version>2.1.5</io.swagger.version>
         <snakeyaml.version>1.26</snakeyaml.version>
 
         <undertow.version>2.2.0.Final</undertow.version>
@@ -75,7 +75,7 @@
         <maven.hibernate.enhance.version>5.4.22.Final</maven.hibernate.enhance.version>
         <maven-owasp-plugin-version>4.0.2</maven-owasp-plugin-version>
 
-        <jackson.version>2.11.2</jackson.version>
+        <jackson.version>2.11.3</jackson.version>
 
         <jakarta.servlet.version>5.0.0</jakarta.servlet.version>
 
@@ -1125,7 +1125,7 @@
             <dependency>
                 <groupId>org.checkerframework</groupId>
                 <artifactId>checker-qual</artifactId>
-                <version>3.6.1</version>
+                <version>3.7.0</version>
                 <optional>true</optional>
             </dependency>
             <dependency>
