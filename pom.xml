@@ -19,7 +19,7 @@
         <maven.asm.version>9.0</maven.asm.version>
         <jaxb.version>2.3.3</jaxb.version>
         <poi.version>4.1.2</poi.version>
-        <mapstruct.version>1.4.0.Final</mapstruct.version>
+        <mapstruct.version>1.4.1.Final</mapstruct.version>
 
         <jsr305.version>2.0.3</jsr305.version>
         <jsr311.api.version>1.1.1</jsr311.api.version>
@@ -113,7 +113,7 @@
         <jasypt.version>1.9.3</jasypt.version>
 
         <cxf.rt.version>3.4.0</cxf.rt.version>
-        <cxf.bundle.version>3.0.0-milestone2</cxf.bundle.version>
+
         <wss4j.policy.version>2.3.0</wss4j.policy.version>
         <wss4j.imp.version>2.2.5</wss4j.imp.version>
 
