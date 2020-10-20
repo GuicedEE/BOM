@@ -21,6 +21,9 @@
         <poi.version>4.1.2</poi.version>
         <mapstruct.version>1.4.1.Final</mapstruct.version>
 
+        <fop.version>2.5</fop.version>
+        <imageio-tiff.version>3.6</imageio-tiff.version>
+
         <jsr305.version>2.0.3</jsr305.version>
         <jsr311.api.version>1.1.1</jsr311.api.version>
 
@@ -59,7 +62,7 @@
         <hazelcast.hibernate.version>2.1.1</hazelcast.hibernate.version>
 
         <log4j2.version>2.13.1</log4j2.version>
-        <woodstox.version>6.1.1</woodstox.version>
+        <woodstox.version>6.2.3</woodstox.version>
 
         <jakarta.faces>2.3.14</jakarta.faces>
 
@@ -79,12 +82,12 @@
 
         <jakarta.servlet.version>4.0.4</jakarta.servlet.version>
 
-        <guava.version>29.0-jre</guava.version>
+        <guava.version>30.0-jre</guava.version>
 
         <junit.jupiter.version>5.7.0</junit.jupiter.version>
         <hamcrest.version>1.3</hamcrest.version>
         <assertj.version>3.17.1</assertj.version>
-        <mockito.version>3.5.13</mockito.version>
+        <mockito.version>3.5.15</mockito.version>
         <aspectj.version>1.9.2</aspectj.version>
 
         <selenium.version>3.141.59</selenium.version>
@@ -99,7 +102,7 @@
 
         <stax.version>1.8.3</stax.version>
         <stax2.api.version>4.2.1</stax2.api.version>
-        <woodstox.version>6.2.1</woodstox.version>
+        <woodstox.version>6.2.3</woodstox.version>
         <wsdl4j.version>1.6.3</wsdl4j.version>
         <opensaml.openws.version>1.5.4</opensaml.openws.version>
         <neethi.version>3.1.1</neethi.version>
@@ -131,6 +134,8 @@
         <ehcache.version>3.9.0</ehcache.version>
 
         <mssql.jdbc>8.4.1</mssql.jdbc>
+
+        <lombok.version>1.18.16</lombok.version>
 
     </properties>
 
@@ -165,21 +170,12 @@
                 <version>${project.version}</version>
             </dependency>
 
-
-            <dependency>
-                <groupId>org.apache.xmlgraphics</groupId>
-                <artifactId>fop</artifactId>
-                <version>2.5</version>
-                <optional>true</optional>
-            </dependency>
-
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-persistence-systemproperties-reader</artifactId>
                 <version>${project.version}</version>
 
             </dependency>
-
 
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
@@ -2374,26 +2370,6 @@
             </dependency>
 
             <dependency>
-                <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-rt-rs-extension-providers</artifactId>
-                <version>3.4.0</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>jakarta.xml.bind</groupId>
-                        <artifactId>jakarta.xml.bind-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.apache.cxf</groupId>
-                        <artifactId>cxf-core</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <dependency>
                 <groupId>org.apache.wss4j</groupId>
                 <artifactId>wss4j-bindings-wss10</artifactId>
                 <optional>true</optional>
@@ -2517,23 +2493,6 @@
             <dependency>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-rt-rs-security-oauth</artifactId>
-                <version>${cxf.rt.version}</version>
-                <optional>true</optional>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.cxf</groupId>
-                        <artifactId>cxf-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.cxf</groupId>
-                <artifactId>cxf-rt-rs-extension-providers</artifactId>
                 <version>${cxf.rt.version}</version>
                 <optional>true</optional>
                 <exclusions>
@@ -3913,6 +3872,67 @@
                 <artifactId>openpdf</artifactId>
                 <version>1.3.22</version>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.bouncycastle</groupId>
+                        <artifactId>bcprov-jdk15on</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.bouncycastle</groupId>
+                        <artifactId>bcpkix-jdk15on</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.bouncycastle</groupId>
+                        <artifactId>bcpkix-jdk15on</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.github.spotbugs</groupId>
+                        <artifactId>spotbugs</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.xmlgraphics</groupId>
+                        <artifactId>fop</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.xmlgraphics</groupId>
+                        <artifactId>xmlgraphics-commons</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.xmlgraphics</groupId>
+                        <artifactId>xmlgraphics-commons</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs</artifactId>
+                <version>${spotbugs.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>com.twelvemonkeys.imageio</groupId>
+                <artifactId>imageio-tiff</artifactId>
+                <version>${imageio-tiff.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>fop</artifactId>
+                <version>${fop.version}</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.ant</groupId>
+                        <artifactId>ant</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
@@ -3926,13 +3946,6 @@
                 <groupId>com.github.albfernandez </groupId>
                 <artifactId>juniversalchardet</artifactId>
                 <version>2.3.2</version>
-                <optional>true</optional>
-            </dependency>
-
-            <dependency>
-                <groupId>com.twelvemonkeys.imageio</groupId>
-                <artifactId>imageio-tiff</artifactId>
-                <version>3.6</version>
                 <optional>true</optional>
             </dependency>
 
@@ -4252,14 +4265,21 @@
             <dependency>
                 <groupId>org.apache.xmlbeans</groupId>
                 <artifactId>xmlbeans</artifactId>
-                <version>3.1.0</version>
+                <version>4.0.0</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-rs-extension-providers</artifactId>
+                <version>3.4.0</version>
                 <optional>true</optional>
             </dependency>
 
             <dependency>
                 <groupId>com.github.luben</groupId>
                 <artifactId>zstd-jni</artifactId>
-                <version>1.4.5-6</version>
+                <version>1.4.5-7</version>
                 <optional>true</optional>
             </dependency>
 
