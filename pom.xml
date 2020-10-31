@@ -1827,7 +1827,7 @@
             <dependency>
                 <groupId>jakarta.xml.ws</groupId>
                 <artifactId>jakarta.xml.ws-api</artifactId>
-                <version>2.3.3</version>
+                <version>3.0.0-RC3</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>jakarta.annotation-api</artifactId>
@@ -3492,7 +3492,7 @@
             <dependency>
                 <groupId>jakarta.xml.bind</groupId>
                 <artifactId>jakarta.xml.bind-api</artifactId>
-                <version>${jaxb.version}</version>
+                <version>3.0.0-RC3</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>jakarta.activation-api</artifactId>
