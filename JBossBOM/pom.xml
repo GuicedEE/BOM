@@ -1,0 +1,403 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.guicedee</groupId>
+    <artifactId>jboss-bom</artifactId>
+    <version>0.0.0_0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <name>JBoss BOM</name>
+    <description>The BOM for JBoss Artefacts</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
+
+        <wildfly.common.version>1.5.4.Final</wildfly.common.version>
+        <wildfly.client.config.version>1.0.1.Final</wildfly.client.config.version>
+        <wildfly.common.jdk9.version>1.0.Final</wildfly.common.jdk9.version>
+
+        <log4j.version>2.14.0</log4j.version>
+        <jansi.version>2.0.1</jansi.version>
+        <jcabi.version>0.18.1</jcabi.version>
+
+        <undertow.version>2.2.2.Final</undertow.version>
+        <xnio.version>3.8.2.Final</xnio.version>
+        <classfilewriter.version>1.2.4.Final</classfilewriter.version>
+
+        <logging.processor.version>2.2.1.Final</logging.processor.version>
+        <logmanager.processor.version>2.1.15.Final</logmanager.processor.version>
+        <jbosslog.version>3.4.1.Final</jbosslog.version>
+
+    </properties>
+
+    <url>https://guicedee.com</url>
+    <dependencyManagement>
+       <dependencies>
+
+           <dependency>
+               <groupId>com.guicedee</groupId>
+               <artifactId>standalone-bom</artifactId>
+               <version>${project.version}</version>
+               <scope>import</scope>
+               <type>pom</type>
+           </dependency>
+
+           <dependency>
+               <groupId>org.jboss.logging</groupId>
+               <artifactId>jboss-logging-processor</artifactId>
+               <version>${logging.processor.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.jboss.logging</groupId>
+               <artifactId>jboss-logging-annotations</artifactId>
+               <version>${logging.processor.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.jboss.logmanager</groupId>
+               <artifactId>jboss-logmanager</artifactId>
+               <version>${logmanager.processor.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.jboss.logging</groupId>
+               <artifactId>jboss-logging</artifactId>
+               <version>${jbosslog.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.wildfly.common</groupId>
+               <artifactId>wildfly-common</artifactId>
+               <version>${wildfly.common.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.wildfly.common</groupId>
+               <artifactId>wildfly-common-jdk9-supplement</artifactId>
+               <version>${wildfly.common.jdk9.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.wildfly.client</groupId>
+               <artifactId>wildfly-client-config</artifactId>
+               <version>${wildfly.client.config.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.apache.logging.log4j</groupId>
+               <artifactId>log4j-api</artifactId>
+               <version>${log4j.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.apache.logging.log4j</groupId>
+               <artifactId>log4j-core</artifactId>
+               <version>${log4j.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.apache.logging.log4j</groupId>
+               <artifactId>log4j-jul</artifactId>
+               <version>${log4j.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.apache.logging.log4j</groupId>
+               <artifactId>log4j-jpl</artifactId>
+               <version>${log4j.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.apache.logging.log4j</groupId>
+               <artifactId>log4j-slf4j-impl</artifactId>
+               <version>${log4j.version}</version>
+               <optional>true</optional>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>log4j-core</artifactId>
+                       <groupId>org.apache.logging.log4j</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>log4j-api</artifactId>
+                       <groupId>org.apache.logging.log4j</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.xml.soap</groupId>
+                       <artifactId>jakarta.xml.soap-api</artifactId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+           <dependency>
+               <groupId>org.fusesource.jansi</groupId>
+               <artifactId>jansi</artifactId>
+               <version>${jansi.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>com.jcabi</groupId>
+               <artifactId>jcabi-log</artifactId>
+               <version>${jcabi.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>io.undertow</groupId>
+               <artifactId>undertow-core</artifactId>
+               <version>${undertow.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.jboss.xnio</groupId>
+               <artifactId>xnio-api</artifactId>
+               <version>${xnio.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+
+           <dependency>
+               <groupId>org.jboss.xnio</groupId>
+               <artifactId>xnio-nio</artifactId>
+               <version>${xnio.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>io.undertow</groupId>
+               <artifactId>undertow-parser-generator</artifactId>
+               <version>${undertow.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>io.undertow</groupId>
+               <artifactId>undertow-servlet</artifactId>
+               <version>${undertow.version}</version>
+               <optional>true</optional>
+               <exclusions>
+                   <exclusion>
+                       <groupId>org.jboss.spec.javax.annotation</groupId>
+                       <artifactId>jboss-annotations-api_1.3_spec</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>org.jboss.spec.javax.servlet</groupId>
+                       <artifactId>jboss-servlet-api_4.0_spec</artifactId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+           <dependency>
+               <groupId>io.undertow</groupId>
+               <artifactId>undertow-websockets-jsr</artifactId>
+               <version>${undertow.version}</version>
+               <optional>true</optional>
+               <exclusions>
+                   <exclusion>
+                       <groupId>org.jboss.spec.javax.websocket</groupId>
+                       <artifactId>jboss-websocket-api_1.1_spec</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>org.jboss.xnio</groupId>
+                       <artifactId>xnio-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>org.jboss.threads</groupId>
+                       <artifactId>jboss-threads</artifactId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+           <dependency>
+               <groupId>org.jboss.classfilewriter</groupId>
+               <artifactId>jboss-classfilewriter</artifactId>
+               <version>${classfilewriter.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+       </dependencies>
+
+
+    </dependencyManagement>
+
+
+    <licenses>
+        <license>
+            <name>GPL 3</name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Marc Magon</name>
+        <url>http://jwebmp.com</url>
+    </organization>
+
+    <scm>
+        <url>https://github.com/GedMarc?tab=repositories</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>GedMarc</id>
+            <name>Marc Magon</name>
+            <email>marc.magon@gmail.com</email>
+            <url>https://github.com/GedMarc</url>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>Jira</system>
+        <url>https://www.guicedee.com/jira</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>TeamCity</system>
+        <url>http://guicedee.com/teamcity</url>
+    </ciManagement>
+
+    <profiles>
+        <profile>
+            <id>jwebmp-distribution</id>
+            <activation>
+            </activation>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>jwebmp-snapshot</id>
+                    <name>JWebMPArtifactory-snapshots</name>
+                    <url>https://jwebmp.com/artifactory/libs-snapshot-local</url>
+                </snapshotRepository>
+                <repository>
+                    <id>jwebmp-release</id>
+                    <name>JWebMPArtifactory-releases</name>
+                    <url>https://jwebmp.com/artifactory/libs-release-local</url>
+                </repository>
+            </distributionManagement>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <configuration>
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                        <arg>--batch</arg>
+                                    </gpgArguments>
+                                    <passphrase>${gpg.passphrase}</passphrase>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+
+        </profile>
+
+        <profile>
+            <id>sonartype-distribution</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>sonar-snapshot</id>
+                    <name>SonarType-snapshots</name>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>sonar-release</id>
+                    <name>SonarType-releases</name>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <configuration>
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                        <arg>--batch</arg>
+                                    </gpgArguments>
+                                    <passphrase>${gpg.passphrase}</passphrase>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.8</version>
+                        <extensions>true</extensions>
+                        <executions>
+                            <execution>
+                                <id>default-deploy</id>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>deploy</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <serverId>sonar-snapshot</serverId>
+                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                            <stagingProgressTimeoutMinutes>300</stagingProgressTimeoutMinutes>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-deploy-plugin</artifactId>
+                        <version>3.0.0-M1</version>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </plugin>
+
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+</project>
