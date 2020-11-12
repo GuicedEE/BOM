@@ -672,6 +672,18 @@
                 <optional>true</optional>
             </dependency>
 
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-core</artifactId>
+                <version>${jakarta.xml.jaxb.api.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>javax.activation-api</artifactId>
+                        <groupId>javax.activation</groupId>
+                    </exclusion>
+                </exclusions>
+                <optional>true</optional>
+            </dependency>
 
             <dependency>
                 <groupId>com.sun.xml.bind</groupId>
