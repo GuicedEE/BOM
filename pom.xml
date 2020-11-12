@@ -11,19 +11,6 @@
     <name>Guiced EE BOM</name>
     <description>The BOM for Guiced EE</description>
 
-    <modules>
-        <module>ApacheBOM</module>
-        <module>ApacheCXFBOM</module>
-        <module>FasterXMLBOM</module>
-        <module>GoogleBOM</module>
-        <module>HibernateBOM</module>
-        <module>JakartaBOM</module>
-        <module>JBossBOM</module>
-        <module>StandaloneBOM</module>
-        <module>SwaggerBOM</module>
-        <module>TestLayoutBOM</module>
-    </modules>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
