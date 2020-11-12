@@ -227,6 +227,11 @@
 
             <!-- Web Service Modules-->
             <dependency>
+                <groupId>com.guicedee.servlets</groupId>
+                <artifactId>guiced-primefaces</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>primefaces</artifactId>
                 <version>${project.version}</version>
