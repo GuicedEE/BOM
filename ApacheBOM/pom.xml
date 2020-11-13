@@ -39,6 +39,8 @@
         <xmlbeans.version>4.0.0</xmlbeans.version>
         <fontbox.version>2.0.21</fontbox.version>
 
+        <xerces.version>2.12.0</xerces.version>
+
     </properties>
 
     <url>https://guicedee.com</url>
@@ -310,6 +312,13 @@
                <groupId>org.apache.xmlbeans</groupId>
                <artifactId>xmlbeans</artifactId>
                <version>${xmlbeans.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>xerces</groupId>
+               <artifactId>xercesImpl</artifactId>
+               <version>${xerces.version}</version>
                <optional>true</optional>
            </dependency>
 
