@@ -911,41 +911,6 @@
                 <version>${project.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jackson-jaxrs-base</artifactId>
-                <version>${project.version}</version>
-                <classifier>jakarta</classifier>
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jackson-datatype-jaxrs</artifactId>
-                <version>${project.version}</version>
-                <classifier>jakarta</classifier>
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jackson-module-jaxb-annotations</artifactId>
-                <version>${project.version}</version>
-                <classifier>jakarta</classifier>
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jackson-jaxrs-json-provider</artifactId>
-                <version>${project.version}</version>
-                <classifier>jakarta</classifier>
-            </dependency>
-
-         <!--   <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>xerces</artifactId>
-                <version>${project.version}</version>
-                <optional>true</optional>
-            </dependency>
--->
         </dependencies>
     </dependencyManagement>
 
