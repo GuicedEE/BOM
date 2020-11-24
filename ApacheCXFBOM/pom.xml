@@ -2352,6 +2352,51 @@
 
            <dependency>
                <groupId>org.apache.cxf</groupId>
+               <artifactId>cxf-rt-rs-service-description-openapi-v3</artifactId>
+               <version>3.4.1</version>
+               <optional>true</optional>
+               <exclusions>
+                   <exclusion>
+                       <groupId>org.apache.cxf</groupId>
+                       <artifactId>cxf-core</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>org.slf4j</groupId>
+                       <artifactId>slf4j</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.xml.soap</groupId>
+                       <artifactId>jakarta.xml.soap-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.xml.ws</groupId>
+                       <artifactId>jakarta.xml.ws-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.annotation</groupId>
+                       <artifactId>jakarta.annotation-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.xml.ws</groupId>
+                       <artifactId>jakarta.xml.ws-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.jws</groupId>
+                       <artifactId>jakarta.jws-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.xml.soap</groupId>
+                       <artifactId>jakarta.xml.soap-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>com.sun.activation</groupId>
+                       <artifactId>jakarta.activation</artifactId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+           <dependency>
+               <groupId>org.apache.cxf</groupId>
                <artifactId>cxf-rt-databinding-xmlbeans</artifactId>
                <version>${cxf.xmlbeans.version}</version>
                <optional>true</optional>
