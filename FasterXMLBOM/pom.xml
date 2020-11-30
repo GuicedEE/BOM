@@ -16,7 +16,7 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
         <woodstox.version>6.2.3</woodstox.version>
-        <jackson.version>2.12.0-rc2</jackson.version>
+        <jackson.version>2.12.0</jackson.version>
 
     </properties>
 
