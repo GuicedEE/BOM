@@ -16,7 +16,7 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
         <jsr305.version>3.0.2</jsr305.version>
-        <checkerqual.version>3.7.1</checkerqual.version>
+        <checkerqual.version>3.8.0</checkerqual.version>
         <errorprone.version>2.4.0</errorprone.version>
         <listenablefuture.version>9999.0-empty-to-avoid-conflict-with-guava</listenablefuture.version>
         <j2obc.version>1.3</j2obc.version>
