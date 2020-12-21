@@ -23,7 +23,7 @@
         <ehcache.version>3.9.0</ehcache.version>
         <net.sf.ehcache.version>2.10.6</net.sf.ehcache.version>
         <esapi.version>2.2.2.0</esapi.version>
-        <classgraph.version>4.8.95</classgraph.version>
+        <classgraph.version>4.8.97</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
         <ant.version>1.10.9</ant.version>
         <stax.version>2.0.0</stax.version>
@@ -38,7 +38,7 @@
         <bytebuddy.version>1.10.17</bytebuddy.version>
         <snakeyaml.version>1.26</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
-        <zstdjni.version>1.4.5-12</zstdjni.version>
+        <zstdjni.version>1.4.7-3</zstdjni.version>
         <tica.version>1.25</tica.version>
 
         <h2.db.api>1.4.200</h2.db.api>
