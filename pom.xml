@@ -154,6 +154,13 @@
                 <version>${project.version}</version>
 
             </dependency>
+			
+			 <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>nrjavaserial</artifactId>
+                <version>${project.version}</version>
+
+            </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
