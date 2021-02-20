@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
-        <io.swagger.version>2.1.6</io.swagger.version>
+        <io.swagger.version>2.1.7</io.swagger.version>
     </properties>
 
     <url>https://guicedee.com</url>
