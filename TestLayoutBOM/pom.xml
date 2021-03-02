@@ -27,7 +27,7 @@
         <selenium.jupiter.version>3.4.0</selenium.jupiter.version>
         <webdrivermanager.version>4.2.2</webdrivermanager.version>
 
-        <jmh.version>1.27</jmh.version>
+        <jmh.version>1.28</jmh.version>
         <okhttp.version>4.9.0</okhttp.version>
         <okio.version>2.9.0</okio.version>
 
