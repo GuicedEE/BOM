@@ -38,7 +38,7 @@
         <bytebuddy.version>1.10.21</bytebuddy.version>
         <snakeyaml.version>1.28</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
-        <zstdjni.version>1.4.8-6</zstdjni.version>
+        <zstdjni.version>1.4.8-7</zstdjni.version>
         <tica.version>1.25</tica.version>
 
         <h2.db.api>1.4.200</h2.db.api>
@@ -687,14 +687,6 @@
                <version>${spotbugs.version}</version>
                <optional>true</optional>
            </dependency>
-
-
-           <dependency>
-               <groupId>com.guicedee.services</groupId>
-               <artifactId>mssql-jdbc</artifactId>
-               <version>${project.version}</version>
-           </dependency>
-
        </dependencies>
     </dependencyManagement>
 

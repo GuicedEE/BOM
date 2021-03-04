@@ -136,6 +136,21 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
+                <artifactId>nrjavaserial</artifactId>
+                <version>${project.version}</version>
+
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>azure-identity</artifactId>
+                <version>${project.version}</version>
+
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.xml.ws-api</artifactId>
                 <version>${project.version}</version>
 
