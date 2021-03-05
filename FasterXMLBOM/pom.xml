@@ -132,6 +132,10 @@
                        <artifactId>jakarta.activation-api</artifactId>
                        <groupId>jakarta.activation</groupId>
                    </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
+                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -152,6 +156,10 @@
                    <exclusion>
                        <groupId>com.fasterxml.jackson.jaxrs</groupId>
                        <artifactId>jackson-jaxrs-base</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
                    </exclusion>
                </exclusions>
            </dependency>

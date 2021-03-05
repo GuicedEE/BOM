@@ -34,6 +34,7 @@
         <jakarta.xml.jaxws.api.version>2.3.1</jakarta.xml.jaxws.api.version>
 
         <jakarta.xml.jaxb.api.version>3.0.0</jakarta.xml.jaxb.api.version>
+		<jakarta.xml.ws.api.version>3.0.0</jakarta.xml.ws.api.version>
         <jakarta.persistence.api.version>3.0.0</jakarta.persistence.api.version>
         <jakarta.transaction.api.version>2.0.0</jakarta.transaction.api.version>
         <jakarta.websocket.api.version>2.0.0</jakarta.websocket.api.version>
@@ -161,6 +162,12 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+			
+			<dependency>
+				<groupId>jakarta.xml.ws</groupId>
+				<artifactId>jakarta.xml.ws-api</artifactId>
+				<version>${jakarta.xml.ws.api.version}</version>
+			</dependency>
 
             <dependency>
                 <groupId>jakarta.interceptor</groupId>
