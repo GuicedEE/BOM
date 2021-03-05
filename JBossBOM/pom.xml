@@ -23,7 +23,7 @@
         <jansi.version>2.3.1</jansi.version>
         <jcabi.version>0.18.1</jcabi.version>
 
-        <undertow.version>2.2.4.Final</undertow.version>
+        <undertow.version>2.2.5.Final</undertow.version>
         <xnio.version>3.8.4.Final</xnio.version>
         <classfilewriter.version>1.2.4.Final</classfilewriter.version>
 
