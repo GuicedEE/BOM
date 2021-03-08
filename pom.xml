@@ -108,6 +108,12 @@
             </dependency>
 
             <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>azure-identity</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-servlets-request-scoper</artifactId>
                 <version>${project.version}</version>
