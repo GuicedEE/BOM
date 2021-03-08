@@ -40,7 +40,7 @@
         <bytebuddy.version>1.10.21</bytebuddy.version>
         <snakeyaml.version>1.28</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
-        <zstdjni.version>1.4.8-7</zstdjni.version>
+        <zstdjni.version>1.4.9-1</zstdjni.version>
         <tica.version>1.25</tica.version>
 
         <h2.db.api>1.4.200</h2.db.api>
@@ -466,7 +466,7 @@
            <dependency>
                <groupId>com.github.javaparser</groupId>
                <artifactId>javaparser-core</artifactId>
-               <version>3.19.0</version>
+               <version>3.20.0</version>
                <optional>true</optional>
            </dependency>
 
