@@ -838,6 +838,13 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
+                <artifactId>java.servlet-api</artifactId>
+                <version>${project.version}</version>
+
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.validation-api</artifactId>
                 <version>${project.version}</version>
 
