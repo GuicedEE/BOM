@@ -28,6 +28,9 @@
 
         <guice.version>5.0.1</guice.version>
 
+        <gson.version>2.8.6</gson.version>
+
+
     </properties>
 
     <url>https://guicedee.com</url>
@@ -68,6 +71,12 @@
                        <artifactId>javax.inject</artifactId>
                    </exclusion>
                </exclusions>
+           </dependency>
+
+           <dependency>
+               <groupId>com.google.code.gson</groupId>
+               <artifactId>gson</artifactId>
+               <version>${gson.version}</version>
            </dependency>
 
            <dependency>
