@@ -21,245 +21,52 @@
     </properties>
 
     <url>https://guicedee.com</url>
-    <dependencyManagement>
-       <dependencies>
-           <dependency>
-               <groupId>com.guicedee</groupId>
-               <artifactId>standalone-bom</artifactId>
-               <version>${project.version}</version>
-               <scope>import</scope>
-               <type>pom</type>
-           </dependency>
-
-           <dependency>
-               <groupId>com.guicedee</groupId>
-               <artifactId>jakarta-bom</artifactId>
-               <version>${project.version}</version>
-               <scope>import</scope>
-               <type>pom</type>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.woodstox</groupId>
-               <artifactId>woodstox-core</artifactId>
-               <version>${woodstox.version}</version>
-           </dependency>
-
-           <!-- Jackson Support-->
-           <dependency>
-               <groupId>com.fasterxml.jackson.core</groupId>
-               <artifactId>jackson-databind</artifactId>
-               <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.core</groupId>
-               <artifactId>jackson-annotations</artifactId>
-               <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.module</groupId>
-               <artifactId>jackson-module-jaxb-annotations</artifactId>
-               <version>${jackson.version}</version>
-               <classifier>jakarta</classifier>
-               <exclusions>
-                   <exclusion>
-                       <groupId>jakarta.xml.bind</groupId>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.activation</groupId>
-                       <artifactId>jakarta.activation-api</artifactId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.core</groupId>
-               <artifactId>jackson-core</artifactId>
-               <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.jaxrs</groupId>
-               <artifactId>jackson-jaxrs-base</artifactId>
-               <version>${jackson.version}</version>
-               <classifier>jakarta</classifier>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.jaxrs</groupId>
-               <artifactId>jackson-jaxrs-json-provider</artifactId>
-               <version>${jackson.version}</version>
-               <classifier>jakarta</classifier>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                       <artifactId>jackson-jaxrs-base</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <artifactId>jackson-dataformat-yaml</artifactId>
-               <groupId>com.fasterxml.jackson.dataformat</groupId>
-               <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.datatype</groupId>
-               <artifactId>jackson-datatype-jdk8</artifactId>
-               <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.dataformat</groupId>
-               <artifactId>jackson-dataformat-xml</artifactId>
-               <version>${jackson.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.module</groupId>
-               <artifactId>jackson-module-parameter-names</artifactId>
-               <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-       </dependencies>
-    </dependencyManagement>
-
-
-    <licenses>
-        <license>
-            <name>GPL 3</name>
-            <url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <organization>
-        <name>Marc Magon</name>
-        <url>http://jwebmp.com</url>
-    </organization>
-
-    <scm>
-        <url>https://github.com/GedMarc?tab=repositories</url>
-    </scm>
-
-    <developers>
-        <developer>
-            <id>GedMarc</id>
-            <name>Marc Magon</name>
-            <email>marc.magon@gmail.com</email>
-            <url>https://github.com/GedMarc</url>
-        </developer>
-    </developers>
-
-    <issueManagement>
-        <system>Jira</system>
-        <url>https://www.guicedee.com/jira</url>
-    </issueManagement>
-
-    <ciManagement>
-        <system>TeamCity</system>
-        <url>http://guicedee.com/teamcity</url>
-    </ciManagement>
 
     <profiles>
+        <profile>
+            <id>jdk9</id>
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.guicedee</groupId>
+                        <artifactId>standalone-bom</artifactId>
+                        <version>${project.version}</version>
+                        <scope>import</scope>
+                        <type>pom</type>
+                    </dependency>
+
+                    <dependency>
+                        <groupId>com.guicedee</groupId>
+                        <artifactId>jakarta-bom</artifactId>
+                        <version>${project.version}</version>
+                        <scope>import</scope>
+                        <type>pom</type>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
+        </profile>
+        <profile>
+            <id>jdk8</id>
+            <dependencyManagement>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.guicedee</groupId>
+                        <artifactId>standalone-bom</artifactId>
+                        <version>${project.version}</version>
+                        <scope>import</scope>
+                        <type>pom</type>
+                    </dependency>
+
+                    <dependency>
+                        <groupId>com.guicedee</groupId>
+                        <artifactId>jakarta-bom</artifactId>
+                        <version>${project.version}</version>
+                        <scope>import</scope>
+                        <type>pom</type>
+                    </dependency>
+                </dependencies>
+            </dependencyManagement>
+        </profile>
         <profile>
             <id>jwebmp-distribution</id>
             <activation>
@@ -385,5 +192,301 @@
             </build>
         </profile>
     </profiles>
+
+    <dependencyManagement>
+       <dependencies>
+
+           <dependency>
+               <groupId>com.fasterxml.woodstox</groupId>
+               <artifactId>woodstox-core</artifactId>
+               <version>${woodstox.version}</version>
+           </dependency>
+
+           <!-- Jackson Support-->
+           <dependency>
+               <groupId>com.fasterxml.jackson.core</groupId>
+               <artifactId>jackson-databind</artifactId>
+               <version>${jackson.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                       <groupId>jakarta.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.activation-api</artifactId>
+                       <groupId>jakarta.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                       <artifactId>jackson-jaxrs-base</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.core</groupId>
+               <artifactId>jackson-annotations</artifactId>
+               <version>${jackson.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                       <groupId>jakarta.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.activation-api</artifactId>
+                       <groupId>jakarta.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                       <artifactId>jackson-jaxrs-base</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.module</groupId>
+               <artifactId>jackson-module-jaxb-annotations</artifactId>
+               <version>${jackson.version}</version>
+               <classifier>jakarta</classifier>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                       <groupId>jakarta.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.activation-api</artifactId>
+                       <groupId>jakarta.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                       <artifactId>jackson-jaxrs-base</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.core</groupId>
+               <artifactId>jackson-core</artifactId>
+               <version>${jackson.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                       <groupId>jakarta.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.activation-api</artifactId>
+                       <groupId>jakarta.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                       <artifactId>jackson-jaxrs-base</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.jaxrs</groupId>
+               <artifactId>jackson-jaxrs-base</artifactId>
+               <version>${jackson.version}</version>
+               <classifier>jakarta</classifier>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                       <groupId>jakarta.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.activation-api</artifactId>
+                       <groupId>jakarta.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                       <artifactId>jackson-jaxrs-base</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.jaxrs</groupId>
+               <artifactId>jackson-jaxrs-json-provider</artifactId>
+               <version>${jackson.version}</version>
+               <classifier>jakarta</classifier>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                       <groupId>jakarta.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.activation-api</artifactId>
+                       <groupId>jakarta.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                       <artifactId>jackson-jaxrs-base</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+           <dependency>
+               <artifactId>jackson-dataformat-yaml</artifactId>
+               <groupId>com.fasterxml.jackson.dataformat</groupId>
+               <version>${jackson.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                       <groupId>jakarta.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.activation-api</artifactId>
+                       <groupId>jakarta.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                       <artifactId>jackson-jaxrs-base</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.datatype</groupId>
+               <artifactId>jackson-datatype-jdk8</artifactId>
+               <version>${jackson.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                       <groupId>jakarta.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.activation-api</artifactId>
+                       <groupId>jakarta.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                       <artifactId>jackson-jaxrs-base</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.dataformat</groupId>
+               <artifactId>jackson-dataformat-xml</artifactId>
+               <version>${jackson.version}</version>
+               <optional>true</optional>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                       <groupId>jakarta.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.activation-api</artifactId>
+                       <groupId>jakarta.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                       <artifactId>jackson-jaxrs-base</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.module</groupId>
+               <artifactId>jackson-module-parameter-names</artifactId>
+               <version>${jackson.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                       <groupId>jakarta.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.activation-api</artifactId>
+                       <groupId>jakarta.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                       <artifactId>jackson-jaxrs-base</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+       </dependencies>
+    </dependencyManagement>
+
+
+    <licenses>
+        <license>
+            <name>GPL 3</name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Marc Magon</name>
+        <url>http://jwebmp.com</url>
+    </organization>
+
+    <scm>
+        <url>https://github.com/GedMarc?tab=repositories</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>GedMarc</id>
+            <name>Marc Magon</name>
+            <email>marc.magon@gmail.com</email>
+            <url>https://github.com/GedMarc</url>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>Jira</system>
+        <url>https://www.guicedee.com/jira</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>TeamCity</system>
+        <url>http://guicedee.com/teamcity</url>
+    </ciManagement>
 
 </project>
