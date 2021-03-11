@@ -37,7 +37,7 @@
         <http.nio.version>4.4.14</http.nio.version>
         <jasypt.version>1.9.3</jasypt.version>
         <slf4j.version>1.7.30</slf4j.version>
-        <bytebuddy.version>1.10.21</bytebuddy.version>
+        <bytebuddy.version>1.10.22</bytebuddy.version>
         <snakeyaml.version>1.28</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
         <zstdjni.version>1.4.9-1</zstdjni.version>
@@ -565,7 +565,7 @@
            <dependency>
                <groupId>org.json</groupId>
                <artifactId>json</artifactId>
-               <version>20201115</version>
+               <version>20210307</version>
                <optional>true</optional>
            </dependency>
 
