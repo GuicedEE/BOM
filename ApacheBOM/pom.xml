@@ -41,6 +41,9 @@
 
         <xerces.version>2.12.0</xerces.version>
 
+        <maven.javadoc.version>3.2.0</maven.javadoc.version>
+        <maven.source.version>3.2.1</maven.source.version>
+
     </properties>
 
     <url>https://guicedee.com</url>
@@ -535,6 +538,17 @@
                         <configuration>
                             <skip>true</skip>
                         </configuration>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>${maven.javadoc.version}</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${maven.source.version}</version>
                     </plugin>
 
                 </plugins>

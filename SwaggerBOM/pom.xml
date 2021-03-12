@@ -16,6 +16,10 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
         <io.swagger.version>2.1.7</io.swagger.version>
+
+        <maven.javadoc.version>3.2.0</maven.javadoc.version>
+        <maven.source.version>3.2.1</maven.source.version>
+
     </properties>
 
     <url>https://guicedee.com</url>
@@ -484,7 +488,16 @@
                             <skip>true</skip>
                         </configuration>
                     </plugin>
-
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>${maven.javadoc.version}</version>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${maven.source.version}</version>
+                    </plugin>
                 </plugins>
             </build>
         </profile>
