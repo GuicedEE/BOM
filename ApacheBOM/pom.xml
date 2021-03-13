@@ -33,7 +33,7 @@
         <text.version>1.9</text.version>
         <beanutils.version>1.9.4</beanutils.version>
         <dec.version>0.1.2</dec.version>
-        <xz.version>1.8</xz.version>
+        <xz.version>1.9</xz.version>
         <portlet.api.version>1.0</portlet.api.version>
 
         <xmlbeans.version>4.0.0</xmlbeans.version>
