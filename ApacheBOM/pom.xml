@@ -37,7 +37,7 @@
         <portlet.api.version>1.0</portlet.api.version>
 
         <xmlbeans.version>5.0.0</xmlbeans.version>
-        <fontbox.version>2.0.22</fontbox.version>
+        <fontbox.version>2.0.23</fontbox.version>
 
         <xerces.version>2.12.0</xerces.version>
 
