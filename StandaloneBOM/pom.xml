@@ -23,7 +23,7 @@
         <ehcache.version>3.9.2</ehcache.version>
         <net.sf.ehcache.version>2.10.6</net.sf.ehcache.version>
         <esapi.version>2.2.2.0</esapi.version>
-        <classgraph.version>4.8.102</classgraph.version>
+        <classgraph.version>4.8.103</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
 
 
@@ -46,7 +46,7 @@
         <h2.db.api>1.4.200</h2.db.api>
 		
 		<nrjavaserial.version>5.1.1</nrjavaserial.version>
-		<jna.version>5.7.0</jna.version>
+		<jna.version>5.8.0</jna.version>
 
         <javassist.version>3.27.0-GA</javassist.version>
 
