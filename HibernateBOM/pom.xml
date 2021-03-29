@@ -25,7 +25,7 @@
         <mchange.version>0.2.20</mchange.version>
         <typesafe.version>1.4.1</typesafe.version>
 
-        <hazelcast.version>4.1.2</hazelcast.version>
+        <hazelcast.version>4.2</hazelcast.version>
         <hazelcast.hibernate.version>2.2.0</hazelcast.hibernate.version>
 
         <maven.javadoc.version>3.2.0</maven.javadoc.version>
