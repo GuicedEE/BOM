@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
-        <lombok.version>1.18.18</lombok.version>
+        <lombok.version>1.18.20</lombok.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <classmate.version>1.5.1</classmate.version>
         <asm.version>9.1</asm.version>
@@ -41,7 +41,7 @@
         <snakeyaml.version>1.28</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
         <zstdjni.version>1.4.9-2</zstdjni.version>
-        <tica.version>1.25</tica.version>
+        <tica.version>1.26</tica.version>
 
         <h2.db.api>1.4.200</h2.db.api>
 		
