@@ -46,7 +46,7 @@
         <jakarta.servlet.jsp.api.version>3.0.0</jakarta.servlet.jsp.api.version>
         <jakarta.servlet.jsp.jstl.version>2.0.0</jakarta.servlet.jsp.jstl.version>
         <jakarta.servlet.jsp.jstl.api.version>2.0.0</jakarta.servlet.jsp.jstl.api.version>
-        <jakarta.mail.version>2.0.0</jakarta.mail.version>
+        <jakarta.mail.version>2.0.1</jakarta.mail.version>
 
         <maven.javadoc.version>3.2.0</maven.javadoc.version>
         <maven.source.version>3.2.1</maven.source.version>

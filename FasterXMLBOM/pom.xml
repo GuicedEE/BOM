@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
-        <woodstox.version>6.2.4</woodstox.version>
+        <woodstox.version>6.2.5</woodstox.version>
         <jackson.version>2.12.1</jackson.version>
 
         <maven.javadoc.version>3.2.0</maven.javadoc.version>

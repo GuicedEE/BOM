@@ -40,7 +40,7 @@
         <bytebuddy.version>1.10.22</bytebuddy.version>
         <snakeyaml.version>1.28</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
-        <zstdjni.version>1.4.9-2</zstdjni.version>
+        <zstdjni.version>1.4.9-4</zstdjni.version>
         <tica.version>1.26</tica.version>
 
         <h2.db.api>1.4.200</h2.db.api>
