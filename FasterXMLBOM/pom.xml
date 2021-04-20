@@ -16,7 +16,7 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
         <woodstox.version>6.2.5</woodstox.version>
-        <jackson.version>2.12.3</jackson.version>
+        <jackson.version>2.12.1</jackson.version>
 
         <maven.javadoc.version>3.2.0</maven.javadoc.version>
         <maven.source.version>3.2.1</maven.source.version>
