@@ -28,13 +28,13 @@
         <jakarta.interceptor.version>2.0.0</jakarta.interceptor.version>
         <jakarta.rs.api.version>3.0.0</jakarta.rs.api.version>
         <jakarta.xml.ws.api.version>3.0.0</jakarta.xml.ws.api.version>
-        <jakarta.xml.soap.api.version>2.0.0</jakarta.xml.soap.api.version>
+        <jakarta.xml.soap.api.version>2.0.1</jakarta.xml.soap.api.version>
         <jakarta.xml.ws.metro.api.version>3.0.0-M3</jakarta.xml.ws.metro.api.version>
         <jakarta.xml.jaxws.rt.version>3.0.0-M5</jakarta.xml.jaxws.rt.version>
         <jakarta.xml.jaxws.api.version>2.3.1</jakarta.xml.jaxws.api.version>
 
-        <jakarta.xml.jaxb.api.version>3.0.0</jakarta.xml.jaxb.api.version>
-		<jakarta.xml.ws.api.version>3.0.0</jakarta.xml.ws.api.version>
+        <jakarta.xml.jaxb.api.version>3.0.1</jakarta.xml.jaxb.api.version>
+		<jakarta.xml.ws.api.version>3.0.1</jakarta.xml.ws.api.version>
         <jakarta.persistence.api.version>3.0.0</jakarta.persistence.api.version>
         <jakarta.transaction.api.version>2.0.0</jakarta.transaction.api.version>
         <jakarta.websocket.api.version>2.0.0</jakarta.websocket.api.version>
