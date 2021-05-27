@@ -23,13 +23,13 @@
         <jansi.version>2.3.2</jansi.version>
         <jcabi.version>0.18.1</jcabi.version>
 
-        <undertow.version>2.2.7.Final</undertow.version>
+        <undertow.version>2.2.8.Final</undertow.version>
         <xnio.version>3.8.4.Final</xnio.version>
         <classfilewriter.version>1.2.4.Final</classfilewriter.version>
 
         <logging.processor.version>2.2.1.Final</logging.processor.version>
         <logmanager.processor.version>2.1.18.Final</logmanager.processor.version>
-        <jbosslog.version>3.4.1.Final</jbosslog.version>
+        <jbosslog.version>3.4.2.Final</jbosslog.version>
 
         <maven.javadoc.version>3.2.0</maven.javadoc.version>
         <maven.source.version>3.2.1</maven.source.version>

@@ -28,7 +28,7 @@
         <xmlsec.version>2.2.2</xmlsec.version>
         <wss4j.security.common.version>2.3.0</wss4j.security.common.version>
         <wss4j.bindings.version>2.0.0-rc1</wss4j.bindings.version>
-        <wss4j.policy.version>2.3.1</wss4j.policy.version>
+        <wss4j.policy.version>2.3.2</wss4j.policy.version>
 
         <velocity.engine.version>2.2</velocity.engine.version>
         <opensaml.version>4.0.1</opensaml.version>
