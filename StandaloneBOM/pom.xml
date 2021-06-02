@@ -23,7 +23,7 @@
         <ehcache.version>3.9.4</ehcache.version>
         <net.sf.ehcache.version>2.10.9.2</net.sf.ehcache.version>
         <esapi.version>2.2.3.1</esapi.version>
-        <classgraph.version>4.8.105</classgraph.version>
+        <classgraph.version>4.8.107</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
 
 
@@ -37,7 +37,7 @@
         <http.nio.version>4.4.14</http.nio.version>
         <jasypt.version>1.9.3</jasypt.version>
         <slf4j.version>1.7.30</slf4j.version>
-        <bytebuddy.version>1.11.0</bytebuddy.version>
+        <bytebuddy.version>1.11.1</bytebuddy.version>
         <snakeyaml.version>1.28</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
         <zstdjni.version>1.4.9-5</zstdjni.version>
@@ -320,7 +320,7 @@
                <version>${stax2.api.version}</version>
            </dependency>
 
-           <dependency>
+     <!--      <dependency>
                <groupId>org.bouncycastle</groupId>
                <artifactId>bcprov-jdk15on</artifactId>
                <version>${bcprov.15.version}</version>
@@ -332,14 +332,14 @@
                <artifactId>bcpkix-jdk15on</artifactId>
                <version>${bcprov.15.version}</version>
                <optional>true</optional>
-           </dependency>
+           </dependency>-->
 
-           <dependency>
+         <!--  <dependency>
                <groupId>org.bouncycastle</groupId>
                <artifactId>bcprov-jdk16</artifactId>
                <version>${bcprov.16.version}</version>
                <optional>true</optional>
-           </dependency>
+           </dependency>-->
 
            <dependency>
                <groupId>ca.juliusdavies</groupId>
