@@ -24,7 +24,7 @@
         <failureacces.version>1.0.1</failureacces.version>
 
         <guava.version>30.1.1-jre</guava.version>
-        <protobuf.version>3.17.1</protobuf.version>
+        <protobuf.version>3.17.3</protobuf.version>
 
         <guice.version>5.0.1</guice.version>
         <zxing.version>3.4.1</zxing.version>
