@@ -437,6 +437,14 @@
                 <version>${project.version}</version>
             </dependency>
 
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>byte-buddy</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>extensions-parent</artifactId>

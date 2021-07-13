@@ -16,7 +16,7 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
         <woodstox.version>6.2.5</woodstox.version>
-        <jackson.version>2.12.1</jackson.version>
+        <jackson.version>2.13.0-SNAPSHOT</jackson.version>
 
         <maven.javadoc.version>3.2.0</maven.javadoc.version>
         <maven.source.version>3.2.1</maven.source.version>
@@ -263,6 +263,116 @@
                </exclusions>
            </dependency>
 
+           <dependency>
+               <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+               <artifactId>jackson-jakarta-rs-json-provider</artifactId>
+               <version>${jackson.version}</version>
+           </dependency>
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+               <artifactId>jackson-jakarta-rs-base</artifactId>
+               <version>${jackson.version}</version>
+           </dependency>
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+               <artifactId>jackson-jakarta-rs-providers</artifactId>
+               <version>${jackson.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <groupId>jakarta.xml.bind</groupId>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.ws.rs</groupId>
+                       <artifactId>jakarta.ws.rs-api</artifactId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+
+           <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+				<artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
+               <version>${jackson.version}</version>
+               <exclusions>
+			    <exclusion>
+                       <groupId>jakarta.xml.bind</groupId>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.ws.rs</groupId>
+                       <artifactId>jakarta.ws.rs-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.xml.bind</groupId>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.activation</groupId>
+                       <artifactId>jakarta.activation-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.activation</groupId>
+                       <artifactId>jakarta.activation-api</artifactId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+               <artifactId>jackson-jakarta-rs-yaml-provider</artifactId>
+               <version>${jackson.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <groupId>org.yaml</groupId>
+                       <artifactId>snakeyaml</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.ws.rs</groupId>
+                       <artifactId>jakarta.ws.rs-api</artifactId>
+                   </exclusion>
+				   <exclusion>
+                       <groupId>jakarta.xml.bind</groupId>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.activation</groupId>
+                       <artifactId>jakarta.activation-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.activation</groupId>
+                       <artifactId>jakarta.activation-api</artifactId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
+           <dependency>
+               <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+               <artifactId>jackson-jakarta-rs-xml-provider</artifactId>
+               <version>${jackson.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <groupId>jakarta.xml.bind</groupId>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.ws.rs</groupId>
+                       <artifactId>jakarta.ws.rs-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.activation</groupId>
+                       <artifactId>jakarta.activation-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>jakarta.activation</groupId>
+                       <artifactId>jakarta.activation-api</artifactId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
+
 
            <dependency>
                <groupId>com.fasterxml.jackson.module</groupId>
@@ -286,6 +396,7 @@
                        <artifactId>javax.ws.rs-api</artifactId>
                        <groupId>javax.ws.rs</groupId>
                    </exclusion>
+				   
                </exclusions>
            </dependency>
 
