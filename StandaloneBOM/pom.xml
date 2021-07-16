@@ -2,6 +2,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>com.guicedee</groupId>
+        <artifactId>versioner</artifactId>
+        <version>0.0.0_0-SNAPSHOT</version>
+        <relativePath>../Versioner</relativePath>
+    </parent>
+
     <groupId>com.guicedee</groupId>
     <artifactId>standalone-bom</artifactId>
     <version>0.0.0_0-SNAPSHOT</version>
@@ -11,51 +18,6 @@
     <name>Standalone BOM</name>
     <description>The BOM for Standalone Artefacts</description>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
-
-        <lombok.version>1.18.20</lombok.version>
-        <mapstruct.version>1.4.2.Final</mapstruct.version>
-        <classmate.version>1.5.1</classmate.version>
-        <asm.version>9.2</asm.version>
-        <dom4j.version>2.1.3</dom4j.version>
-        <ehcache.version>3.9.4</ehcache.version>
-        <net.sf.ehcache.version>2.10.9.2</net.sf.ehcache.version>
-        <esapi.version>2.2.3.1</esapi.version>
-        <classgraph.version>4.8.110</classgraph.version>
-        <antlr.version>2.7.7</antlr.version>
-
-
-        <ant.version>1.10.9</ant.version>
-        <stax.version>2.0.1</stax.version>
-        <stax2.api.version>4.2.1</stax2.api.version>
-        <bcprov.15.version>1.68</bcprov.15.version>
-        <bcprov.16.version>1.46</bcprov.16.version>
-        <nyc.ssl.version>0.3.11</nyc.ssl.version>
-        <http.core.version>4.4.14</http.core.version>
-        <http.nio.version>4.4.14</http.nio.version>
-        <jasypt.version>1.9.3</jasypt.version>
-        <slf4j.version>1.7.31</slf4j.version>
-        <bytebuddy.version>1.11.6</bytebuddy.version>
-        <snakeyaml.version>1.29</snakeyaml.version>
-        <sparsebitset.version>1.2</sparsebitset.version>
-        <zstdjni.version>1.5.0-2</zstdjni.version>
-        <tica.version>1.27</tica.version>
-
-        <h2.db.api>1.4.200</h2.db.api>
-		
-		<nrjavaserial.version>5.1.1</nrjavaserial.version>
-		<jna.version>5.8.0</jna.version>
-
-        <javassist.version>3.28.0-GA</javassist.version>
-
-        <maven.javadoc.version>3.2.0</maven.javadoc.version>
-        <maven.source.version>3.2.1</maven.source.version>
-
-    </properties>
-
-    <url>https://guicedee.com</url>
     <dependencyManagement>
        <dependencies>
            <dependency>
@@ -531,14 +493,14 @@
            <dependency>
                <groupId>org.apache.geronimo.specs</groupId>
                <artifactId>geronimo-jms_1.1_spec</artifactId>
-               <version>1.1.1</version>
+               <version>${jms.version}</version>
                <optional>true</optional>
            </dependency>
 
            <dependency>
                <groupId>jaxen</groupId>
                <artifactId>jaxen</artifactId>
-               <version>1.2.0</version>
+               <version>${jaxen.version}</version>
                <optional>true</optional>
            </dependency>
 
@@ -568,14 +530,14 @@
            <dependency>
                <groupId>org.json</groupId>
                <artifactId>json</artifactId>
-               <version>20210307</version>
+               <version>${org.json.version}</version>
                <optional>true</optional>
            </dependency>
 
            <dependency>
                <groupId>org.apache.kafka</groupId>
                <artifactId>kafka-clients</artifactId>
-               <version>2.8.0</version>
+               <version>${kafka.client.version}</version>
                <optional>true</optional>
                <exclusions>
                    <exclusion>
@@ -652,7 +614,7 @@
            <dependency>
                <groupId>com.github.librepdf</groupId>
                <artifactId>openpdf</artifactId>
-               <version>1.3.26</version>
+               <version>${openpdf.version}</version>
                <optional>true</optional>
                <exclusions>
                    <exclusion>
@@ -694,178 +656,5 @@
            </dependency>
        </dependencies>
     </dependencyManagement>
-
-
-    <licenses>
-        <license>
-            <name>GPL 3</name>
-            <url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <organization>
-        <name>Marc Magon</name>
-        <url>http://jwebmp.com</url>
-    </organization>
-
-    <scm>
-        <url>https://github.com/GedMarc?tab=repositories</url>
-    </scm>
-
-    <developers>
-        <developer>
-            <id>GedMarc</id>
-            <name>Marc Magon</name>
-            <email>marc.magon@gmail.com</email>
-            <url>https://github.com/GedMarc</url>
-        </developer>
-    </developers>
-
-    <issueManagement>
-        <system>Jira</system>
-        <url>https://www.guicedee.com/jira</url>
-    </issueManagement>
-
-    <ciManagement>
-        <system>TeamCity</system>
-        <url>http://guicedee.com/teamcity</url>
-    </ciManagement>
-
-    <profiles>
-        <profile>
-            <id>jwebmp-distribution</id>
-            <activation>
-            </activation>
-            <distributionManagement>
-                <snapshotRepository>
-                    <id>jwebmp-snapshot</id>
-                    <name>JWebMPArtifactory-snapshots</name>
-                    <url>https://jwebmp.com/artifactory/libs-snapshot-local</url>
-                </snapshotRepository>
-                <repository>
-                    <id>jwebmp-release</id>
-                    <name>JWebMPArtifactory-releases</name>
-                    <url>https://jwebmp.com/artifactory/libs-release-local</url>
-                </repository>
-            </distributionManagement>
-
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
-                        <configuration>
-                            <gpgArguments>
-                                <arg>--pinentry-mode</arg>
-                                <arg>loopback</arg>
-                                <arg>--batch</arg>
-                            </gpgArguments>
-                            <passphrase>${gpg.passphrase}</passphrase>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-
-        </profile>
-
-        <profile>
-            <id>sonartype-distribution</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
-            <distributionManagement>
-                <snapshotRepository>
-                    <id>sonar-snapshot</id>
-                    <name>SonarType-snapshots</name>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-                </snapshotRepository>
-                <repository>
-                    <id>sonar-release</id>
-                    <name>SonarType-releases</name>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-                </repository>
-            </distributionManagement>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
-                        <configuration>
-                            <gpgArguments>
-                                <arg>--pinentry-mode</arg>
-                                <arg>loopback</arg>
-                                <arg>--batch</arg>
-                            </gpgArguments>
-                            <passphrase>${gpg.passphrase}</passphrase>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.8</version>
-                        <extensions>true</extensions>
-                        <executions>
-                            <execution>
-                                <id>default-deploy</id>
-                                <phase>deploy</phase>
-                                <goals>
-                                    <goal>deploy</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <serverId>sonar-snapshot</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                            <stagingProgressTimeoutMinutes>300</stagingProgressTimeoutMinutes>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-deploy-plugin</artifactId>
-                        <version>3.0.0-M1</version>
-                        <configuration>
-                            <skip>true</skip>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>${maven.javadoc.version}</version>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>${maven.source.version}</version>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
 </project>
