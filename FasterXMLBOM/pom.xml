@@ -97,6 +97,10 @@
                        <artifactId>javax.ws.rs-api</artifactId>
                        <groupId>javax.ws.rs</groupId>
                    </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
+                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -121,6 +125,10 @@
                        <artifactId>javax.ws.rs-api</artifactId>
                        <groupId>javax.ws.rs</groupId>
                    </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
+                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -128,12 +136,24 @@
                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
                <artifactId>jackson-jakarta-rs-json-provider</artifactId>
                <version>${jackson.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
+                   </exclusion>
+               </exclusions>
            </dependency>
 
            <dependency>
                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
                <artifactId>jackson-jakarta-rs-base</artifactId>
                <version>${jackson.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
+                   </exclusion>
+               </exclusions>
            </dependency>
 
            <dependency>
@@ -148,6 +168,10 @@
                    <exclusion>
                        <groupId>jakarta.ws.rs</groupId>
                        <artifactId>jakarta.ws.rs-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -178,6 +202,10 @@
                        <groupId>jakarta.activation</groupId>
                        <artifactId>jakarta.activation-api</artifactId>
                    </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
+                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -207,6 +235,10 @@
                        <groupId>jakarta.activation</groupId>
                        <artifactId>jakarta.activation-api</artifactId>
                    </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
+                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -230,6 +262,10 @@
                    <exclusion>
                        <groupId>jakarta.activation</groupId>
                        <artifactId>jakarta.activation-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -257,7 +293,10 @@
                        <artifactId>javax.ws.rs-api</artifactId>
                        <groupId>javax.ws.rs</groupId>
                    </exclusion>
-				   
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
+                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -282,6 +321,10 @@
                    <exclusion>
                        <artifactId>javax.ws.rs-api</artifactId>
                        <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -308,6 +351,10 @@
                        <artifactId>javax.ws.rs-api</artifactId>
                        <groupId>javax.ws.rs</groupId>
                    </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
+                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -333,6 +380,10 @@
                        <artifactId>javax.ws.rs-api</artifactId>
                        <groupId>javax.ws.rs</groupId>
                    </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
+                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -357,6 +408,10 @@
                        <artifactId>javax.ws.rs-api</artifactId>
                        <groupId>javax.ws.rs</groupId>
                    </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
+                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -380,6 +435,10 @@
                    <exclusion>
                        <artifactId>javax.ws.rs-api</artifactId>
                        <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -406,6 +465,10 @@
                        <artifactId>javax.ws.rs-api</artifactId>
                        <groupId>javax.ws.rs</groupId>
                    </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
+                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -429,6 +492,10 @@
                    <exclusion>
                        <artifactId>javax.ws.rs-api</artifactId>
                        <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>

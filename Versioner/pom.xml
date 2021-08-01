@@ -85,6 +85,7 @@
         <http.nio.version>4.4.14</http.nio.version>
         <jasypt.version>1.9.3</jasypt.version>
         <slf4j.version>1.7.32</slf4j.version>
+        <slf4j.log4j2.version>2.14.1</slf4j.log4j2.version>
         <bytebuddy.version>1.11.8</bytebuddy.version>
         <snakeyaml.version>1.29</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
@@ -112,7 +113,7 @@
         <typesafe.version>1.4.1</typesafe.version>
 
         <hazelcast.version>4.2.1</hazelcast.version>
-        <hazelcast.hibernate.version>2.2.0</hazelcast.hibernate.version>
+        <hazelcast.hibernate.version>2.2.1</hazelcast.hibernate.version>
 
         <!-- Apache -->
         <poi.version>5.0.0</poi.version>
@@ -242,7 +243,7 @@
         <wildfly.common.jdk9.version>1.0.Final</wildfly.common.jdk9.version>
 
         <log4j.version>2.14.1</log4j.version>
-        <jansi.version>2.3.3</jansi.version>
+        <jansi.version>2.3.4</jansi.version>
         <jcabi.version>0.18.1</jcabi.version>
 
         <undertow.version>2.2.9.Final</undertow.version>
