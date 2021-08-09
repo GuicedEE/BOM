@@ -281,13 +281,13 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>primefaces</artifactId>
-                <version>${primefaces.version}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>primefaces-extensions</artifactId>
-                <version>${primefaces.version}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <!-- Third Party Services -->
