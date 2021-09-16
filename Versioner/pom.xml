@@ -54,7 +54,7 @@
         <sonar.host.url>https://jwebmp.com/sonarqube</sonar.host.url>
 
         <nexus.staging.maven.plugin.version>1.6.8</nexus.staging.maven.plugin.version>
-        <jdk.release>16</jdk.release>
+        <jdk.release>17</jdk.release>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <moditect.maven.plugin.version>1.0.0.RC1</moditect.maven.plugin.version>
 
