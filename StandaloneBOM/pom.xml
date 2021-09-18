@@ -101,7 +101,6 @@
                <groupId>org.ow2.asm</groupId>
                <artifactId>asm</artifactId>
                <version>${asm.version}</version>
-               <optional>true</optional>
            </dependency>
 
            <dependency>
