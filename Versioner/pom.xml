@@ -74,6 +74,7 @@
         <esapi.version>2.2.3.1</esapi.version>
         <classgraph.version>4.8.115</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
+        <amqp.client.version>5.13.1</amqp.client.version>
 
         <ant.version>1.10.11</ant.version>
         <stax.version>2.1.0-M1</stax.version>
@@ -436,16 +437,6 @@
                             <skip>true</skip>
                         </configuration>
                     </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>${maven.javadoc.version}</version>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>${maven.source.version}</version>
-                    </plugin>
                 </plugins>
             </build>
         </profile>
@@ -627,38 +618,39 @@
                         </execution>
                     </executions>
                 </plugin>
-
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>flatten-maven-plugin</artifactId>
-                    <version>1.2.5</version>
-                    <configuration>
-                    </configuration>
-                    <executions>
-                        <!-- enable flattening -->
-                        <execution>
-                            <id>flatten</id>
-                            <phase>process-resources</phase>
-                            <goals>
-                                <goal>flatten</goal>
-                            </goals>
-                            <configuration>
-                                <flattenMode>oss</flattenMode>
-                            </configuration>
-                        </execution>
-                        <!-- ensure proper cleanup -->
-                        <execution>
-                            <id>flatten.clean</id>
-                            <phase>clean</phase>
-                            <goals>
-                                <goal>clean</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-
             </plugins>
         </pluginManagement>
+
+
+        <plugins>
+            <!--<plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>1.2.5</version>
+                <configuration>
+                    <flattenMode>bom</flattenMode>
+                    <flattenDependencyMode>direct</flattenDependencyMode>
+                    <detail>true</detail>
+                    <updatePomFile>true</updatePomFile>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>-->
+        </plugins>
 
     </build>
 

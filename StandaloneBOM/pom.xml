@@ -19,647 +19,678 @@
     <description>The BOM for Standalone Artefacts</description>
 
     <dependencyManagement>
-       <dependencies>
-           <dependency>
-               <groupId>org.projectlombok</groupId>
-               <artifactId>lombok</artifactId>
-               <version>${lombok.version}</version>
-               <scope>provided</scope>
-           </dependency>
-
-           <dependency>
-               <groupId>org.mapstruct</groupId>
-               <artifactId>mapstruct-processor</artifactId>
-               <version>${mapstruct.version}</version>
-               <scope>provided</scope>
-           </dependency>
-
-           <dependency>
-               <groupId>org.mapstruct</groupId>
-               <artifactId>mapstruct</artifactId>
-               <version>${mapstruct.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.mapstruct</groupId>
-               <artifactId>mapstruct-jdk8</artifactId>
-               <version>${mapstruct.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>net.bytebuddy</groupId>
-               <artifactId>byte-buddy</artifactId>
-               <version>${bytebuddy.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.slf4j</groupId>
-               <artifactId>slf4j-api</artifactId>
-               <version>${slf4j.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.yaml</groupId>
-               <artifactId>snakeyaml</artifactId>
-               <version>${snakeyaml.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>com.zaxxer</groupId>
-               <artifactId>SparseBitSet</artifactId>
-               <version>${sparsebitset.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-		<dependency>
-            <groupId>com.neuronrobotics</groupId>
-            <artifactId>nrjavaserial</artifactId>
-            <version>${nrjavaserial.version}</version>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>net.java.dev.jna</groupId>
-            <artifactId>jna-platform</artifactId>
-            <version>${jna.version}</version>
-            <optional>true</optional>
-        </dependency>
-
-
-           <dependency>
-               <groupId>com.fasterxml</groupId>
-               <artifactId>classmate</artifactId>
-               <version>${classmate.version}</version>
-           </dependency>
-
-           <dependency>
-               <groupId>org.ow2.asm</groupId>
-               <artifactId>asm</artifactId>
-               <version>${asm.version}</version>
-           </dependency>
-
-           <dependency>
-               <groupId>org.dom4j</groupId>
-               <artifactId>dom4j</artifactId>
-               <version>${dom4j.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>xalan</groupId>
-               <artifactId>serializer</artifactId>
-               <version>2.7.2</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>xalan</groupId>
-               <artifactId>xalan</artifactId>
-               <version>2.7.2</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.ehcache</groupId>
-               <artifactId>ehcache</artifactId>
-               <version>${ehcache.version}</version>
-               <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>slf4j-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.glassfish.jaxb</groupId>
-                       <artifactId>jaxb-runtime</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>javax.cache</groupId>
-                       <artifactId>cache-api</artifactId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>org.owasp.esapi</groupId>
-               <artifactId>esapi</artifactId>
-               <version>${esapi.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>commons-lang</artifactId>
-                       <groupId>commons-lang</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>batik-css</artifactId>
-                       <groupId>org.apache.xmlgraphics</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>antisamy</artifactId>
-                       <groupId>org.owasp.antisamy</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>commons-fileupload</artifactId>
-                       <groupId>commons-fileupload</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>xalan</artifactId>
-                       <groupId>xalan</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>commons-collections4</artifactId>
-                       <groupId>org.apache.commons</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>log4j</artifactId>
-                       <groupId>log4j</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>xom</artifactId>
-                       <groupId>com.io7m.xom</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>xercesImpl</artifactId>
-                       <groupId>xerces</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>bsh</artifactId>
-                       <groupId>org.apache-extras.beanshell</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>slf4j-api</artifactId>
-                       <groupId>org.slf4j</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>xml-apis</artifactId>
-                       <groupId>xml-apis</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>commons-io</artifactId>
-                       <groupId>commons-io</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>commons-configuration</artifactId>
-                       <groupId>commons-configuration</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>commons-beanutils</artifactId>
-                       <groupId>commons-beanutils</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>io.github.classgraph</groupId>
-               <artifactId>classgraph</artifactId>
-               <version>${classgraph.version}</version>
-           </dependency>
-
-           <dependency>
-               <groupId>antlr</groupId>
-               <artifactId>antlr</artifactId>
-               <version>${antlr.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>xml-apis</artifactId>
-                       <groupId>xml-apis</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>org.apache.ant</groupId>
-               <artifactId>ant</artifactId>
-               <version>${ant.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>net.sf.ehcache</groupId>
-               <artifactId>ehcache</artifactId>
-               <version>${net.sf.ehcache.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.jvnet.staxex</groupId>
-               <artifactId>stax-ex</artifactId>
-               <version>${stax.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>jakarta.activation</groupId>
-                       <artifactId>jakarta.activation-api</artifactId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>org.codehaus.woodstox</groupId>
-               <artifactId>stax2-api</artifactId>
-               <version>${stax2.api.version}</version>
-           </dependency>
-
-     <!--      <dependency>
-               <groupId>org.bouncycastle</groupId>
-               <artifactId>bcprov-jdk15on</artifactId>
-               <version>${bcprov.15.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.bouncycastle</groupId>
-               <artifactId>bcpkix-jdk15on</artifactId>
-               <version>${bcprov.15.version}</version>
-               <optional>true</optional>
-           </dependency>-->
-
-         <!--  <dependency>
-               <groupId>org.bouncycastle</groupId>
-               <artifactId>bcprov-jdk16</artifactId>
-               <version>${bcprov.16.version}</version>
-               <optional>true</optional>
-           </dependency>-->
-
-           <dependency>
-               <groupId>ca.juliusdavies</groupId>
-               <artifactId>not-yet-commons-ssl</artifactId>
-               <version>${nyc.ssl.version}</version>
-           </dependency>
-
-           <dependency>
-               <groupId>org.apache.httpcomponents</groupId>
-               <artifactId>httpcore</artifactId>
-               <version>${http.core.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.apache.httpcomponents</groupId>
-               <artifactId>httpcore-nio</artifactId>
-               <version>${http.nio.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.jasypt</groupId>
-               <artifactId>jasypt</artifactId>
-               <version>${jasypt.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>com.github.luben</groupId>
-               <artifactId>zstd-jni</artifactId>
-               <version>${zstdjni.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>com.h2database</groupId>
-               <artifactId>h2</artifactId>
-               <version>${h2.db.api}</version>
-               <scope>test</scope>
-           </dependency>
-
-           <dependency>
-               <groupId>org.javassist</groupId>
-               <artifactId>javassist</artifactId>
-               <version>${javassist.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-
-
-
-           <dependency>
-               <groupId>net.glxn</groupId>
-               <artifactId>qrgen</artifactId>
-               <version>1.4</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.jdom</groupId>
-               <artifactId>jdom2</artifactId>
-               <version>2.0.6</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>com.rometools</groupId>
-               <artifactId>rome</artifactId>
-               <version>1.16.0</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>slf4j-api</artifactId>
-                       <groupId>org.slf4j</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jdom2</artifactId>
-                       <groupId>org.jdom</groupId>
-                   </exclusion>
-               </exclusions>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>com.rometools</groupId>
-               <artifactId>rome-utils</artifactId>
-               <version>1.16.0</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>slf4j-api</artifactId>
-                       <groupId>org.slf4j</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jdom2</artifactId>
-                       <groupId>org.jdom</groupId>
-                   </exclusion>
-               </exclusions>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>com.googlecode.owasp-java-html-sanitizer</groupId>
-               <artifactId>owasp-java-html-sanitizer</artifactId>
-               <version>20200713.1</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>guava</artifactId>
-                       <groupId>com.google.guava</groupId>
-                   </exclusion>
-               </exclusions>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>net.sf.barcode4j</groupId>
-               <artifactId>barcode4j-light</artifactId>
-               <version>2.0</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>xml-apis</artifactId>
-                       <groupId>xml-apis</groupId>
-                   </exclusion>
-               </exclusions>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>com.github.javaparser</groupId>
-               <artifactId>javaparser-core</artifactId>
-               <version>3.20.2</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.owasp.encoder</groupId>
-               <artifactId>encoder</artifactId>
-               <version>1.2.3</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>net.sf.saxon</groupId>
-               <artifactId>Saxon-B</artifactId>
-               <version>9.0</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>net.sf.saxon</groupId>
-               <artifactId>saxon-dom</artifactId>
-               <version>8.7</version>
-               <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>net.sf.saxon</groupId>
-                       <artifactId>saxon</artifactId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>net.shibboleth.utilities</groupId>
-               <artifactId>java-support</artifactId>
-               <version>7.5.1</version>
-               <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>com.google.guava</groupId>
-                       <artifactId>guava</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>joda-time</groupId>
-                       <artifactId>joda-time</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.google.code.findbugs</groupId>
-                       <artifactId>jsr305</artifactId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>com.github.albfernandez </groupId>
-               <artifactId>juniversalchardet</artifactId>
-               <version>2.4.0</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.apache.geronimo.specs</groupId>
-               <artifactId>geronimo-jms_1.1_spec</artifactId>
-               <version>${jms.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>jaxen</groupId>
-               <artifactId>jaxen</artifactId>
-               <version>${jaxen.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-
-           <dependency>
-               <groupId>org.jboss.jdeparser</groupId>
-               <artifactId>jdeparser</artifactId>
-               <version>2.0.3.Final</version>
-               <optional>true</optional>
-           </dependency>
-
-
-           <dependency>
-               <groupId>net.sourceforge.barbecue</groupId>
-               <artifactId>barbecue</artifactId>
-               <version>1.5-beta1</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>jfree</groupId>
-               <artifactId>jfreechart</artifactId>
-               <version>1.0.0</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.json</groupId>
-               <artifactId>json</artifactId>
-               <version>${org.json.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.apache.kafka</groupId>
-               <artifactId>kafka-clients</artifactId>
-               <version>${kafka.client.version}</version>
-               <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>com.github.luben</groupId>
-                       <artifactId>zstd-jni</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>slf4j-api</artifactId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>org.xerial.snappy</groupId>
-               <artifactId>snappy-java</artifactId>
-               <version>1.1.8.4</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.lz4</groupId>
-               <artifactId>lz4-java</artifactId>
-               <version>1.8.0</version>
-               <optional>true</optional>
-           </dependency>
-
-
-           <!-- Stuffs-->
-           <dependency>
-               <groupId>org.apache.tika</groupId>
-               <artifactId>tika-core</artifactId>
-               <version>${tica.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>commons-io</artifactId>
-                       <groupId>commons-io</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>org.apache.tika</groupId>
-               <artifactId>tika-java7</artifactId>
-               <version>${tica.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>commons-io</artifactId>
-                       <groupId>commons-io</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.annotation-api</artifactId>
-                       <groupId>javax.annotation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation</artifactId>
-                       <groupId>com.sun.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation</artifactId>
-                       <groupId>com.sun.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation</artifactId>
-                       <groupId>com.sun.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.activation</artifactId>
-                       <groupId>com.sun.activation</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>com.github.librepdf</groupId>
-               <artifactId>openpdf</artifactId>
-               <version>${openpdf.version}</version>
-               <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>org.bouncycastle</groupId>
-                       <artifactId>bcprov-jdk15on</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.bouncycastle</groupId>
-                       <artifactId>bcpkix-jdk15on</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.bouncycastle</groupId>
-                       <artifactId>bcpkix-jdk15on</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.github.spotbugs</groupId>
-                       <artifactId>spotbugs</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.apache.xmlgraphics</groupId>
-                       <artifactId>fop</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.apache.xmlgraphics</groupId>
-                       <artifactId>xmlgraphics-commons</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.apache.xmlgraphics</groupId>
-                       <artifactId>xmlgraphics-commons</artifactId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>com.github.spotbugs</groupId>
-               <artifactId>spotbugs</artifactId>
-               <version>${spotbugs.version}</version>
-               <optional>true</optional>
-           </dependency>
-       </dependencies>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-jdk8</artifactId>
+                <version>${mapstruct.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy</artifactId>
+                <version>${bytebuddy.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>${snakeyaml.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>SparseBitSet</artifactId>
+                <version>${sparsebitset.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>com.neuronrobotics</groupId>
+                <artifactId>nrjavaserial</artifactId>
+                <version>${nrjavaserial.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>net.java.dev.jna</groupId>
+                <artifactId>jna-platform</artifactId>
+                <version>${jna.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>com.rabbitmq</groupId>
+                <artifactId>amqp-client</artifactId>
+                <version>${amqp.client.version}</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.fasterxml.jackson.core</groupId>
+                        <artifactId>jackson-databind</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>io.dropwizard.metrics</groupId>
+                <artifactId>metrics-core</artifactId>
+                <version>4.2.3</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.fasterxml.jackson.core</groupId>
+                        <artifactId>jackson-databind</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml</groupId>
+                <artifactId>classmate</artifactId>
+                <version>${classmate.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm</artifactId>
+                <version>${asm.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>xalan</groupId>
+                <artifactId>serializer</artifactId>
+                <version>2.7.2</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>xalan</groupId>
+                <artifactId>xalan</artifactId>
+                <version>2.7.2</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>${ehcache.version}</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.glassfish.jaxb</groupId>
+                        <artifactId>jaxb-runtime</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>javax.cache</groupId>
+                        <artifactId>cache-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.owasp.esapi</groupId>
+                <artifactId>esapi</artifactId>
+                <version>${esapi.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>commons-lang</artifactId>
+                        <groupId>commons-lang</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>batik-css</artifactId>
+                        <groupId>org.apache.xmlgraphics</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>antisamy</artifactId>
+                        <groupId>org.owasp.antisamy</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>commons-fileupload</artifactId>
+                        <groupId>commons-fileupload</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>xalan</artifactId>
+                        <groupId>xalan</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>commons-collections4</artifactId>
+                        <groupId>org.apache.commons</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>log4j</artifactId>
+                        <groupId>log4j</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>xom</artifactId>
+                        <groupId>com.io7m.xom</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>xercesImpl</artifactId>
+                        <groupId>xerces</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>bsh</artifactId>
+                        <groupId>org.apache-extras.beanshell</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>slf4j-api</artifactId>
+                        <groupId>org.slf4j</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>xml-apis</artifactId>
+                        <groupId>xml-apis</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>commons-io</artifactId>
+                        <groupId>commons-io</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>commons-configuration</artifactId>
+                        <groupId>commons-configuration</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>commons-beanutils</artifactId>
+                        <groupId>commons-beanutils</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>jakarta.xml.ws</groupId>
+                        <artifactId>jakarta.xml.ws-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>jakarta.annotation</groupId>
+                        <artifactId>jakarta.annotation-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>jakarta.xml.ws</groupId>
+                        <artifactId>jakarta.xml.ws-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>jakarta.jws</groupId>
+                        <artifactId>jakarta.jws-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>jakarta.xml.soap</groupId>
+                        <artifactId>jakarta.xml.soap-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.sun.activation</groupId>
+                        <artifactId>jakarta.activation</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.classgraph</groupId>
+                <artifactId>classgraph</artifactId>
+                <version>${classgraph.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>antlr</groupId>
+                <artifactId>antlr</artifactId>
+                <version>${antlr.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>xml-apis</artifactId>
+                        <groupId>xml-apis</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.ant</groupId>
+                <artifactId>ant</artifactId>
+                <version>${ant.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>net.sf.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>${net.sf.ehcache.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jvnet.staxex</groupId>
+                <artifactId>stax-ex</artifactId>
+                <version>${stax.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.activation</groupId>
+                        <artifactId>jakarta.activation-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.woodstox</groupId>
+                <artifactId>stax2-api</artifactId>
+                <version>${stax2.api.version}</version>
+            </dependency>
+
+            <!--      <dependency>
+                      <groupId>org.bouncycastle</groupId>
+                      <artifactId>bcprov-jdk15on</artifactId>
+                      <version>${bcprov.15.version}</version>
+                      <optional>true</optional>
+                  </dependency>
+
+                  <dependency>
+                      <groupId>org.bouncycastle</groupId>
+                      <artifactId>bcpkix-jdk15on</artifactId>
+                      <version>${bcprov.15.version}</version>
+                      <optional>true</optional>
+                  </dependency>-->
+
+            <!--  <dependency>
+                  <groupId>org.bouncycastle</groupId>
+                  <artifactId>bcprov-jdk16</artifactId>
+                  <version>${bcprov.16.version}</version>
+                  <optional>true</optional>
+              </dependency>-->
+
+            <dependency>
+                <groupId>ca.juliusdavies</groupId>
+                <artifactId>not-yet-commons-ssl</artifactId>
+                <version>${nyc.ssl.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+                <version>${http.core.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore-nio</artifactId>
+                <version>${http.nio.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jasypt</groupId>
+                <artifactId>jasypt</artifactId>
+                <version>${jasypt.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.luben</groupId>
+                <artifactId>zstd-jni</artifactId>
+                <version>${zstdjni.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2.db.api}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${javassist.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+
+            <dependency>
+                <groupId>net.glxn</groupId>
+                <artifactId>qrgen</artifactId>
+                <version>1.4</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jdom</groupId>
+                <artifactId>jdom2</artifactId>
+                <version>2.0.6</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>com.rometools</groupId>
+                <artifactId>rome</artifactId>
+                <version>1.16.0</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>slf4j-api</artifactId>
+                        <groupId>org.slf4j</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>jdom2</artifactId>
+                        <groupId>org.jdom</groupId>
+                    </exclusion>
+                </exclusions>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>com.rometools</groupId>
+                <artifactId>rome-utils</artifactId>
+                <version>1.16.0</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>slf4j-api</artifactId>
+                        <groupId>org.slf4j</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>jdom2</artifactId>
+                        <groupId>org.jdom</groupId>
+                    </exclusion>
+                </exclusions>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>com.googlecode.owasp-java-html-sanitizer</groupId>
+                <artifactId>owasp-java-html-sanitizer</artifactId>
+                <version>20200713.1</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>guava</artifactId>
+                        <groupId>com.google.guava</groupId>
+                    </exclusion>
+                </exclusions>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>net.sf.barcode4j</groupId>
+                <artifactId>barcode4j-light</artifactId>
+                <version>2.0</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>xml-apis</artifactId>
+                        <groupId>xml-apis</groupId>
+                    </exclusion>
+                </exclusions>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.javaparser</groupId>
+                <artifactId>javaparser-core</artifactId>
+                <version>3.20.2</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.owasp.encoder</groupId>
+                <artifactId>encoder</artifactId>
+                <version>1.2.3</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>net.sf.saxon</groupId>
+                <artifactId>Saxon-B</artifactId>
+                <version>9.0</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>net.sf.saxon</groupId>
+                <artifactId>saxon-dom</artifactId>
+                <version>8.7</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>net.sf.saxon</groupId>
+                        <artifactId>saxon</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>net.shibboleth.utilities</groupId>
+                <artifactId>java-support</artifactId>
+                <version>7.5.1</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>joda-time</groupId>
+                        <artifactId>joda-time</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.google.code.findbugs</groupId>
+                        <artifactId>jsr305</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.albfernandez</groupId>
+                <artifactId>juniversalchardet</artifactId>
+                <version>2.4.0</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.geronimo.specs</groupId>
+                <artifactId>geronimo-jms_1.1_spec</artifactId>
+                <version>${jms.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>jaxen</groupId>
+                <artifactId>jaxen</artifactId>
+                <version>${jaxen.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.jboss.jdeparser</groupId>
+                <artifactId>jdeparser</artifactId>
+                <version>2.0.3.Final</version>
+                <optional>true</optional>
+            </dependency>
+
+
+            <dependency>
+                <groupId>net.sourceforge.barbecue</groupId>
+                <artifactId>barbecue</artifactId>
+                <version>1.5-beta1</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>jfree</groupId>
+                <artifactId>jfreechart</artifactId>
+                <version>1.0.0</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>${org.json.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka-clients</artifactId>
+                <version>${kafka.client.version}</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.github.luben</groupId>
+                        <artifactId>zstd-jni</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.xerial.snappy</groupId>
+                <artifactId>snappy-java</artifactId>
+                <version>1.1.8.4</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.lz4</groupId>
+                <artifactId>lz4-java</artifactId>
+                <version>1.8.0</version>
+                <optional>true</optional>
+            </dependency>
+
+
+            <!-- Stuffs-->
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-core</artifactId>
+                <version>${tica.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>commons-io</artifactId>
+                        <groupId>commons-io</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-java7</artifactId>
+                <version>${tica.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>commons-io</artifactId>
+                        <groupId>commons-io</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>javax.annotation-api</artifactId>
+                        <groupId>javax.annotation</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>jakarta.activation</artifactId>
+                        <groupId>com.sun.activation</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>jakarta.activation</artifactId>
+                        <groupId>com.sun.activation</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>jakarta.activation</artifactId>
+                        <groupId>com.sun.activation</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>javax.activation</artifactId>
+                        <groupId>com.sun.activation</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.librepdf</groupId>
+                <artifactId>openpdf</artifactId>
+                <version>${openpdf.version}</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.bouncycastle</groupId>
+                        <artifactId>bcprov-jdk15on</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.bouncycastle</groupId>
+                        <artifactId>bcpkix-jdk15on</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.bouncycastle</groupId>
+                        <artifactId>bcpkix-jdk15on</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.github.spotbugs</groupId>
+                        <artifactId>spotbugs</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.xmlgraphics</groupId>
+                        <artifactId>fop</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.xmlgraphics</groupId>
+                        <artifactId>xmlgraphics-commons</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.xmlgraphics</groupId>
+                        <artifactId>xmlgraphics-commons</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs</artifactId>
+                <version>${spotbugs.version}</version>
+                <optional>true</optional>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 
 </project>
