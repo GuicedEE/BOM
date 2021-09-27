@@ -17,62 +17,61 @@
 
     <name>Guiced EE BOM</name>
     <description>The BOM for Guiced EE</description>
-
+    
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jna-platform</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jna.version}</version>-->
             </dependency>
-
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.mail</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.mail.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-servlets-request-scoper</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-persistence-systemproperties-reader</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-persistence-wildfly</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>cache-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>nrjavaserial</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${nrjavaserial.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>azure-identity</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
@@ -80,7 +79,7 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.xml.ws-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.xml.jaxws.api.version}</version>-->
             </dependency>
 			
@@ -88,7 +87,7 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>bouncycastle</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${bouncycastle.version}</version>-->
 
             </dependency>
@@ -96,14 +95,14 @@
             <dependency>
                 <groupId>com.guicedee</groupId>
                 <artifactId>guiced-log-master</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee</groupId>
                 <artifactId>guiced-injection</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 			
@@ -111,56 +110,56 @@
                 <groupId>com.guicedee</groupId>
                 <artifactId>nrjavaserial</artifactId>
 
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>btm</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-servlets-jsf</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-undertow</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-servlets</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-openapi</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-swagger-ui</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-persistence-c3p0</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
                 <scope>compile</scope>
             </dependency>
@@ -168,7 +167,7 @@
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-persistence-jpa</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
                 <scope>compile</scope>
             </dependency>
@@ -176,7 +175,7 @@
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-persistence-eclipselink-reader</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
                 <scope>compile</scope>
             </dependency>
@@ -184,7 +183,7 @@
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-persistence-ehcache</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
                 <scope>compile</scope>
             </dependency>
@@ -194,201 +193,201 @@
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-primefaces</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>primefaces</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>primefaces-extensions</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <!-- Third Party Services -->
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>h2</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${h2.db.api}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.annotation-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.annotation.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.ws.rs-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.rs.api.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${lang.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-beanutils</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${beanutils.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>openpdf</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${openpdf.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>apache-poi-ooxml</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${poi.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>org.apache.cxf</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${cxf.core.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>java.ws.rs</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.rs.api.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-compress</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${compress.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-xmlbeans</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${xmlbeans.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-text</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${text.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-codec</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${codec.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-math3</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${math.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-logging</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${logging.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-csv</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${csv.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-collections4</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${collections.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>apache-poi</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${poi.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-io</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${io.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-fileupload</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${fileupload.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>aopalliance-core</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${aop.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.activation</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.activation.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.jws-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.jws.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>org.apache.fop</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${fop.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>guice-parent</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>byte-buddy</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${bytebuddy.version}</version>-->
             </dependency>
 
@@ -396,13 +395,13 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>extensions-parent</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>javax.jms</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jms.version}</version>-->
 
             </dependency>
@@ -410,14 +409,14 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>javax.transaction</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.transaction.api.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>javax.inject</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.inject.api.version}</version>-->
 
             </dependency>
@@ -425,27 +424,27 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jcache</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>json</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${org.json.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>cdi-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.cdi.api.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.xml.bind-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.xml.jaxb.api.version}</version>-->
             </dependency>
 
@@ -453,60 +452,60 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jstl</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>-->
 
             <!--<dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>servlet</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>-->
 
             <dependency>
                 <groupId>com.entityassist</groupId>
                 <artifactId>entity-assist</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-hazelcast</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-hazelcast-hibernate</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-hazelcast-client</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-persistence</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hazelcast-all</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${hazelcast.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hazelcast-hibernate</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${hazelcast.hibernate.version}</version>-->
             </dependency>
 <!--
@@ -514,55 +513,55 @@
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hazelcast-client</artifactId>
 
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>-->
 
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-websockets</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-rest-services</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-web-services</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>cache-annotations-ri-guice</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>cache-annotations-ri-common</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>ehcache</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
 
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.el-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.el.version}</version>-->
 
             </dependency>
@@ -570,14 +569,14 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.websocket-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.websocket.api.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>mssql-jdbc</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${mssql.jdbc}</version>-->
             </dependency>
 
@@ -585,7 +584,7 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>javax.jms-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jms.version}</version>-->
 
             </dependency>
@@ -593,21 +592,21 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>javax.security.jacc</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.security.sacc.api.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>log4j-core</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${log4j.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>slf4j</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${slf4j.version}</version>-->
             </dependency>
 
@@ -615,20 +614,20 @@
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jfreechart</artifactId>
 
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.servlet.jsp.jstl.api.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>ejb-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.ejb.version}</version>-->
             </dependency>
 
@@ -636,34 +635,34 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-parent</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>zstd-jni</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${zstdjni.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.persistence-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.persistence.api.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-core</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${maven.hibernate.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-ehcache</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${maven.hibernate.version}</version>-->
             </dependency>
 
@@ -671,7 +670,7 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-enhance-maven-plugin</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${maven.hibernate.enhance.version}</version>-->
             </dependency>
 
@@ -679,28 +678,28 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-c3p0</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${maven.hibernate.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>kafka-client</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${kafka.client.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-validator</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${maven.hibernate.validator.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-jpamodelgen</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${maven.hibernate.version}</version>-->
                 <scope>provided</scope>
             </dependency>
@@ -709,75 +708,75 @@
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jpa-parent</artifactId>
 
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jboss-logmanager</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jbosslog.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.xml.soap-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.xml.soap.api.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-commons-annotations</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${maven.hibernate.annotations.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-jcache</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${maven.hibernate.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jandex</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jandex.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>dom4j</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${dom4j.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jaxen</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jaxen.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>guava</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${guava.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>uadetector-core</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>uadetector-resources</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <!-- Undertow -->
@@ -785,28 +784,28 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>undertow-core</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${undertow.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>undertow-parser-generator</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${undertow.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>undertow-servlet</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${undertow.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>undertow-websockets-jsr</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${undertow.version}</version>-->
             </dependency>
 
@@ -815,14 +814,14 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.servlet-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.servlet.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>java.servlet-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.servlet.version}</version>-->
             </dependency>
 
@@ -830,27 +829,27 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>gson</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.validation-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.validation.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>javax.activation</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.activation.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>javassist</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${javassist.version}</version>-->
 
             </dependency>
@@ -858,110 +857,110 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.el</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.el.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jakarta.servlet.jsp-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.servlet.jsp.api.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>mapstruct</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${mapstruct.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>interceptor-api</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.interceptor.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>javax.faces</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${jakarta.faces.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>guice</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${guice.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>guice-assistedinject</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${guice.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>guice-grapher</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${guice.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>guice-jmx</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${guice.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>guice-jndi</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${guice.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>guice-persist</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${guice.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>guice-servlet</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${guice.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>swagger</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
                 <!--<version>${io.swagger.version}</version>-->
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>xalan</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>aqmp-client</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>metrics-core</artifactId>
-                <version>${project.version}</version>
+                <version>${guicedee.version}</version>
             </dependency>
 
         </dependencies>
@@ -972,11 +971,11 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
-                <version>1.2.5</version>
+                <version>1.2.7</version>
                 <configuration>
                     <flattenMode>bom</flattenMode>
-                    <flattenDependencyMode>direct</flattenDependencyMode>
-                    <detail>true</detail>
+                    <flattenDependencyMode>all</flattenDependencyMode>
+                    <detail>false</detail>
                     <updatePomFile>true</updatePomFile>
                     <flattenedPomFilename>flatter.pom</flattenedPomFilename>
                 </configuration>
