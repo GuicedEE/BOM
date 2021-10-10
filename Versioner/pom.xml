@@ -22,7 +22,7 @@
         <maven.jar.version>3.2.0</maven.jar.version>
         <maven.clean.version>3.1.0</maven.clean.version>
         <maven.dependency.version>3.2.0</maven.dependency.version>
-        <maven.javadoc.version>3.3.0</maven.javadoc.version>
+        <maven.javadoc.version>3.3.1</maven.javadoc.version>
         <maven.deploy.version>3.0.0-M1</maven.deploy.version>
         <maven.install.version>3.0.0-M1</maven.install.version>
         <maven.source.version>3.2.1</maven.source.version>
@@ -38,7 +38,7 @@
         <maven.asm.version>9.2</maven.asm.version>
         <maven.gpg.version>1.6</maven.gpg.version>
 
-        <maven.war.version>3.3.1</maven.war.version>
+        <maven.war.version>3.3.2</maven.war.version>
         <maven.ear.version>3.1.0</maven.ear.version>
         <maven.ejb.version>3.1.0</maven.ejb.version>
 
@@ -56,23 +56,23 @@
         <nexus.staging.maven.plugin.version>1.6.8</nexus.staging.maven.plugin.version>
         <jdk.release>17</jdk.release>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
-        <moditect.maven.plugin.version>1.0.0.RC1</moditect.maven.plugin.version>
+        <moditect.maven.plugin.version>1.0.0.RC2</moditect.maven.plugin.version>
 
-        <junit.jupiter.version>5.7.1</junit.jupiter.version>
+        <junit.jupiter.version>5.8.1</junit.jupiter.version>
         <!--suppress CheckTagEmptyBody -->
         <surefireArgLine></surefireArgLine>
         <!--suppress CheckTagEmptyBody -->
         <gpg.passphrase></gpg.passphrase>
 
         <!-- Standalone -->
-        <lombok.version>1.18.20</lombok.version>
+        <lombok.version>1.18.22</lombok.version>
         <classmate.version>1.5.1</classmate.version>
         <asm.version>9.2</asm.version>
         <dom4j.version>2.1.3</dom4j.version>
         <ehcache.version>3.9.6</ehcache.version>
         <net.sf.ehcache.version>2.10.9.2</net.sf.ehcache.version>
         <esapi.version>2.2.3.1</esapi.version>
-        <classgraph.version>4.8.115</classgraph.version>
+        <classgraph.version>4.8.125</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
         <amqp.client.version>5.13.1</amqp.client.version>
 
@@ -87,7 +87,7 @@
         <jasypt.version>1.9.3</jasypt.version>
         <slf4j.version>1.7.32</slf4j.version>
         <slf4j.log4j2.version>2.14.1</slf4j.log4j2.version>
-        <bytebuddy.version>1.11.13</bytebuddy.version>
+        <bytebuddy.version>1.11.19</bytebuddy.version>
         <snakeyaml.version>1.29</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
         <zstdjni.version>1.5.0-4</zstdjni.version>
@@ -104,10 +104,10 @@
 
         <!--  Hibernate -->
         <maven.hibernate.validator.version>7.0.1.Final</maven.hibernate.validator.version>
-        <maven.hibernate.version>5.5.6.Final</maven.hibernate.version>
+        <maven.hibernate.version>5.5.7.Final</maven.hibernate.version>
         <maven.hibernate.annotations.version>5.1.2.Final</maven.hibernate.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
-        <maven.hibernate.enhance.version>5.5.6.Final</maven.hibernate.enhance.version>
+        <maven.hibernate.enhance.version>5.5.7.Final</maven.hibernate.enhance.version>
 
         <c3p0.version>0.9.5.5</c3p0.version>
         <mchange.version>0.2.20</mchange.version>
@@ -145,20 +145,20 @@
 
 
         <!-- Apache CXF -->
-        <cxf.core.version>3.4.4</cxf.core.version>
+        <cxf.core.version>3.4.5</cxf.core.version>
         <cxf.xmlbeans.version>3.1.18</cxf.xmlbeans.version>
         <alpn.api.version>1.1.3.v20160715</alpn.api.version>
         <wsdl4j.version>1.6.3</wsdl4j.version>
 
         <opensaml.openws.version>1.5.4</opensaml.openws.version>
-        <neethi.version>3.1.1</neethi.version>
+        <neethi.version>3.2.0</neethi.version>
         <oauth.version>20100527</oauth.version>
-        <xmlschema.core.version>2.2.5</xmlschema.core.version>
-        <wss4j.version>2.3.0</wss4j.version>
+        <xmlschema.core.version>2.3.0</xmlschema.core.version>
+        <wss4j.version>2.3.3</wss4j.version>
         <xmlsec.version>2.2.2</xmlsec.version>
-        <wss4j.security.common.version>2.3.0</wss4j.security.common.version>
+        <wss4j.security.common.version>2.3.3</wss4j.security.common.version>
         <wss4j.bindings.version>2.0.0-rc1</wss4j.bindings.version>
-        <wss4j.policy.version>2.3.2</wss4j.policy.version>
+        <wss4j.policy.version>2.3.3</wss4j.policy.version>
 
         <velocity.engine.version>2.2</velocity.engine.version>
         <opensaml.version>4.0.1</opensaml.version>
@@ -170,21 +170,21 @@
         <!-- FasterXML  -->
 
         <woodstox.version>6.2.5</woodstox.version>
-        <jackson.version>2.13.0-rc2</jackson.version>
+        <jackson.version>2.13.0</jackson.version>
 
         <!-- Google -->
 
         <jsr305.version>3.0.2</jsr305.version>
         <findbugs.annotation.version>3.0.1</findbugs.annotation.version>
-        <checkerqual.version>3.17.0</checkerqual.version>
+        <checkerqual.version>3.18.1</checkerqual.version>
         <errorprone.version>2.9.0</errorprone.version>
         <listenablefuture.version>9999.0-empty-to-avoid-conflict-with-guava</listenablefuture.version>
         <j2obc.version>1.3</j2obc.version>
         <animalsniffer.version>1.20</animalsniffer.version>
         <failureacces.version>1.0.1</failureacces.version>
 
-        <guava.version>30.1.1-jre</guava.version>
-        <protobuf.version>3.17.3</protobuf.version>
+        <guava.version>31.0.1-jre</guava.version>
+        <protobuf.version>3.18.1</protobuf.version>
 
         <guice.version>5.0.1</guice.version>
         <zxing.version>3.4.1</zxing.version>
@@ -194,7 +194,7 @@
         <!-- Jakarta -->
 
         <jakarta.activation.version>2.0.0</jakarta.activation.version>
-        <jakarta.annotation.version>2.0.0</jakarta.annotation.version>
+        <jakarta.annotation.version>2.1.0-B1</jakarta.annotation.version>
         <jakarta.com.sun.activation.version>2.0.0</jakarta.com.sun.activation.version>
         <jakarta.validation.version>3.0.0</jakarta.validation.version>
         <jakarta.faces.version>3.0.0</jakarta.faces.version>
@@ -245,9 +245,9 @@
 
         <log4j.version>2.14.1</log4j.version>
         <jansi.version>2.3.4</jansi.version>
-        <jcabi.version>0.18.1</jcabi.version>
+        <jcabi.version>0.20.1</jcabi.version>
 
-        <undertow.version>2.2.10.Final</undertow.version>
+        <undertow.version>2.2.12.Final</undertow.version>
         <xnio.version>3.8.4.Final</xnio.version>
         <classfilewriter.version>1.2.4.Final</classfilewriter.version>
 
@@ -255,13 +255,13 @@
         <logmanager.processor.version>2.1.18.Final</logmanager.processor.version>
         <jbosslog.version>3.4.2.Final</jbosslog.version>
 
-        <io.swagger.version>2.1.10</io.swagger.version>
+        <io.swagger.version>2.1.11</io.swagger.version>
 
-        <junit.jupiter.version>5.7.1</junit.jupiter.version>
+        <junit.jupiter.version>5.8.1</junit.jupiter.version>
 
         <hamcrest.version>1.3</hamcrest.version>
-        <assertj.version>3.20.2</assertj.version>
-        <mockito.version>3.12.1</mockito.version>
+        <assertj.version>3.21.0</assertj.version>
+        <mockito.version>4.0.0</mockito.version>
 
         <aspectj.version>1.9.2</aspectj.version>
 
@@ -347,6 +347,7 @@
                                 <arg>--batch</arg>
                             </gpgArguments>
                             <passphrase>${gpg.passphrase}</passphrase>
+                            <skip>true</skip>
                         </configuration>
                         <executions>
                             <execution>
@@ -396,6 +397,7 @@
                                 <arg>--batch</arg>
                             </gpgArguments>
                             <passphrase>${gpg.passphrase}</passphrase>
+                            <skip>true</skip>
                         </configuration>
                         <executions>
                             <execution>

@@ -828,6 +828,13 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
+                <artifactId>amqp-client</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
                 <artifactId>gson</artifactId>
                 <version>${guicedee.version}</version>
             </dependency>
