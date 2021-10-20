@@ -69,7 +69,7 @@
         <classmate.version>1.5.1</classmate.version>
         <asm.version>9.2</asm.version>
         <dom4j.version>2.1.3</dom4j.version>
-        <ehcache.version>3.9.6</ehcache.version>
+        <ehcache.version>3.9.7</ehcache.version>
         <net.sf.ehcache.version>2.10.9.2</net.sf.ehcache.version>
         <esapi.version>2.2.3.1</esapi.version>
         <classgraph.version>4.8.125</classgraph.version>
@@ -87,7 +87,7 @@
         <jasypt.version>1.9.3</jasypt.version>
         <slf4j.version>1.7.32</slf4j.version>
         <slf4j.log4j2.version>2.14.1</slf4j.log4j2.version>
-        <bytebuddy.version>1.11.19</bytebuddy.version>
+        <bytebuddy.version>1.11.21</bytebuddy.version>
         <snakeyaml.version>1.29</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
         <zstdjni.version>1.5.0-4</zstdjni.version>
@@ -104,10 +104,10 @@
 
         <!--  Hibernate -->
         <maven.hibernate.validator.version>7.0.1.Final</maven.hibernate.validator.version>
-        <maven.hibernate.version>5.5.7.Final</maven.hibernate.version>
+        <maven.hibernate.version>5.5.8.Final</maven.hibernate.version>
         <maven.hibernate.annotations.version>5.1.2.Final</maven.hibernate.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
-        <maven.hibernate.enhance.version>5.5.7.Final</maven.hibernate.enhance.version>
+        <maven.hibernate.enhance.version>5.5.8.Final</maven.hibernate.enhance.version>
 
         <c3p0.version>0.9.5.5</c3p0.version>
         <mchange.version>0.2.20</mchange.version>
