@@ -356,6 +356,9 @@
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
+                                <configuration>
+                                    <skip>false</skip>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -406,6 +409,9 @@
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
+                                <configuration>
+                                    <skip>false</skip>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
