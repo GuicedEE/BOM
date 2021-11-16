@@ -71,7 +71,7 @@
         <ehcache.version>3.9.7</ehcache.version>
         <net.sf.ehcache.version>2.10.9.2</net.sf.ehcache.version>
         <esapi.version>2.2.3.1</esapi.version>
-        <classgraph.version>4.8.129</classgraph.version>
+        <classgraph.version>4.8.131</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
         <amqp.client.version>5.13.1</amqp.client.version>
 
@@ -86,7 +86,7 @@
         <jasypt.version>1.9.3</jasypt.version>
         <slf4j.version>1.7.32</slf4j.version>
         <slf4j.log4j2.version>2.14.1</slf4j.log4j2.version>
-        <bytebuddy.version>1.12.0</bytebuddy.version>
+        <bytebuddy.version>1.11.13</bytebuddy.version>
         <snakeyaml.version>1.29</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
         <zstdjni.version>1.5.0-4</zstdjni.version>
@@ -95,7 +95,7 @@
         <h2.db.api>1.4.200</h2.db.api>
 
         <nrjavaserial.version>5.1.1</nrjavaserial.version>
-        <jna.version>5.9.0</jna.version>
+        <jna.version>5.10.0</jna.version>
 
         <javassist.version>3.28.0-GA</javassist.version>
 
@@ -155,9 +155,9 @@
         <xmlschema.core.version>2.3.0</xmlschema.core.version>
         <wss4j.version>2.3.3</wss4j.version>
         <xmlsec.version>2.3.0</xmlsec.version>
-        <wss4j.security.common.version>2.3.3</wss4j.security.common.version>
+        <wss4j.security.common.version>2.4.0</wss4j.security.common.version>
         <wss4j.bindings.version>2.0.0-rc1</wss4j.bindings.version>
-        <wss4j.policy.version>2.3.3</wss4j.policy.version>
+        <wss4j.policy.version>2.4.0</wss4j.policy.version>
 
         <velocity.engine.version>2.2</velocity.engine.version>
         <opensaml.version>4.0.1</opensaml.version>
@@ -195,7 +195,7 @@
         <jakarta.activation.version>2.0.0</jakarta.activation.version>
         <jakarta.annotation.version>2.1.0-B1</jakarta.annotation.version>
         <jakarta.com.sun.activation.version>2.0.0</jakarta.com.sun.activation.version>
-        <jakarta.validation.version>3.0.0</jakarta.validation.version>
+        <jakarta.validation.version>3.0.1</jakarta.validation.version>
         <jakarta.faces.version>3.0.0</jakarta.faces.version>
         <jakarta.json.version>2.0.0</jakarta.json.version>
         <jakarta.cdi.api.version>3.0.0-M3</jakarta.cdi.api.version>
