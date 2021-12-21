@@ -69,10 +69,10 @@
         <classmate.version>1.5.1</classmate.version>
         <asm.version>9.2</asm.version>
         <dom4j.version>2.1.3</dom4j.version>
-        <ehcache.version>3.9.7</ehcache.version>
+        <ehcache.version>3.9.9</ehcache.version>
         <net.sf.ehcache.version>2.10.9.2</net.sf.ehcache.version>
         <esapi.version>2.2.3.1</esapi.version>
-        <classgraph.version>4.8.137</classgraph.version>
+        <classgraph.version>4.8.138</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
         <amqp.client.version>5.14.0</amqp.client.version>
 
@@ -86,12 +86,12 @@
         <http.nio.version>4.4.14</http.nio.version>
         <jasypt.version>1.9.3</jasypt.version>
         <slf4j.version>1.7.32</slf4j.version>
-        <slf4j.log4j2.version>2.15.0</slf4j.log4j2.version>
+        <slf4j.log4j2.version>2.17.0</slf4j.log4j2.version>
         <bytebuddy.version>1.11.20</bytebuddy.version>
-        <snakeyaml.version>1.29</snakeyaml.version>
+        <snakeyaml.version>1.30</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
-        <zstdjni.version>1.5.0-4</zstdjni.version>
-        <tica.version>2.1.0</tica.version>
+        <zstdjni.version>1.5.0-5</zstdjni.version>
+        <tica.version>2.2.0</tica.version>
 
         <h2.db.api>1.4.200</h2.db.api>
 
@@ -104,22 +104,22 @@
 
         <!--  Hibernate -->
         <maven.hibernate.validator.version>7.0.1.Final</maven.hibernate.validator.version>
-        <maven.hibernate.version>5.6.2.Final</maven.hibernate.version>
+        <maven.hibernate.version>5.6.3.Final</maven.hibernate.version>
         <maven.hibernate.annotations.version>5.1.2.Final</maven.hibernate.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
-        <maven.hibernate.enhance.version>5.6.2.Final</maven.hibernate.enhance.version>
+        <maven.hibernate.enhance.version>5.6.3.Final</maven.hibernate.enhance.version>
 
         <c3p0.version>0.9.5.5</c3p0.version>
         <mchange.version>0.2.20</mchange.version>
         <typesafe.version>1.4.1</typesafe.version>
 
-        <hazelcast.version>4.2.2</hazelcast.version>
+        <hazelcast.version>4.2.3</hazelcast.version>
         <hazelcast.hibernate.version>2.2.1</hazelcast.hibernate.version>
 
         <!-- Apache -->
         <poi.version>5.1.0</poi.version>
         <fop.version>2.6</fop.version>
-        <imageio-tiff.version>3.7.0</imageio-tiff.version>
+        <imageio-tiff.version>3.8.0</imageio-tiff.version>
 
         <httpclient.version>4.5.13</httpclient.version>
 
@@ -139,7 +139,7 @@
         <portlet.api.version>1.0</portlet.api.version>
 
         <xmlbeans.version>5.0.2</xmlbeans.version>
-        <fontbox.version>2.0.24</fontbox.version>
+        <fontbox.version>2.0.25</fontbox.version>
 
         <xerces.version>2.12.0</xerces.version>
 
@@ -170,13 +170,13 @@
         <!-- FasterXML  -->
 
         <woodstox.version>6.2.7</woodstox.version>
-        <jackson.version>2.13.0</jackson.version>
+        <jackson.version>2.13.1</jackson.version>
 
         <!-- Google -->
 
         <jsr305.version>3.0.2</jsr305.version>
         <findbugs.annotation.version>3.0.1</findbugs.annotation.version>
-        <checkerqual.version>3.20.0</checkerqual.version>
+        <checkerqual.version>3.21.0</checkerqual.version>
         <errorprone.version>2.10.0</errorprone.version>
         <listenablefuture.version>9999.0-empty-to-avoid-conflict-with-guava</listenablefuture.version>
         <j2obc.version>1.3</j2obc.version>
@@ -243,7 +243,7 @@
         <wildfly.client.config.version>1.0.1.Final</wildfly.client.config.version>
         <wildfly.common.jdk9.version>1.0.Final</wildfly.common.jdk9.version>
 
-        <log4j.version>2.15.0</log4j.version>
+        <log4j.version>2.16.0</log4j.version>
         <jansi.version>2.3.4</jansi.version>
         <jcabi.version>0.20.1</jcabi.version>
 
@@ -262,12 +262,12 @@
 
         <hamcrest.version>1.3</hamcrest.version>
         <assertj.version>3.21.0</assertj.version>
-        <mockito.version>4.0.0</mockito.version>
+        <mockito.version>4.2.0</mockito.version>
 
         <aspectj.version>1.9.2</aspectj.version>
 
         <selenium.version>3.141.59</selenium.version>
-        <selenium.jupiter.version>3.4.0</selenium.jupiter.version>
+        <selenium.jupiter.version>4.1.1</selenium.jupiter.version>
         <webdrivermanager.version>4.2.2</webdrivermanager.version>
 
         <jmh.version>1.30</jmh.version>
@@ -589,7 +589,7 @@
                         <dependency>
                             <groupId>org.apache.maven.doxia</groupId>
                             <artifactId>doxia-site-renderer</artifactId>
-                            <version>1.10</version>
+                            <version>1.11.1</version>
                         </dependency>
                     </dependencies>
                 </plugin>
