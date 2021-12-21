@@ -492,7 +492,7 @@
             <dependency>
                 <groupId>io.github.bonigarcia</groupId>
                 <artifactId>selenium-jupiter</artifactId>
-                <version>${selenium.jupiter.version}</version>
+                <version>4.0.1</version>
                 <scope>test</scope>
                 <exclusions>
                     <exclusion>
