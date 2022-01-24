@@ -19,7 +19,7 @@
 
 
         <maven.assembly.version>3.3.0</maven.assembly.version>
-        <maven.jar.version>3.2.0</maven.jar.version>
+        <maven.jar.version>3.2.2</maven.jar.version>
         <maven.clean.version>3.1.0</maven.clean.version>
         <maven.dependency.version>3.2.0</maven.dependency.version>
         <maven.javadoc.version>3.3.1</maven.javadoc.version>
@@ -28,11 +28,11 @@
         <maven.source.version>3.2.1</maven.source.version>
         <maven.site.version>3.10.0</maven.site.version>
         <maven.shade.version>3.2.4</maven.shade.version>
-        <maven.compiler.version>3.8.1</maven.compiler.version>
+        <maven.compiler.version>3.9.0</maven.compiler.version>
         <maven.surefire.version>3.0.0-M5</maven.surefire.version>
         <maven.failsafe.version>3.0.0-M1</maven.failsafe.version>
         <maven.resources.version>3.2.0</maven.resources.version>
-        <maven.release.version>3.0.0-M1</maven.release.version>
+        <maven.release.version>3.0.0-M5</maven.release.version>
         <maven.versions.version>2.8.1</maven.versions.version>
         <maven.verifyier.version>1.1</maven.verifyier.version>
         <maven.asm.version>9.2</maven.asm.version>
@@ -44,7 +44,7 @@
 
         <aop.version>1.0.0</aop.version>
 
-        <build.helper.maven.plugin.version>3.2.0</build.helper.maven.plugin.version>
+        <build.helper.maven.plugin.version>3.3.0</build.helper.maven.plugin.version>
         <netbeans.hint.license>gpl30</netbeans.hint.license>
         <license.dir>${basedir}</license.dir>
 
@@ -74,7 +74,7 @@
         <esapi.version>2.2.3.1</esapi.version>
         <classgraph.version>4.8.138</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
-        <amqp.client.version>5.14.0</amqp.client.version>
+        <amqp.client.version>5.14.1</amqp.client.version>
 
         <ant.version>1.10.12</ant.version>
         <stax.version>2.1.0-M1</stax.version>
@@ -85,7 +85,7 @@
         <http.core.version>4.4.14</http.core.version>
         <http.nio.version>4.4.14</http.nio.version>
         <jasypt.version>1.9.3</jasypt.version>
-        <slf4j.version>1.7.32</slf4j.version>
+        <slf4j.version>1.7.33</slf4j.version>
         <slf4j.log4j2.version>2.17.1</slf4j.log4j2.version>
         <bytebuddy.version>1.11.20</bytebuddy.version>
         <snakeyaml.version>1.30</snakeyaml.version>
@@ -93,7 +93,7 @@
         <zstdjni.version>1.5.1-1</zstdjni.version>
         <tica.version>2.2.1</tica.version>
 
-        <h2.db.api>2.0.204</h2.db.api>
+        <h2.db.api>2.1.210</h2.db.api>
 
         <nrjavaserial.version>5.1.1</nrjavaserial.version>
         <jna.version>5.10.0</jna.version>
@@ -104,10 +104,10 @@
 
         <!--  Hibernate -->
         <maven.hibernate.validator.version>7.0.2.Final</maven.hibernate.validator.version>
-        <maven.hibernate.version>5.6.3.Final</maven.hibernate.version>
-        <maven.hibernate.annotations.version>5.1.2.Final</maven.hibernate.annotations.version>
+        <maven.hibernate.version>5.6.4.Final</maven.hibernate.version>
+        <maven.hibernate.annotations.version>6.0.0.CR1</maven.hibernate.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
-        <maven.hibernate.enhance.version>5.6.3.Final</maven.hibernate.enhance.version>
+        <maven.hibernate.enhance.version>5.6.4.Final</maven.hibernate.enhance.version>
 
         <c3p0.version>0.9.5.5</c3p0.version>
         <mchange.version>0.2.20</mchange.version>
@@ -117,7 +117,7 @@
         <hazelcast.hibernate.version>2.2.1</hazelcast.hibernate.version>
 
         <!-- Apache -->
-        <poi.version>5.1.0</poi.version>
+        <poi.version>5.2.0</poi.version>
         <fop.version>2.6</fop.version>
         <imageio-tiff.version>3.8.1</imageio-tiff.version>
 
@@ -169,14 +169,14 @@
 
         <!-- FasterXML  -->
 
-        <woodstox.version>6.2.7</woodstox.version>
+        <woodstox.version>6.2.8</woodstox.version>
         <jackson.version>2.13.1</jackson.version>
 
         <!-- Google -->
 
         <jsr305.version>3.0.2</jsr305.version>
         <findbugs.annotation.version>3.0.1</findbugs.annotation.version>
-        <checkerqual.version>3.21.0</checkerqual.version>
+        <checkerqual.version>3.21.1</checkerqual.version>
         <errorprone.version>2.10.0</errorprone.version>
         <listenablefuture.version>9999.0-empty-to-avoid-conflict-with-guava</listenablefuture.version>
         <j2obc.version>1.3</j2obc.version>
@@ -184,7 +184,7 @@
         <failureacces.version>1.0.1</failureacces.version>
 
         <guava.version>31.0.1-jre</guava.version>
-        <protobuf.version>3.19.1</protobuf.version>
+        <protobuf.version>3.19.3</protobuf.version>
 
         <guice.version>5.0.1</guice.version>
         <zxing.version>3.4.1</zxing.version>
@@ -261,7 +261,7 @@
         <junit.version>4.13.1</junit.version>
 
         <hamcrest.version>1.3</hamcrest.version>
-        <assertj.version>3.21.0</assertj.version>
+        <assertj.version>3.22.0</assertj.version>
         <mockito.version>4.2.0</mockito.version>
 
         <aspectj.version>1.9.2</aspectj.version>
