@@ -92,6 +92,8 @@
         <sparsebitset.version>1.2</sparsebitset.version>
         <zstdjni.version>1.5.1-1</zstdjni.version>
         <tica.version>2.2.1</tica.version>
+        <typescript4j.version>0.4.0</typescript4j.version>
+        <rhino.version>1.7.14</rhino.version>
 
         <h2.db.api>2.1.210</h2.db.api>
 

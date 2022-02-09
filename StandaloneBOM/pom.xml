@@ -28,6 +28,13 @@
             </dependency>
 
             <dependency>
+                <groupId>org.mozilla</groupId>
+                <artifactId>rhino</artifactId>
+                <version>${rhino.version}</version>
+            </dependency>
+
+
+            <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-processor</artifactId>
                 <version>${mapstruct.version}</version>
@@ -88,6 +95,34 @@
                 <artifactId>jna-platform</artifactId>
                 <version>${jna.version}</version>
                 <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mangofactory</groupId>
+                <artifactId>typescript4j</artifactId>
+                <version>${typescript4j.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guvaa</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-io</groupId>
+                        <artifactId>commons-io</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>commons-lang</groupId>
+                        <artifactId>commons-lang</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>commons-lang3</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>sl4fj-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>
