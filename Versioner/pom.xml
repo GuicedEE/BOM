@@ -85,7 +85,7 @@
         <http.core.version>4.4.14</http.core.version>
         <http.nio.version>4.4.14</http.nio.version>
         <jasypt.version>1.9.3</jasypt.version>
-        <slf4j.version>1.7.35</slf4j.version>
+        <slf4j.version>1.7.36</slf4j.version>
         <slf4j.log4j2.version>2.17.1</slf4j.log4j2.version>
         <bytebuddy.version>1.12.7</bytebuddy.version>
         <snakeyaml.version>1.30</snakeyaml.version>
