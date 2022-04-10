@@ -760,7 +760,7 @@
            <dependency>
                <groupId>org.apache.cxf</groupId>
                <artifactId>cxf-rt-rs-security-oauth</artifactId>
-               <version>${cxf.core.version}</version>
+               <version>${cxf.oauth.version}</version>
                <optional>true</optional>
                <exclusions>
                    <exclusion>

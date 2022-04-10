@@ -168,7 +168,7 @@
             <dependency>
                 <groupId>org.ow2.asm</groupId>
                 <artifactId>asm</artifactId>
-                <version>${asm.version}</version>
+                <version>${maven.asm.version}</version>
             </dependency>
 
             <dependency>
@@ -502,7 +502,7 @@
             <dependency>
                 <groupId>com.github.javaparser</groupId>
                 <artifactId>javaparser-core</artifactId>
-                <version>3.24.0</version>
+                <version>${javaparser-core}</version>
                 <optional>true</optional>
             </dependency>
 

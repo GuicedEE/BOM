@@ -624,7 +624,7 @@
             <dependency>
                 <groupId>org.glassfish.jaxb</groupId>
                 <artifactId>jaxb-runtime</artifactId>
-                <version>${jakarta.xml.jaxb.api.version}</version>
+                <version>${jakarta.xml.jaxb.glassfish.api.version}</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>javax.activation-api</artifactId>
@@ -637,7 +637,7 @@
             <dependency>
                 <groupId>org.glassfish.jaxb</groupId>
                 <artifactId>jaxb-core</artifactId>
-                <version>${jakarta.xml.jaxb.api.version}</version>
+                <version>${jakarta.xml.jaxb.glassfish.api.version}</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>javax.activation-api</artifactId>
@@ -650,7 +650,7 @@
             <dependency>
                 <groupId>com.sun.xml.bind</groupId>
                 <artifactId>jaxb-impl</artifactId>
-                <version>${jakarta.xml.jaxb.api.version}</version>
+                <version>${jakarta.xml.jaxb.glassfish.api.version}</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>jakarta.activation-api</artifactId>

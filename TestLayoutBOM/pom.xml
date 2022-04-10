@@ -492,7 +492,7 @@
             <dependency>
                 <groupId>io.github.bonigarcia</groupId>
                 <artifactId>selenium-jupiter</artifactId>
-                <version>4.0.1</version>
+                <version>${bonigarcia.selenium.jupiter.version}</version>
                 <scope>test</scope>
                 <exclusions>
                     <exclusion>
@@ -576,7 +576,7 @@
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-chrome-driver</artifactId>
-                <version>${selenium.version}</version>
+                <version>${selenium.drivers.version}</version>
                 <scope>test</scope>
                 <exclusions>
                     <exclusion>
@@ -660,7 +660,7 @@
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-firefox-driver</artifactId>
-                <version>${selenium.version}</version>
+                <version>${selenium.drivers.version}</version>
                 <scope>test</scope>
                 <exclusions>
                     <exclusion>
@@ -744,7 +744,7 @@
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-safari-driver</artifactId>
-                <version>${selenium.version}</version>
+                <version>${selenium.drivers.version}</version>
                 <scope>test</scope>
                 <exclusions>
                     <exclusion>
@@ -828,7 +828,7 @@
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-edge-driver</artifactId>
-                <version>${selenium.version}</version>
+                <version>${selenium.drivers.version}</version>
                 <scope>test</scope>
                 <exclusions>
                     <exclusion>
@@ -912,7 +912,7 @@
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-ie-driver</artifactId>
-                <version>${selenium.version}</version>
+                <version>${selenium.drivers.version}</version>
                 <scope>test</scope>
                 <exclusions>
                     <exclusion>
@@ -996,7 +996,7 @@
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-remote-driver</artifactId>
-                <version>${selenium.version}</version>
+                <version>${selenium.drivers.version}</version>
                 <scope>test</scope>
                 <exclusions>
                     <exclusion>

@@ -738,7 +738,7 @@
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-commons-annotations</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${maven.hibernate.annotations.version}</version>-->
+                <!--<version>${maven.hibernate.commons.annotations.version}</version>-->
             </dependency>
 
             <dependency>

@@ -23,7 +23,14 @@
        <dependencies>
 
            <dependency>
-               <groupId>org.hibernate</groupId>
+               <groupId>org.antlr</groupId>
+               <artifactId>antlr4-runtime</artifactId>
+               <version>${antlr4-runtime.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.hibernate.validator</groupId>
                <artifactId>hibernate-validator-annotation-processor</artifactId>
                <version>${maven.hibernate.validator.version}</version>
            </dependency>
@@ -31,7 +38,7 @@
            <dependency>
                <groupId>org.hibernate.common</groupId>
                <artifactId>hibernate-commons-annotations</artifactId>
-               <version>${maven.hibernate.annotations.version}</version>
+               <version>${maven.hibernate.commons.annotations.version}</version>
                <optional>true</optional>
            </dependency>
 
@@ -97,7 +104,93 @@
            </dependency>
 
            <dependency>
-               <groupId>org.hibernate</groupId>
+               <groupId>org.hibernate.orm</groupId>
+               <artifactId>hibernate-core</artifactId>
+               <version>${maven.hibernate.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>jaxb-api</artifactId>
+                       <groupId>javax.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                       <groupId>jakarta.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>hibernate-commons-annotations</artifactId>
+                       <groupId>org.hibernate.common</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.persistence-api</artifactId>
+                       <groupId>javax.persistence</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javassist</artifactId>
+                       <groupId>org.javassist</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jboss-transaction-api_1.2_spec</artifactId>
+                       <groupId>org.jboss.spec.javax.transaction</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.persistence-api</artifactId>
+                       <groupId>javax.persistence</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.persistence-api</artifactId>
+                       <groupId>jakarta.persistence</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.transaction-api</artifactId>
+                       <groupId>jakarta.transaction</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jandex</artifactId>
+                       <groupId>org.jboss</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>dom4j</artifactId>
+                       <groupId>org.dom4j</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jaxb-api</artifactId>
+                       <groupId>javax.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jaxb-runtime</artifactId>
+                       <groupId>org.glassfish.jaxb</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jboss-logging</artifactId>
+                       <groupId>org.jboss.logging</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.activation-api</artifactId>
+                       <groupId>javax.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.activation-api</artifactId>
+                       <groupId>jakarta.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.inject-api</artifactId>
+                       <groupId>jakarta.inject</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>net.bytebuddy</groupId>
+                       <artifactId>byte-buddy</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>org.glassfish.jaxb</groupId>
+                       <artifactId>jaxb-runtime</artifactId>
+                   </exclusion>
+               </exclusions>
+               <optional>true</optional>
+           </dependency>
+
+
+           <dependency>
+               <groupId>org.hibernate.orm</groupId>
                <artifactId>hibernate-jcache</artifactId>
                <version>${maven.hibernate.version}</version>
                <optional>true</optional>
@@ -123,7 +216,7 @@
            </dependency>
 
            <dependency>
-               <groupId>org.hibernate</groupId>
+               <groupId>org.hibernate.orm</groupId>
                <artifactId>hibernate-jpamodelgen</artifactId>
                <version>${maven.hibernate.version}</version>
                <optional>true</optional>
@@ -136,7 +229,7 @@
            </dependency>
 
            <dependency>
-               <groupId>org.hibernate</groupId>
+               <groupId>org.hibernate.orm</groupId>
                <artifactId>hibernate-c3p0</artifactId>
                <version>${maven.hibernate.version}</version>
                <exclusions>
@@ -196,7 +289,7 @@
            </dependency>
 
            <dependency>
-               <groupId>org.hibernate</groupId>
+               <groupId>org.hibernate.orm</groupId>
                <artifactId>hibernate-ehcache</artifactId>
                <version>${maven.hibernate.version}</version>
                <exclusions>
