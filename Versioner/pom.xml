@@ -17,17 +17,16 @@
 
         <guicedee.version>0.0.0_0-SNAPSHOT</guicedee.version>
 
-
         <maven.assembly.version>3.3.0</maven.assembly.version>
         <maven-project-info-reports-plugin.version>3.2.2</maven-project-info-reports-plugin.version>
         <maven.jar.version>3.2.2</maven.jar.version>
         <maven.clean.version>3.2.0</maven.clean.version>
         <maven.dependency.version>3.3.0</maven.dependency.version>
-        <maven.javadoc.version>3.3.2</maven.javadoc.version>
+        <maven.javadoc.version>3.4.0</maven.javadoc.version>
         <maven.deploy.version>3.0.0-M2</maven.deploy.version>
         <maven.install.version>3.0.0-M1</maven.install.version>
         <maven.source.version>3.2.1</maven.source.version>
-        <maven.site.version>3.11.0</maven.site.version>
+        <maven.site.version>3.12.0</maven.site.version>
         <maven.shade.version>3.3.0</maven.shade.version>
         <maven.compiler.version>3.10.1</maven.compiler.version>
         <maven.surefire.version>3.0.0-M6</maven.surefire.version>
@@ -58,7 +57,7 @@
         <sonar.exclusions>**bower_components,**src/test,**/test/**,**/module-info.java,**/jar-resources</sonar.exclusions>
         <sonar.host.url>https://jwebmp.com/sonarqube</sonar.host.url>
 
-        <nexus.staging.maven.plugin.version>1.6.12</nexus.staging.maven.plugin.version>
+        <nexus.staging.maven.plugin.version>1.6.13</nexus.staging.maven.plugin.version>
         <jdk.release>17</jdk.release>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <moditect.maven.plugin.version>1.0.0.RC2</moditect.maven.plugin.version>
@@ -69,18 +68,18 @@
         <gpg.passphrase></gpg.passphrase>
 
         <!-- Standalone -->
-        <lombok.version>1.18.22</lombok.version>
+        <lombok.version>1.18.24</lombok.version>
         <classmate.version>1.5.1</classmate.version>
         <dom4j.version>2.1.3</dom4j.version>
         <ehcache.version>3.10.0</ehcache.version>
         <net.sf.ehcache.version>2.10.9.2</net.sf.ehcache.version>
-        <esapi.version>2.2.3.1</esapi.version>
-        <classgraph.version>4.8.143</classgraph.version>
+        <esapi.version>2.3.0.0</esapi.version>
+        <classgraph.version>4.8.146</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
         <amqp.client.version>5.14.2</amqp.client.version>
 
         <ant.version>1.10.12</ant.version>
-        <stax.version>2.1.0-M1</stax.version>
+        <stax.version>2.1.0</stax.version>
         <stax2.api.version>4.2.1</stax2.api.version>
         <bcprov.15.version>1.68</bcprov.15.version>
         <bcprov.16.version>1.46</bcprov.16.version>
@@ -145,13 +144,13 @@
         <portlet.api.version>1.0</portlet.api.version>
 
         <xmlbeans.version>5.0.2</xmlbeans.version>
-        <fontbox.version>2.0.25</fontbox.version>
+        <fontbox.version>2.0.26</fontbox.version>
 
         <xerces.version>2.12.0</xerces.version>
 
 
         <!-- Apache CXF -->
-        <cxf.core.version>3.5.1</cxf.core.version>
+        <cxf.core.version>3.5.2</cxf.core.version>
         <cxf.oauth.version>3.4.6</cxf.oauth.version>
         <cxf.xmlbeans.version>3.1.18</cxf.xmlbeans.version>
         <alpn.api.version>1.1.3.v20160715</alpn.api.version>
@@ -169,7 +168,7 @@
 
         <velocity.engine.version>2.2</velocity.engine.version>
         <opensaml.version>4.0.1</opensaml.version>
-        <cryptacular.version>1.2.4</cryptacular.version>
+        <cryptacular.version>1.2.5</cryptacular.version>
 
         <saaj.impl>2.0.0</saaj.impl>
         <relaxng.datatype>2.3.3</relaxng.datatype>
@@ -184,14 +183,14 @@
         <jsr305.version>3.0.2</jsr305.version>
         <findbugs.annotation.version>3.0.1</findbugs.annotation.version>
         <checkerqual.version>3.21.4</checkerqual.version>
-        <errorprone.version>2.12.1</errorprone.version>
+        <errorprone.version>2.13.1</errorprone.version>
         <listenablefuture.version>9999.0-empty-to-avoid-conflict-with-guava</listenablefuture.version>
         <j2obc.version>1.3</j2obc.version>
         <animalsniffer.version>1.21</animalsniffer.version>
         <failureacces.version>1.0.1</failureacces.version>
 
         <guava.version>31.1-jre</guava.version>
-        <protobuf.version>3.20.0</protobuf.version>
+        <protobuf.version>3.20.1</protobuf.version>
 
         <guice.version>5.1.0</guice.version>
         <zxing.version>3.4.1</zxing.version>
@@ -206,20 +205,20 @@
         <jakarta.validation.version>3.0.1</jakarta.validation.version>
         <jakarta.faces.version>3.0.0</jakarta.faces.version>
         <jakarta.json.version>2.0.0</jakarta.json.version>
-        <jakarta.cdi.api.version>3.0.1</jakarta.cdi.api.version>
+        <jakarta.cdi.api.version>4.0.0</jakarta.cdi.api.version>
         <jakarta.ejb.version>4.0.0</jakarta.ejb.version>
         <jakarta.el.version>4.0.0</jakarta.el.version>
         <jakarta.jws.version>3.0.0</jakarta.jws.version>
         <jakarta.interceptor.version>2.1.0</jakarta.interceptor.version>
-        <jakarta.rs.api.version>3.0.0</jakarta.rs.api.version>
+        <jakarta.rs.api.version>3.1.0</jakarta.rs.api.version>
         <jakarta.xml.ws.api.version>3.0.0</jakarta.xml.ws.api.version>
-        <jakarta.xml.soap.api.version>2.0.1</jakarta.xml.soap.api.version>
+        <jakarta.xml.soap.api.version>3.0.0</jakarta.xml.soap.api.version>
         <jakarta.xml.ws.metro.api.version>3.0.0-M3</jakarta.xml.ws.metro.api.version>
         <jakarta.xml.jaxws.rt.version>3.0.0-M5</jakarta.xml.jaxws.rt.version>
         <jakarta.xml.jaxws.api.version>2.3.1</jakarta.xml.jaxws.api.version>
 
         <jakarta.xml.jaxb.api.version>4.0.0</jakarta.xml.jaxb.api.version>
-        <jakarta.xml.jaxb.glassfish.api.version>3.0.2</jakarta.xml.jaxb.glassfish.api.version>
+        <jakarta.xml.jaxb.glassfish.api.version>4.0.0-M4</jakarta.xml.jaxb.glassfish.api.version>
         <jakarta.xml.ws.api.version>4.0.0</jakarta.xml.ws.api.version>
         <jakarta.persistence.api.version>3.1.0</jakarta.persistence.api.version>
         <jakarta.transaction.api.version>2.0.1</jakarta.transaction.api.version>
@@ -272,7 +271,7 @@
 
         <hamcrest.version>1.3</hamcrest.version>
         <assertj.version>3.22.0</assertj.version>
-        <mockito.version>4.4.0</mockito.version>
+        <mockito.version>4.5.1</mockito.version>
 
         <aspectj.version>1.9.2</aspectj.version>
 
