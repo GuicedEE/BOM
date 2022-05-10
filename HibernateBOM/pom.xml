@@ -225,6 +225,18 @@
                        <groupId>net.bytebuddy</groupId>
                        <artifactId>byte-buddy</artifactId>
                    </exclusion>
+                   <exclusion>
+                       <groupId>javax.xml.bind</groupId>
+                       <artifactId>jaxb-api</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>org.glassfish.jaxb</groupId>
+                       <artifactId>jaxb-runtime</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>org.jboss.logging</groupId>
+                       <artifactId>jboss-logging</artifactId>
+                   </exclusion>
                </exclusions>
            </dependency>
 

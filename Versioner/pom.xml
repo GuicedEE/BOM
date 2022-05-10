@@ -18,7 +18,7 @@
         <guicedee.version>0.0.0_0-SNAPSHOT</guicedee.version>
 
         <maven.assembly.version>3.3.0</maven.assembly.version>
-        <maven-project-info-reports-plugin.version>3.2.2</maven-project-info-reports-plugin.version>
+        <maven-project-info-reports-plugin.version>3.3.0</maven-project-info-reports-plugin.version>
         <maven.jar.version>3.2.2</maven.jar.version>
         <maven.clean.version>3.2.0</maven.clean.version>
         <maven.dependency.version>3.3.0</maven.dependency.version>
@@ -26,7 +26,7 @@
         <maven.deploy.version>3.0.0-M2</maven.deploy.version>
         <maven.install.version>3.0.0-M1</maven.install.version>
         <maven.source.version>3.2.1</maven.source.version>
-        <maven.site.version>3.12.0</maven.site.version>
+        <maven.site.version>4.0.0-M1</maven.site.version>
         <maven.shade.version>3.3.0</maven.shade.version>
         <maven.compiler.version>3.10.1</maven.compiler.version>
         <maven.surefire.version>3.0.0-M6</maven.surefire.version>
@@ -89,11 +89,11 @@
         <jasypt.version>1.9.3</jasypt.version>
         <slf4j.version>1.7.36</slf4j.version>
         <slf4j.log4j2.version>2.17.2</slf4j.log4j2.version>
-        <bytebuddy.version>1.12.9</bytebuddy.version>
+        <bytebuddy.version>1.12.10</bytebuddy.version>
         <snakeyaml.version>1.30</snakeyaml.version>
         <sparsebitset.version>1.2</sparsebitset.version>
         <zstdjni.version>1.5.2-2</zstdjni.version>
-        <tica.version>2.3.0</tica.version>
+        <tica.version>2.4.0</tica.version>
         <typescript4j.version>0.4.0</typescript4j.version>
         <rhino.version>1.7.14</rhino.version>
 
@@ -108,10 +108,10 @@
 
         <!--  Hibernate -->
         <maven.hibernate.validator.version>7.0.4.Final</maven.hibernate.validator.version>
-        <maven.hibernate.version>6.0.0.Final</maven.hibernate.version>
-        <maven.hibernate.commons.annotations.version>6.0.0.Final</maven.hibernate.commons.annotations.version>
+        <maven.hibernate.version>6.0.1.Final</maven.hibernate.version>
+        <maven.hibernate.commons.annotations.version>6.0.1.Final</maven.hibernate.commons.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
-        <maven.hibernate.enhance.version>6.0.0.Final</maven.hibernate.enhance.version>
+        <maven.hibernate.enhance.version>6.0.1.Final</maven.hibernate.enhance.version>
         <antlr4-runtime.version>4.9.3</antlr4-runtime.version>
 
         <c3p0.version>0.9.5.5</c3p0.version>
@@ -161,7 +161,7 @@
         <oauth.version>20100527</oauth.version>
         <xmlschema.core.version>2.3.0</xmlschema.core.version>
         <wss4j.version>2.3.3</wss4j.version>
-        <xmlsec.version>2.3.0</xmlsec.version>
+        <xmlsec.version>3.0.0</xmlsec.version>
         <wss4j.security.common.version>2.4.1</wss4j.security.common.version>
         <wss4j.bindings.version>2.0.0-rc1</wss4j.bindings.version>
         <wss4j.policy.version>2.4.1</wss4j.policy.version>
@@ -182,7 +182,7 @@
 
         <jsr305.version>3.0.2</jsr305.version>
         <findbugs.annotation.version>3.0.1</findbugs.annotation.version>
-        <checkerqual.version>3.21.4</checkerqual.version>
+        <checkerqual.version>3.22.0</checkerqual.version>
         <errorprone.version>2.13.1</errorprone.version>
         <listenablefuture.version>9999.0-empty-to-avoid-conflict-with-guava</listenablefuture.version>
         <j2obc.version>1.3</j2obc.version>
@@ -193,7 +193,7 @@
         <protobuf.version>3.20.1</protobuf.version>
 
         <guice.version>5.1.0</guice.version>
-        <zxing.version>3.4.1</zxing.version>
+        <zxing.version>3.5.0</zxing.version>
 
         <gson.version>2.9.0</gson.version>
 
@@ -206,7 +206,7 @@
         <jakarta.faces.version>3.0.0</jakarta.faces.version>
         <jakarta.json.version>2.0.0</jakarta.json.version>
         <jakarta.cdi.api.version>4.0.0</jakarta.cdi.api.version>
-        <jakarta.ejb.version>4.0.0</jakarta.ejb.version>
+        <jakarta.ejb.version>4.0.1</jakarta.ejb.version>
         <jakarta.el.version>4.0.0</jakarta.el.version>
         <jakarta.jws.version>3.0.0</jakarta.jws.version>
         <jakarta.interceptor.version>2.1.0</jakarta.interceptor.version>
@@ -222,7 +222,7 @@
         <jakarta.xml.ws.api.version>4.0.0</jakarta.xml.ws.api.version>
         <jakarta.persistence.api.version>3.1.0</jakarta.persistence.api.version>
         <jakarta.transaction.api.version>2.0.1</jakarta.transaction.api.version>
-        <jakarta.websocket.api.version>2.0.0</jakarta.websocket.api.version>
+        <jakarta.websocket.api.version>2.1.0</jakarta.websocket.api.version>
         <jakarta.inject.api.version>2.0.0</jakarta.inject.api.version>
         <jakarta.security.sacc.api.version>1.6.1</jakarta.security.sacc.api.version>
 
@@ -257,7 +257,7 @@
         <jcabi.version>0.20.1</jcabi.version>
 
         <undertow.version>2.2.17.Final</undertow.version>
-        <xnio.version>3.8.6.Final</xnio.version>
+        <xnio.version>3.8.7.Final</xnio.version>
         <classfilewriter.version>1.2.4.Final</classfilewriter.version>
 
         <logging.processor.version>2.2.1.Final</logging.processor.version>
@@ -275,9 +275,9 @@
 
         <aspectj.version>1.9.2</aspectj.version>
 
-        <selenium.version>4.1.3</selenium.version>
-        <selenium.drivers.version>4.1.3</selenium.drivers.version>
-        <selenium.jupiter.version>4.1.3</selenium.jupiter.version>
+        <selenium.version>4.1.4</selenium.version>
+        <selenium.drivers.version>4.1.4</selenium.drivers.version>
+        <selenium.jupiter.version>4.1.4</selenium.jupiter.version>
         <bonigarcia.selenium.jupiter.version>4.1.0</bonigarcia.selenium.jupiter.version>
         <webdrivermanager.version>4.2.2</webdrivermanager.version>
 
