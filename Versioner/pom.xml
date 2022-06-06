@@ -33,7 +33,7 @@
         <maven.failsafe.version>3.0.0-M1</maven.failsafe.version>
         <maven.resources.version>3.2.0</maven.resources.version>
         <maven.release.version>3.0.0-M5</maven.release.version>
-        <maven.versions.version>2.10.0</maven.versions.version>
+        <maven.versions.version>2.11.0</maven.versions.version>
         <maven.verifyier.version>1.1</maven.verifyier.version>
         <maven.asm.version>9.3</maven.asm.version>
         <maven.gpg.version>1.6</maven.gpg.version>
@@ -109,7 +109,7 @@
         <!--  Hibernate -->
         <maven.hibernate.validator.version>7.0.4.Final</maven.hibernate.validator.version>
         <maven.hibernate.version>6.0.1.Final</maven.hibernate.version>
-        <maven.hibernate.commons.annotations.version>6.0.1.Final</maven.hibernate.commons.annotations.version>
+        <maven.hibernate.commons.annotations.version>6.0.2.Final</maven.hibernate.commons.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
         <maven.hibernate.enhance.version>6.0.1.Final</maven.hibernate.enhance.version>
         <antlr4-runtime.version>4.9.3</antlr4-runtime.version>
