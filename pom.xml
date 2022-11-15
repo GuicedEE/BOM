@@ -105,14 +105,15 @@
                 <version>${guicedee.version}</version>
 
             </dependency>
-			
-			 <dependency>
-                <groupId>com.guicedee</groupId>
-                <artifactId>nrjavaserial</artifactId>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>postgresql</artifactId>
 
                 <version>${guicedee.version}</version>
 
             </dependency>
+
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -597,6 +598,15 @@
                 <!--<version>${jms.version}</version>-->
 
             </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>wildfly-common</artifactId>
+                <version>${guicedee.version}</version>
+                <!--<version>${jms.version}</version>-->
+
+            </dependency>
+
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>

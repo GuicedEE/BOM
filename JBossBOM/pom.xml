@@ -161,7 +161,6 @@
                <optional>true</optional>
            </dependency>
 
-
            <dependency>
                <groupId>org.jboss.xnio</groupId>
                <artifactId>xnio-nio</artifactId>
