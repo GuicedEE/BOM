@@ -228,7 +228,7 @@
         <jakarta.inject.api.version>2.0.0</jakarta.inject.api.version>
         <jakarta.security.sacc.api.version>1.6.1</jakarta.security.sacc.api.version>
 
-        <jakarta.servlet.version>5.0.0</jakarta.servlet.version>
+        <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
         <jakarta.servlet.jsp.version>3.0.0</jakarta.servlet.jsp.version>
         <jakarta.servlet.jsp.api.version>3.0.0</jakarta.servlet.jsp.api.version>
         <jakarta.servlet.jsp.jstl.version>2.0.0</jakarta.servlet.jsp.jstl.version>
