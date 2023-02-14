@@ -499,6 +499,33 @@
                    </exclusion>
                </exclusions>
            </dependency>
+           <dependency>
+               <groupId>com.fasterxml.jackson.datatype</groupId>
+               <artifactId>jackson-datatype-jsr310</artifactId>
+               <version>${jackson.version}</version>
+               <exclusions>
+                   <exclusion>
+                       <artifactId>jakarta.xml.bind-api</artifactId>
+                       <groupId>jakarta.xml.bind</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>jakarta.activation-api</artifactId>
+                       <groupId>jakarta.activation</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                       <artifactId>jackson-jaxrs-base</artifactId>
+                   </exclusion>
+                   <exclusion>
+                       <artifactId>javax.ws.rs-api</artifactId>
+                       <groupId>javax.ws.rs</groupId>
+                   </exclusion>
+                   <exclusion>
+                       <groupId>ch.qos.logback</groupId>
+                       <artifactId>logback-classic</artifactId>
+                   </exclusion>
+               </exclusions>
+           </dependency>
 
        </dependencies>
     </dependencyManagement>
