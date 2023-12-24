@@ -5,13 +5,13 @@
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>versioner</artifactId>
-        <version>0.0.0_0-SNAPSHOT</version>
+        <version>2.0.0-SNAPSHOT</version>
         <relativePath>../Versioner</relativePath>
     </parent>
 
     <groupId>com.guicedee</groupId>
     <artifactId>standalone-bom</artifactId>
-    <version>0.0.0_0-SNAPSHOT</version>
+    <version>2.0.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
@@ -157,7 +157,7 @@
             <dependency>
                 <groupId>io.dropwizard.metrics</groupId>
                 <artifactId>metrics-core</artifactId>
-                <version>4.2.3</version>
+                <version>${dropwizard.metrics-core.version}</version>
                 <optional>true</optional>
                 <exclusions>
                     <exclusion>
@@ -193,14 +193,14 @@
             <dependency>
                 <groupId>xalan</groupId>
                 <artifactId>serializer</artifactId>
-                <version>2.7.2</version>
+                <version>2.7.3</version>
                 <optional>true</optional>
             </dependency>
 
             <dependency>
                 <groupId>xalan</groupId>
                 <artifactId>xalan</artifactId>
-                <version>2.7.2</version>
+                <version>2.7.3</version>
                 <optional>true</optional>
             </dependency>
 
@@ -447,14 +447,14 @@
             <dependency>
                 <groupId>org.jdom</groupId>
                 <artifactId>jdom2</artifactId>
-                <version>2.0.6</version>
+                <version>${jdom.version}</version>
                 <optional>true</optional>
             </dependency>
 
             <dependency>
                 <groupId>com.rometools</groupId>
                 <artifactId>rome</artifactId>
-                <version>1.18.0</version>
+                <version>${rome.version}</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>slf4j-api</artifactId>
@@ -471,7 +471,7 @@
             <dependency>
                 <groupId>com.rometools</groupId>
                 <artifactId>rome-utils</artifactId>
-                <version>1.18.0</version>
+                <version>${rome.version}</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>slf4j-api</artifactId>
@@ -548,7 +548,7 @@
             <dependency>
                 <groupId>net.shibboleth.utilities</groupId>
                 <artifactId>java-support</artifactId>
-                <version>7.5.1</version>
+                <version>${java-support.version}</version>
                 <optional>true</optional>
                 <exclusions>
                     <exclusion>
@@ -606,7 +606,7 @@
             <dependency>
                 <groupId>jfree</groupId>
                 <artifactId>jfreechart</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.1</version>
                 <optional>true</optional>
             </dependency>
 
@@ -637,7 +637,7 @@
             <dependency>
                 <groupId>org.xerial.snappy</groupId>
                 <artifactId>snappy-java</artifactId>
-                <version>1.1.8.4</version>
+                <version>${snappy.version}</version>
                 <optional>true</optional>
             </dependency>
 

@@ -5,66 +5,37 @@
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>versioner</artifactId>
-        <version>0.0.0_0-SNAPSHOT</version>
+        <version>2.0.0-SNAPSHOT</version>
         <relativePath>../Versioner</relativePath>
     </parent>
 
 
     <groupId>com.guicedee</groupId>
     <artifactId>fasterxml-bom</artifactId>
-    <version>0.0.0_0-SNAPSHOT</version>
+    <version>2.0.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
     <name>FasterXML BOM</name>
     <description>The BOM for FasterXML Artefacts</description>
 
-    <profiles>
-        <profile>
-            <id>jdk9</id>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.guicedee</groupId>
-                        <artifactId>standalone-bom</artifactId>
-                        <version>${guicedee.version}</version>
-                        <scope>import</scope>
-                        <type>pom</type>
-                    </dependency>
+    <dependencies>
+        <dependency>
+            <groupId>com.guicedee</groupId>
+            <artifactId>standalone-bom</artifactId>
+            <version>${guicedee.version}</version>
+            <scope>import</scope>
+            <type>pom</type>
+        </dependency>
 
-                    <dependency>
-                        <groupId>com.guicedee</groupId>
-                        <artifactId>jakarta-bom</artifactId>
-                        <version>${guicedee.version}</version>
-                        <scope>import</scope>
-                        <type>pom</type>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-        </profile>
-        <profile>
-            <id>jdk8</id>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.guicedee</groupId>
-                        <artifactId>standalone-bom</artifactId>
-                        <version>${guicedee.version}</version>
-                        <scope>import</scope>
-                        <type>pom</type>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>com.guicedee</groupId>
-                        <artifactId>jakarta-bom</artifactId>
-                        <version>${guicedee.version}</version>
-                        <scope>import</scope>
-                        <type>pom</type>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-        </profile>
-    </profiles>
+        <dependency>
+            <groupId>com.guicedee</groupId>
+            <artifactId>jakarta-bom</artifactId>
+            <version>${guicedee.version}</version>
+            <scope>import</scope>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
        <dependencies>
