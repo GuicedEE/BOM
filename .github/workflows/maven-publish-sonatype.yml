@@ -37,6 +37,7 @@ jobs:
               "password": "${secrets.SONA_PASSWORD}"
             }
           ]
+
     - name: Build with Maven
       run: mvn -B source:jar javadoc:jar package --file pom.xml
     - name: Publish to GitHub Packages
