@@ -1,6 +1,8 @@
 name: Maven Package (BOM)
 on:
   workflow_dispatch:
+env:
+  GITHUB_TOKEN: ${{ github.token }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,9 +21,75 @@ jobs:
         distribution: 'oracle'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
-    - name: Build with Maven
+    - name: Versioner
+      run: mvn -B package --file Versioner/pom.xml
+    - name: Publish Versioner
+      run: mvn deploy --file Versioner/pom.xml -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: Standalone BOM
+      run: mvn -B package --file StandaloneBOM/pom.xml
+    - name: Publish Standalone BOM
+      run: mvn deploy --file StandaloneBOM/pom.xml -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: Tests BOM
+      run: mvn -B package --file TestLayoutBOM/pom.xml
+    - name: Publish Test BOM
+      run: mvn deploy --file TestLayoutBOM/pom.xml -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: Swagger BOM
+      run: mvn -B package --file SwaggerBOM/pom.xml
+    - name: Publish Swagger BOM
+      run: mvn deploy --file SwaggerBOM/pom.xml -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: JBoss BOM
+      run: mvn -B package --file JBossBOM/pom.xml
+    - name: Publish JBoss BOM
+      run: mvn deploy --file JBossBOM/pom.xml -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: Jakarta BOM
+      run: mvn -B package --file JakartaBOM/pom.xml
+    - name: Publish Jakarta BOM
+      run: mvn deploy --file JakartaBOM/pom.xml -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: Hibernate BOM
+      run: mvn -B package --file HibernateBOM/pom.xml
+    - name: Publish Hibernate BOM
+      run: mvn deploy --file HibernateBOM/pom.xml -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: Google BOM
+      run: mvn -B package --file GoogleBOM/pom.xml
+    - name: Publish Google BOM
+      run: mvn deploy --file GoogleBOM/pom.xml -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: FasterXML BOM
+      run: mvn -B package --file FasterXMLBOM/pom.xml
+    - name: Publish FasterXML BOM
+      run: mvn deploy --file FasterXMLBOM/pom.xml -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: ApacheCXF BOM
+      run: mvn -B package --file ApacheCXFBOM/pom.xml
+    - name: Publish ApacheCXF BOM
+      run: mvn deploy --file ApacheCXFBOM/pom.xml -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: Apache BOM
+      run: mvn -B package --file ApacheBOM/pom.xml
+    - name: Publish Apache BOM
+      run: mvn deploy --file ApacheBOM/pom.xml -s $GITHUB_WORKSPACE/settings.xml
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+    - name: Guiced EE BOM
       run: mvn -B package --file pom.xml
-    - name: Publish to GitHub Packages
-      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
+    - name: Publish Guiced EE BOM
+      run: mvn deploy --file pom.xml -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
