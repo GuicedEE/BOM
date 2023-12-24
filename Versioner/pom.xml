@@ -376,6 +376,14 @@
             <name>SonaType-releases</name>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
+        <repository>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <id>shibboleth</id>
+            <name>sonatype</name>
+            <url>https://build.shibboleth.net/nexus/content/repositories/releases/</url>
+        </repository>
     </repositories>
 
     <distributionManagement>
@@ -447,43 +455,37 @@
             </activation>
             <distributionManagement>
                 <snapshotRepository>
-                    <id>sonar-snapshot</id>
+                    <id>sona-snapshot</id>
                     <name>SonarType-snapshots</name>
                     <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                 </snapshotRepository>
                 <repository>
-                    <id>sonar-release</id>
+                    <id>sona-release</id>
                     <name>SonarType-releases</name>
                     <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
             <build>
                 <plugins>
-                    <!--<plugin>
+                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
-                        <configuration>
-                            <gpgArguments>
-                                <arg>&#45;&#45;pinentry-mode</arg>
-                                <arg>loopback</arg>
-                                <arg>&#45;&#45;batch</arg>
-                            </gpgArguments>
-                            <skip>true</skip>
-                        </configuration>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
-                                <phase>install</phase>
+                                <phase>verify</phase>
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
                                 <configuration>
-                                    <skip>false</skip>
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                    </gpgArguments>
                                 </configuration>
                             </execution>
                         </executions>
-                    </plugin>-->
+                    </plugin>
                 </plugins>
             </build>
         </profile>
@@ -505,7 +507,6 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-release-plugin</artifactId>
-                        <version>2.5.3</version>
                         <configuration>
                             <tagNameFormat>@{project.version}</tagNameFormat>
                         </configuration>
