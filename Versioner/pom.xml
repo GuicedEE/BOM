@@ -12,6 +12,12 @@
     <description>Supplies the version numbers for all the dependencies in a single location</description>
 
     <properties>
+        <project.scm.baseUrl>https://github.com</project.scm.baseUrl>
+        <project.scm.repoUrl>https://maven.pkg.github.com</project.scm.repoUrl>
+        <project.scm.nameUrl>/GedMarc/GuicedEE-BOM</project.scm.nameUrl>
+
+        <project.baseUrl>${project.scm.baseUrl}${project.scm.nameUrl}</project.baseUrl>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
@@ -300,6 +306,9 @@
         <postgres.version>42.7.1</postgres.version>
         <snappy.version>1.1.10.5</snappy.version>
 
+        <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
+        <doxia-site-renderer.version>2.0.0-M16</doxia-site-renderer.version>
+
     </properties>
 
     <url>https://guicedee.com</url>
@@ -318,7 +327,9 @@
     </organization>
 
     <scm>
-        <url>https://github.com/GedMarc?tab=repositories</url>
+        <url>${project.baseUrl}${project.scm.nameUrl}.git</url>
+        <connection>${project.scm.url}</connection>
+        <developerConnection>${project.scm.url}</developerConnection>
     </scm>
 
     <developers>
@@ -331,14 +342,32 @@
     </developers>
 
     <issueManagement>
-        <system>Jira</system>
-        <url>https://www.guicedee.com/jira</url>
+        <system>Github</system>
+        <url>${project.baseUrl}/issues</url>
     </issueManagement>
 
     <ciManagement>
-        <system>TeamCity</system>
-        <url>http://guicedee.com/teamcity</url>
+        <system>Github Actions</system>
+        <url>${project.baseUrl}/actions</url>
     </ciManagement>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>${project.scm.repoUrl}${project.scm.nameUrl}</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub GedMarc Apache Maven Packages</name>
+            <url>${project.scm.repoUrl}${project.scm.nameUrl}</url>
+        </repository>
+    </distributionManagement>
+
 
     <profiles>
         <profile>
@@ -566,7 +595,7 @@
                         <dependency>
                             <groupId>org.apache.maven.doxia</groupId>
                             <artifactId>doxia-site-renderer</artifactId>
-                            <version>2.0.0-M16</version>
+                            <version>${doxia-site-renderer.version}</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -574,7 +603,7 @@
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>exec-maven-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>${exec-maven-plugin.version}</version>
                 </plugin>
 
                 <plugin>
