@@ -353,13 +353,31 @@
 
     <repositories>
         <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
             <id>github</id>
             <url>${project.scm.repoUrl}${project.scm.nameUrl}</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>sona-snapshot</id>
+            <name>SonaType-snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>sona-release</id>
+            <name>SonaType-releases</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </repositories>
+
     <distributionManagement>
         <repository>
             <id>github</id>
