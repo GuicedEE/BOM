@@ -79,11 +79,11 @@
                 <version>${jakarta.servlet.jsp.jstl.api.version}</version>
             </dependency>
 
-            <dependency>
+<!--            <dependency>
                 <groupId>com.sun.activation</groupId>
                 <artifactId>jakarta.activation</artifactId>
                 <version>${jakarta.com.sun.activation.version}</version>
-            </dependency>
+            </dependency>-->
 
             <dependency>
                 <groupId>jakarta.annotation</groupId>

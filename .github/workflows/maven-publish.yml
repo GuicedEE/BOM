@@ -1,6 +1,7 @@
 name: Maven Package (BOM)
 on:
   workflow_dispatch:
+  push:
 jobs:
   Versioner:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master

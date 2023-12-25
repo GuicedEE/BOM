@@ -68,13 +68,13 @@
 
             </dependency>
 
-            <dependency>
+<!--            <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>bouncycastle</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${bouncycastle.version}</version>-->
+                &lt;!&ndash;<version>${bouncycastle.version}</version>&ndash;&gt;
 
-            </dependency>
+            </dependency>-->
 
             <dependency>
                 <groupId>com.guicedee</groupId>
@@ -173,13 +173,13 @@
                 <version>${guicedee.version}</version>
                 <!--<version>${h2.db.api}</version>-->
             </dependency>
-
+<!--
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${lang.version}</version>-->
-            </dependency>
+                &lt;!&ndash;<version>${lang.version}</version>&ndash;&gt;
+            </dependency>-->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -209,27 +209,27 @@
                 <!--<version>${cxf.core.version}</version>-->
             </dependency>
 
-            <dependency>
+<!--            <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-compress</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${compress.version}</version>-->
-            </dependency>
+                &lt;!&ndash;<version>${compress.version}</version>&ndash;&gt;
+            </dependency>-->
 
-            <dependency>
+ <!--           <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-xmlbeans</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${xmlbeans.version}</version>-->
-            </dependency>
+                &lt;!&ndash;<version>${xmlbeans.version}</version>&ndash;&gt;
+            </dependency>-->
 
-            <dependency>
+        <!--    <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-text</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${text.version}</version>-->
+                &lt;!&ndash;<version>${text.version}</version>&ndash;&gt;
             </dependency>
-
+-->
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-codec</artifactId>
@@ -244,12 +244,12 @@
                 <!--<version>${math.version}</version>-->
             </dependency>
 
-            <dependency>
+   <!--         <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-logging</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${logging.version}</version>-->
-            </dependency>
+                &lt;!&ndash;<version>${logging.version}</version>&ndash;&gt;
+            </dependency>-->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -272,13 +272,13 @@
                 <!--<version>${poi.version}</version>-->
             </dependency>
 
-            <dependency>
+   <!--         <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${io.version}</version>-->
+                &lt;!&ndash;<version>${io.version}</version>&ndash;&gt;
             </dependency>
-
+-->
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-fileupload</artifactId>
@@ -477,19 +477,19 @@
                 <!--<version>${jakarta.security.sacc.api.version}</version>-->
             </dependency>
 
-            <dependency>
+ <!--           <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>log4j-core</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${log4j.version}</version>-->
-            </dependency>
+                &lt;!&ndash;<version>${log4j.version}</version>&ndash;&gt;
+            </dependency>-->
 
-            <dependency>
+  <!--          <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>slf4j</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${slf4j.version}</version>-->
-            </dependency>
+                &lt;!&ndash;<version>${slf4j.version}</version>&ndash;&gt;
+            </dependency>-->
 
             <!-- Hibernate -->
             <dependency>
