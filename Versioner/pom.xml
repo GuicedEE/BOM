@@ -16,7 +16,6 @@
         <project.scm.repoUrl>https://maven.pkg.github.com</project.scm.repoUrl>
         <project.scm.nameUrl>/GuicedEE/GuicedEE-BOM</project.scm.nameUrl>
         <project.scm.packages>/GuicedEE/Packages</project.scm.packages>
-
         <project.baseUrl>${project.scm.baseUrl}${project.scm.nameUrl}</project.baseUrl>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -330,7 +329,7 @@
     </organization>
 
     <scm>
-        <url>${project.baseUrl}${project.scm.nameUrl}.git</url>
+        <url>${project.baseUrl}.git</url>
         <connection>${project.scm.url}</connection>
         <developerConnection>${project.scm.url}</developerConnection>
     </scm>
@@ -346,31 +345,13 @@
 
     <issueManagement>
         <system>Github</system>
-        <url>${project.baseUrl}${project.scm.nameUrl}/issues</url>
+        <url>${project.baseUrl}/issues</url>
     </issueManagement>
 
     <ciManagement>
         <system>Github Actions</system>
-        <url>${project.baseUrl}${project.scm.nameUrl}/actions</url>
+        <url>${project.baseUrl}/actions</url>
     </ciManagement>
-
-    <repositories>
-        <repository>
-            <id>packages</id>
-            <url>${project.scm.repoUrl}${project.scm.packages}</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <id>shibboleth</id>
-            <name>shibboleth</name>
-            <url>https://build.shibboleth.net/nexus/content/repositories/releases/</url>
-        </repository>
-    </repositories>
 
     <distributionManagement>
         <repository>
@@ -704,6 +685,12 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>flatten-maven-plugin</artifactId>
                     <version>${flatten-maven-plugin.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>3.1.0</version>
                 </plugin>
 
             </plugins>

@@ -28,13 +28,6 @@
             </dependency>
 
             <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.mail</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.mail.version}</version>-->
-            </dependency>
-
-            <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-servlets-request-scoper</artifactId>
                 <version>${guicedee.version}</version>
@@ -75,15 +68,6 @@
 
             </dependency>
 
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.xml.ws-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.xml.jaxws.api.version}</version>-->
-            </dependency>
-
-
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>bouncycastle</artifactId>
@@ -118,13 +102,6 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>btm</artifactId>
-                <version>${guicedee.version}</version>
-
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.servlets</groupId>
-                <artifactId>guiced-servlets-jsf</artifactId>
                 <version>${guicedee.version}</version>
 
             </dependency>
@@ -189,46 +166,12 @@
                 <scope>compile</scope>
             </dependency>
 
-
-            <!-- Web Service Modules-->
-            <dependency>
-                <groupId>com.guicedee.servlets</groupId>
-                <artifactId>guiced-primefaces</artifactId>
-                <version>${guicedee.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>primefaces</artifactId>
-                <version>${guicedee.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>primefaces-extensions</artifactId>
-                <version>${guicedee.version}</version>
-            </dependency>
-
             <!-- Third Party Services -->
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>h2</artifactId>
                 <version>${guicedee.version}</version>
                 <!--<version>${h2.db.api}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.annotation-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.annotation.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.ws.rs-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.rs.api.version}</version>-->
             </dependency>
 
             <dependency>
@@ -252,15 +195,6 @@
                 <!--<version>${openpdf.version}</version>-->
             </dependency>
 
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>typescript4j</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${openpdf.version}</version>-->
-            </dependency>
-
-
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>apache-poi-ooxml</artifactId>
@@ -273,13 +207,6 @@
                 <artifactId>org.apache.cxf</artifactId>
                 <version>${guicedee.version}</version>
                 <!--<version>${cxf.core.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>java.ws.rs</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.rs.api.version}</version>-->
             </dependency>
 
             <dependency>
@@ -368,20 +295,6 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.activation</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.activation.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.jws-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.jws.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
                 <artifactId>org.apache.fop</artifactId>
                 <version>${guicedee.version}</version>
                 <!--<version>${fop.version}</version>-->
@@ -425,14 +338,6 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
-                <artifactId>javax.inject</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.inject.api.version}</version>-->
-
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
                 <artifactId>jcache</artifactId>
                 <version>${guicedee.version}</version>
             </dependency>
@@ -443,35 +348,6 @@
                 <version>${guicedee.version}</version>
                 <!--<version>${org.json.version}</version>-->
             </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>cdi-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.cdi.api.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.xml.bind-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.xml.jaxb.api.version}</version>-->
-            </dependency>
-
-            <!--
-                        <dependency>
-                            <groupId>com.guicedee.services</groupId>
-                            <artifactId>jstl</artifactId>
-                            <version>${guicedee.version}</version>
-
-                        </dependency>-->
-
-            <!--<dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>servlet</artifactId>
-                <version>${guicedee.version}</version>
-
-            </dependency>-->
 
             <dependency>
                 <groupId>com.entityassist</groupId>
@@ -518,13 +394,6 @@
                 <version>${guicedee.version}</version>
                 <!--<version>${hazelcast.hibernate.version}</version>-->
             </dependency>
-            <!--
-                        <dependency>
-                            <groupId>com.guicedee.services</groupId>
-                            <artifactId>hazelcast-client</artifactId>
-
-                            <version>${guicedee.version}</version>
-                        </dependency>-->
 
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
@@ -578,13 +447,6 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.websocket-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.websocket.api.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
                 <artifactId>mssql-jdbc</artifactId>
                 <version>${guicedee.version}</version>
                 <!--<version>${mssql.jdbc}</version>-->
@@ -629,27 +491,6 @@
                 <!--<version>${slf4j.version}</version>-->
             </dependency>
 
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jfreechart</artifactId>
-
-                <version>${guicedee.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.servlet.jsp.jstl.api.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>ejb-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.ejb.version}</version>-->
-            </dependency>
-
             <!-- Hibernate -->
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -662,13 +503,6 @@
                 <artifactId>zstd-jni</artifactId>
                 <version>${guicedee.version}</version>
                 <!--<version>${zstdjni.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.persistence-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.persistence.api.version}</version>-->
             </dependency>
 
             <dependency>
@@ -735,13 +569,6 @@
                 <artifactId>jboss-logmanager</artifactId>
                 <version>${guicedee.version}</version>
                 <!--<version>${jbosslog.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.xml.soap-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.xml.soap.api.version}</version>-->
             </dependency>
 
             <dependency>
@@ -828,48 +655,10 @@
                 <!--<version>${undertow.version}</version>-->
             </dependency>
 
-            <!-- javax side -->
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.servlet-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.servlet.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>java.servlet-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.servlet.version}</version>-->
-            </dependency>
-
-
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>amqp-client</artifactId>
                 <version>${guicedee.version}</version>
-            </dependency>
-
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>gson</artifactId>
-                <version>${guicedee.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.validation-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.validation.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>javax.activation</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.activation.version}</version>-->
             </dependency>
 
             <dependency>
@@ -882,37 +671,9 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.el</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.el.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>jakarta.servlet.jsp-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.servlet.jsp.api.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
                 <artifactId>mapstruct</artifactId>
                 <version>${guicedee.version}</version>
                 <!--<version>${mapstruct.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>interceptor-api</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.interceptor.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>javax.faces</artifactId>
-                <version>${guicedee.version}</version>
-                <!--<version>${jakarta.faces.version}</version>-->
             </dependency>
 
             <dependency>
@@ -971,11 +732,13 @@
                 <!--<version>${io.swagger.version}</version>-->
             </dependency>
 
+<!--
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>xalan</artifactId>
                 <version>${guicedee.version}</version>
             </dependency>
+-->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
