@@ -8,6 +8,7 @@ jobs:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     with:
       baseDir: 'Versioner'
+      name: 'Versioner'
   build:
     runs-on: ubuntu-latest
     permissions:
