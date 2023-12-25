@@ -7,7 +7,7 @@ jobs:
   call-workflow-1:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     with:
-      baseDir: 'Versioner'
+      baseDir: 'Versioner/'
       name: 'Versioner'
   build:
     runs-on: ubuntu-latest
