@@ -23,6 +23,8 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
         <guicedee.version>2.0.0-SNAPSHOT</guicedee.version>
+        <expressly.version>5.0.0</expressly.version>
+
 
         <maven.assembly.version>3.4.2</maven.assembly.version>
         <maven-project-info-reports-plugin.version>3.4.1</maven-project-info-reports-plugin.version>
@@ -59,7 +61,7 @@
         <license.dir>${basedir}</license.dir>
 
         <sonarqube.version>3.8.0.2131</sonarqube.version>
-        <java-support.version>8.0.0</java-support.version>
+        <java-support.version>8.4.0</java-support.version>
 
         <jacoco.version>0.8.10</jacoco.version>
         <sonar.exclusions>**bower_components,**src/test,**/test/**,**/module-info.java,**/jar-resources
@@ -112,24 +114,24 @@
         <nrjavaserial.version>5.2.1</nrjavaserial.version>
         <jna.version>5.14.0</jna.version>
 
-        <javassist.version>3.30.1-GA</javassist.version>
+        <javassist.version>3.30.2-GA</javassist.version>
         <spotbugs.version>4.8.3</spotbugs.version>
 
         <bouncycastle.version>1.68</bouncycastle.version>
 
         <!--  Hibernate -->
-        <maven.hibernate.validator.version>8.0.0.Final</maven.hibernate.validator.version>
-        <maven.hibernate.version>6.1.7.Final</maven.hibernate.version>
+        <maven.hibernate.validator.version>8.0.1.Final</maven.hibernate.validator.version>
+        <maven.hibernate.version>6.4.1.Final</maven.hibernate.version>
         <maven.hibernate.commons.annotations.version>6.0.6.Final</maven.hibernate.commons.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
-        <maven.hibernate.enhance.version>6.1.7.Final</maven.hibernate.enhance.version>
-        <antlr4-runtime.version>4.11.1</antlr4-runtime.version>
+        <maven.hibernate.enhance.version>6.4.1.Final</maven.hibernate.enhance.version>
+        <antlr4-runtime.version>4.13.1</antlr4-runtime.version>
 
         <c3p0.version>0.9.5.5</c3p0.version>
         <mchange.version>0.2.20</mchange.version>
-        <typesafe.version>1.4.2</typesafe.version>
+        <typesafe.version>1.4.3</typesafe.version>
 
-        <hazelcast.version>5.2.1</hazelcast.version>
+        <hazelcast.version>5.3.6</hazelcast.version>
         <hazelcast.hibernate.version>5.1.0</hazelcast.hibernate.version>
 
         <!-- Apache -->

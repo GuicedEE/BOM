@@ -23,6 +23,12 @@
        <dependencies>
 
            <dependency>
+               <groupId>org.glassfish.expressly</groupId>
+               <artifactId>expressly</artifactId>
+               <version>${expressly.version}</version>
+           </dependency>
+
+           <dependency>
                <groupId>com.guicedee</groupId>
                <artifactId>standalone-bom</artifactId>
                <version>${guicedee.version}</version>
