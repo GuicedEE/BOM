@@ -4,6 +4,10 @@ on:
 env:
   GITHUB_TOKEN: ${{ github.token }}
 jobs:
+  call-workflow-1:
+    uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    with:
+      baseDir: 'Versioner'
   build:
     runs-on: ubuntu-latest
     permissions:
