@@ -14,7 +14,8 @@
     <properties>
         <project.scm.baseUrl>https://github.com</project.scm.baseUrl>
         <project.scm.repoUrl>https://maven.pkg.github.com</project.scm.repoUrl>
-        <project.scm.nameUrl>/GedMarc/GuicedEE-BOM</project.scm.nameUrl>
+        <project.scm.nameUrl>/GuicedEE/GuicedEE-BOM</project.scm.nameUrl>
+        <project.scm.packages>/GuicedEE/Packages</project.scm.packages>
 
         <project.baseUrl>${project.scm.baseUrl}${project.scm.nameUrl}</project.baseUrl>
 
@@ -322,8 +323,8 @@
     </licenses>
 
     <organization>
-        <name>Marc Magon</name>
-        <url>http://jwebmp.com</url>
+        <name>Guiced EE</name>
+        <url>http://guicedee.com</url>
     </organization>
 
     <scm>
@@ -364,6 +365,13 @@
             </snapshots>
         </repository>
         <repository>
+            <id>packages</id>
+            <url>${project.scm.repoUrl}${project.scm.packages}</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
             <id>sona-snapshot</id>
             <name>SonaType-snapshots</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
@@ -389,8 +397,8 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>GitHub GedMarc Apache Maven Packages</name>
-            <url>${project.scm.repoUrl}${project.scm.nameUrl}</url>
+            <name>GitHub Guiced EE Packages</name>
+            <url>${project.scm.repoUrl}${project.scm.packages}</url>
         </repository>
     </distributionManagement>
 
