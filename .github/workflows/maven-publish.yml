@@ -1,11 +1,14 @@
 name: Maven Package (BOM)
 on:
   workflow_dispatch:
-env:
-  GITHUB_TOKEN: ${{ github.token }}
 jobs:
   Versioner:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     with:
       baseDir: 'Versioner/'
       name: 'Versioner'
+    secrets:
+      USERNAME: ${{secrets.USERNAME}}
+      USER_TOKEN: ${{secrets.USER_TOKEN}}
+      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
+      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
