@@ -358,13 +358,6 @@
             <url>https://repo1.maven.org/maven2</url>
         </repository>
         <repository>
-            <id>github</id>
-            <url>${project.scm.repoUrl}${project.scm.nameUrl}</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
             <id>packages</id>
             <url>${project.scm.repoUrl}${project.scm.packages}</url>
             <snapshots>
@@ -401,7 +394,6 @@
             <url>${project.scm.repoUrl}${project.scm.packages}</url>
         </repository>
     </distributionManagement>
-
 
     <profiles>
         <profile>
