@@ -307,13 +307,13 @@
             </dependency>
 
 
-            <dependency>
+   <!--         <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>byte-buddy</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${bytebuddy.version}</version>-->
+                &lt;!&ndash;<version>${bytebuddy.version}</version>&ndash;&gt;
             </dependency>
-
+-->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -564,12 +564,14 @@
                 <version>${guicedee.version}</version>
             </dependency>
 
+<!--
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jboss-logmanager</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${jbosslog.version}</version>-->
+                &lt;!&ndash;<version>${jbosslog.version}</version>&ndash;&gt;
             </dependency>
+-->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -592,20 +594,20 @@
                 <!--<version>${jandex.version}</version>-->
             </dependency>
 
-            <dependency>
+  <!--          <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>dom4j</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${dom4j.version}</version>-->
+                &lt;!&ndash;<version>${dom4j.version}</version>&ndash;&gt;
             </dependency>
-
-            <dependency>
+-->
+  <!--          <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jaxen</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${jaxen.version}</version>-->
+                &lt;!&ndash;<version>${jaxen.version}</version>&ndash;&gt;
             </dependency>
-
+-->
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>guava</artifactId>
