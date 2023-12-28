@@ -128,6 +128,11 @@
                 <version>${jakarta.el.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>jakarta.jms</groupId>
+                <artifactId>jakarta.jms-api</artifactId>
+                <version>${jakarta.jms.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>jakarta.ws.rs</groupId>

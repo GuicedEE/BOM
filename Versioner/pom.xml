@@ -261,6 +261,7 @@
         <qdox.version>2.0.0</qdox.version>
         <jcache.api.version>1.1.1</jcache.api.version>
         <jms.version>1.1.1</jms.version>
+        <jakarta.jms.version>3.1.0</jakarta.jms.version>
 
         <dropwizard.metrics-core.version>4.2.23</dropwizard.metrics-core.version>
         <jdom.version>2.0.6.1</jdom.version>
