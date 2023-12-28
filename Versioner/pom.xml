@@ -317,6 +317,12 @@
         <doxia-site-renderer.version>2.0.0-M16</doxia-site-renderer.version>
         <gson.version>2.10.1</gson.version>
         <waffle-jna.version>3.3.0</waffle-jna.version>
+        <javax.money.moneta.version>1.4.2</javax.money.moneta.version>
+        <javax.money.version>1.1</javax.money.version>
+        <javafx.version>21.0.1</javafx.version>
+        <ojdbc.version>23.3.0.23.09</ojdbc.version>
+        <joda.time.version>2.12.5</joda.time.version>
+        <paranamer.version>2.8</paranamer.version>
 
     </properties>
 
@@ -698,6 +704,27 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
                     <version>3.1.0</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.hibernate.orm.tooling</groupId>
+                    <artifactId>hibernate-enhance-maven-plugin</artifactId>
+                    <version>${maven.hibernate.enhance.version}</version>
+                    <executions>
+                        <execution>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>enhance</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <failOnError>false</failOnError>
+                        <enableLazyInitialization>true</enableLazyInitialization>
+                        <enableDirtyTracking>false</enableDirtyTracking>
+                        <enableAssociationManagement>true</enableAssociationManagement>
+                        <enableExtendedEnhancement>true</enableExtendedEnhancement>
+                    </configuration>
                 </plugin>
 
             </plugins>
