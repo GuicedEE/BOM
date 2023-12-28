@@ -191,7 +191,7 @@
 
         <!-- FasterXML  -->
         <woodstox.version>6.5.1</woodstox.version>
-        <jackson.version>2.16.0</jackson.version>
+        <jackson.version>2.16.1</jackson.version>
 
         <!-- Google -->
 
@@ -264,7 +264,7 @@
         <dropwizard.metrics-core.version>4.2.23</dropwizard.metrics-core.version>
         <jdom.version>2.0.6.1</jdom.version>
 
-        <mssql.jdbc>11.2.1</mssql.jdbc>
+        <mssql.jdbc>12.4.2</mssql.jdbc>
         <mssql.driver.jdbc>11.2.0</mssql.driver.jdbc>
 
         <!-- JBoss -->
@@ -314,6 +314,8 @@
 
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
         <doxia-site-renderer.version>2.0.0-M16</doxia-site-renderer.version>
+        <gson.version>2.10.1</gson.version>
+        <waffle-jna.version>3.3.0</waffle-jna.version>
 
     </properties>
 

@@ -48,6 +48,13 @@
             </dependency>
 
             <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>guice-inject-client</artifactId>
+                <version>${guicedee.version}</version>
+
+            </dependency>
+
+            <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>cache-api</artifactId>
                 <version>${guicedee.version}</version>
@@ -167,12 +174,12 @@
             </dependency>
 
             <!-- Third Party Services -->
-            <dependency>
+<!--            <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>h2</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${h2.db.api}</version>-->
-            </dependency>
+                &lt;!&ndash;<version>${h2.db.api}</version>&ndash;&gt;
+            </dependency>-->
 <!--
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -498,12 +505,12 @@
                 <version>${guicedee.version}</version>
             </dependency>
 
-            <dependency>
+<!--            <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>zstd-jni</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${zstdjni.version}</version>-->
-            </dependency>
+                &lt;!&ndash;<version>${zstdjni.version}</version>&ndash;&gt;
+            </dependency>-->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>

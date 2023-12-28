@@ -37,8 +37,14 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>jul-to-slf4j</artifactId>
                 <version>${slf4j.version}</version>
-                <optional>true</optional>
             </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>org.mapstruct</groupId>
@@ -410,6 +416,19 @@
                 <version>${bcprov.18.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.waffle</groupId>
+                <artifactId>waffle-jna</artifactId>
+                <version>${waffle-jna.version}</version>
+                <optional>true</optional>
+            </dependency>
+
 
             <!--      <dependency>
                       <groupId>org.bouncycastle</groupId>
@@ -670,10 +689,6 @@
                     <exclusion>
                         <groupId>com.github.luben</groupId>
                         <artifactId>zstd-jni</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-api</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
