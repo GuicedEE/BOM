@@ -120,14 +120,12 @@
                 <groupId>com.google.errorprone</groupId>
                 <artifactId>error_prone_annotations</artifactId>
                 <version>${errorprone.version}</version>
-                <optional>true</optional>
             </dependency>
 
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>listenablefuture</artifactId>
                 <version>${listenablefuture.version}</version>
-                <optional>true</optional>
             </dependency>
 
             <dependency>
@@ -141,16 +139,12 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>animal-sniffer-annotations</artifactId>
                 <version>${animalsniffer.version}</version>
-                <optional>true</optional>
-                <scope>provided</scope>
             </dependency>
 
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>failureaccess</artifactId>
                 <version>${failureacces.version}</version>
-                <optional>true</optional>
-                <scope>provided</scope>
             </dependency>
 
             <dependency>
