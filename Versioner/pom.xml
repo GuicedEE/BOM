@@ -323,6 +323,10 @@
         <ojdbc.version>23.3.0.23.09</ojdbc.version>
         <joda.time.version>2.12.5</joda.time.version>
         <paranamer.version>2.8</paranamer.version>
+        <offheap.version>2.5.5</offheap.version>
+        <osgi.version>8.0.0</osgi.version>
+        <osgi.annotations.version>1.5.1</osgi.annotations.version>
+        <terracota.statistics.version>2.1.2</terracota.statistics.version>
 
     </properties>
 

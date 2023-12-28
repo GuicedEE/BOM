@@ -156,6 +156,39 @@
             </dependency>
 
             <dependency>
+                <groupId>org.terracotta</groupId>
+                <artifactId>offheap-store</artifactId>
+                <version>${offheap.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.terracotta</groupId>
+                <artifactId>statistics</artifactId>
+                <version>${terracota.statistics.version}</version>
+                <optional>true</optional>
+                <scope>provided</scope>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>osgi.core</artifactId>
+                <version>${osgi.version}</version>
+                <scope>provided</scope>
+                <optional>true</optional>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.osgi/org.osgi.service.component.annotations -->
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>org.osgi.service.component.annotations</artifactId>
+                <version>${osgi.annotations.version}</version>
+                <scope>provided</scope>
+                <optional>true</optional>
+            </dependency>
+
+
+            <dependency>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-base</artifactId>
                 <version>${javafx.version}</version>

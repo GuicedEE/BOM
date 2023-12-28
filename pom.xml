@@ -165,14 +165,14 @@
                 <scope>compile</scope>
             </dependency>
 
-            <dependency>
+         <!--   <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-persistence-ehcache</artifactId>
                 <version>${guicedee.version}</version>
 
                 <scope>compile</scope>
             </dependency>
-
+-->
             <!-- Third Party Services -->
 <!--            <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -437,12 +437,12 @@
 
             </dependency>
 
-            <dependency>
+       <!--     <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>ehcache</artifactId>
                 <version>${guicedee.version}</version>
 
-            </dependency>
+            </dependency>-->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -519,13 +519,13 @@
                 <!--<version>${maven.hibernate.version}</version>-->
             </dependency>
 
-            <dependency>
+     <!--       <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-ehcache</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${maven.hibernate.version}</version>-->
+                &lt;!&ndash;<version>${maven.hibernate.version}</version>&ndash;&gt;
             </dependency>
-
+-->
 
         <!--    <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -571,14 +571,12 @@
                 <version>${guicedee.version}</version>
             </dependency>
 
-<!--
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jboss-logmanager</artifactId>
                 <version>${guicedee.version}</version>
-                &lt;!&ndash;<version>${jbosslog.version}</version>&ndash;&gt;
+                <!--<version>${jbosslog.version}</version>-->
             </dependency>
--->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
