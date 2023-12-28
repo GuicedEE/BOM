@@ -50,30 +50,20 @@
                <version>${maven.hibernate.validator.version}</version>
            </dependency>
 
+<!--
            <dependency>
                <groupId>org.hibernate.common</groupId>
                <artifactId>hibernate-commons-annotations</artifactId>
                <version>${maven.hibernate.commons.annotations.version}</version>
                <optional>true</optional>
            </dependency>
+-->
 
            <dependency>
                <groupId>org.hibernate</groupId>
                <artifactId>hibernate-core</artifactId>
                <version>${maven.hibernate.version}</version>
                <exclusions>
-                   <exclusion>
-                       <artifactId>jaxb-api</artifactId>
-                       <groupId>javax.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>hibernate-commons-annotations</artifactId>
-                       <groupId>org.hibernate.common</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.persistence-api</artifactId>
-                       <groupId>javax.persistence</groupId>
-                   </exclusion>
                    <exclusion>
                        <artifactId>javassist</artifactId>
                        <groupId>org.javassist</groupId>
@@ -83,10 +73,6 @@
                        <groupId>org.jboss.spec.javax.transaction</groupId>
                    </exclusion>
                    <exclusion>
-                       <artifactId>javax.persistence-api</artifactId>
-                       <groupId>javax.persistence</groupId>
-                   </exclusion>
-                   <exclusion>
                        <artifactId>jandex</artifactId>
                        <groupId>org.jboss</groupId>
                    </exclusion>
@@ -94,28 +80,14 @@
                        <artifactId>dom4j</artifactId>
                        <groupId>org.dom4j</groupId>
                    </exclusion>
-                   <exclusion>
-                       <artifactId>jaxb-api</artifactId>
-                       <groupId>javax.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jaxb-runtime</artifactId>
-                       <groupId>org.glassfish.jaxb</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jboss-logging</artifactId>
-                       <groupId>org.jboss.logging</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.activation-api</artifactId>
-                       <groupId>javax.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
-                   </exclusion>
                </exclusions>
                <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.hibernate.common</groupId>
+               <artifactId>hibernate-commons-annotations</artifactId>
+               <version>${maven.hibernate.commons.annotations.version}</version>
            </dependency>
 
            <dependency>
@@ -124,20 +96,8 @@
                <version>${maven.hibernate.version}</version>
                <exclusions>
                    <exclusion>
-                       <artifactId>jaxb-api</artifactId>
-                       <groupId>javax.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
                        <artifactId>hibernate-commons-annotations</artifactId>
                        <groupId>org.hibernate.common</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.persistence-api</artifactId>
-                       <groupId>javax.persistence</groupId>
                    </exclusion>
                    <exclusion>
                        <artifactId>javassist</artifactId>
@@ -148,56 +108,8 @@
                        <groupId>org.jboss.spec.javax.transaction</groupId>
                    </exclusion>
                    <exclusion>
-                       <artifactId>javax.persistence-api</artifactId>
-                       <groupId>javax.persistence</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.persistence-api</artifactId>
-                       <groupId>jakarta.persistence</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.transaction-api</artifactId>
-                       <groupId>jakarta.transaction</groupId>
-                   </exclusion>
-                   <exclusion>
                        <artifactId>jandex</artifactId>
                        <groupId>org.jboss</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>dom4j</artifactId>
-                       <groupId>org.dom4j</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jaxb-api</artifactId>
-                       <groupId>javax.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jaxb-runtime</artifactId>
-                       <groupId>org.glassfish.jaxb</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jboss-logging</artifactId>
-                       <groupId>org.jboss.logging</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.activation-api</artifactId>
-                       <groupId>javax.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.inject-api</artifactId>
-                       <groupId>jakarta.inject</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.glassfish.jaxb</groupId>
-                       <artifactId>jaxb-runtime</artifactId>
                    </exclusion>
                </exclusions>
                <optional>true</optional>
@@ -209,12 +121,6 @@
                <artifactId>hibernate-jcache</artifactId>
                <version>${maven.hibernate.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
@@ -222,12 +128,6 @@
                <artifactId>hibernate-validator</artifactId>
                <version>${maven.hibernate.validator.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
@@ -235,44 +135,12 @@
                <artifactId>hibernate-jpamodelgen</artifactId>
                <version>${maven.hibernate.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>javax.xml.bind</groupId>
-                       <artifactId>jaxb-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.glassfish.jaxb</groupId>
-                       <artifactId>jaxb-runtime</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.jboss.logging</groupId>
-                       <artifactId>jboss-logging</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
                <groupId>org.hibernate.orm</groupId>
                <artifactId>hibernate-c3p0</artifactId>
                <version>${maven.hibernate.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>org.hibernate</groupId>
-                       <artifactId>hibernate-core</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.jboss.logging</groupId>
-                       <artifactId>jboss-logging</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
-                   </exclusion>
-               </exclusions>
                <optional>true</optional>
            </dependency>
 
@@ -281,12 +149,6 @@
                <artifactId>c3p0</artifactId>
                <version>${c3p0.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
@@ -294,12 +156,6 @@
                <artifactId>mchange-commons-java</artifactId>
                <version>${mchange.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
@@ -307,12 +163,6 @@
                <artifactId>config</artifactId>
                <version>${typesafe.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
@@ -325,16 +175,8 @@
                        <artifactId>hibernate-core</artifactId>
                    </exclusion>
                    <exclusion>
-                       <groupId>org.jboss.logging</groupId>
-                       <artifactId>jboss-logging</artifactId>
-                   </exclusion>
-                   <exclusion>
                        <groupId>net.sf.ehcache</groupId>
                        <artifactId>ehcache</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
                    </exclusion>
                </exclusions>
                <optional>true</optional>
@@ -344,12 +186,7 @@
                <groupId>org.hibernate.orm.tooling</groupId>
                <artifactId>hibernate-enhance-maven-plugin</artifactId>
                <version>${maven.hibernate.enhance.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
-                   </exclusion>
-               </exclusions>
+               <scope>provided</scope>
            </dependency>
 
            <dependency>
@@ -357,12 +194,6 @@
                <artifactId>hazelcast</artifactId>
                <version>${hazelcast.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
@@ -370,12 +201,6 @@
                <artifactId>hazelcast-hibernate53</artifactId>
                <version>${hazelcast.hibernate.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>net.bytebuddy</groupId>
-                       <artifactId>byte-buddy</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
        </dependencies>

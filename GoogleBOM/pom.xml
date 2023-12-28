@@ -56,10 +56,6 @@
                         <groupId>com.google.guava</groupId>
                         <artifactId>guava</artifactId>
                     </exclusion>
-                    <exclusion>
-                        <groupId>javax.inject</groupId>
-                        <artifactId>javax.inject</artifactId>
-                    </exclusion>
                 </exclusions>
             </dependency>
 
@@ -117,6 +113,7 @@
                 <artifactId>checker-qual</artifactId>
                 <version>${checkerqual.version}</version>
                 <optional>true</optional>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
@@ -145,6 +142,7 @@
                 <artifactId>animal-sniffer-annotations</artifactId>
                 <version>${animalsniffer.version}</version>
                 <optional>true</optional>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
@@ -152,6 +150,7 @@
                 <artifactId>failureaccess</artifactId>
                 <version>${failureacces.version}</version>
                 <optional>true</optional>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
@@ -166,36 +165,6 @@
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
                 <optional>true</optional>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>animal-sniffer-annotations</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.google.j2objc</groupId>
-                        <artifactId>j2objc-annotations</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.google.errorprone</groupId>
-                        <artifactId>error_prone_annotations</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.checkerframework</groupId>
-                        <artifactId>checker-qual</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.google.code.findbugs</groupId>
-                        <artifactId>jsr305</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.google.guava</groupId>
-                        <artifactId>failureaccess</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.google.guava</groupId>
-                        <artifactId>listenablefuture</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.google.zxing</groupId>

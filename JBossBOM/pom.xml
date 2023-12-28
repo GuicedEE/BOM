@@ -121,25 +121,13 @@
                 <optional>true</optional>
             </dependency>
 
+
+
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-slf4j-impl</artifactId>
                 <version>${log4j.version}</version>
                 <optional>true</optional>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>log4j-core</artifactId>
-                        <groupId>org.apache.logging.log4j</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>log4j-api</artifactId>
-                        <groupId>org.apache.logging.log4j</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>jakarta.xml.soap</groupId>
-                        <artifactId>jakarta.xml.soap-api</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
 
             <dependency>
@@ -189,16 +177,6 @@
                 <artifactId>undertow-servlet</artifactId>
                 <version>${undertow.version}</version>
                 <optional>true</optional>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.jboss.spec.javax.annotation</groupId>
-                        <artifactId>jboss-annotations-api_1.3_spec</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.jboss.spec.javax.servlet</groupId>
-                        <artifactId>jboss-servlet-api_4.0_spec</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
 
             <dependency>
@@ -206,20 +184,6 @@
                 <artifactId>undertow-websockets-jsr</artifactId>
                 <version>${undertow.version}</version>
                 <optional>true</optional>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.jboss.spec.javax.websocket</groupId>
-                        <artifactId>jboss-websocket-api_1.1_spec</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.jboss.xnio</groupId>
-                        <artifactId>xnio-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.jboss.threads</groupId>
-                        <artifactId>jboss-threads</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
 
             <dependency>

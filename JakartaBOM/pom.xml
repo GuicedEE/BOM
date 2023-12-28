@@ -50,6 +50,12 @@
             </dependency>
 
             <dependency>
+                <groupId>jakarta.json.bind</groupId>
+                <artifactId>jakarta.json.bind-api</artifactId>
+                <version>${jakarta.json.bind.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.glassfish</groupId>
                 <artifactId>jakarta.faces</artifactId>
                 <version>${glassfish.faces.version}</version>

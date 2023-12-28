@@ -527,12 +527,12 @@
             </dependency>
 
 
-            <dependency>
+        <!--    <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-enhance-maven-plugin</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${maven.hibernate.enhance.version}</version>-->
-            </dependency>
+                &lt;!&ndash;<version>${maven.hibernate.enhance.version}</version>&ndash;&gt;
+            </dependency>-->
 
 
             <dependency>
@@ -736,7 +736,7 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
-                <artifactId>swagger</artifactId>
+                <artifactId>openapi</artifactId>
                 <version>${guicedee.version}</version>
                 <!--<version>${io.swagger.version}</version>-->
             </dependency>
