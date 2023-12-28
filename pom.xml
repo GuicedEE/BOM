@@ -92,9 +92,8 @@
 
             <dependency>
                 <groupId>com.guicedee</groupId>
-                <artifactId>guiced-injection</artifactId>
+                <artifactId>guice-injection</artifactId>
                 <version>${guicedee.version}</version>
-
             </dependency>
 
             <dependency>
