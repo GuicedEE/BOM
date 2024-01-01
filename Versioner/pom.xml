@@ -330,6 +330,8 @@
         <osgi.annotations.version>1.5.1</osgi.annotations.version>
         <terracota.statistics.version>2.1.2</terracota.statistics.version>
 
+        <spring.version>6.1.2</spring.version>
+
     </properties>
 
     <url>https://guicedee.com</url>

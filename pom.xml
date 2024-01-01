@@ -83,12 +83,34 @@
 
             </dependency>-->
 
-            <dependency>
+   <!--         <dependency>
                 <groupId>com.guicedee</groupId>
                 <artifactId>guiced-log-master</artifactId>
                 <version>${guicedee.version}</version>
 
+            </dependency>-->
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>apache-cxf-rt-security</artifactId>
+                <version>${guicedee.version}</version>
+
             </dependency>
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>apache-cxf-rt-transports-http</artifactId>
+                <version>${guicedee.version}</version>
+
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+                <version>${guicedee.version}</version>
+
+            </dependency>
+
+
+
 
             <dependency>
                 <groupId>com.guicedee</groupId>
@@ -774,6 +796,69 @@
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>metrics-core</artifactId>
                 <version>${guicedee.version}</version>
+            </dependency>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>fasterxml-bom</artifactId>
+                <version>${guicedee.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>standalone-bom</artifactId>
+                <version>${guicedee.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>jakarta-bom</artifactId>
+                <version>${guicedee.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>google-bom</artifactId>
+                <version>${guicedee.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>apache-bom</artifactId>
+                <version>${guicedee.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>tests-bom</artifactId>
+                <version>${guicedee.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
 
         </dependencies>
