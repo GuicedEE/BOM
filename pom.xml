@@ -106,8 +106,15 @@
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>cxf-rt-frontend-jaxrs</artifactId>
                 <version>${guicedee.version}</version>
-
             </dependency>
+
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>cxf-rt-rs-service-description-openapi-v3</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
 
 
 
