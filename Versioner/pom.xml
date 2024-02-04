@@ -16,13 +16,14 @@
         <project.scm.repoUrl>https://maven.pkg.github.com</project.scm.repoUrl>
         <project.scm.nameUrl>/GuicedEE/GuicedEE-BOM</project.scm.nameUrl>
         <project.scm.packages>/GuicedEE/Packages</project.scm.packages>
-
         <project.baseUrl>${project.scm.baseUrl}${project.scm.nameUrl}</project.baseUrl>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
         <guicedee.version>2.0.0-SNAPSHOT</guicedee.version>
+        <expressly.version>5.0.0</expressly.version>
+
 
         <maven.assembly.version>3.4.2</maven.assembly.version>
         <maven-project-info-reports-plugin.version>3.4.1</maven-project-info-reports-plugin.version>
@@ -59,7 +60,7 @@
         <license.dir>${basedir}</license.dir>
 
         <sonarqube.version>3.8.0.2131</sonarqube.version>
-        <java-support.version>8.0.0</java-support.version>
+        <java-support.version>8.4.0</java-support.version>
 
         <jacoco.version>0.8.10</jacoco.version>
         <sonar.exclusions>**bower_components,**src/test,**/test/**,**/module-info.java,**/jar-resources
@@ -87,16 +88,20 @@
         <antlr.version>2.7.7</antlr.version>
         <amqp.client.version>5.20.0</amqp.client.version>
 
+        <batik.version>1.17</batik.version>
+
         <ant.version>1.10.14</ant.version>
         <stax.version>2.1.0</stax.version>
         <stax2.api.version>4.2.2</stax2.api.version>
         <bcprov.15.version>1.68</bcprov.15.version>
         <bcprov.16.version>1.46</bcprov.16.version>
+        <bcprov.18.version>1.77</bcprov.18.version>
         <nyc.ssl.version>0.3.11</nyc.ssl.version>
         <http.core.version>4.4.16</http.core.version>
         <http.nio.version>4.4.16</http.nio.version>
         <jasypt.version>1.9.3</jasypt.version>
         <slf4j.version>2.0.9</slf4j.version>
+        <log4j2.version>2.22.0</log4j2.version>
         <slf4j.log4j2.version>2.22.0</slf4j.log4j2.version>
         <bytebuddy.version>1.14.11</bytebuddy.version>
         <snakeyaml.version>2.2</snakeyaml.version>
@@ -112,24 +117,24 @@
         <nrjavaserial.version>5.2.1</nrjavaserial.version>
         <jna.version>5.14.0</jna.version>
 
-        <javassist.version>3.30.1-GA</javassist.version>
+        <javassist.version>3.30.2-GA</javassist.version>
         <spotbugs.version>4.8.3</spotbugs.version>
 
         <bouncycastle.version>1.68</bouncycastle.version>
 
         <!--  Hibernate -->
-        <maven.hibernate.validator.version>8.0.0.Final</maven.hibernate.validator.version>
-        <maven.hibernate.version>6.1.7.Final</maven.hibernate.version>
+        <maven.hibernate.validator.version>8.0.1.Final</maven.hibernate.validator.version>
+        <maven.hibernate.version>6.4.1.Final</maven.hibernate.version>
         <maven.hibernate.commons.annotations.version>6.0.6.Final</maven.hibernate.commons.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
-        <maven.hibernate.enhance.version>6.1.7.Final</maven.hibernate.enhance.version>
-        <antlr4-runtime.version>4.11.1</antlr4-runtime.version>
+        <maven.hibernate.enhance.version>6.4.1.Final</maven.hibernate.enhance.version>
+        <antlr4-runtime.version>4.13.1</antlr4-runtime.version>
 
         <c3p0.version>0.9.5.5</c3p0.version>
         <mchange.version>0.2.20</mchange.version>
-        <typesafe.version>1.4.2</typesafe.version>
+        <typesafe.version>1.4.3</typesafe.version>
 
-        <hazelcast.version>5.2.1</hazelcast.version>
+        <hazelcast.version>5.3.6</hazelcast.version>
         <hazelcast.hibernate.version>5.1.0</hazelcast.hibernate.version>
 
         <!-- Apache -->
@@ -161,32 +166,32 @@
 
 
         <!-- Apache CXF -->
-        <cxf.core.version>3.5.5</cxf.core.version>
+        <cxf.core.version>4.0.3</cxf.core.version>
         <cxf.oauth.version>3.4.10</cxf.oauth.version>
         <cxf.xmlbeans.version>3.1.18</cxf.xmlbeans.version>
         <alpn.api.version>1.1.3.v20160715</alpn.api.version>
         <wsdl4j.version>1.6.3</wsdl4j.version>
 
-        <opensaml.openws.version>1.5.4</opensaml.openws.version>
+        <opensaml.openws.version>1.5.6</opensaml.openws.version>
         <neethi.version>3.2.0</neethi.version>
         <oauth.version>20100527</oauth.version>
-        <xmlschema.core.version>2.3.0</xmlschema.core.version>
-        <wss4j.version>2.3.3</wss4j.version>
-        <xmlsec.version>3.0.1</xmlsec.version>
-        <wss4j.security.common.version>3.0.0</wss4j.security.common.version>
+        <xmlschema.core.version>2.3.1</xmlschema.core.version>
+        <wss4j.version>3.0.2</wss4j.version>
+        <xmlsec.version>4.0.1</xmlsec.version>
+        <wss4j.security.common.version>3.0.2</wss4j.security.common.version>
         <wss4j.bindings.version>2.0.0-rc1</wss4j.bindings.version>
-        <wss4j.policy.version>3.0.0</wss4j.policy.version>
+        <wss4j.policy.version>3.0.2</wss4j.policy.version>
 
-        <velocity.engine.version>2.2</velocity.engine.version>
-        <opensaml.version>4.0.1</opensaml.version>
-        <cryptacular.version>1.2.5</cryptacular.version>
+        <velocity.engine.version>2.3</velocity.engine.version>
+        <opensaml.version>4.3.0</opensaml.version>
+        <cryptacular.version>1.2.6</cryptacular.version>
 
-        <saaj.impl>2.0.0</saaj.impl>
-        <relaxng.datatype>4.0.1</relaxng.datatype>
+        <saaj.impl>3.0.3</saaj.impl>
+        <relaxng.datatype>4.0.4</relaxng.datatype>
 
         <!-- FasterXML  -->
         <woodstox.version>6.5.1</woodstox.version>
-        <jackson.version>2.16.0</jackson.version>
+        <jackson.version>2.16.1</jackson.version>
 
         <!-- Google -->
 
@@ -216,6 +221,7 @@
         <jakarta.faces.version>4.1.0-M1</jakarta.faces.version>
         <glassfish.faces.version>4.1.0-M1</glassfish.faces.version>
         <jakarta.json.version>2.1.3</jakarta.json.version>
+        <jakarta.json.bind.version>3.0.0</jakarta.json.bind.version>
         <jakarta.cdi.api.version>4.1.0-M1</jakarta.cdi.api.version>
         <jakarta.ejb.version>4.0.1</jakarta.ejb.version>
         <jakarta.el.version>6.0.0-M1</jakarta.el.version>
@@ -250,16 +256,18 @@
         <jaxen.version>2.0.0</jaxen.version>
         <org.json.version>20231013</org.json.version>
         <kafka.client.version>3.6.1</kafka.client.version>
-        <openpdf.version>1.3.34</openpdf.version>
+        <openpdf.version>1.3.35</openpdf.version>
         <primefaces.version>11.0.0-RC2</primefaces.version>
         <qdox.version>2.0.0</qdox.version>
         <jcache.api.version>1.1.1</jcache.api.version>
         <jms.version>1.1.1</jms.version>
+        <jakarta.jms.version>3.1.0</jakarta.jms.version>
+        <org.osgi.core.version>6.0.0</org.osgi.core.version>
 
         <dropwizard.metrics-core.version>4.2.23</dropwizard.metrics-core.version>
         <jdom.version>2.0.6.1</jdom.version>
 
-        <mssql.jdbc>11.2.1</mssql.jdbc>
+        <mssql.jdbc>12.4.2</mssql.jdbc>
         <mssql.driver.jdbc>11.2.0</mssql.driver.jdbc>
 
         <!-- JBoss -->
@@ -271,7 +279,7 @@
 
         <log4j.version>2.22.0</log4j.version>
         <jansi.version>2.4.1</jansi.version>
-        <jcabi.version>0.23.0</jcabi.version>
+        <jcabi.version>0.24.1</jcabi.version>
 
         <undertow.version>2.3.10.Final</undertow.version>
         <xnio.version>3.8.12.Final</xnio.version>
@@ -309,6 +317,20 @@
 
         <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
         <doxia-site-renderer.version>2.0.0-M16</doxia-site-renderer.version>
+        <gson.version>2.10.1</gson.version>
+        <waffle-jna.version>3.3.0</waffle-jna.version>
+        <javax.money.moneta.version>1.4.2</javax.money.moneta.version>
+        <javax.money.version>1.1</javax.money.version>
+        <javafx.version>21.0.1</javafx.version>
+        <ojdbc.version>23.3.0.23.09</ojdbc.version>
+        <joda.time.version>2.12.5</joda.time.version>
+        <paranamer.version>2.8</paranamer.version>
+        <offheap.version>2.5.5</offheap.version>
+        <osgi.version>8.0.0</osgi.version>
+        <osgi.annotations.version>1.5.1</osgi.annotations.version>
+        <terracota.statistics.version>2.1.2</terracota.statistics.version>
+
+        <spring.version>6.1.2</spring.version>
 
     </properties>
 
@@ -328,9 +350,9 @@
     </organization>
 
     <scm>
-        <url>${project.baseUrl}${project.scm.nameUrl}.git</url>
-        <connection>${project.scm.url}</connection>
-        <developerConnection>${project.scm.url}</developerConnection>
+        <url>${project.baseUrl}.git</url>
+        <connection>scm:git:${project.scm.url}</connection>
+        <developerConnection>scm:git:${project.scm.url}</developerConnection>
     </scm>
 
     <developers>
@@ -344,55 +366,13 @@
 
     <issueManagement>
         <system>Github</system>
-        <url>${project.baseUrl}${project.scm.nameUrl}/issues</url>
+        <url>${project.baseUrl}/issues</url>
     </issueManagement>
 
     <ciManagement>
         <system>Github Actions</system>
-        <url>${project.baseUrl}${project.scm.nameUrl}/actions</url>
+        <url>${project.baseUrl}/actions</url>
     </ciManagement>
-
-    <repositories>
-        <repository>
-            <id>central</id>
-            <url>https://repo1.maven.org/maven2</url>
-        </repository>
-        <repository>
-            <id>github</id>
-            <url>${project.scm.repoUrl}${project.scm.nameUrl}</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>packages</id>
-            <url>${project.scm.repoUrl}${project.scm.packages}</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>sona-snapshot</id>
-            <name>SonaType-snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>sona-release</id>
-            <name>SonaType-releases</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-        <repository>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <id>shibboleth</id>
-            <name>shibboleth</name>
-            <url>https://build.shibboleth.net/nexus/content/repositories/releases/</url>
-        </repository>
-    </repositories>
 
     <distributionManagement>
         <repository>
@@ -401,7 +381,6 @@
             <url>${project.scm.repoUrl}${project.scm.packages}</url>
         </repository>
     </distributionManagement>
-
 
     <profiles>
         <profile>
@@ -501,7 +480,7 @@
                         <version>1.6.13</version>
                         <extensions>true</extensions>
                         <configuration>
-                            <serverId>ossrh</serverId>
+                            <serverId>sona-release</serverId>
                             <nexusUrl>https://s01.oss.sonatype.org</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
@@ -727,6 +706,33 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>flatten-maven-plugin</artifactId>
                     <version>${flatten-maven-plugin.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.hibernate.orm.tooling</groupId>
+                    <artifactId>hibernate-enhance-maven-plugin</artifactId>
+                    <version>${maven.hibernate.enhance.version}</version>
+                    <executions>
+                        <execution>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>enhance</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <failOnError>false</failOnError>
+                        <enableLazyInitialization>true</enableLazyInitialization>
+                        <enableDirtyTracking>false</enableDirtyTracking>
+                        <enableAssociationManagement>true</enableAssociationManagement>
+                        <enableExtendedEnhancement>true</enableExtendedEnhancement>
+                    </configuration>
                 </plugin>
 
             </plugins>

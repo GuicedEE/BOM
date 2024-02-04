@@ -109,24 +109,6 @@
                 <artifactId>mockito-junit-jupiter</artifactId>
                 <version>${mockito.version}</version>
                 <scope>test</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
-                        <artifactId>jackson-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
-                        <artifactId>jackson-databind</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.apache.commons</groupId>
-                        <artifactId>commons-lang3</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.junit.jupiter</groupId>
-                        <artifactId>junit-jupiter-api</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
 
             <dependency>
@@ -177,22 +159,6 @@
                         <groupId>com.codeborne</groupId>
                     </exclusion>
                     <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
-                        <artifactId>jackson-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
-                        <artifactId>jackson-databind</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.apache.commons</groupId>
-                        <artifactId>commons-lang3</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>commons-io</groupId>
-                        <artifactId>commons-io</artifactId>
-                    </exclusion>
-                    <exclusion>
                         <groupId>commons-codec</groupId>
                         <artifactId>commons-codec</artifactId>
                     </exclusion>
@@ -221,20 +187,8 @@
                         <artifactId>kotlin-stdlib</artifactId>
                     </exclusion>
                     <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-api</artifactId>
-                    </exclusion>
-                    <exclusion>
                         <groupId>junit</groupId>
                         <artifactId>junit</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.apache.logging.log4j</groupId>
-                        <artifactId>log4j-core</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.apache.logging.log4j</groupId>
-                        <artifactId>log4j-slf4j-impl</artifactId>
                     </exclusion>
                     <exclusion>
                         <groupId>org.springframework</groupId>

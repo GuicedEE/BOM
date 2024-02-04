@@ -56,16 +56,6 @@
                <artifactId>commons-collections4</artifactId>
                <version>${collections.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>org.glassfish</groupId>
-                       <artifactId>jakarta.faces</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.h2database</groupId>
-                       <artifactId>h2</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
@@ -108,12 +98,6 @@
                <artifactId>commons-logging</artifactId>
                <version>${logging.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>javax.servlet</groupId>
-                       <artifactId>servlet-api</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
@@ -134,16 +118,6 @@
                <groupId>commons-beanutils</groupId>
                <artifactId>commons-beanutils</artifactId>
                <version>${beanutils.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>commons-collections</groupId>
-                       <artifactId>commons-collections</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>commons-logging</groupId>
-                       <artifactId>commons-logging</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
@@ -172,60 +146,12 @@
                <artifactId>poi</artifactId>
                <version>${poi.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>commons-codec</groupId>
-                       <artifactId>commons-codec</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>slf4j-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>jcl-over-slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.apache.commons</groupId>
-                       <artifactId>commons-math3</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.apache.commons</groupId>
-                       <artifactId>commons-collections4</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
                <groupId>org.apache.poi</groupId>
                <artifactId>poi-ooxml</artifactId>
                <version>${poi.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>org.apache.xmlbeans</groupId>
-                       <artifactId>xmlbeans</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.apache.poi</groupId>
-                       <artifactId>poi-ooxml-schemas</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>slf4j-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>jcl-over-slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>commons-compress</artifactId>
-                       <groupId>org.apache.commons</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>poi</artifactId>
-                       <groupId>org.apache.poi</groupId>
-                   </exclusion>
-               </exclusions>
                <optional>true</optional>
            </dependency>
 
@@ -233,24 +159,6 @@
                <groupId>org.apache.poi</groupId>
 				<artifactId>poi-ooxml-full</artifactId>
                <version>${poi.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>org.apache.xmlbeans</groupId>
-                       <artifactId>xmlbeans</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>poi</artifactId>
-                       <groupId>org.apache.poi</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>slf4j-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>jcl-over-slf4j</artifactId>
-                   </exclusion>
-               </exclusions>
                <optional>true</optional>
            </dependency>
 
@@ -258,24 +166,6 @@
                <groupId>org.apache.poi</groupId>
                <artifactId>poi-scratchpad</artifactId>
                <version>${poi.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>org.apache.xmlbeans</groupId>
-                       <artifactId>xmlbeans</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>poi</artifactId>
-                       <groupId>org.apache.poi</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>slf4j-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>jcl-over-slf4j</artifactId>
-                   </exclusion>
-               </exclusions>
                <optional>true</optional>
            </dependency>
 
@@ -291,43 +181,14 @@
                <artifactId>fop</artifactId>
                <version>${fop.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <groupId>org.apache.ant</groupId>
-                       <artifactId>ant</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>junit</groupId>
-                       <artifactId>junit</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>commons-io</groupId>
-                       <artifactId>commons-io</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>commons-logging</groupId>
-                       <artifactId>commons-logging</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>javax.servlet</groupId>
-                       <artifactId>servlet-api</artifactId>
-                   </exclusion>
-               </exclusions>
+
            </dependency>
 
            <dependency>
                <groupId>org.apache.xmlbeans</groupId>
                <artifactId>xmlbeans</artifactId>
                <version>${xmlbeans.version}</version>
-               <optional>true</optional>
            </dependency>
-
-<!--           <dependency>
-               <groupId>xerces</groupId>
-               <artifactId>xercesImpl</artifactId>
-               <version>${xerces.version}</version>
-               <optional>true</optional>
-           </dependency>-->
 
        </dependencies>
     </dependencyManagement>
