@@ -16,6 +16,7 @@
         <project.scm.repoUrl>https://maven.pkg.github.com</project.scm.repoUrl>
         <project.scm.nameUrl>/GuicedEE/GuicedEE-BOM</project.scm.nameUrl>
         <project.scm.packages>/GuicedEE/Packages</project.scm.packages>
+
         <project.baseUrl>${project.scm.baseUrl}${project.scm.nameUrl}</project.baseUrl>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,44 +26,44 @@
         <expressly.version>5.0.0</expressly.version>
 
 
-        <maven.assembly.version>3.4.2</maven.assembly.version>
-        <maven-project-info-reports-plugin.version>3.4.1</maven-project-info-reports-plugin.version>
+        <maven.assembly.version>3.6.0</maven.assembly.version>
+        <maven-project-info-reports-plugin.version>3.5.0</maven-project-info-reports-plugin.version>
         <maven.jar.version>3.3.0</maven.jar.version>
-        <maven.clean.version>3.2.0</maven.clean.version>
-        <maven.dependency.version>3.3.0</maven.dependency.version>
+        <maven.clean.version>3.3.2</maven.clean.version>
+        <maven.dependency.version>3.6.1</maven.dependency.version>
         <maven.javadoc.version>3.4.1</maven.javadoc.version>
-        <maven.deploy.version>3.0.0</maven.deploy.version>
+        <maven.deploy.version>3.1.1</maven.deploy.version>
         <maven.install.version>3.0.1</maven.install.version>
-        <maven.source.version>3.2.1</maven.source.version>
-        <maven.site.version>4.0.0-M3</maven.site.version>
+        <maven.source.version>3.3.0</maven.source.version>
+        <maven.site.version>4.0.0-M13</maven.site.version>
         <maven.shade.version>3.4.0</maven.shade.version>
         <maven.compiler.version>3.10.1</maven.compiler.version>
         <maven.surefire.version>3.0.0-M6</maven.surefire.version>
         <maven.failsafe.version>3.0.0-M1</maven.failsafe.version>
-        <maven.resources.version>3.3.0</maven.resources.version>
-        <maven.release.version>3.0.0-M6</maven.release.version>
-        <maven.versions.version>2.12.0</maven.versions.version>
+        <maven.resources.version>3.3.1</maven.resources.version>
+        <maven.release.version>3.0.1</maven.release.version>
+        <maven.versions.version>2.16.2</maven.versions.version>
         <maven.verifyier.version>1.1</maven.verifyier.version>
         <maven.asm.version>9.6</maven.asm.version>
-        <maven.gpg.version>1.6</maven.gpg.version>
+        <maven.gpg.version>3.1.0</maven.gpg.version>
 
-        <maven.war.version>3.3.2</maven.war.version>
-        <maven.ear.version>3.1.0</maven.ear.version>
-        <maven.ejb.version>3.1.0</maven.ejb.version>
+        <maven.war.version>3.4.0</maven.war.version>
+        <maven.ear.version>3.3.0</maven.ear.version>
+        <maven.ejb.version>3.2.1</maven.ejb.version>
 
         <maven-shade-transformers>0.0.3</maven-shade-transformers>
 
-        <javaparser-core>3.25.7</javaparser-core>
+        <javaparser-core>3.25.8</javaparser-core>
         <aop.version>1.0.0</aop.version>
 
-        <build.helper.maven.plugin.version>3.3.0</build.helper.maven.plugin.version>
+        <build.helper.maven.plugin.version>3.5.0</build.helper.maven.plugin.version>
         <netbeans.hint.license>gpl30</netbeans.hint.license>
         <license.dir>${basedir}</license.dir>
 
-        <sonarqube.version>3.8.0.2131</sonarqube.version>
+        <sonarqube.version>3.10.0.2594</sonarqube.version>
         <java-support.version>8.4.0</java-support.version>
 
-        <jacoco.version>0.8.10</jacoco.version>
+        <jacoco.version>0.8.11</jacoco.version>
         <sonar.exclusions>**bower_components,**src/test,**/test/**,**/module-info.java,**/jar-resources
         </sonar.exclusions>
         <sonar.host.url>https://jwebmp.com/sonarqube</sonar.host.url>
@@ -70,7 +71,7 @@
         <nexus.staging.maven.plugin.version>1.6.13</nexus.staging.maven.plugin.version>
         <jdk.release>21</jdk.release>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
-        <moditect.maven.plugin.version>1.0.0.RC2</moditect.maven.plugin.version>
+        <moditect.maven.plugin.version>1.1.0</moditect.maven.plugin.version>
 
         <!--suppress CheckTagEmptyBody -->
         <surefireArgLine></surefireArgLine>
@@ -79,7 +80,7 @@
 
         <!-- Standalone -->
         <lombok.version>1.18.30</lombok.version>
-        <classmate.version>1.6.0</classmate.version>
+        <classmate.version>1.7.0</classmate.version>
         <dom4j.version>2.1.4</dom4j.version>
         <ehcache.version>3.10.8</ehcache.version>
         <net.sf.ehcache.version>2.10.9.2</net.sf.ehcache.version>
@@ -103,7 +104,7 @@
         <slf4j.version>2.0.9</slf4j.version>
         <log4j2.version>2.22.0</log4j2.version>
         <slf4j.log4j2.version>2.22.0</slf4j.log4j2.version>
-        <bytebuddy.version>1.14.11</bytebuddy.version>
+        <bytebuddy.version>1.14.12</bytebuddy.version>
         <snakeyaml.version>2.2</snakeyaml.version>
         <sparsebitset.version>1.3</sparsebitset.version>
         <zstdjni.version>1.5.5-11</zstdjni.version>
@@ -131,7 +132,7 @@
         <antlr4-runtime.version>4.13.1</antlr4-runtime.version>
 
         <c3p0.version>0.9.5.5</c3p0.version>
-        <mchange.version>0.2.20</mchange.version>
+        <mchange.version>0.3.0</mchange.version>
         <typesafe.version>1.4.3</typesafe.version>
 
         <hazelcast.version>5.3.6</hazelcast.version>
@@ -145,8 +146,8 @@
         <httpclient.version>4.5.14</httpclient.version>
 
         <collections.version>4.4</collections.version>
-        <codec.version>1.16.0</codec.version>
-        <compress.version>1.25.0</compress.version>
+        <codec.version>1.16.1</codec.version>
+        <compress.version>1.26.0</compress.version>
         <csv.version>1.10.0</csv.version>
         <fileupload.version>1.5</fileupload.version>
         <io.version>2.15.1</io.version>
@@ -177,20 +178,20 @@
         <oauth.version>20100527</oauth.version>
         <xmlschema.core.version>2.3.1</xmlschema.core.version>
         <wss4j.version>3.0.2</wss4j.version>
-        <xmlsec.version>4.0.1</xmlsec.version>
+        <xmlsec.version>4.0.2</xmlsec.version>
         <wss4j.security.common.version>3.0.2</wss4j.security.common.version>
         <wss4j.bindings.version>2.0.0-rc1</wss4j.bindings.version>
         <wss4j.policy.version>3.0.2</wss4j.policy.version>
 
         <velocity.engine.version>2.3</velocity.engine.version>
-        <opensaml.version>4.3.0</opensaml.version>
+        <opensaml.version>5.0.0</opensaml.version>
         <cryptacular.version>1.2.6</cryptacular.version>
 
         <saaj.impl>3.0.3</saaj.impl>
         <relaxng.datatype>4.0.4</relaxng.datatype>
 
         <!-- FasterXML  -->
-        <woodstox.version>6.5.1</woodstox.version>
+        <woodstox.version>6.6.0</woodstox.version>
         <jackson.version>2.16.1</jackson.version>
 
         <!-- Google -->
@@ -198,7 +199,7 @@
         <jsr305.version>3.0.2</jsr305.version>
         <findbugs.annotation.version>3.0.1</findbugs.annotation.version>
         <checkerqual.version>3.42.0</checkerqual.version>
-        <errorprone.version>2.24.0</errorprone.version>
+        <errorprone.version>2.25.0</errorprone.version>
         <listenablefuture.version>9999.0-empty-to-avoid-conflict-with-guava</listenablefuture.version>
         <j2obc.version>2.8</j2obc.version>
         <animalsniffer.version>1.23</animalsniffer.version>
@@ -225,7 +226,7 @@
         <jakarta.cdi.api.version>4.1.0-M1</jakarta.cdi.api.version>
         <jakarta.ejb.version>4.0.1</jakarta.ejb.version>
         <jakarta.el.version>6.0.0-M1</jakarta.el.version>
-        <jakarta.el.api.version>6.0.0-M1</jakarta.el.api.version>
+        <jakarta.el.api.version>6.0.0-RC1</jakarta.el.api.version>
         <jakarta.jws.version>3.0.0</jakarta.jws.version>
         <jakarta.interceptor.version>2.2.0-RC1</jakarta.interceptor.version>
         <jakarta.rs.api.version>3.1.0</jakarta.rs.api.version>
@@ -254,9 +255,9 @@
 
         <jandex.version>3.1.6</jandex.version>
         <jaxen.version>2.0.0</jaxen.version>
-        <org.json.version>20231013</org.json.version>
+        <org.json.version>20240205</org.json.version>
         <kafka.client.version>3.6.1</kafka.client.version>
-        <openpdf.version>1.3.35</openpdf.version>
+        <openpdf.version>2.0.0</openpdf.version>
         <primefaces.version>11.0.0-RC2</primefaces.version>
         <qdox.version>2.0.0</qdox.version>
         <jcache.api.version>1.1.1</jcache.api.version>
@@ -264,7 +265,7 @@
         <jakarta.jms.version>3.1.0</jakarta.jms.version>
         <org.osgi.core.version>6.0.0</org.osgi.core.version>
 
-        <dropwizard.metrics-core.version>4.2.23</dropwizard.metrics-core.version>
+        <dropwizard.metrics-core.version>4.2.25</dropwizard.metrics-core.version>
         <jdom.version>2.0.6.1</jdom.version>
 
         <mssql.jdbc>12.4.2</mssql.jdbc>
@@ -281,7 +282,7 @@
         <jansi.version>2.4.1</jansi.version>
         <jcabi.version>0.24.1</jcabi.version>
 
-        <undertow.version>2.3.10.Final</undertow.version>
+        <undertow.version>2.3.12.Final</undertow.version>
         <xnio.version>3.8.12.Final</xnio.version>
         <classfilewriter.version>1.3.0.Final</classfilewriter.version>
 
@@ -292,30 +293,30 @@
         <io.swagger.version>2.2.20</io.swagger.version>
         <io.swagger.jakarta.version>2.2.20</io.swagger.jakarta.version>
 
-        <junit.jupiter.version>5.10.1</junit.jupiter.version>
+        <junit.jupiter.version>5.10.2</junit.jupiter.version>
         <hamcrest.version>1.3</hamcrest.version>
-        <assertj.version>3.24.2</assertj.version>
-        <mockito.version>5.8.0</mockito.version>
+        <assertj.version>3.25.3</assertj.version>
+        <mockito.version>5.10.0</mockito.version>
 
-        <aspectj.version>1.9.21</aspectj.version>
+        <aspectj.version>1.9.21.1</aspectj.version>
 
         <junit.version>4.13.2</junit.version>
-        <selenium.version>4.16.1</selenium.version>
-        <selenium.drivers.version>4.16.1</selenium.drivers.version>
+        <selenium.version>4.18.1</selenium.version>
+        <selenium.drivers.version>4.18.1</selenium.drivers.version>
         <selenium.jupiter.version>5.0.0</selenium.jupiter.version>
-        <bonigarcia.selenium.jupiter.version>5.0.0</bonigarcia.selenium.jupiter.version>
-        <webdrivermanager.version>5.6.2</webdrivermanager.version>
+        <bonigarcia.selenium.jupiter.version>5.1.0</bonigarcia.selenium.jupiter.version>
+        <webdrivermanager.version>5.7.0</webdrivermanager.version>
 
         <jmh.version>1.37</jmh.version>
         <okhttp.version>4.10.0</okhttp.version>
-        <okio.version>3.7.0</okio.version>
+        <okio.version>3.8.0</okio.version>
 
         <flatten-maven-plugin.version>1.3.0</flatten-maven-plugin.version>
 
-        <postgres.version>42.7.1</postgres.version>
+        <postgres.version>42.7.2</postgres.version>
         <snappy.version>1.1.10.5</snappy.version>
 
-        <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
+        <exec-maven-plugin.version>3.2.0</exec-maven-plugin.version>
         <doxia-site-renderer.version>2.0.0-M16</doxia-site-renderer.version>
         <gson.version>2.10.1</gson.version>
         <waffle-jna.version>3.3.0</waffle-jna.version>
@@ -323,7 +324,7 @@
         <javax.money.version>1.1</javax.money.version>
         <javafx.version>21.0.1</javafx.version>
         <ojdbc.version>23.3.0.23.09</ojdbc.version>
-        <joda.time.version>2.12.5</joda.time.version>
+        <joda.time.version>2.12.7</joda.time.version>
         <paranamer.version>2.8</paranamer.version>
         <offheap.version>2.5.5</offheap.version>
         <osgi.version>8.0.0</osgi.version>
@@ -417,7 +418,7 @@
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
-                                <phase>install</phase>
+                                <phase>package</phase>
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
@@ -448,7 +449,7 @@
             </distributionManagement>
             <build>
                 <plugins>
-                    <plugin>
+                    <!--<plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
                         <executions>
@@ -460,13 +461,13 @@
                                 </goals>
                                 <configuration>
                                     <gpgArguments>
-                                        <arg>--pinentry-mode</arg>
+                                        <arg>&#45;&#45;pinentry-mode</arg>
                                         <arg>loopback</arg>
                                     </gpgArguments>
                                 </configuration>
                             </execution>
                         </executions>
-                    </plugin>
+                    </plugin>-->
                 </plugins>
             </build>
         </profile>
@@ -480,12 +481,12 @@
                         <version>1.6.13</version>
                         <extensions>true</extensions>
                         <configuration>
-                            <serverId>sona-release</serverId>
+                            <serverId>sona-snapshot</serverId>
                             <nexusUrl>https://s01.oss.sonatype.org</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
-                    <plugin>
+                   <!-- <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-release-plugin</artifactId>
                         <configuration>
@@ -499,8 +500,8 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin>
-                    <plugin>
+                    </plugin>-->
+                    <!--<plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
                         <executions>
@@ -512,13 +513,13 @@
                                 </goals>
                                 <configuration>
                                     <gpgArguments>
-                                        <arg>--pinentry-mode</arg>
+                                        <arg>&#45;&#45;pinentry-mode</arg>
                                         <arg>loopback</arg>
                                     </gpgArguments>
                                 </configuration>
                             </execution>
                         </executions>
-                    </plugin>
+                    </plugin>-->
                 </plugins>
             </build>
         </profile>
@@ -701,7 +702,6 @@
                     </executions>
                 </plugin>
 
-
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>flatten-maven-plugin</artifactId>
@@ -712,27 +712,6 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
                     <version>3.1.0</version>
-                </plugin>
-
-                <plugin>
-                    <groupId>org.hibernate.orm.tooling</groupId>
-                    <artifactId>hibernate-enhance-maven-plugin</artifactId>
-                    <version>${maven.hibernate.enhance.version}</version>
-                    <executions>
-                        <execution>
-                            <phase>compile</phase>
-                            <goals>
-                                <goal>enhance</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <failOnError>false</failOnError>
-                        <enableLazyInitialization>true</enableLazyInitialization>
-                        <enableDirtyTracking>false</enableDirtyTracking>
-                        <enableAssociationManagement>true</enableAssociationManagement>
-                        <enableExtendedEnhancement>true</enableExtendedEnhancement>
-                    </configuration>
                 </plugin>
 
             </plugins>
