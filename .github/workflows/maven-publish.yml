@@ -8,6 +8,7 @@ jobs:
     with:
       baseDir: 'Versioner/'
       name: 'Versioner'
+      publishToCentral: true
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -18,6 +19,7 @@ jobs:
     with:
       baseDir: 'StandaloneBOM/'
       name: 'Standalone'
+      publishToCentral: true
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -28,6 +30,7 @@ jobs:
     with:
       baseDir: 'TestLayoutBOM/'
       name: 'Test Layouts'
+      publishToCentral: true
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -38,6 +41,7 @@ jobs:
     with:
       baseDir: 'SwaggerBOM/'
       name: 'Swagger'
+      publishToCentral: true
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -48,6 +52,7 @@ jobs:
     with:
       baseDir: 'JBossBOM/'
       name: 'JBoss'
+      publishToCentral: true
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -58,6 +63,7 @@ jobs:
     with:
       baseDir: 'JakartaBOM/'
       name: 'Jakarta'
+      publishToCentral: true
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -68,6 +74,7 @@ jobs:
     with:
       baseDir: 'HibernateBOM/'
       name: 'Hibernate'
+      publishToCentral: true
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -78,6 +85,7 @@ jobs:
     with:
       baseDir: 'GoogleBOM/'
       name: 'Google'
+      publishToCentral: true
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -88,6 +96,7 @@ jobs:
     with:
       baseDir: 'FasterXMLBOM/'
       name: 'FasterXML'
+      publishToCentral: true
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -98,6 +107,7 @@ jobs:
     with:
       baseDir: 'ApacheCXFBOM/'
       name: 'Apache CXF'
+      publishToCentral: true
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -108,6 +118,7 @@ jobs:
     with:
       baseDir: 'ApacheBOM/'
       name: 'Apache'
+      publishToCentral: true
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -118,6 +129,7 @@ jobs:
     with:
       baseDir: ''
       name: 'Guiced-EE BOM'
+      publishToCentral: true
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
