@@ -6,12 +6,6 @@ on:
         type: boolean
         description: Run a release to maven central
         default: false
-  push:
-    inputs:
-      centralRelease:
-        type: boolean
-        description: Run a release to maven central
-        default: false
 env:
   GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
   GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
