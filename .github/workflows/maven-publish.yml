@@ -1,6 +1,11 @@
 name: Guiced EE (BOM)
 on:
   workflow_dispatch:
+    inputs:
+      centralRelease:
+        type: boolean
+        description: Run a release to maven central
+        default: false
   push:
 env:
   GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
@@ -11,7 +16,7 @@ jobs:
     with:
       baseDir: 'Versioner/'
       name: 'Versioner'
-      publishToCentral: true
+      publishToCentral: ${{inputs.centralRelease}}
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -26,7 +31,7 @@ jobs:
     with:
       baseDir: 'StandaloneBOM/'
       name: 'Standalone'
-      publishToCentral: true
+      publishToCentral: ${{inputs.centralRelease}}
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -41,7 +46,7 @@ jobs:
     with:
       baseDir: 'TestLayoutBOM/'
       name: 'Test Layouts'
-      publishToCentral: true
+      publishToCentral: ${{inputs.centralRelease}}
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -56,7 +61,7 @@ jobs:
     with:
       baseDir: 'SwaggerBOM/'
       name: 'Swagger'
-      publishToCentral: true
+      publishToCentral: ${{inputs.centralRelease}}
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -71,7 +76,7 @@ jobs:
     with:
       baseDir: 'JBossBOM/'
       name: 'JBoss'
-      publishToCentral: true
+      publishToCentral: ${{inputs.centralRelease}}
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -86,7 +91,7 @@ jobs:
     with:
       baseDir: 'JakartaBOM/'
       name: 'Jakarta'
-      publishToCentral: true
+      publishToCentral: ${{inputs.centralRelease}}
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -101,7 +106,7 @@ jobs:
     with:
       baseDir: 'HibernateBOM/'
       name: 'Hibernate'
-      publishToCentral: true
+      publishToCentral: ${{inputs.centralRelease}}
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -116,7 +121,7 @@ jobs:
     with:
       baseDir: 'GoogleBOM/'
       name: 'Google'
-      publishToCentral: true
+      publishToCentral: ${{inputs.centralRelease}}
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -131,7 +136,7 @@ jobs:
     with:
       baseDir: 'FasterXMLBOM/'
       name: 'FasterXML'
-      publishToCentral: true
+      publishToCentral: ${{inputs.centralRelease}}
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -146,7 +151,7 @@ jobs:
     with:
       baseDir: 'ApacheCXFBOM/'
       name: 'Apache CXF'
-      publishToCentral: true
+      publishToCentral: ${{inputs.centralRelease}}
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -161,7 +166,7 @@ jobs:
     with:
       baseDir: 'ApacheBOM/'
       name: 'Apache'
-      publishToCentral: true
+      publishToCentral: ${{inputs.centralRelease}}
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
@@ -176,7 +181,7 @@ jobs:
     with:
       baseDir: ''
       name: 'Guiced-EE BOM'
-      publishToCentral: true
+      publishToCentral: ${{inputs.centralRelease}}
     secrets:
       USERNAME: ${{secrets.USERNAME}}
       USER_TOKEN: ${{secrets.USER_TOKEN}}
