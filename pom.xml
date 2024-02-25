@@ -283,11 +283,19 @@
                 &lt;!&ndash;<version>${text.version}</version>&ndash;&gt;
             </dependency>
 -->
+<!--
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-codec</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${codec.version}</version>-->
+                &lt;!&ndash;<version>${codec.version}</version>&ndash;&gt;
+            </dependency>
+-->
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>config-core</artifactId>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>

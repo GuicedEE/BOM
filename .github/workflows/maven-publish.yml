@@ -174,6 +174,22 @@ jobs:
       SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
       GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
       GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+  SmallRye:
+    uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    needs:
+      - Versioner
+    with:
+      baseDir: 'SmallRyeBOM/'
+      name: 'Guiced-EE BOM'
+      publishToCentral: ${{inputs.centralRelease}}
+    secrets:
+      USERNAME: ${{secrets.USERNAME}}
+      USER_TOKEN: ${{secrets.USER_TOKEN}}
+      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
+      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
+      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
+      GPG_PRIVATE_KEY:
+        ${{secrets.GPG_PRIVATE_KEY}}
   GuicedEE:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:

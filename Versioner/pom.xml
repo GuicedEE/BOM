@@ -333,6 +333,11 @@
 
         <spring.version>6.1.2</spring.version>
 
+
+        <smallrye.config.version>3.5.4</smallrye.config.version>
+        <microprofile.config.version>3.1</microprofile.config.version>
+        <smallrye.commons.version>2.3.0</smallrye.commons.version>
+
     </properties>
 
     <url>https://guicedee.com</url>
