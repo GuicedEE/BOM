@@ -448,26 +448,10 @@
                         <extensions>true</extensions>
                         <configuration>
                             <serverId>sona-snapshot</serverId>
-                            <nexusUrl>https://s01.oss.sonatype.org</nexusUrl>
+                            <nexusUrl>https://oss.sonatype.org</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
-                   <!-- <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-release-plugin</artifactId>
-                        <configuration>
-                            <tagNameFormat>@{project.version}</tagNameFormat>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>default</id>
-                                <goals>
-                                    <goal>perform</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>-->
-                    <!---->
                 </plugins>
             </build>
         </profile>
@@ -661,6 +645,8 @@
                     <artifactId>maven-antrun-plugin</artifactId>
                     <version>3.1.0</version>
                 </plugin>
+
+
 
             </plugins>
         </pluginManagement>
