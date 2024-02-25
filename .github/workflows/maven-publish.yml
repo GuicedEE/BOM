@@ -2,6 +2,9 @@ name: Guiced EE (BOM)
 on:
   workflow_dispatch:
   push:
+env:
+  GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+  GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
 jobs:
   Versioner:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
