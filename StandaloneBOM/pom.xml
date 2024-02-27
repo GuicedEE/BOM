@@ -839,6 +839,21 @@
                 <version>${spotbugs.version}</version>
                 <optional>true</optional>
             </dependency>
+
+            <dependency>
+                <groupId>com.ibm.mq</groupId>
+                <artifactId>com.ibm.mq.jakarta.client</artifactId>
+                <version>${ibm.mq.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>org.fusesource.hawtbuf</groupId>
+                <artifactId>hawtbuf</artifactId>
+                <version>1.11</version>
+                <optional>true</optional>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
