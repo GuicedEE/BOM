@@ -5,69 +5,38 @@
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>versioner</artifactId>
-        <version>0.0.0_0-SNAPSHOT</version>
+        <version>2.0.0-SNAPSHOT</version>
         <relativePath>../Versioner</relativePath>
     </parent>
 
 
     <groupId>com.guicedee</groupId>
     <artifactId>fasterxml-bom</artifactId>
-    <version>0.0.0_0-SNAPSHOT</version>
+    <version>2.0.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
     <name>FasterXML BOM</name>
     <description>The BOM for FasterXML Artefacts</description>
 
-    <profiles>
-        <profile>
-            <id>jdk9</id>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.guicedee</groupId>
-                        <artifactId>standalone-bom</artifactId>
-                        <version>${guicedee.version}</version>
-                        <scope>import</scope>
-                        <type>pom</type>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>com.guicedee</groupId>
-                        <artifactId>jakarta-bom</artifactId>
-                        <version>${guicedee.version}</version>
-                        <scope>import</scope>
-                        <type>pom</type>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-        </profile>
-        <profile>
-            <id>jdk8</id>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.guicedee</groupId>
-                        <artifactId>standalone-bom</artifactId>
-                        <version>${guicedee.version}</version>
-                        <scope>import</scope>
-                        <type>pom</type>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>com.guicedee</groupId>
-                        <artifactId>jakarta-bom</artifactId>
-                        <version>${guicedee.version}</version>
-                        <scope>import</scope>
-                        <type>pom</type>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-        </profile>
-    </profiles>
-
     <dependencyManagement>
        <dependencies>
+           <dependency>
+               <groupId>com.guicedee</groupId>
+               <artifactId>standalone-bom</artifactId>
+               <version>${guicedee.version}</version>
+               <scope>import</scope>
+               <type>pom</type>
+           </dependency>
+
+           <dependency>
+               <groupId>com.guicedee</groupId>
+               <artifactId>jakarta-bom</artifactId>
+               <version>${guicedee.version}</version>
+               <scope>import</scope>
+               <type>pom</type>
+           </dependency>
+
 
            <dependency>
                <groupId>com.fasterxml.woodstox</groupId>
@@ -80,100 +49,30 @@
                <groupId>com.fasterxml.jackson.core</groupId>
                <artifactId>jackson-databind</artifactId>
                <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                       <artifactId>jackson-jaxrs-base</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
                <groupId>com.fasterxml.jackson.core</groupId>
                <artifactId>jackson-annotations</artifactId>
                <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                       <artifactId>jackson-jaxrs-base</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
                <artifactId>jackson-jakarta-rs-json-provider</artifactId>
                <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
                <artifactId>jackson-jakarta-rs-base</artifactId>
                <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
                <artifactId>jackson-jakarta-rs-providers</artifactId>
                <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>jakarta.xml.bind</groupId>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.ws.rs</groupId>
-                       <artifactId>jakarta.ws.rs-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
 
@@ -181,32 +80,6 @@
                 <groupId>com.fasterxml.jackson.module</groupId>
 				<artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
                <version>${jackson.version}</version>
-               <exclusions>
-			    <exclusion>
-                       <groupId>jakarta.xml.bind</groupId>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.ws.rs</groupId>
-                       <artifactId>jakarta.ws.rs-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.bind</groupId>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.activation</groupId>
-                       <artifactId>jakarta.activation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.activation</groupId>
-                       <artifactId>jakarta.activation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
 
@@ -219,26 +92,6 @@
                        <groupId>org.yaml</groupId>
                        <artifactId>snakeyaml</artifactId>
                    </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.ws.rs</groupId>
-                       <artifactId>jakarta.ws.rs-api</artifactId>
-                   </exclusion>
-				   <exclusion>
-                       <groupId>jakarta.xml.bind</groupId>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.activation</groupId>
-                       <artifactId>jakarta.activation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.activation</groupId>
-                       <artifactId>jakarta.activation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -246,28 +99,6 @@
                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
                <artifactId>jackson-jakarta-rs-xml-provider</artifactId>
                <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>jakarta.xml.bind</groupId>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.ws.rs</groupId>
-                       <artifactId>jakarta.ws.rs-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.activation</groupId>
-                       <artifactId>jakarta.activation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.activation</groupId>
-                       <artifactId>jakarta.activation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
 
@@ -276,28 +107,6 @@
                <artifactId>jackson-module-jaxb-annotations</artifactId>
                <version>${jackson.version}</version>
                <classifier>jakarta</classifier>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                       <artifactId>jackson-jaxrs-base</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
 
@@ -305,28 +114,6 @@
                <groupId>com.fasterxml.jackson.core</groupId>
                <artifactId>jackson-core</artifactId>
                <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                       <artifactId>jackson-jaxrs-base</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
@@ -334,28 +121,6 @@
                <artifactId>jackson-jaxrs-base</artifactId>
                <version>${jackson.version}</version>
                <classifier>jakarta</classifier>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                       <artifactId>jackson-jaxrs-base</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
@@ -363,84 +128,18 @@
                <artifactId>jackson-jaxrs-json-provider</artifactId>
                <version>${jackson.version}</version>
                <classifier>jakarta</classifier>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                       <artifactId>jackson-jaxrs-base</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
                <artifactId>jackson-dataformat-yaml</artifactId>
                <groupId>com.fasterxml.jackson.dataformat</groupId>
                <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                       <artifactId>jackson-jaxrs-base</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
                <groupId>com.fasterxml.jackson.datatype</groupId>
                <artifactId>jackson-datatype-jdk8</artifactId>
                <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                       <artifactId>jackson-jaxrs-base</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
@@ -448,83 +147,17 @@
                <artifactId>jackson-dataformat-xml</artifactId>
                <version>${jackson.version}</version>
                <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                       <artifactId>jackson-jaxrs-base</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
                <groupId>com.fasterxml.jackson.module</groupId>
                <artifactId>jackson-module-parameter-names</artifactId>
                <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                       <artifactId>jackson-jaxrs-base</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
            <dependency>
                <groupId>com.fasterxml.jackson.datatype</groupId>
                <artifactId>jackson-datatype-jsr310</artifactId>
                <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                       <groupId>jakarta.xml.bind</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jakarta.activation-api</artifactId>
-                       <groupId>jakarta.activation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                       <artifactId>jackson-jaxrs-base</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>javax.ws.rs-api</artifactId>
-                       <groupId>javax.ws.rs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>ch.qos.logback</groupId>
-                       <artifactId>logback-classic</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
        </dependencies>

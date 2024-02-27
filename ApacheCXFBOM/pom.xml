@@ -5,13 +5,13 @@
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>versioner</artifactId>
-        <version>0.0.0_0-SNAPSHOT</version>
+        <version>2.0.0-SNAPSHOT</version>
         <relativePath>../Versioner</relativePath>
     </parent>
 
     <groupId>com.guicedee</groupId>
     <artifactId>apache-cxf-bom</artifactId>
-    <version>0.0.0_0-SNAPSHOT</version>
+    <version>2.0.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
@@ -20,6 +20,15 @@
 
     <dependencyManagement>
        <dependencies>
+
+           <dependency>
+               <groupId>com.guicedee</groupId>
+               <artifactId>standalone-bom</artifactId>
+               <version>${guicedee.version}</version>
+               <scope>import</scope>
+               <type>pom</type>
+           </dependency>
+
 			<dependency>
 				<groupId>com.sun.xml.messaging.saaj</groupId>
 				<artifactId>saaj-impl</artifactId>
@@ -33,48 +42,70 @@
 				<version>${relaxng.datatype}</version>
 				<optional>true</optional>
 			</dependency>
-
 		
            <dependency>
                <groupId>org.apache.cxf</groupId>
                <artifactId>cxf-core</artifactId>
                <version>${cxf.core.version}</version>
                <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.apache.cxf</groupId>
+               <artifactId>cxf-rt-rs-service-description-common-openapi</artifactId>
+               <version>${cxf.core.version}</version>
+               <optional>true</optional>
+           </dependency>
+           <dependency>
+               <groupId>org.apache.cxf</groupId>
+               <artifactId>cxf-rt-rs-service-description-swagger-ui</artifactId>
+               <version>${cxf.core.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+
+           <dependency>
+               <groupId>org.apache.cxf</groupId>
+               <artifactId>cxf-rt-rs-http-sci</artifactId>
+               <version>${cxf.core.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+
+           <dependency>
+               <groupId>org.apache.neethi</groupId>
+               <artifactId>neethi</artifactId>
+               <version>3.2.0</version>
+           </dependency>
+
+           <dependency>
+               <groupId>org.apache.ws.commons.axiom</groupId>
+               <artifactId>axiom-api</artifactId>
+               <version>1.4.0</version>
+               <optional>true</optional>
                <exclusions>
                    <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
+                       <groupId>jaxen</groupId>
+                       <artifactId>jaxen</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
+
+
+           <dependency>
+               <groupId>org.apache.cxf</groupId>
+               <artifactId>cxf-rt-transports-http</artifactId>
+               <version>${cxf.core.version}</version>
+               <optional>true</optional>
+           </dependency>
+
+           <dependency>
+               <groupId>org.apache.cxf</groupId>
+               <artifactId>cxf-rt-security</artifactId>
+               <version>${cxf.core.version}</version>
+               <optional>true</optional>
+           </dependency>
+
 
            <dependency>
                <groupId>org.apache.cxf</groupId>
@@ -89,34 +120,6 @@
                    <exclusion>
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -135,34 +138,6 @@
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
                    </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
-                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -179,34 +154,6 @@
                    <exclusion>
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -225,34 +172,6 @@
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
                    </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
-                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -269,34 +188,6 @@
                    <exclusion>
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -315,34 +206,6 @@
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
                    </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
-                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -359,34 +222,6 @@
                    <exclusion>
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -407,30 +242,6 @@
                    <exclusion>
                        <groupId>org.apache.cxf</groupId>
                        <artifactId>cxf-core</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -462,26 +273,6 @@
                        <groupId>jakarta.xml.ws</groupId>
                        <artifactId>jakarta.xml.ws-api</artifactId>
                    </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
-                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -494,30 +285,6 @@
                    <exclusion>
                        <groupId>org.apache.cxf</groupId>
                        <artifactId>cxf-core</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -535,38 +302,6 @@
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
                    </exclusion>
-                   <exclusion>
-                       <groupId>org.apache.cxf</groupId>
-                       <artifactId>cxf-core</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
-                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -576,44 +311,12 @@
                <version>${cxf.core.version}</version>
                <exclusions>
                    <exclusion>
-                       <groupId>jakarta.xml.bind</groupId>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                   </exclusion>
-                   <exclusion>
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
                    </exclusion>
                    <exclusion>
                        <groupId>org.apache.cxf</groupId>
                        <artifactId>cxf-core</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -631,34 +334,6 @@
                    <exclusion>
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -681,34 +356,6 @@
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
                    </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
-                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -725,34 +372,6 @@
                    <exclusion>
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -771,34 +390,6 @@
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
                    </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
-                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -816,34 +407,6 @@
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
                    </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
-                   </exclusion>
                </exclusions>
            </dependency>
 
@@ -860,34 +423,6 @@
                    <exclusion>
                        <groupId>org.slf4j</groupId>
                        <artifactId>slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
 
@@ -2297,87 +1832,17 @@
                <artifactId>wss4j-bindings-wssc</artifactId>
                <optional>true</optional>
                <version>${wss4j.bindings.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>jakarta.xml.bind</groupId>
-                       <artifactId>jakarta.xml.bind-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
-                   </exclusion>
-               </exclusions>
            </dependency>
 
            <dependency>
                <groupId>org.apache.cxf</groupId>
                <artifactId>cxf-rt-rs-service-description-openapi-v3</artifactId>
-               <version>3.4.1</version>
+               <version>${cxf.core.version}</version>
                <optional>true</optional>
                <exclusions>
                    <exclusion>
                        <groupId>org.apache.cxf</groupId>
                        <artifactId>cxf-core</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -2391,38 +1856,6 @@
                    <exclusion>
                        <groupId>org.apache.cxf</groupId>
                        <artifactId>cxf-core</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -2444,38 +1877,6 @@
                    <exclusion>
                        <groupId>commons-collections</groupId>
                        <artifactId>commons-collections</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.slf4j</groupId>
-                       <artifactId>slf4j</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -2637,36 +2038,5 @@
 
        </dependencies>
     </dependencyManagement>
-
-    <profiles>
-        <profile>
-            <id>jdk9</id>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.guicedee</groupId>
-                        <artifactId>standalone-bom</artifactId>
-                        <version>${guicedee.version}</version>
-                        <scope>import</scope>
-                        <type>pom</type>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-        </profile>
-        <profile>
-            <id>jdk8</id>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.guicedee</groupId>
-                        <artifactId>standalone-bom</artifactId>
-                        <version>${guicedee.version}</version>
-                        <scope>import</scope>
-                        <type>pom</type>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-        </profile>
-    </profiles>
 
 </project>

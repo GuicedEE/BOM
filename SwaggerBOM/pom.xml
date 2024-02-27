@@ -2,17 +2,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>versioner</artifactId>
-        <version>0.0.0_0-SNAPSHOT</version>
+        <version>2.0.0-SNAPSHOT</version>
         <relativePath>../Versioner</relativePath>
     </parent>
 
     <groupId>com.guicedee</groupId>
     <artifactId>swagger-bom</artifactId>
-    <version>0.0.0_0-SNAPSHOT</version>
+    <version>2.0.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
@@ -21,67 +20,25 @@
 
     <dependencyManagement>
        <dependencies>
+
+           <dependency>
+               <groupId>com.guicedee</groupId>
+               <artifactId>standalone-bom</artifactId>
+               <version>${guicedee.version}</version>
+               <scope>import</scope>
+               <type>pom</type>
+           </dependency>
+
+
            <!-- Swagger runtime dependencies -->
            <dependency>
                <groupId>io.swagger.core.v3</groupId>
-               <artifactId>swagger-jaxrs2</artifactId>
-               <version>${io.swagger.version}</version>
+               <artifactId>swagger-jaxrs2-jakarta</artifactId>
+               <version>${io.swagger.jakarta.version}</version>
                <exclusions>
-                   <exclusion>
-                       <artifactId>commons-lang3</artifactId>
-                       <groupId>org.apache.commons</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.glassfish.jaxb</groupId>
-                       <artifactId>jaxb-runtime</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>javax.xml.bind</groupId>
-                       <artifactId>jaxb-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>validation-api</artifactId>
-                       <groupId>javax.validation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>slf4j-api</artifactId>
-                       <groupId>org.slf4j</groupId>
-                   </exclusion>
                    <exclusion>
                        <artifactId>javassist</artifactId>
                        <groupId>org.javassist</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jackson-dataformat-yaml</artifactId>
-                       <groupId>com.fasterxml.jackson.dataformat</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jackson-jaxrs-json-provider</artifactId>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -93,60 +50,8 @@
                <optional>true</optional>
                <exclusions>
                    <exclusion>
-                       <artifactId>commons-lang3</artifactId>
-                       <groupId>org.apache.commons</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.glassfish.jaxb</groupId>
-                       <artifactId>jaxb-runtime</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>javax.xml.bind</groupId>
-                       <artifactId>jaxb-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>validation-api</artifactId>
-                       <groupId>javax.validation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>slf4j-api</artifactId>
-                       <groupId>org.slf4j</groupId>
-                   </exclusion>
-                   <exclusion>
                        <artifactId>javassist</artifactId>
                        <groupId>org.javassist</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jackson-dataformat-yaml</artifactId>
-                       <groupId>com.fasterxml.jackson.dataformat</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jackson-jaxrs-json-provider</artifactId>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -158,60 +63,8 @@
                <optional>true</optional>
                <exclusions>
                    <exclusion>
-                       <artifactId>commons-lang3</artifactId>
-                       <groupId>org.apache.commons</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.glassfish.jaxb</groupId>
-                       <artifactId>jaxb-runtime</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>javax.xml.bind</groupId>
-                       <artifactId>jaxb-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>validation-api</artifactId>
-                       <groupId>javax.validation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>slf4j-api</artifactId>
-                       <groupId>org.slf4j</groupId>
-                   </exclusion>
-                   <exclusion>
                        <artifactId>javassist</artifactId>
                        <groupId>org.javassist</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jackson-dataformat-yaml</artifactId>
-                       <groupId>com.fasterxml.jackson.dataformat</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jackson-jaxrs-json-provider</artifactId>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
@@ -223,108 +76,25 @@
                <optional>true</optional>
                <exclusions>
                    <exclusion>
-                       <artifactId>commons-lang3</artifactId>
-                       <groupId>org.apache.commons</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>org.glassfish.jaxb</groupId>
-                       <artifactId>jaxb-runtime</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>javax.xml.bind</groupId>
-                       <artifactId>jaxb-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>validation-api</artifactId>
-                       <groupId>javax.validation</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>slf4j-api</artifactId>
-                       <groupId>org.slf4j</groupId>
-                   </exclusion>
-                   <exclusion>
                        <artifactId>javassist</artifactId>
                        <groupId>org.javassist</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jackson-dataformat-yaml</artifactId>
-                       <groupId>com.fasterxml.jackson.dataformat</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <artifactId>jackson-jaxrs-json-provider</artifactId>
-                       <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.annotation</groupId>
-                       <artifactId>jakarta.annotation-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.ws</groupId>
-                       <artifactId>jakarta.xml.ws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.jws</groupId>
-                       <artifactId>jakarta.jws-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>jakarta.xml.soap</groupId>
-                       <artifactId>jakarta.xml.soap-api</artifactId>
-                   </exclusion>
-                   <exclusion>
-                       <groupId>com.sun.activation</groupId>
-                       <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
            </dependency>
 
            <dependency>
                <groupId>io.swagger.core.v3</groupId>
-               <artifactId>swagger-jaxrs2-servlet-initializer</artifactId>
-               <version>${io.swagger.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>io.swagger.core.v3</groupId>
-                       <artifactId>swagger-jaxrs2</artifactId>
-                   </exclusion>
-               </exclusions>
+               <artifactId>swagger-annotations-jakarta</artifactId>
+               <version>${io.swagger.jakarta.version}</version>
+           </dependency>
+
+           <dependency>
+               <groupId>io.swagger.core.v3</groupId>
+               <artifactId>swagger-jaxrs2-servlet-initializer-jakarta</artifactId>
+               <version>${io.swagger.jakarta.version}</version>
            </dependency>
 
        </dependencies>
     </dependencyManagement>
-
-    <profiles>
-        <profile>
-            <id>jdk9</id>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.guicedee</groupId>
-                        <artifactId>standalone-bom</artifactId>
-                        <version>${guicedee.version}</version>
-                        <scope>import</scope>
-                        <type>pom</type>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-        </profile>
-        <profile>
-            <id>jdk8</id>
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.guicedee</groupId>
-                        <artifactId>standalone-bom</artifactId>
-                        <version>${guicedee.version}</version>
-                        <scope>import</scope>
-                        <type>pom</type>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
-        </profile>
-    </profiles>
 
 </project>
