@@ -191,7 +191,7 @@
         <relaxng.datatype>4.0.4</relaxng.datatype>
 
         <!-- FasterXML  -->
-        <woodstox.version>6.5.1</woodstox.version>
+        <woodstox.version>6.6.1</woodstox.version>
         <jackson.version>2.16.1</jackson.version>
 
         <!-- Google -->
