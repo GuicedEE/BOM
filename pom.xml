@@ -24,7 +24,30 @@
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jna-platform</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${jna.version}</version>-->
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.servlets</groupId>
+                <artifactId>guiced-vertx-sockets</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>vertx-core</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>vertx-rest</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.servlets</groupId>
+                <artifactId>guiced-vertx</artifactId>
+                <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
