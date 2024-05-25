@@ -44,6 +44,20 @@
                 <version>${guicedee.version}</version>
             </dependency>
 
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>guiced-cerial</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>guiced-rabbit</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>vertx-rabbitmq</artifactId>
