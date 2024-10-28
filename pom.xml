@@ -76,18 +76,21 @@
                 <version>${guicedee.version}</version>
             </dependency>
 
+<!--
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-servlets-request-scoper</artifactId>
                 <version>${guicedee.version}</version>
             </dependency>
-
+-->
+<!--
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
                 <artifactId>guiced-persistence-systemproperties-reader</artifactId>
                 <version>${guicedee.version}</version>
 
-            </dependency>
+            </dependency>-->
+<!--
 
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
@@ -95,6 +98,7 @@
                 <version>${guicedee.version}</version>
 
             </dependency>
+-->
 
             <dependency>
                 <groupId>com.guicedee</groupId>
@@ -208,7 +212,7 @@
 
             </dependency>
 
-            <dependency>
+          <!--  <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-undertow</artifactId>
                 <version>${guicedee.version}</version>
@@ -221,7 +225,7 @@
                 <version>${guicedee.version}</version>
 
             </dependency>
-
+-->
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-openapi</artifactId>
@@ -504,13 +508,13 @@
                 <version>${guicedee.version}</version>
                 <!--<version>${hazelcast.hibernate.version}</version>-->
             </dependency>
-
+<!--
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
                 <artifactId>guiced-websockets</artifactId>
                 <version>${guicedee.version}</version>
 
-            </dependency>
+            </dependency>-->
 
             <dependency>
                 <groupId>com.guicedee.servlets</groupId>
@@ -750,21 +754,21 @@
                 <version>${guicedee.version}</version>
                 <!--<version>${undertow.version}</version>-->
             </dependency>
-
+<!--
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>undertow-servlet</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${undertow.version}</version>-->
-            </dependency>
+                &lt;!&ndash;<version>${undertow.version}</version>&ndash;&gt;
+            </dependency>-->
 
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
+         <!--   <dependency>
+                <groupId>com.guided.services</groupId>
                 <artifactId>undertow-websockets-jsr</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${undertow.version}</version>-->
+                &lt;!&ndash;<version>${undertow.version}</version>&ndash;&gt;
             </dependency>
-
+-->
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>amqp-client</artifactId>

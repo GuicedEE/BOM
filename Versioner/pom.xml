@@ -340,7 +340,7 @@
 
         <ibm.mq.version>9.3.5.0</ibm.mq.version>
 
-        <vertx.version>4.5.7</vertx.version>
+        <vertx.version>4.5.10</vertx.version>
         <jboss-marshalling.version>2.1.4.SP1</jboss-marshalling.version>
         <netty-tcnative.version>2.0.65.Final</netty-tcnative.version>
     </properties>
