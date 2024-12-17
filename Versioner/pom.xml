@@ -44,7 +44,7 @@
         <maven.release.version>3.0.1</maven.release.version>
         <maven.versions.version>2.16.2</maven.versions.version>
         <maven.verifyier.version>1.1</maven.verifyier.version>
-        <maven.asm.version>9.7</maven.asm.version>
+        <maven.asm.version>9.7.1</maven.asm.version>
         <maven.gpg.version>3.2.4</maven.gpg.version>
 
         <maven.war.version>3.4.0</maven.war.version>
@@ -53,7 +53,7 @@
 
         <maven-shade-transformers>0.0.3</maven-shade-transformers>
 
-        <javaparser-core>3.25.10</javaparser-core>
+        <javaparser-core>3.26.3</javaparser-core>
         <aop.version>1.0.0</aop.version>
 
         <build.helper.maven.plugin.version>3.6.0</build.helper.maven.plugin.version>
@@ -70,7 +70,7 @@
 
         <nexus.staging.maven.plugin.version>1.6.13</nexus.staging.maven.plugin.version>
         <jdk.release>21</jdk.release>
-        <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <mapstruct.version>1.6.3</mapstruct.version>
         <moditect.maven.plugin.version>1.2.1.Final</moditect.maven.plugin.version>
 
         <!--suppress CheckTagEmptyBody -->
@@ -79,24 +79,24 @@
         <gpg.passphrase></gpg.passphrase>
 
         <!-- Standalone -->
-        <lombok.version>1.18.32</lombok.version>
+        <lombok.version>1.18.36</lombok.version>
         <classmate.version>1.7.0</classmate.version>
         <dom4j.version>2.1.4</dom4j.version>
         <ehcache.version>3.10.8</ehcache.version>
         <net.sf.ehcache.version>2.10.9.2</net.sf.ehcache.version>
-        <esapi.version>2.5.3.1</esapi.version>
-        <classgraph.version>4.8.170</classgraph.version>
+        <esapi.version>2.6.0.0</esapi.version>
+        <classgraph.version>4.8.179</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
-        <amqp.client.version>5.21.0</amqp.client.version>
+        <amqp.client.version>5.24.0</amqp.client.version>
 
         <batik.version>1.17</batik.version>
 
-        <ant.version>1.10.14</ant.version>
+        <ant.version>1.10.15</ant.version>
         <stax.version>2.1.0</stax.version>
         <stax2.api.version>4.2.2</stax2.api.version>
         <bcprov.15.version>1.68</bcprov.15.version>
         <bcprov.16.version>1.46</bcprov.16.version>
-        <bcprov.18.version>1.78.1</bcprov.18.version>
+        <bcprov.18.version>1.79</bcprov.18.version>
         <nyc.ssl.version>0.3.11</nyc.ssl.version>
         <http.core.version>4.4.16</http.core.version>
         <http.nio.version>4.4.16</http.nio.version>
@@ -104,22 +104,22 @@
         <slf4j.version>2.0.9</slf4j.version>
         <log4j2.version>2.23.1</log4j2.version>
         <slf4j.log4j2.version>2.22.0</slf4j.log4j2.version>
-        <bytebuddy.version>1.14.16</bytebuddy.version>
-        <snakeyaml.version>2.2</snakeyaml.version>
+        <bytebuddy.version>1.15.11</bytebuddy.version>
+        <snakeyaml.version>2.3</snakeyaml.version>
         <sparsebitset.version>1.3</sparsebitset.version>
-        <zstdjni.version>1.5.6-2</zstdjni.version>
-        <tica.version>3.0.0-BETA</tica.version>
+        <zstdjni.version>1.5.6-8</zstdjni.version>
+        <tica.version>3.0.0</tica.version>
         <typescript4j.version>0.4.0</typescript4j.version>
-        <rhino.version>1.7.14</rhino.version>
+        <rhino.version>1.7.15</rhino.version>
         <rome.version>2.1.0</rome.version>
 
-        <h2.db.api>2.2.224</h2.db.api>
+        <h2.db.api>2.3.232</h2.db.api>
 
         <nrjavaserial.version>5.2.1</nrjavaserial.version>
-        <jna.version>5.14.0</jna.version>
+        <jna.version>5.15.0</jna.version>
 
         <javassist.version>3.30.2-GA</javassist.version>
-        <spotbugs.version>4.8.4</spotbugs.version>
+        <spotbugs.version>4.8.6</spotbugs.version>
 
         <bouncycastle.version>1.78</bouncycastle.version>
 
@@ -139,29 +139,29 @@
         <hazelcast.hibernate.version>5.1.0</hazelcast.hibernate.version>
 
         <!-- Apache -->
-        <poi.version>5.2.5</poi.version>
-        <fop.version>2.9</fop.version>
-        <imageio-tiff.version>3.10.1</imageio-tiff.version>
+        <poi.version>5.3.0</poi.version>
+        <fop.version>2.10</fop.version>
+        <imageio-tiff.version>3.12.0</imageio-tiff.version>
 
         <httpclient.version>4.5.14</httpclient.version>
 
-        <collections.version>4.5.0-M1</collections.version>
-        <codec.version>1.16.1</codec.version>
-        <compress.version>1.26.1</compress.version>
-        <csv.version>1.10.0</csv.version>
+        <collections.version>4.5.0-M2</collections.version>
+        <codec.version>1.17.1</codec.version>
+        <compress.version>1.27.1</compress.version>
+        <csv.version>1.12.0</csv.version>
         <fileupload.version>1.5</fileupload.version>
-        <io.version>2.16.1</io.version>
-        <lang.version>3.14.0</lang.version>
-        <logging.version>1.3.1</logging.version>
+        <io.version>2.18.0</io.version>
+        <lang.version>3.17.0</lang.version>
+        <logging.version>1.3.4</logging.version>
         <math.version>3.6.1</math.version>
-        <text.version>1.11.0</text.version>
+        <text.version>1.13.0</text.version>
         <beanutils.version>1.9.4</beanutils.version>
         <dec.version>0.1.2</dec.version>
-        <xz.version>1.9</xz.version>
+        <xz.version>1.10</xz.version>
         <portlet.api.version>1.0</portlet.api.version>
 
-        <xmlbeans.version>5.2.0</xmlbeans.version>
-        <fontbox.version>3.0.2</fontbox.version>
+        <xmlbeans.version>5.3.0</xmlbeans.version>
+        <fontbox.version>3.0.3</fontbox.version>
 
         <!--<xerces.version>2.12.0</xerces.version>-->
 
@@ -191,73 +191,73 @@
         <relaxng.datatype>4.0.5</relaxng.datatype>
 
         <!-- FasterXML  -->
-        <woodstox.version>6.6.2</woodstox.version>
-        <jackson.version>2.17.1</jackson.version>
+        <woodstox.version>7.1.0</woodstox.version>
+        <jackson.version>2.18.2</jackson.version>
 
         <!-- Google -->
 
         <jsr305.version>3.0.2</jsr305.version>
         <findbugs.annotation.version>3.0.1</findbugs.annotation.version>
-        <checkerqual.version>3.42.0</checkerqual.version>
-        <errorprone.version>2.26.1</errorprone.version>
+        <checkerqual.version>3.48.3</checkerqual.version>
+        <errorprone.version>2.36.0</errorprone.version>
         <listenablefuture.version>9999.0-empty-to-avoid-conflict-with-guava</listenablefuture.version>
         <j2obc.version>3.0.0</j2obc.version>
-        <animalsniffer.version>1.23</animalsniffer.version>
+        <animalsniffer.version>1.24</animalsniffer.version>
         <failureacces.version>1.0.2</failureacces.version>
 
-        <guava.version>33.1.0-jre</guava.version>
-        <protobuf.version>4.26.1</protobuf.version>
+        <guava.version>33.4.0-jre</guava.version>
+        <protobuf.version>4.29.1</protobuf.version>
 
         <guice.version>7.0.0</guice.version>
         <zxing.version>3.5.3</zxing.version>
 
-        <gson.version>2.10.1</gson.version>
+        <gson.version>2.11.0</gson.version>
 
         <!-- Jakarta -->
 
         <jakarta.activation.version>2.1.3</jakarta.activation.version>
         <jakarta.annotation.version>3.0.0</jakarta.annotation.version>
         <jakarta.com.sun.activation.version>2.0.1</jakarta.com.sun.activation.version>
-        <jakarta.validation.version>3.1.0-M2</jakarta.validation.version>
-        <jakarta.faces.version>4.1.0-M1</jakarta.faces.version>
-        <glassfish.faces.version>4.1.0-M1</glassfish.faces.version>
+        <jakarta.validation.version>3.1.0</jakarta.validation.version>
+        <jakarta.faces.version>4.1.2</jakarta.faces.version>
+        <glassfish.faces.version>4.1.2</glassfish.faces.version>
         <jakarta.json.version>2.1.3</jakarta.json.version>
         <jakarta.json.bind.version>3.0.1</jakarta.json.bind.version>
-        <jakarta.cdi.api.version>4.1.0.RC1</jakarta.cdi.api.version>
+        <jakarta.cdi.api.version>4.1.0</jakarta.cdi.api.version>
         <jakarta.ejb.version>4.0.1</jakarta.ejb.version>
-        <jakarta.el.version>6.0.0-M1</jakarta.el.version>
-        <jakarta.el.api.version>6.0.0-RC1</jakarta.el.api.version>
+        <jakarta.el.version>6.0.1</jakarta.el.version>
+        <jakarta.el.api.version>6.0.1</jakarta.el.api.version>
         <jakarta.jws.version>3.0.0</jakarta.jws.version>
-        <jakarta.interceptor.version>2.2.0-RC1</jakarta.interceptor.version>
-        <jakarta.rs.api.version>3.1.0</jakarta.rs.api.version>
-        <jakarta.xml.ws.api.version>4.0.1</jakarta.xml.ws.api.version>
-        <jakarta.xml.soap.api.version>3.0.1</jakarta.xml.soap.api.version>
-        <jakarta.xml.ws.metro.api.version>4.0.3</jakarta.xml.ws.metro.api.version>
-        <jakarta.xml.jaxws.rt.version>4.0.2</jakarta.xml.jaxws.rt.version>
+        <jakarta.interceptor.version>2.2.0</jakarta.interceptor.version>
+        <jakarta.rs.api.version>4.0.0</jakarta.rs.api.version>
+        <jakarta.xml.ws.api.version>4.0.2</jakarta.xml.ws.api.version>
+        <jakarta.xml.soap.api.version>3.0.2</jakarta.xml.soap.api.version>
+        <jakarta.xml.ws.metro.api.version>4.0.4</jakarta.xml.ws.metro.api.version>
+        <jakarta.xml.jaxws.rt.version>4.0.4</jakarta.xml.jaxws.rt.version>
         <jakarta.xml.jaxws.api.version>4.0.0</jakarta.xml.jaxws.api.version>
 
         <jakarta.xml.jaxb.api.version>4.0.2</jakarta.xml.jaxb.api.version>
         <jakarta.xml.jaxb.glassfish.api.version>4.0.5</jakarta.xml.jaxb.glassfish.api.version>
-        <jakarta.xml.ws.api.version>4.0.1</jakarta.xml.ws.api.version>
-        <jakarta.persistence.api.version>3.2.0-M2</jakarta.persistence.api.version>
+        <jakarta.xml.ws.api.version>4.0.2</jakarta.xml.ws.api.version>
+        <jakarta.persistence.api.version>3.2.0</jakarta.persistence.api.version>
         <jakarta.transaction.api.version>2.0.1</jakarta.transaction.api.version>
-        <jakarta.websocket.api.version>2.2.0-M1</jakarta.websocket.api.version>
+        <jakarta.websocket.api.version>2.2.0</jakarta.websocket.api.version>
         <jakarta.inject.api.version>2.0.1.MR</jakarta.inject.api.version>
         <jakarta.security.sacc.api.version>1.6.1</jakarta.security.sacc.api.version>
 
-        <jakarta.servlet.version>6.1.0-M2</jakarta.servlet.version>
-        <jakarta.servlet.jsp.version>4.0.0-M2</jakarta.servlet.jsp.version>
-        <jakarta.servlet.jsp.api.version>4.0.0-M2</jakarta.servlet.jsp.api.version>
+        <jakarta.servlet.version>6.1.0</jakarta.servlet.version>
+        <jakarta.servlet.jsp.version>4.0.0</jakarta.servlet.jsp.version>
+        <jakarta.servlet.jsp.api.version>4.0.0</jakarta.servlet.jsp.api.version>
         <jakarta.servlet.jsp.jstl.version>3.0.1</jakarta.servlet.jsp.jstl.version>
-        <jakarta.servlet.jsp.jstl.api.version>3.0.0</jakarta.servlet.jsp.jstl.api.version>
+        <jakarta.servlet.jsp.jstl.api.version>3.0.2</jakarta.servlet.jsp.jstl.api.version>
 
         <jakarta.mail.version>2.0.1</jakarta.mail.version>
 
         <jandex.version>3.2.0</jandex.version>
         <jaxen.version>2.0.0</jaxen.version>
         <org.json.version>20240303</org.json.version>
-        <kafka.client.version>3.7.0</kafka.client.version>
-        <openpdf.version>2.0.2</openpdf.version>
+        <kafka.client.version>3.9.0</kafka.client.version>
+        <openpdf.version>2.0.3</openpdf.version>
         <primefaces.version>11.0.0-RC2</primefaces.version>
         <qdox.version>2.0.0</qdox.version>
         <jcache.api.version>1.1.1</jcache.api.version>
@@ -265,7 +265,7 @@
         <jakarta.jms.version>3.1.0</jakarta.jms.version>
         <org.osgi.core.version>6.0.0</org.osgi.core.version>
 
-        <dropwizard.metrics-core.version>4.2.25</dropwizard.metrics-core.version>
+        <dropwizard.metrics-core.version>4.2.29</dropwizard.metrics-core.version>
         <jdom.version>2.0.6.1</jdom.version>
 
         <mssql.jdbc>12.4.2</mssql.jdbc>
@@ -293,43 +293,42 @@
         <io.swagger.version>2.2.21</io.swagger.version>
         <io.swagger.jakarta.version>2.2.21</io.swagger.jakarta.version>
 
-        <junit.jupiter.version>5.10.2</junit.jupiter.version>
+        <junit.jupiter.version>5.11.4</junit.jupiter.version>
         <hamcrest.version>1.3</hamcrest.version>
-        <assertj.version>3.25.3</assertj.version>
-        <mockito.version>5.11.0</mockito.version>
+        <assertj.version>3.26.3</assertj.version>
+        <mockito.version>5.14.2</mockito.version>
 
-        <aspectj.version>1.9.22</aspectj.version>
+        <aspectj.version>1.9.22.1</aspectj.version>
 
         <junit.version>4.13.2</junit.version>
-        <selenium.version>4.19.1</selenium.version>
-        <selenium.drivers.version>4.19.1</selenium.drivers.version>
+        <selenium.version>4.27.0</selenium.version>
+        <selenium.drivers.version>4.27.0</selenium.drivers.version>
         <selenium.jupiter.version>5.0.0</selenium.jupiter.version>
-        <bonigarcia.selenium.jupiter.version>5.1.0</bonigarcia.selenium.jupiter.version>
-        <webdrivermanager.version>5.8.0</webdrivermanager.version>
+        <bonigarcia.selenium.jupiter.version>5.1.1</bonigarcia.selenium.jupiter.version>
+        <webdrivermanager.version>5.9.2</webdrivermanager.version>
 
         <jmh.version>1.37</jmh.version>
         <okhttp.version>4.10.0</okhttp.version>
-        <okio.version>3.9.0</okio.version>
+        <okio.version>3.9.1</okio.version>
 
         <flatten-maven-plugin.version>1.3.0</flatten-maven-plugin.version>
 
-        <postgres.version>42.7.3</postgres.version>
-        <snappy.version>1.1.10.5</snappy.version>
+        <postgres.version>42.7.4</postgres.version>
+        <snappy.version>1.1.10.7</snappy.version>
 
         <exec-maven-plugin.version>3.3.0</exec-maven-plugin.version>
-        <doxia-site-renderer.version>2.0.0-M19</doxia-site-renderer.version>
-        <gson.version>2.10.1</gson.version>
-        <waffle-jna.version>3.3.0</waffle-jna.version>
+        <doxia-site-renderer.version>2.0.0</doxia-site-renderer.version>
+        <waffle-jna.version>3.5.0</waffle-jna.version>
         <javax.money.moneta.version>1.4.2</javax.money.moneta.version>
         <javax.money.version>1.1</javax.money.version>
         <javafx.version>21.0.1</javafx.version>
-        <ojdbc.version>23.3.0.23.09</ojdbc.version>
-        <joda.time.version>2.12.7</joda.time.version>
+        <ojdbc.version>23.6.0.24.10</ojdbc.version>
+        <joda.time.version>2.13.0</joda.time.version>
         <paranamer.version>2.8</paranamer.version>
-        <offheap.version>2.5.5</offheap.version>
+        <offheap.version>2.5.6</offheap.version>
         <osgi.version>8.0.0</osgi.version>
         <osgi.annotations.version>1.5.1</osgi.annotations.version>
-        <terracota.statistics.version>2.1.2</terracota.statistics.version>
+        <terracota.statistics.version>2.1.3</terracota.statistics.version>
 
         <spring.version>6.1.2</spring.version>
 
@@ -338,11 +337,11 @@
         <microprofile.config.version>3.1</microprofile.config.version>
         <smallrye.commons.version>2.4.0</smallrye.commons.version>
 
-        <ibm.mq.version>9.3.5.0</ibm.mq.version>
+        <ibm.mq.version>9.4.1.0</ibm.mq.version>
 
-        <vertx.version>4.5.10</vertx.version>
-        <jboss-marshalling.version>2.1.4.SP1</jboss-marshalling.version>
-        <netty-tcnative.version>2.0.65.Final</netty-tcnative.version>
+        <vertx.version>[4.5.10,5.0)</vertx.version>
+        <jboss-marshalling.version>2.2.1.Final</jboss-marshalling.version>
+        <netty-tcnative.version>2.0.69.Final</netty-tcnative.version>
     </properties>
 
     <url>https://guicedee.com</url>
