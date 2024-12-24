@@ -634,6 +634,13 @@
                 <!--<version>${maven.hibernate.version}</version>-->
             </dependency>
 
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>jSerialComm</artifactId>
+                <version>${guicedee.version}</version>
+                <!--<version>${maven.hibernate.version}</version>-->
+            </dependency>
+
      <!--       <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>hibernate-ehcache</artifactId>
@@ -648,6 +655,7 @@
                 <version>${guicedee.version}</version>
                 &lt;!&ndash;<version>${maven.hibernate.enhance.version}</version>&ndash;&gt;
             </dependency>-->
+
 
 
             <dependency>
