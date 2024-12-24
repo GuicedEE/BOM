@@ -636,7 +636,7 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
-                <artifactId>jSerialComm</artifactId>
+                <artifactId>jserialcomm</artifactId>
                 <version>${guicedee.version}</version>
                 <!--<version>${maven.hibernate.version}</version>-->
             </dependency>
