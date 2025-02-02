@@ -25,6 +25,25 @@
         </license>
     </licenses>
 
+    <!--<profiles>
+        <profile>
+            <id>build</id>
+            <modules>
+                <module>ApacheBOM</module>
+                <module>ApacheCXFBOM</module>
+                <module>FasterXMLBOM</module>
+                <module>GoogleBOM</module>
+                <module>HibernateBOM</module>
+                <module>JakartaBOM</module>
+                <module>JBossBOM</module>
+                <module>SmallRyeBOM</module>
+                <module>StandaloneBOM</module>
+                <module>SwaggerBOM</module>
+                <module>TestLayoutBOM</module>
+            </modules>
+        </profile>
+    </profiles>-->
+
 
     <dependencyManagement>
         <dependencies>
