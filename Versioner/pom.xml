@@ -125,10 +125,10 @@
 
         <!--  Hibernate -->
         <maven.hibernate.validator.version>8.0.1.Final</maven.hibernate.validator.version>
-        <maven.hibernate.version>6.5.2.Final</maven.hibernate.version>
-        <maven.hibernate.commons.annotations.version>6.0.6.Final</maven.hibernate.commons.annotations.version>
+        <maven.hibernate.version>6.6.7.Final</maven.hibernate.version>
+        <maven.hibernate.commons.annotations.version>7.0.3.Final</maven.hibernate.commons.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
-        <maven.hibernate.enhance.version>6.5.2.Final</maven.hibernate.enhance.version>
+        <maven.hibernate.enhance.version>6.6.7.Final</maven.hibernate.enhance.version>
         <antlr4-runtime.version>4.13.1</antlr4-runtime.version>
 
         <c3p0.version>0.9.5.5</c3p0.version>
@@ -253,7 +253,7 @@
 
         <jakarta.mail.version>2.0.1</jakarta.mail.version>
 
-        <jandex.version>3.2.0</jandex.version>
+        <jandex.version>3.2.6</jandex.version>
         <jaxen.version>2.0.0</jaxen.version>
         <org.json.version>20240303</org.json.version>
         <kafka.client.version>3.9.0</kafka.client.version>
@@ -313,7 +313,7 @@
 
         <flatten-maven-plugin.version>1.3.0</flatten-maven-plugin.version>
 
-        <postgres.version>42.7.4</postgres.version>
+        <postgres.version>42.7.5</postgres.version>
         <snappy.version>1.1.10.7</snappy.version>
 
         <exec-maven-plugin.version>3.3.0</exec-maven-plugin.version>
@@ -339,7 +339,7 @@
 
         <ibm.mq.version>9.4.1.0</ibm.mq.version>
 
-        <vertx.version>[4.5.10,5.0)</vertx.version>
+        <vertx.version>5.0.0.CR5</vertx.version>
         <jboss-marshalling.version>2.2.1.Final</jboss-marshalling.version>
         <netty-tcnative.version>2.0.69.Final</netty-tcnative.version>
     </properties>
