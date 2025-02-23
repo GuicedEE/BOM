@@ -64,12 +64,14 @@
                 <artifactId>guiced-vertx-sockets</artifactId>
                 <version>${guicedee.version}</version>
             </dependency>
+<!--
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>vertx-core</artifactId>
                 <version>${guicedee.version}</version>
             </dependency>
+-->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
