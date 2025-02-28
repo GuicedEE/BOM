@@ -333,7 +333,7 @@
         <spring.version>6.1.2</spring.version>
 
 
-        <smallrye.config.version>3.7.1</smallrye.config.version>
+        <smallrye.config.version>3.12.2</smallrye.config.version>
         <microprofile.config.version>3.1</microprofile.config.version>
         <smallrye.commons.version>2.4.0</smallrye.commons.version>
 
