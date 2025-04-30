@@ -55,13 +55,37 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
-                <artifactId>hibernate-jpamodelgen</artifactId>
+                <artifactId>testcontainers</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>scram</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>vertx-mutiny</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>hibernate-reactive</artifactId>
                 <version>${guicedee.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.guicedee</groupId>
                 <artifactId>guiced-vertx-web</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>guiced-vertx-persistence</artifactId>
                 <version>${guicedee.version}</version>
             </dependency>
 
@@ -173,7 +197,6 @@
             </dependency>
 
 
-
             <dependency>
                 <groupId>com.guicedee</groupId>
                 <artifactId>guice-injection</artifactId>
@@ -251,28 +274,28 @@
                 <scope>compile</scope>
             </dependency>
 
-         <!--   <dependency>
-                <groupId>com.guicedee.persistence</groupId>
-                <artifactId>guiced-persistence-ehcache</artifactId>
-                <version>${guicedee.version}</version>
+            <!--   <dependency>
+                   <groupId>com.guicedee.persistence</groupId>
+                   <artifactId>guiced-persistence-ehcache</artifactId>
+                   <version>${guicedee.version}</version>
 
-                <scope>compile</scope>
-            </dependency>
--->
+                   <scope>compile</scope>
+               </dependency>
+   -->
             <!-- Third Party Services -->
-<!--            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>h2</artifactId>
-                <version>${guicedee.version}</version>
-                &lt;!&ndash;<version>${h2.db.api}</version>&ndash;&gt;
-            </dependency>-->
-<!--
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${guicedee.version}</version>
-                &lt;!&ndash;<version>${lang.version}</version>&ndash;&gt;
-            </dependency>-->
+            <!--            <dependency>
+                            <groupId>com.guicedee.services</groupId>
+                            <artifactId>h2</artifactId>
+                            <version>${guicedee.version}</version>
+                            &lt;!&ndash;<version>${h2.db.api}</version>&ndash;&gt;
+                        </dependency>-->
+            <!--
+                        <dependency>
+                            <groupId>com.guicedee.services</groupId>
+                            <artifactId>commons-lang3</artifactId>
+                            <version>${guicedee.version}</version>
+                            &lt;!&ndash;<version>${lang.version}</version>&ndash;&gt;
+                        </dependency>-->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -302,35 +325,35 @@
                 <!--<version>${cxf.core.version}</version>-->
             </dependency>
 
-<!--            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>commons-compress</artifactId>
-                <version>${guicedee.version}</version>
-                &lt;!&ndash;<version>${compress.version}</version>&ndash;&gt;
-            </dependency>-->
+            <!--            <dependency>
+                            <groupId>com.guicedee.services</groupId>
+                            <artifactId>commons-compress</artifactId>
+                            <version>${guicedee.version}</version>
+                            &lt;!&ndash;<version>${compress.version}</version>&ndash;&gt;
+                        </dependency>-->
 
- <!--           <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>commons-xmlbeans</artifactId>
-                <version>${guicedee.version}</version>
-                &lt;!&ndash;<version>${xmlbeans.version}</version>&ndash;&gt;
-            </dependency>-->
+            <!--           <dependency>
+                           <groupId>com.guicedee.services</groupId>
+                           <artifactId>commons-xmlbeans</artifactId>
+                           <version>${guicedee.version}</version>
+                           &lt;!&ndash;<version>${xmlbeans.version}</version>&ndash;&gt;
+                       </dependency>-->
 
-        <!--    <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>commons-text</artifactId>
-                <version>${guicedee.version}</version>
-                &lt;!&ndash;<version>${text.version}</version>&ndash;&gt;
-            </dependency>
--->
-<!--
-            <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>commons-codec</artifactId>
-                <version>${guicedee.version}</version>
-                &lt;!&ndash;<version>${codec.version}</version>&ndash;&gt;
-            </dependency>
--->
+            <!--    <dependency>
+                    <groupId>com.guicedee.services</groupId>
+                    <artifactId>commons-text</artifactId>
+                    <version>${guicedee.version}</version>
+                    &lt;!&ndash;<version>${text.version}</version>&ndash;&gt;
+                </dependency>
+    -->
+            <!--
+                        <dependency>
+                            <groupId>com.guicedee.services</groupId>
+                            <artifactId>commons-codec</artifactId>
+                            <version>${guicedee.version}</version>
+                            &lt;!&ndash;<version>${codec.version}</version>&ndash;&gt;
+                        </dependency>
+            -->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -345,12 +368,12 @@
                 <!--<version>${math.version}</version>-->
             </dependency>
 
-   <!--         <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>commons-logging</artifactId>
-                <version>${guicedee.version}</version>
-                &lt;!&ndash;<version>${logging.version}</version>&ndash;&gt;
-            </dependency>-->
+            <!--         <dependency>
+                         <groupId>com.guicedee.services</groupId>
+                         <artifactId>commons-logging</artifactId>
+                         <version>${guicedee.version}</version>
+                         &lt;!&ndash;<version>${logging.version}</version>&ndash;&gt;
+                     </dependency>-->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -373,13 +396,13 @@
                 <!--<version>${poi.version}</version>-->
             </dependency>
 
-   <!--         <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>commons-io</artifactId>
-                <version>${guicedee.version}</version>
-                &lt;!&ndash;<version>${io.version}</version>&ndash;&gt;
-            </dependency>
--->
+            <!--         <dependency>
+                         <groupId>com.guicedee.services</groupId>
+                         <artifactId>commons-io</artifactId>
+                         <version>${guicedee.version}</version>
+                         &lt;!&ndash;<version>${io.version}</version>&ndash;&gt;
+                     </dependency>
+         -->
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>commons-fileupload</artifactId>
@@ -408,13 +431,13 @@
             </dependency>
 
 
-   <!--         <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>byte-buddy</artifactId>
-                <version>${guicedee.version}</version>
-                &lt;!&ndash;<version>${bytebuddy.version}</version>&ndash;&gt;
-            </dependency>
--->
+            <!--         <dependency>
+                         <groupId>com.guicedee.services</groupId>
+                         <artifactId>byte-buddy</artifactId>
+                         <version>${guicedee.version}</version>
+                         &lt;!&ndash;<version>${bytebuddy.version}</version>&ndash;&gt;
+                     </dependency>
+         -->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -753,25 +776,21 @@
             </dependency>
 
 
+            <dependency>
+                <groupId>io.smallrye.reactive</groupId>
+                <artifactId>mutiny</artifactId>
+                <version>2.8.0</version>
+            </dependency>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            <!-- ==========================  -->
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>apache-bom</artifactId>
+                <version>${guicedee.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
             <dependency>
                 <groupId>com.guicedee</groupId>
                 <artifactId>fasterxml-bom</artifactId>
@@ -811,6 +830,29 @@
                 <groupId>com.guicedee</groupId>
                 <artifactId>tests-bom</artifactId>
                 <version>${guicedee.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>io.smallrye.reactive</groupId>
+                <artifactId>vertx-mutiny-clients-bom</artifactId>
+                <version>${smallrye.reactive.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-stack-depchain</artifactId>
+                <version>${vertx.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+            <dependency>
+                <groupId>io.smallrye.common</groupId>
+                <artifactId>smallrye-common-bom</artifactId>
+                <version>${smallrye.commons.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
