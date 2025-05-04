@@ -21,6 +21,19 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>at.favre.lib</groupId>
+                <artifactId>bcrypt</artifactId>
+                <version>${bcrypt.version}</version>
+                <optional>true</optional>
+            </dependency>
+            <dependency>
+                <groupId>at.favre.lib</groupId>
+                <artifactId>bytes</artifactId>
+                <version>${bcrypt.bytes.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>

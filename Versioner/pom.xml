@@ -164,6 +164,8 @@
         <fontbox.version>3.0.3</fontbox.version>
 
         <!--<xerces.version>2.12.0</xerces.version>-->
+        <bcrypt.version>0.10.2</bcrypt.version>
+        <bcrypt.bytes.version>1.5.0</bcrypt.bytes.version>
 
 
         <!-- Apache CXF -->
