@@ -24,13 +24,11 @@
                 <groupId>at.favre.lib</groupId>
                 <artifactId>bcrypt</artifactId>
                 <version>${bcrypt.version}</version>
-                <optional>true</optional>
             </dependency>
             <dependency>
                 <groupId>at.favre.lib</groupId>
                 <artifactId>bytes</artifactId>
                 <version>${bcrypt.bytes.version}</version>
-                <optional>true</optional>
             </dependency>
 
             <dependency>
@@ -197,7 +195,6 @@
                 <optional>true</optional>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/org.osgi/org.osgi.service.component.annotations -->
             <dependency>
                 <groupId>org.osgi</groupId>
                 <artifactId>org.osgi.service.component.annotations</artifactId>
