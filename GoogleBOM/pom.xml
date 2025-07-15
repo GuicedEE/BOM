@@ -52,10 +52,6 @@
                         <groupId>aopalliance</groupId>
                         <artifactId>aopalliance</artifactId>
                     </exclusion>
-                    <exclusion>
-                        <groupId>com.google.guava</groupId>
-                        <artifactId>guava</artifactId>
-                    </exclusion>
                 </exclusions>
             </dependency>
 
@@ -165,7 +161,6 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
-                <optional>true</optional>
             </dependency>
             <dependency>
                 <groupId>com.google.zxing</groupId>

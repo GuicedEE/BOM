@@ -75,7 +75,7 @@
            <dependency>
                <groupId>org.apache.neethi</groupId>
                <artifactId>neethi</artifactId>
-               <version>3.2.0</version>
+               <version>${neethi.version}</version>
            </dependency>
 
            <dependency>
@@ -90,22 +90,6 @@
                    </exclusion>
                </exclusions>
            </dependency>
-
-
-           <dependency>
-               <groupId>org.apache.cxf</groupId>
-               <artifactId>cxf-rt-transports-http</artifactId>
-               <version>${cxf.core.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>org.apache.cxf</groupId>
-               <artifactId>cxf-rt-security</artifactId>
-               <version>${cxf.core.version}</version>
-               <optional>true</optional>
-           </dependency>
-
 
            <dependency>
                <groupId>org.apache.cxf</groupId>
@@ -1335,13 +1319,6 @@
                        <artifactId>jakarta.activation</artifactId>
                    </exclusion>
                </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>org.apache.neethi</groupId>
-               <artifactId>neethi</artifactId>
-               <version>${neethi.version}</version>
-               <optional>true</optional>
            </dependency>
 
            <dependency>

@@ -605,11 +605,11 @@
                 <version>${guicedee.version}</version>
             </dependency>
 
-            <dependency>
+            <!--dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>jserialcomm</artifactId>
                 <version>${guicedee.version}</version>
-            </dependency>
+            </dependency>-->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -665,12 +665,12 @@
                 <!--<version>${jandex.version}</version>-->
             </dependency>
 
-            <dependency>
+    <!--        <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guicedee.version}</version>
-                <!--<version>${guava.version}</version>-->
-            </dependency>
+                &lt;!&ndash;<version>${guava.version}</version>&ndash;&gt;
+            </dependency>-->
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
@@ -787,6 +787,12 @@
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>aqmp-client</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>cloudevents</artifactId>
                 <version>${guicedee.version}</version>
             </dependency>
 
