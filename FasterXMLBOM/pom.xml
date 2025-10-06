@@ -20,147 +20,155 @@
     <description>The BOM for FasterXML Artefacts</description>
 
     <dependencyManagement>
-       <dependencies>
-           <dependency>
-               <groupId>com.guicedee</groupId>
-               <artifactId>standalone-bom</artifactId>
-               <version>${guicedee.version}</version>
-               <scope>import</scope>
-               <type>pom</type>
-           </dependency>
+        <dependencies>
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>standalone-bom</artifactId>
+                <version>${guicedee.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
 
-           <dependency>
-               <groupId>com.guicedee</groupId>
-               <artifactId>jakarta-bom</artifactId>
-               <version>${guicedee.version}</version>
-               <scope>import</scope>
-               <type>pom</type>
-           </dependency>
-
-
-           <dependency>
-               <groupId>com.fasterxml.woodstox</groupId>
-               <artifactId>woodstox-core</artifactId>
-               <version>${woodstox.version}</version>
-           </dependency>
-
-           <!-- Jackson Support-->
-           <dependency>
-               <groupId>com.fasterxml.jackson.core</groupId>
-               <artifactId>jackson-databind</artifactId>
-               <version>${jackson.version}</version>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.core</groupId>
-               <artifactId>jackson-annotations</artifactId>
-               <version>${jackson.version}</version>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
-               <artifactId>jackson-jakarta-rs-json-provider</artifactId>
-               <version>${jackson.version}</version>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
-               <artifactId>jackson-jakarta-rs-base</artifactId>
-               <version>${jackson.version}</version>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
-               <artifactId>jackson-jakarta-rs-providers</artifactId>
-               <version>${jackson.version}</version>
-           </dependency>
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>jakarta-bom</artifactId>
+                <version>${guicedee.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
 
 
-           <dependency>
+            <dependency>
+                <groupId>com.fasterxml.woodstox</groupId>
+                <artifactId>woodstox-core</artifactId>
+                <version>${woodstox.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>${jackson.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Jackson Support-->
+            <!--<dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.annotations.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+                <artifactId>jackson-jakarta-rs-json-provider</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+                <artifactId>jackson-jakarta-rs-base</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+                <artifactId>jackson-jakarta-rs-providers</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+
+            <dependency>
                 <groupId>com.fasterxml.jackson.module</groupId>
-				<artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
-               <version>${jackson.version}</version>
-           </dependency>
+                <artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+-->
+<!--            <dependency>
+                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+                <artifactId>jackson-jakarta-rs-yaml-provider</artifactId>
+                <version>${jackson.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.yaml</groupId>
+                        <artifactId>snakeyaml</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>-->
+
+           <!-- <dependency>
+                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+                <artifactId>jackson-jakarta-rs-xml-provider</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
 
 
-           <dependency>
-               <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
-               <artifactId>jackson-jakarta-rs-yaml-provider</artifactId>
-               <version>${jackson.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <groupId>org.yaml</groupId>
-                       <artifactId>snakeyaml</artifactId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
-               <artifactId>jackson-jakarta-rs-xml-provider</artifactId>
-               <version>${jackson.version}</version>
-           </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-jaxb-annotations</artifactId>
+                <version>${jackson.version}</version>
+                <classifier>jakarta</classifier>
+            </dependency>
 
 
-           <dependency>
-               <groupId>com.fasterxml.jackson.module</groupId>
-               <artifactId>jackson-module-jaxb-annotations</artifactId>
-               <version>${jackson.version}</version>
-               <classifier>jakarta</classifier>
-           </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
 
+            <dependency>
+                <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                <artifactId>jackson-jaxrs-base</artifactId>
+                <version>${jackson.version}</version>
+                <classifier>jakarta</classifier>
+            </dependency>
 
-           <dependency>
-               <groupId>com.fasterxml.jackson.core</groupId>
-               <artifactId>jackson-core</artifactId>
-               <version>${jackson.version}</version>
-           </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.jaxrs</groupId>
+                <artifactId>jackson-jaxrs-json-provider</artifactId>
+                <version>${jackson.version}</version>
+                <classifier>jakarta</classifier>
+            </dependency>
 
-           <dependency>
-               <groupId>com.fasterxml.jackson.jaxrs</groupId>
-               <artifactId>jackson-jaxrs-base</artifactId>
-               <version>${jackson.version}</version>
-               <classifier>jakarta</classifier>
-           </dependency>
+            <dependency>
+                <artifactId>jackson-dataformat-yaml</artifactId>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <version>${jackson.version}</version>
+            </dependency>
 
-           <dependency>
-               <groupId>com.fasterxml.jackson.jaxrs</groupId>
-               <artifactId>jackson-jaxrs-json-provider</artifactId>
-               <version>${jackson.version}</version>
-               <classifier>jakarta</classifier>
-           </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jdk8</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
 
-           <dependency>
-               <artifactId>jackson-dataformat-yaml</artifactId>
-               <groupId>com.fasterxml.jackson.dataformat</groupId>
-               <version>${jackson.version}</version>
-           </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-xml</artifactId>
+                <version>${jackson.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>com.fasterxml.jackson.datatype</groupId>
-               <artifactId>jackson-datatype-jdk8</artifactId>
-               <version>${jackson.version}</version>
-           </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-parameter-names</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>-->
 
-           <dependency>
-               <groupId>com.fasterxml.jackson.dataformat</groupId>
-               <artifactId>jackson-dataformat-xml</artifactId>
-               <version>${jackson.version}</version>
-               <optional>true</optional>
-           </dependency>
-
-           <dependency>
-               <groupId>com.fasterxml.jackson.module</groupId>
-               <artifactId>jackson-module-parameter-names</artifactId>
-               <version>${jackson.version}</version>
-           </dependency>
-           <dependency>
-               <groupId>com.fasterxml.jackson.datatype</groupId>
-               <artifactId>jackson-datatype-jsr310</artifactId>
-               <version>${jackson.version}</version>
-           </dependency>
-
-       </dependencies>
+        </dependencies>
     </dependencyManagement>
 
 </project>
