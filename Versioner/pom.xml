@@ -300,7 +300,8 @@
         <io.swagger.version>2.2.34</io.swagger.version>
         <io.swagger.jakarta.version>2.2.34</io.swagger.jakarta.version>
 
-        <junit.jupiter.version>5.11.4</junit.jupiter.version>
+        <junit.jupiter.version>6.0.1</junit.jupiter.version>
+        <junit.platform.version>6.0.1</junit.platform.version>
         <hamcrest.version>1.3</hamcrest.version>
         <assertj.version>3.27.4</assertj.version>
         <mockito.version>5.14.2</mockito.version>
@@ -308,6 +309,8 @@
         <aspectj.version>1.9.22.1</aspectj.version>
 
         <junit.version>4.13.2</junit.version>
+
+
         <selenium.version>4.27.0</selenium.version>
         <selenium.drivers.version>4.27.0</selenium.drivers.version>
         <selenium.jupiter.version>5.0.0</selenium.jupiter.version>
@@ -350,8 +353,8 @@
 
         <ibm.mq.version>9.4.3.0</ibm.mq.version>
 
-        <vertx.version>5.0.4</vertx.version>
-        <vertx.mtuiny.version>3.20.0</vertx.mtuiny.version>
+        <vertx.version>5.0.5</vertx.version>
+        <vertx.mtuiny.version>3.20.1</vertx.mtuiny.version>
         <jboss-marshalling.version>2.2.3.Final</jboss-marshalling.version>
         <netty-tcnative.version>2.0.72.Final</netty-tcnative.version>
 
