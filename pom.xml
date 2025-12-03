@@ -61,12 +61,12 @@
                 <version>${guicedee.version}</version>
             </dependency>
 
-            <dependency>
+     <!--       <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>scram</artifactId>
                 <version>${guicedee.version}</version>
             </dependency>
-
+-->
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>vertx-mutiny</artifactId>
