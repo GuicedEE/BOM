@@ -291,6 +291,7 @@
         <undertow.version>2.3.18.Final</undertow.version>
         <xnio.version>3.8.16.Final</xnio.version>
         <classfilewriter.version>1.3.1.Final</classfilewriter.version>
+        <lz4.version>1.8.1</lz4.version>
 
         <logging.processor.version>3.0.4.Final</logging.processor.version>
         <logmanager.processor.version>3.0.4.Final</logmanager.processor.version>
