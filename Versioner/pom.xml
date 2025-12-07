@@ -44,7 +44,7 @@
         <maven.release.version>3.0.1</maven.release.version>
         <maven.versions.version>2.16.2</maven.versions.version>
         <maven.verifyier.version>1.1</maven.verifyier.version>
-        <maven.asm.version>9.8</maven.asm.version>
+        <maven.asm.version>9.9.1</maven.asm.version>
         <maven.gpg.version>3.2.4</maven.gpg.version>
 
         <maven.war.version>3.4.0</maven.war.version>
