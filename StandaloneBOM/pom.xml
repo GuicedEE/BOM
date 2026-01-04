@@ -964,6 +964,18 @@
                 <version>${jserialcomm.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>jSerialComm</artifactId>
+                <version>${jserialcomm.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j2-impl</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
