@@ -325,6 +325,38 @@
                 <scope>test</scope>
                 <exclusions>
                     <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-context</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-exporter-logging</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk-trace</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk-common</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk-extension-autoconfigure</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk-extension-autoconfigure-spi</artifactId>
+                    </exclusion>
+                    <exclusion>
                         <artifactId>docker-client</artifactId>
                         <groupId>com.spotify</groupId>
                     </exclusion>
@@ -1071,6 +1103,26 @@
                     <exclusion>
                         <groupId>org.springframework</groupId>
                         <artifactId>spring-context</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk-trace</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk-common</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk-extension-autoconfigure</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>

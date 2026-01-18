@@ -21,6 +21,22 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>io.micrometer</groupId>
+                <artifactId>micrometer-bom</artifactId>
+                <version>${micrometer.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.dropwizard.metrics</groupId>
+                <artifactId>metrics-bom</artifactId>
+                <version>${dropwizard.metrics-core.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>at.favre.lib</groupId>
                 <artifactId>bcrypt</artifactId>
                 <version>${bcrypt.version}</version>
@@ -901,6 +917,18 @@
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-pg-client</artifactId>
                 <version>${vertx.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-dropwizard-metrics</artifactId>
+                <version>${vertx.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>io.dropwizard.metrics</groupId>
+                        <artifactId>metrics-core</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>

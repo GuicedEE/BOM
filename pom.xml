@@ -57,16 +57,46 @@
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>
+                <artifactId>health-core</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>guiced-health</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>guiced-metrics</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>guiced-telemetry</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
+                <artifactId>telemetry-core</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.services</groupId>
                 <artifactId>testcontainers</artifactId>
                 <version>${guicedee.version}</version>
             </dependency>
 
-     <!--       <dependency>
-                <groupId>com.guicedee.services</groupId>
-                <artifactId>scram</artifactId>
-                <version>${guicedee.version}</version>
-            </dependency>
--->
+            <!--       <dependency>
+                       <groupId>com.guicedee.services</groupId>
+                       <artifactId>scram</artifactId>
+                       <version>${guicedee.version}</version>
+                   </dependency>
+       -->
             <dependency>
                 <groupId>com.guicedee.services</groupId>
                 <artifactId>vertx-mutiny</artifactId>
@@ -112,6 +142,26 @@
                             <version>${guicedee.version}</version>
                         </dependency>
             -->
+
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-opentelemetry</artifactId>
+                <version>${vertx.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk-trace</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
 
             <dependency>
                 <groupId>com.guicedee.services</groupId>

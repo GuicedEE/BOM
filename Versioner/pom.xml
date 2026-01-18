@@ -91,6 +91,9 @@
 
         <batik.version>1.17</batik.version>
 
+        <micrometer.version>1.16.2</micrometer.version>
+        <dropwizard.version>4.2.37</dropwizard.version>
+
         <ant.version>1.10.15</ant.version>
         <stax.version>2.1.0</stax.version>
         <stax2.api.version>4.2.2</stax2.api.version>
@@ -102,8 +105,8 @@
         <http.nio.version>4.4.16</http.nio.version>
         <jasypt.version>1.9.3</jasypt.version>
         <slf4j.version>2.0.17</slf4j.version>
-        <log4j2.version>2.25.1</log4j2.version>
-        <slf4j.log4j2.version>2.25.1</slf4j.log4j2.version>
+        <log4j2.version>2.25.3</log4j2.version>
+        <slf4j.log4j2.version>2.25.3</slf4j.log4j2.version>
         <bytebuddy.version>1.18.3</bytebuddy.version>
         <snakeyaml.version>2.5</snakeyaml.version>
         <sparsebitset.version>1.3</sparsebitset.version>
@@ -123,6 +126,7 @@
         <spotbugs.version>4.9.8</spotbugs.version>
 
         <bouncycastle.version>1.81</bouncycastle.version>
+        <opentelemetry.version>1.58.0</opentelemetry.version>
 
         <!--  Hibernate -->
         <maven.hibernate.validator.version>8.0.1.Final</maven.hibernate.validator.version>
@@ -301,8 +305,8 @@
         <io.swagger.version>2.2.34</io.swagger.version>
         <io.swagger.jakarta.version>2.2.34</io.swagger.jakarta.version>
 
-        <junit.jupiter.version>6.0.1</junit.jupiter.version>
-        <junit.platform.version>6.0.1</junit.platform.version>
+        <junit.jupiter.version>6.0.2</junit.jupiter.version>
+        <junit.platform.version>6.0.2</junit.platform.version>
         <hamcrest.version>1.3</hamcrest.version>
         <assertj.version>3.27.4</assertj.version>
         <mockito.version>5.21.0</mockito.version>
@@ -352,11 +356,13 @@
         <smallrye.reactive.version>3.21.3</smallrye.reactive.version>
         <smallrye.config.version>3.18.1</smallrye.config.version>
         <microprofile.config.version>3.1</microprofile.config.version>
+        <microprofile.metrics.version>5.1.1</microprofile.metrics.version>
+        <smallrye.metrics.version>5.1.0</smallrye.metrics.version>
         <smallrye.commons.version>2.15.0</smallrye.commons.version>
 
         <ibm.mq.version>9.4.4.1</ibm.mq.version>
 
-        <vertx.version>5.0.6</vertx.version>
+        <vertx.version>5.0.7</vertx.version>
         <vertx.mtuiny.version>3.20.1</vertx.mtuiny.version>
         <jboss-marshalling.version>2.2.3.Final</jboss-marshalling.version>
         <netty-tcnative.version>2.0.72.Final</netty-tcnative.version>
@@ -364,6 +370,8 @@
         <cloudevents.version>4.0.1</cloudevents.version>
 
         <testcontainers.version>1.21.4</testcontainers.version>
+
+        <microprofile.health.version>4.0.1</microprofile.health.version>
 
     </properties>
 
