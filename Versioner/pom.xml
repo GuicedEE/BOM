@@ -131,12 +131,12 @@
 
         <!--  Hibernate -->
         <maven.hibernate.validator.version>8.0.1.Final</maven.hibernate.validator.version>
-        <maven.hibernate.version>7.2.0.Final</maven.hibernate.version>
-        <maven.hibernate.reactive.version>4.2.1.Final</maven.hibernate.reactive.version>
+        <maven.hibernate.version>7.2.4.Final</maven.hibernate.version>
+        <maven.hibernate.reactive.version>4.2.2.Final</maven.hibernate.reactive.version>
         <maven.hibernate.models.version>1.0.1</maven.hibernate.models.version>
         <maven.hibernate.commons.annotations.version>7.0.7.Final</maven.hibernate.commons.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
-        <maven.hibernate.enhance.version>7.1.6.Final</maven.hibernate.enhance.version>
+        <maven.hibernate.enhance.version>7.2.4.Final</maven.hibernate.enhance.version>
         <antlr4-runtime.version>4.13.2</antlr4-runtime.version>
 
         <c3p0.version>0.11.2</c3p0.version>
@@ -353,7 +353,7 @@
         <jspecify.version>1.0.0</jspecify.version>
 
 
-        <smallrye.mutiny.version>3.1.0</smallrye.mutiny.version>
+        <smallrye.mutiny.version>3.1.1</smallrye.mutiny.version>
         <smallrye.reactive.version>3.21.3</smallrye.reactive.version>
         <smallrye.config.version>3.18.1</smallrye.config.version>
         <microprofile.config.version>3.1</microprofile.config.version>
@@ -363,7 +363,7 @@
 
         <ibm.mq.version>9.4.4.1</ibm.mq.version>
 
-        <vertx.version>5.0.7</vertx.version>
+        <vertx.version>5.0.8</vertx.version>
         <vertx.mtuiny.version>3.20.1</vertx.mtuiny.version>
         <jboss-marshalling.version>2.2.3.Final</jboss-marshalling.version>
         <netty-tcnative.version>2.0.72.Final</netty-tcnative.version>
