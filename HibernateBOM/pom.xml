@@ -203,13 +203,12 @@
                 </exclusions>
                 <optional>true</optional>
             </dependency>
-            <!--
-                        <dependency>
-                            <groupId>org.hibernate.orm.tooling</groupId>
-                            <artifactId>hibernate-enhance-maven-plugin</artifactId>
-                            <version>${maven.hibernate.enhance.version}</version>
-                            <scope>provided</scope>
-                        </dependency>-->
+            <dependency>
+                <groupId>org.hibernate.orm</groupId>
+                <artifactId>hibernate-maven-plugin</artifactId>
+                <version>${maven.hibernate.enhance.version}</version>
+                <scope>provided</scope>
+            </dependency>
 
             <dependency>
                 <groupId>org.hibernate.orm</groupId>

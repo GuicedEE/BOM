@@ -67,6 +67,14 @@
                 <version>${guicedee.version}</version>
             </dependency>
 
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>guiced-rest-client</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+
             <dependency>
                 <groupId>com.guicedee</groupId>
                 <artifactId>guiced-metrics</artifactId>
