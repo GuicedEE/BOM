@@ -993,7 +993,7 @@
             </dependency>
 
             <dependency>
-                <groupId>com.guicedee.services</groupId>
+                <groupId>com.guicedee.modules.services</groupId>
                 <artifactId>jSerialComm</artifactId>
                 <version>${jserialcomm.version}</version>
             </dependency>
