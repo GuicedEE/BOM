@@ -17,13 +17,7 @@ jobs:
       baseDir: 'Versioner/'
       name: 'Versioner'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
   Standalone:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:
@@ -32,13 +26,7 @@ jobs:
       baseDir: 'StandaloneBOM/'
       name: 'Standalone'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
   Tests:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:
@@ -47,13 +35,7 @@ jobs:
       baseDir: 'TestLayoutBOM/'
       name: 'Test Layouts'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
   Swagger:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:
@@ -62,13 +44,7 @@ jobs:
       baseDir: 'SwaggerBOM/'
       name: 'Swagger'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
   JBoss:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:
@@ -77,13 +53,7 @@ jobs:
       baseDir: 'JBossBOM/'
       name: 'JBoss'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
   Jakarta:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:
@@ -92,13 +62,7 @@ jobs:
       baseDir: 'JakartaBOM/'
       name: 'Jakarta'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
   Hibernate:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:
@@ -107,13 +71,7 @@ jobs:
       baseDir: 'HibernateBOM/'
       name: 'Hibernate'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
   Google:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:
@@ -122,13 +80,7 @@ jobs:
       baseDir: 'GoogleBOM/'
       name: 'Google'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
   FasterXML:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:
@@ -137,13 +89,7 @@ jobs:
       baseDir: 'FasterXMLBOM/'
       name: 'FasterXML'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
   Apache-CXF:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:
@@ -152,13 +98,7 @@ jobs:
       baseDir: 'ApacheCXFBOM/'
       name: 'Apache CXF'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
   Apache-Commons:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:
@@ -167,13 +107,7 @@ jobs:
       baseDir: 'ApacheBOM/'
       name: 'Apache'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
   SmallRye:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:
@@ -182,14 +116,7 @@ jobs:
       baseDir: 'SmallRyeBOM/'
       name: 'Guiced-EE BOM'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY:
-        ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
   GuicedEE:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
     needs:
@@ -198,10 +125,4 @@ jobs:
       baseDir: ''
       name: 'Guiced-EE BOM'
       publishToCentral: ${{inputs.centralRelease}}
-    secrets:
-      USERNAME: ${{secrets.USERNAME}}
-      USER_TOKEN: ${{secrets.USER_TOKEN}}
-      SONA_USERNAME: ${{secrets.SONA_USERNAME}}
-      SONA_PASSWORD: ${{secrets.SONA_PASSWORD}}
-      GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-      GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+    secrets: inherit
