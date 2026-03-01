@@ -11,8 +11,61 @@ env:
   GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
   GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
 jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      versioner: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.versioner }}
+      standalone: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.standalone }}
+      tests: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.tests }}
+      swagger: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.swagger }}
+      jboss: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.jboss }}
+      jakarta: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.jakarta }}
+      hibernate: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.hibernate }}
+      google: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.google }}
+      fasterxml: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.fasterxml }}
+      apachecxf: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.apachecxf }}
+      apachecommons: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.apachecommons }}
+      smallrye: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.smallrye }}
+      guicedee: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.guicedee }}
+    steps:
+      - uses: actions/checkout@v4
+        if: github.event_name == 'push'
+      - uses: dorny/paths-filter@v3
+        if: github.event_name == 'push'
+        id: filter
+        with:
+          filters: |
+            versioner:
+              - 'Versioner/pom.xml'
+            standalone:
+              - 'StandaloneBOM/pom.xml'
+            tests:
+              - 'TestLayoutBOM/pom.xml'
+            swagger:
+              - 'SwaggerBOM/pom.xml'
+            jboss:
+              - 'JBossBOM/pom.xml'
+            jakarta:
+              - 'JakartaBOM/pom.xml'
+            hibernate:
+              - 'HibernateBOM/pom.xml'
+            google:
+              - 'GoogleBOM/pom.xml'
+            fasterxml:
+              - 'FasterXMLBOM/pom.xml'
+            apachecxf:
+              - 'ApacheCXFBOM/pom.xml'
+            apachecommons:
+              - 'ApacheBOM/pom.xml'
+            smallrye:
+              - 'SmallRyeBOM/pom.xml'
+            guicedee:
+              - 'pom.xml'
   Versioner:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.versioner == 'true' }}
+    needs:
+      - detect-changes
     with:
       baseDir: 'Versioner/'
       name: 'Versioner'
@@ -20,7 +73,9 @@ jobs:
     secrets: inherit
   Standalone:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.standalone == 'true' }}
     needs:
+      - detect-changes
       - Versioner
     with:
       baseDir: 'StandaloneBOM/'
@@ -29,7 +84,9 @@ jobs:
     secrets: inherit
   Tests:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.tests == 'true' }}
     needs:
+      - detect-changes
       - Versioner
     with:
       baseDir: 'TestLayoutBOM/'
@@ -38,7 +95,9 @@ jobs:
     secrets: inherit
   Swagger:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.swagger == 'true' }}
     needs:
+      - detect-changes
       - Versioner
     with:
       baseDir: 'SwaggerBOM/'
@@ -47,7 +106,9 @@ jobs:
     secrets: inherit
   JBoss:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.jboss == 'true' }}
     needs:
+      - detect-changes
       - Versioner
     with:
       baseDir: 'JBossBOM/'
@@ -56,7 +117,9 @@ jobs:
     secrets: inherit
   Jakarta:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.jakarta == 'true' }}
     needs:
+      - detect-changes
       - Versioner
     with:
       baseDir: 'JakartaBOM/'
@@ -65,7 +128,9 @@ jobs:
     secrets: inherit
   Hibernate:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.hibernate == 'true' }}
     needs:
+      - detect-changes
       - Versioner
     with:
       baseDir: 'HibernateBOM/'
@@ -74,7 +139,9 @@ jobs:
     secrets: inherit
   Google:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.google == 'true' }}
     needs:
+      - detect-changes
       - Versioner
     with:
       baseDir: 'GoogleBOM/'
@@ -83,7 +150,9 @@ jobs:
     secrets: inherit
   FasterXML:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.fasterxml == 'true' }}
     needs:
+      - detect-changes
       - Versioner
     with:
       baseDir: 'FasterXMLBOM/'
@@ -92,7 +161,9 @@ jobs:
     secrets: inherit
   Apache-CXF:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.apachecxf == 'true' }}
     needs:
+      - detect-changes
       - Versioner
     with:
       baseDir: 'ApacheCXFBOM/'
@@ -101,7 +172,9 @@ jobs:
     secrets: inherit
   Apache-Commons:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.apachecommons == 'true' }}
     needs:
+      - detect-changes
       - Versioner
     with:
       baseDir: 'ApacheBOM/'
@@ -110,7 +183,9 @@ jobs:
     secrets: inherit
   SmallRye:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.smallrye == 'true' }}
     needs:
+      - detect-changes
       - Versioner
     with:
       baseDir: 'SmallRyeBOM/'
@@ -119,7 +194,9 @@ jobs:
     secrets: inherit
   GuicedEE:
     uses: GuicedEE/Workflows/.github/workflows/bom.yml@master
+    if: ${{ !cancelled() && needs.detect-changes.outputs.guicedee == 'true' }}
     needs:
+      - detect-changes
       - Versioner
     with:
       baseDir: ''

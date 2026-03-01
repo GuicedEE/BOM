@@ -470,9 +470,9 @@
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
-                                <configuration>
+                                <!--<configuration>
                                     <passphrase>${gpg.passphrase}</passphrase>
-                                </configuration>
+                                </configuration>-->
                             </execution>
                         </executions>
                     </plugin>
