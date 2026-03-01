@@ -68,8 +68,8 @@
         <jacoco.version>0.8.14</jacoco.version>
         <sonar.exclusions>**bower_components,**src/test,**/test/**,**/module-info.java,**/jar-resources
         </sonar.exclusions>
-        <sonar.host.url>https://jwebmp.com/sonarqube</sonar.host.url>
-
+      <!--  <sonar.host.url>https://jwebmp.com/sonarqube</sonar.host.url>
+-->
         <nexus.staging.maven.plugin.version>1.6.13</nexus.staging.maven.plugin.version>
         <jdk.release>25</jdk.release>
         <mapstruct.version>1.6.3</mapstruct.version>
