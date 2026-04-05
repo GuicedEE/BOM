@@ -23,8 +23,8 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
         <guicedee.version>2.0.0-SNAPSHOT</guicedee.version>
-        <expressly.version>6.0.0</expressly.version>
 
+        <expressly.version>6.0.0</expressly.version>
 
         <maven.assembly.version>3.8.0</maven.assembly.version>
         <maven-project-info-reports-plugin.version>3.5.0</maven-project-info-reports-plugin.version>
@@ -424,23 +424,6 @@
     </distributionManagement>
 
     <profiles>
-        <profile>
-            <id>guicedee-distribution</id>
-            <activation>
-            </activation>
-            <distributionManagement>
-                <snapshotRepository>
-                    <id>jwebmp-snapshot</id>
-                    <name>JWebMPArtifactory-snapshots</name>
-                    <url>https://guicedee.com/artifactory/guicedee-snapshots</url>
-                </snapshotRepository>
-                <repository>
-                    <id>jwebmp-release</id>
-                    <name>JWebMPArtifactory-releases</name>
-                    <url>https://guicedee.com/artifactory/guicedee-release</url>
-                </repository>
-            </distributionManagement>
-        </profile>
 
         <profile>
             <id>sonatype-distribution</id>
@@ -530,31 +513,6 @@
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>${maven.deploy.version}</version>
                 </plugin>
-
-                <!--<plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>${maven.jar.version}</version>
-                    <executions>
-                        <execution>
-                            <id>jar</id>
-                            <goals>
-                                <goal>jar</goal>
-                            </goals>
-                            <configuration>
-                                <archive>
-                                    <manifest>
-                                        <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                                        <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-                                    </manifest>
-                                    <manifestEntries>
-                                        <Multi-Release>true</Multi-Release>
-                                    </manifestEntries>
-                                </archive>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>-->
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
