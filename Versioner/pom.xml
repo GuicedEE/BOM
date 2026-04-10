@@ -376,6 +376,8 @@
 
         <microprofile.health.version>4.0.1</microprofile.health.version>
 
+        <!-- Snapshots → GitHub (standard deploy), Releases → Central (central-publishing plugin) -->
+        <central.publishing.skip>true</central.publishing.skip>
 
     </properties>
 
@@ -425,11 +427,12 @@
             <name>GitHub Guiced EE Packages</name>
             <url>${project.scm.repoUrl}${project.scm.packages}</url>
         </repository>
+        <snapshotRepository>
+            <id>github</id>
+            <name>GitHub Guiced EE Packages</name>
+            <url>${project.scm.repoUrl}${project.scm.packages}</url>
+        </snapshotRepository>
     </distributionManagement>
-
-    <profiles>
-    </profiles>
-
 
     <build>
         <pluginManagement>
@@ -655,7 +658,17 @@
                     <publishingServerId>central</publishingServerId>
                     <autoPublish>true</autoPublish>
                     <waitUntil>published</waitUntil>
+                    <skipPublishing>${central.publishing.skip}</skipPublishing>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>central-publish</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>publish</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
