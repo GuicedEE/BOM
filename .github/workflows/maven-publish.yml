@@ -28,7 +28,7 @@ jobs:
       smallrye: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.smallrye }}
       guicedee: ${{ github.event_name == 'workflow_dispatch' && 'true' || steps.filter.outputs.guicedee }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.2
         if: github.event_name == 'push'
       - uses: dorny/paths-filter@v3
         if: github.event_name == 'push'
