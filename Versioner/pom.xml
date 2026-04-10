@@ -681,6 +681,7 @@
                         <arg>--batch</arg>
                     </gpgArguments>
                     <passphrase>${gpg.passphrase}</passphrase>
+                    <skip>${central.publishing.skip}</skip>
                 </configuration>
                 <executions>
                     <execution>
