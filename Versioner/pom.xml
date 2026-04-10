@@ -4,7 +4,7 @@
 
     <groupId>com.guicedee</groupId>
     <artifactId>versioner</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>2.0.0-RC1</version>
 
     <packaging>pom</packaging>
 
@@ -22,15 +22,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
-        <guicedee.version>2.0.0-SNAPSHOT</guicedee.version>
+        <guicedee.version>2.0.0-RC1</guicedee.version>
 
         <expressly.version>6.0.0</expressly.version>
 
         <maven.assembly.version>3.8.0</maven.assembly.version>
-        <maven-project-info-reports-plugin.version>3.5.0</maven-project-info-reports-plugin.version>
+        <maven-project-info-reports-plugin.version>3.9.0</maven-project-info-reports-plugin.version>
         <maven.jar.version>3.5.0</maven.jar.version>
         <maven.clean.version>3.5.0</maven.clean.version>
-        <maven.dependency.version>3.9.0</maven.dependency.version>
+        <maven.dependency.version>3.10.0</maven.dependency.version>
         <maven.javadoc.version>3.12.0</maven.javadoc.version>
         <maven.deploy.version>3.1.4</maven.deploy.version>
         <maven.install.version>3.1.4</maven.install.version>
@@ -39,10 +39,10 @@
         <maven.shade.version>3.6.1</maven.shade.version>
         <maven.compiler.version>3.14.1</maven.compiler.version>
         <maven.surefire.version>3.5.5</maven.surefire.version>
-        <maven.failsafe.version>3.5.3</maven.failsafe.version>
+        <maven.failsafe.version>3.5.5</maven.failsafe.version>
         <maven.resources.version>3.3.1</maven.resources.version>
         <maven.release.version>3.3.1</maven.release.version>
-        <maven.versions.version>2.20.1</maven.versions.version>
+        <maven.versions.version>2.21.0</maven.versions.version>
         <maven.verifyier.version>1.1</maven.verifyier.version>
         <maven.asm.version>9.9.1</maven.asm.version>
         <maven.gpg.version>3.2.8</maven.gpg.version>
@@ -79,10 +79,12 @@
         <gpg.passphrase></gpg.passphrase>
 
         <!-- Standalone -->
-        <lombok.version>1.18.42</lombok.version>
+        <lombok.version>1.18.44</lombok.version>
+        <owasp.html.sanitizer.version>20260313.1</owasp.html.sanitizer.version>
+        <jdeparser.version>2.1.0</jdeparser.version>
         <classmate.version>1.7.3</classmate.version>
         <dom4j.version>2.2.0</dom4j.version>
-        <ehcache.version>3.11.1</ehcache.version>
+        <ehcache.version>3.12.0</ehcache.version>
         <net.sf.ehcache.version>2.10.9.2</net.sf.ehcache.version>
         <esapi.version>2.7.0.0</esapi.version>
         <classgraph.version>4.8.184</classgraph.version>
@@ -94,9 +96,9 @@
         <micrometer.version>1.16.2</micrometer.version>
         <dropwizard.version>4.2.37</dropwizard.version>
 
-        <ant.version>1.10.15</ant.version>
+        <ant.version>1.10.16</ant.version>
         <stax.version>2.1.0</stax.version>
-        <stax2.api.version>4.2.2</stax2.api.version>
+        <stax2.api.version>4.3.0</stax2.api.version>
         <bcprov.15.version>1.68</bcprov.15.version>
         <bcprov.16.version>1.46</bcprov.16.version>
         <bcprov.18.version>1.83</bcprov.18.version>
@@ -111,7 +113,7 @@
         <snakeyaml.version>2.6</snakeyaml.version>
         <sparsebitset.version>1.3</sparsebitset.version>
         <zstdjni.version>1.5.7-7</zstdjni.version>
-        <tica.version>3.2.3</tica.version>
+        <tica.version>3.3.0</tica.version>
         <typescript4j.version>0.4.0</typescript4j.version>
         <rhino.version>1.9.1</rhino.version>
         <rome.version>2.1.0</rome.version>
@@ -126,23 +128,23 @@
         <spotbugs.version>4.9.8</spotbugs.version>
 
         <bouncycastle.version>1.81</bouncycastle.version>
-        <opentelemetry.version>1.58.0</opentelemetry.version>
+        <opentelemetry.version>1.60.1</opentelemetry.version>
 
         <!--  Hibernate -->
-        <maven.hibernate.validator.version>8.0.1.Final</maven.hibernate.validator.version>
+        <maven.hibernate.validator.version>9.1.0.Final</maven.hibernate.validator.version>
         <maven.hibernate.version>7.2.4.Final</maven.hibernate.version>
-        <maven.hibernate.reactive.version>4.2.2.Final</maven.hibernate.reactive.version>
-        <maven.hibernate.models.version>1.0.1</maven.hibernate.models.version>
+        <maven.hibernate.reactive.version>4.3.1.Final</maven.hibernate.reactive.version>
+        <maven.hibernate.models.version>1.1.1</maven.hibernate.models.version>
         <maven.hibernate.commons.annotations.version>7.0.7.Final</maven.hibernate.commons.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
         <maven.hibernate.enhance.version>7.2.4.Final</maven.hibernate.enhance.version>
         <antlr4-runtime.version>4.13.2</antlr4-runtime.version>
 
-        <c3p0.version>0.11.2</c3p0.version>
-        <mchange.version>0.3.2</mchange.version>
-        <typesafe.version>1.4.4</typesafe.version>
+        <c3p0.version>0.12.0</c3p0.version>
+        <mchange.version>0.4.0</mchange.version>
+        <typesafe.version>1.4.6</typesafe.version>
 
-        <hazelcast.version>5.5.0</hazelcast.version>
+        <hazelcast.version>5.6.0</hazelcast.version>
         <hazelcast.hibernate.version>5.2.0</hazelcast.hibernate.version>
 
         <!-- Apache -->
@@ -159,16 +161,16 @@
         <fileupload.version>1.6.0</fileupload.version>
         <io.version>2.21.0</io.version>
         <lang.version>3.20.0</lang.version>
-        <logging.version>1.3.5</logging.version>
+        <logging.version>1.3.6</logging.version>
         <math.version>3.6.1</math.version>
         <text.version>1.15.0</text.version>
         <beanutils.version>1.11.0</beanutils.version>
         <dec.version>0.1.2</dec.version>
-        <xz.version>1.11</xz.version>
+        <xz.version>1.12</xz.version>
         <portlet.api.version>1.0</portlet.api.version>
 
         <xmlbeans.version>5.3.0</xmlbeans.version>
-        <fontbox.version>3.0.6</fontbox.version>
+        <fontbox.version>3.0.7</fontbox.version>
 
         <!--<xerces.version>2.12.0</xerces.version>-->
         <bcrypt.version>0.10.2</bcrypt.version>
@@ -176,7 +178,8 @@
 
 
         <!-- Apache CXF -->
-        <cxf.core.version>4.1.2</cxf.core.version>
+        <cxf.core.version>4.2.0</cxf.core.version>
+        <axiom.api.version>2.0.0</axiom.api.version>
         <cxf.oauth.version>3.4.10</cxf.oauth.version>
         <cxf.xmlbeans.version>3.1.18</cxf.xmlbeans.version>
         <alpn.api.version>1.1.3.v20160715</alpn.api.version>
@@ -185,38 +188,38 @@
         <opensaml.openws.version>1.5.6</opensaml.openws.version>
         <neethi.version>3.2.1</neethi.version>
         <oauth.version>20100527</oauth.version>
-        <xmlschema.core.version>2.3.1</xmlschema.core.version>
-        <wss4j.version>3.0.3</wss4j.version>
+        <xmlschema.core.version>2.3.2</xmlschema.core.version>
+        <wss4j.version>4.0.1</wss4j.version>
         <xmlsec.version>4.0.4</xmlsec.version>
-        <wss4j.security.common.version>4.0.0</wss4j.security.common.version>
+        <wss4j.security.common.version>4.0.1</wss4j.security.common.version>
         <wss4j.bindings.version>2.0.0-rc1</wss4j.bindings.version>
-        <wss4j.policy.version>4.0.0</wss4j.policy.version>
+        <wss4j.policy.version>4.0.1</wss4j.policy.version>
 
-        <velocity.engine.version>2.3</velocity.engine.version>
+        <velocity.engine.version>2.4.1</velocity.engine.version>
         <opensaml.version>5.1.1</opensaml.version>
-        <cryptacular.version>1.2.7</cryptacular.version>
+        <cryptacular.version>1.3.0</cryptacular.version>
 
         <saaj.impl>3.0.4</saaj.impl>
-        <relaxng.datatype>4.0.5</relaxng.datatype>
+        <relaxng.datatype>4.0.7</relaxng.datatype>
 
         <!-- FasterXML  -->
         <woodstox.version>7.1.1</woodstox.version>
-        <jackson.version>2.21.1</jackson.version>
+        <jackson.version>2.21.2</jackson.version>
         <jackson.annotations.version>2.20</jackson.annotations.version>
 
         <!-- Google -->
 
         <jsr305.version>3.0.2</jsr305.version>
         <findbugs.annotation.version>3.0.1</findbugs.annotation.version>
-        <checkerqual.version>3.53.1</checkerqual.version>
-        <errorprone.version>2.40.0</errorprone.version>
+        <checkerqual.version>4.0.0</checkerqual.version>
+        <errorprone.version>2.49.0</errorprone.version>
         <listenablefuture.version>9999.0-empty-to-avoid-conflict-with-guava</listenablefuture.version>
-        <j2obc.version>3.0.0</j2obc.version>
+        <j2obc.version>3.1</j2obc.version>
         <animalsniffer.version>1.27</animalsniffer.version>
         <failureacces.version>1.0.3</failureacces.version>
 
         <guava.version>33.5.0-jre</guava.version>
-        <protobuf.version>4.33.3</protobuf.version>
+        <protobuf.version>4.34.1</protobuf.version>
 
         <guice.version>7.0.0</guice.version>
         <zxing.version>3.5.4</zxing.version>
@@ -230,7 +233,7 @@
         <jakarta.com.sun.activation.version>2.0.1</jakarta.com.sun.activation.version>
         <jakarta.validation.version>3.1.1</jakarta.validation.version>
         <jakarta.faces.version>4.1.3</jakarta.faces.version>
-        <glassfish.faces.version>4.1.2</glassfish.faces.version>
+        <glassfish.faces.version>4.1.7</glassfish.faces.version>
         <jakarta.json.version>2.1.3</jakarta.json.version>
         <jakarta.json.bind.version>3.0.1</jakarta.json.bind.version>
         <jakarta.cdi.api.version>4.1.0</jakarta.cdi.api.version>
@@ -242,12 +245,12 @@
         <jakarta.rs.api.version>4.0.0</jakarta.rs.api.version>
         <jakarta.xml.ws.api.version>4.0.2</jakarta.xml.ws.api.version>
         <jakarta.xml.soap.api.version>3.0.2</jakarta.xml.soap.api.version>
-        <jakarta.xml.ws.metro.api.version>4.0.4</jakarta.xml.ws.metro.api.version>
+        <jakarta.xml.ws.metro.api.version>4.0.6</jakarta.xml.ws.metro.api.version>
         <jakarta.xml.jaxws.rt.version>4.0.4</jakarta.xml.jaxws.rt.version>
         <jakarta.xml.jaxws.api.version>4.0.0</jakarta.xml.jaxws.api.version>
 
         <jakarta.xml.jaxb.api.version>4.0.5</jakarta.xml.jaxb.api.version>
-        <jakarta.xml.jaxb.glassfish.api.version>4.0.6</jakarta.xml.jaxb.glassfish.api.version>
+        <jakarta.xml.jaxb.glassfish.api.version>4.0.7</jakarta.xml.jaxb.glassfish.api.version>
         <jakarta.xml.ws.api.version>4.0.3</jakarta.xml.ws.api.version>
         <jakarta.persistence.api.version>3.2.0</jakarta.persistence.api.version>
         <jakarta.transaction.api.version>2.0.1</jakarta.transaction.api.version>
@@ -263,11 +266,11 @@
 
         <jakarta.mail.version>2.0.2</jakarta.mail.version>
 
-        <jandex.version>3.3.2</jandex.version>
+        <jandex.version>3.5.3</jandex.version>
         <jaxen.version>2.0.0</jaxen.version>
         <org.json.version>20251224</org.json.version>
         <kafka.client.version>4.2.0</kafka.client.version>
-        <openpdf.version>3.0.2</openpdf.version>
+        <openpdf.version>3.0.3</openpdf.version>
         <primefaces.version>11.0.0-RC2</primefaces.version>
         <qdox.version>2.0.0</qdox.version>
         <jcache.api.version>1.1.1</jcache.api.version>
@@ -286,61 +289,61 @@
         <wildfly.client.config.version>1.0.1.Final</wildfly.client.config.version>
         <wildfly.common.jdk9.version>1.0.Final</wildfly.common.jdk9.version>
 
-        <jboss-logging.version>3.6.1.Final</jboss-logging.version>
+        <jboss-logging.version>3.6.3.Final</jboss-logging.version>
 
         <log4j.version>2.25.2</log4j.version>
-        <jansi.version>2.4.2</jansi.version>
+        <jansi.version>2.4.3</jansi.version>
         <jcabi.version>0.24.3</jcabi.version>
 
-        <undertow.version>2.3.18.Final</undertow.version>
-        <xnio.version>3.8.16.Final</xnio.version>
+        <undertow.version>2.3.24.Final</undertow.version>
+        <xnio.version>3.8.17.Final</xnio.version>
         <classfilewriter.version>1.3.1.Final</classfilewriter.version>
         <lz4.version>1.8.1</lz4.version>
 
         <logging.processor.version>3.0.4.Final</logging.processor.version>
         <logmanager.processor.version>3.0.4.Final</logmanager.processor.version>
-        <logmanager.version>3.1.2.Final</logmanager.version>
-        <jbosslog.version>3.6.1.Final</jbosslog.version>
+        <logmanager.version>3.2.2.Final</logmanager.version>
+        <jbosslog.version>3.6.3.Final</jbosslog.version>
 
-        <io.swagger.version>2.2.34</io.swagger.version>
-        <io.swagger.jakarta.version>2.2.34</io.swagger.jakarta.version>
+        <io.swagger.version>2.2.47</io.swagger.version>
+        <io.swagger.jakarta.version>2.2.47</io.swagger.jakarta.version>
 
         <junit.jupiter.version>6.0.3</junit.jupiter.version>
         <junit.platform.version>6.0.2</junit.platform.version>
         <hamcrest.version>1.3</hamcrest.version>
         <assertj.version>3.27.7</assertj.version>
-        <mockito.version>5.22.0</mockito.version>
+        <mockito.version>5.23.0</mockito.version>
 
         <aspectj.version>1.9.25.1</aspectj.version>
 
         <junit.version>4.13.2</junit.version>
 
 
-        <selenium.version>4.41.0</selenium.version>
-        <selenium.drivers.version>4.41.0</selenium.drivers.version>
+        <selenium.version>4.42.0</selenium.version>
+        <selenium.drivers.version>4.42.0</selenium.drivers.version>
         <selenium.jupiter.version>5.0.0</selenium.jupiter.version>
         <bonigarcia.selenium.jupiter.version>6.3.1</bonigarcia.selenium.jupiter.version>
-        <webdrivermanager.version>6.3.3</webdrivermanager.version>
+        <webdrivermanager.version>6.3.4</webdrivermanager.version>
 
         <jmh.version>1.37</jmh.version>
-        <okhttp.version>4.10.0</okhttp.version>
-        <okio.version>3.16.4</okio.version>
+        <okhttp.version>5.3.2</okhttp.version>
+        <okio.version>3.17.0</okio.version>
 
-        <flatten-maven-plugin.version>1.3.0</flatten-maven-plugin.version>
+        <flatten-maven-plugin.version>1.7.3</flatten-maven-plugin.version>
 
         <postgres.version>42.7.10</postgres.version>
         <scram.version>3.2</scram.version>
         <scram.sasl.version>2.2</scram.sasl.version>
         <snappy.version>1.1.10.8</snappy.version>
 
-        <exec-maven-plugin.version>3.3.0</exec-maven-plugin.version>
-        <doxia-site-renderer.version>2.0.0</doxia-site-renderer.version>
+        <exec-maven-plugin.version>3.6.3</exec-maven-plugin.version>
+        <doxia-site-renderer.version>2.1.0</doxia-site-renderer.version>
         <waffle-jna.version>3.6.0</waffle-jna.version>
         <javax.money.moneta.version>1.4.2</javax.money.moneta.version>
         <javax.money.version>1.1</javax.money.version>
         <javafx.version>21.0.1</javafx.version>
         <ojdbc.version>23.26.1.0.0</ojdbc.version>
-        <joda.time.version>2.14.0</joda.time.version>
+        <joda.time.version>2.14.1</joda.time.version>
         <paranamer.version>2.8</paranamer.version>
         <offheap.version>2.5.6</offheap.version>
         <osgi.version>8.0.0</osgi.version>
@@ -356,22 +359,24 @@
         <smallrye.reactive.version>3.21.5</smallrye.reactive.version>
         <smallrye.config.version>3.18.1</smallrye.config.version>
         <microprofile.config.version>3.1</microprofile.config.version>
-        <microprofile.metrics.version>5.1.1</microprofile.metrics.version>
+        <microprofile.metrics.version>5.1.2</microprofile.metrics.version>
         <smallrye.metrics.version>5.1.0</smallrye.metrics.version>
-        <smallrye.commons.version>2.16.0</smallrye.commons.version>
+        <smallrye.commons.version>2.17.1</smallrye.commons.version>
 
-        <ibm.mq.version>9.4.4.1</ibm.mq.version>
+        <ibm.mq.version>9.4.5.0</ibm.mq.version>
 
-        <vertx.version>5.0.8</vertx.version>
+        <vertx.version>5.0.10</vertx.version>
         <vertx.mtuiny.version>3.20.1</vertx.mtuiny.version>
-        <jboss-marshalling.version>2.2.3.Final</jboss-marshalling.version>
-        <netty-tcnative.version>2.0.72.Final</netty-tcnative.version>
+        <jboss-marshalling.version>2.3.0</jboss-marshalling.version>
+        <netty-tcnative.version>2.0.75.Final</netty-tcnative.version>
 
         <cloudevents.version>4.0.1</cloudevents.version>
 
-        <testcontainers.version>1.21.4</testcontainers.version>
+        <testcontainers.version>2.0.4</testcontainers.version>
 
         <microprofile.health.version>4.0.1</microprofile.health.version>
+
+        <central.publishing.skip>true</central.publishing.skip>
 
     </properties>
 
@@ -427,11 +432,23 @@
 
         <profile>
             <id>sonatype-distribution</id>
+            <properties>
+                <central.publishing.skip>false</central.publishing.skip>
+            </properties>
             <build>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${maven.gpg.version}</version>
+                        <configuration>
+                            <gpgArguments>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                                <arg>--batch</arg>
+                            </gpgArguments>
+                            <passphrase>${gpg.passphrase}</passphrase>
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -441,10 +458,6 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.sonatype.central</groupId>
-                        <artifactId>central-publishing-maven-plugin</artifactId>
                     </plugin>
                 </plugins>
             </build>
@@ -459,11 +472,12 @@
                     <groupId>org.sonatype.central</groupId>
                     <artifactId>central-publishing-maven-plugin</artifactId>
                     <version>${central.publishing.maven.plugin.version}</version>
-                    <extensions>true</extensions>
                     <configuration>
                         <publishingServerId>central</publishingServerId>
-                        <autoPublish>true</autoPublish>
-                        <waitUntil>published</waitUntil>
+                        <autoPublish>false</autoPublish>
+                        <!--<autoPublish>true</autoPublish>-->
+                        <!--<waitUntil>published</waitUntil>-->
+                        <waitUntil>validated</waitUntil>
                     </configuration>
                 </plugin>
 
@@ -669,6 +683,17 @@
         </pluginManagement>
 
         <plugins>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>${central.publishing.maven.plugin.version}</version>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <autoPublish>false</autoPublish>
+                    <waitUntil>validated</waitUntil>
+                    <skipPublishing>${central.publishing.skip}</skipPublishing>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
