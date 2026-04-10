@@ -474,10 +474,8 @@
                     <version>${central.publishing.maven.plugin.version}</version>
                     <configuration>
                         <publishingServerId>central</publishingServerId>
-                        <autoPublish>false</autoPublish>
-                        <!--<autoPublish>true</autoPublish>-->
-                        <!--<waitUntil>published</waitUntil>-->
-                        <waitUntil>validated</waitUntil>
+                        <autoPublish>true</autoPublish>
+                        <waitUntil>published</waitUntil>
                     </configuration>
                 </plugin>
 
@@ -689,8 +687,8 @@
                 <version>${central.publishing.maven.plugin.version}</version>
                 <configuration>
                     <publishingServerId>central</publishingServerId>
-                    <autoPublish>false</autoPublish>
-                    <waitUntil>validated</waitUntil>
+                    <autoPublish>true</autoPublish>
+                    <waitUntil>published</waitUntil>
                     <skipPublishing>${central.publishing.skip}</skipPublishing>
                 </configuration>
             </plugin>
