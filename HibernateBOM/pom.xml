@@ -22,6 +22,44 @@
     <dependencyManagement>
         <dependencies>
 
+            <!-- Explicit overrides BEFORE hibernate-platform import so our versions win -->
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy</artifactId>
+                <version>${bytebuddy.version}</version>
+                <optional>true</optional>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml</groupId>
+                <artifactId>classmate</artifactId>
+                <version>${classmate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.micrometer</groupId>
+                <artifactId>micrometer-core</artifactId>
+                <version>${micrometer.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.logging</groupId>
+                <artifactId>jboss-logging</artifactId>
+                <version>${jboss-logging.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.smallrye</groupId>
+                <artifactId>jandex</artifactId>
+                <version>${jandex.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.xml.bind</groupId>
+                <artifactId>jakarta.xml.bind-api</artifactId>
+                <version>${jakarta.xml.jaxb.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>${jakarta.xml.jaxb.glassfish.api.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.hibernate.orm</groupId>
                 <artifactId>hibernate-platform</artifactId>
@@ -65,15 +103,6 @@
                 <artifactId>hibernate-validator-annotation-processor</artifactId>
                 <version>${maven.hibernate.validator.version}</version>
             </dependency>
-
-            <!--
-                       <dependency>
-                           <groupId>org.hibernate.common</groupId>
-                           <artifactId>hibernate-commons-annotations</artifactId>
-                           <version>${maven.hibernate.commons.annotations.version}</version>
-                           <optional>true</optional>
-                       </dependency>
-            -->
 
             <dependency>
                 <groupId>org.hibernate.models</groupId>
