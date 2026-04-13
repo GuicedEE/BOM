@@ -107,7 +107,7 @@
         <http.nio.version>4.4.16</http.nio.version>
         <jasypt.version>1.9.3</jasypt.version>
         <slf4j.version>2.0.17</slf4j.version>
-        <log4j2.version>2.25.3</log4j2.version>
+        <log4j2.version>2.25.4</log4j2.version>
         <slf4j.log4j2.version>2.25.3</slf4j.log4j2.version>
         <bytebuddy.version>1.18.3</bytebuddy.version>
         <snakeyaml.version>2.6</snakeyaml.version>
@@ -375,6 +375,7 @@
         <testcontainers.version>2.0.4</testcontainers.version>
 
         <microprofile.health.version>4.0.1</microprofile.health.version>
+        <microprofile.fault-tolerance.version>4.1</microprofile.fault-tolerance.version>
 
         <!-- Snapshots → GitHub (standard deploy), Releases → Central (central-publishing plugin) -->
         <central.publishing.skip>true</central.publishing.skip>

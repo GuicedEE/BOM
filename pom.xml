@@ -67,6 +67,18 @@
                 <version>${guicedee.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>fault-tolerance-core</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>fault-tolerance</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>com.guicedee</groupId>
