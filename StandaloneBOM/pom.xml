@@ -264,6 +264,12 @@
             </dependency>
 
             <dependency>
+                <groupId>org.bitbucket.b_c</groupId>
+                <artifactId>jose4j</artifactId>
+                <version>${jose4j.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.rabbitmq</groupId>
                 <artifactId>amqp-client</artifactId>
                 <version>${amqp.client.version}</version>
@@ -511,28 +517,6 @@
                 <version>${waffle-jna.version}</version>
                 <optional>true</optional>
             </dependency>
-
-
-            <!--      <dependency>
-                      <groupId>org.bouncycastle</groupId>
-                      <artifactId>bcprov-jdk15on</artifactId>
-                      <version>${bcprov.15.version}</version>
-                      <optional>true</optional>
-                  </dependency>
-
-                  <dependency>
-                      <groupId>org.bouncycastle</groupId>
-                      <artifactId>bcpkix-jdk15on</artifactId>
-                      <version>${bcprov.15.version}</version>
-                      <optional>true</optional>
-                  </dependency>-->
-
-            <!--  <dependency>
-                  <groupId>org.bouncycastle</groupId>
-                  <artifactId>bcprov-jdk16</artifactId>
-                  <version>${bcprov.16.version}</version>
-                  <optional>true</optional>
-              </dependency>-->
 
             <dependency>
                 <groupId>ca.juliusdavies</groupId>

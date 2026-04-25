@@ -217,6 +217,12 @@
             </dependency>
 
             <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>vertx-kafka</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.guicedee</groupId>
                 <artifactId>vertx</artifactId>
                 <version>${guicedee.version}</version>

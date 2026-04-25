@@ -375,6 +375,10 @@
         <testcontainers.version>2.0.5</testcontainers.version>
         <testcontainers.oraclefree.version>2.0.5</testcontainers.oraclefree.version>
 
+        <docker.java.version>3.7.1</docker.java.version>
+        <duct.tape.version>1.0.8</duct.tape.version>
+        <jose4j.version>0.9.6</jose4j.version>
+
         <microprofile.health.version>4.0.1</microprofile.health.version>
         <microprofile.fault-tolerance.version>4.1</microprofile.fault-tolerance.version>
 
