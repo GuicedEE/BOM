@@ -612,7 +612,7 @@
 
             <dependency>
                 <groupId>com.guicedee</groupId>
-                <artifactId>guiced-web-services</artifactId>
+                <artifactId>web-services</artifactId>
                 <version>${guicedee.version}</version>
 
             </dependency>
