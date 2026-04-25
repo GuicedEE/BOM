@@ -373,6 +373,7 @@
         <cloudevents.version>4.0.1</cloudevents.version>
 
         <testcontainers.version>2.0.4</testcontainers.version>
+        <testcontainers.oraclefree.version>2.0.1</testcontainers.oraclefree.version>
 
         <microprofile.health.version>4.0.1</microprofile.health.version>
         <microprofile.fault-tolerance.version>4.1</microprofile.fault-tolerance.version>
@@ -668,6 +669,19 @@
                         <configuration>
                             <target>
                                 <delete dir="${project.build.directory}/project-local-repo/.locks" failonerror="false"/>
+                                <delete dir="${project.build.directory}/central-staging/.locks" failonerror="false"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>clean-staging-locks</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <delete dir="${project.build.directory}/central-staging/.locks" failonerror="false"/>
                             </target>
                         </configuration>
                     </execution>
@@ -683,6 +697,7 @@
                     <autoPublish>true</autoPublish>
                     <waitUntil>published</waitUntil>
                     <skipPublishing>${central.publishing.skip}</skipPublishing>
+                    <checksums>required</checksums>
                 </configuration>
                 <executions>
                     <execution>
