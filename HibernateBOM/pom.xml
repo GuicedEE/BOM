@@ -189,27 +189,6 @@
             </dependency>
 
             <dependency>
-                <groupId>org.hibernate.orm</groupId>
-                <artifactId>hibernate-c3p0</artifactId>
-                <version>${maven.hibernate.version}</version>
-                <optional>true</optional>
-            </dependency>
-
-            <dependency>
-                <groupId>com.mchange</groupId>
-                <artifactId>c3p0</artifactId>
-                <version>${c3p0.version}</version>
-                <optional>true</optional>
-            </dependency>
-
-            <dependency>
-                <groupId>com.mchange</groupId>
-                <artifactId>mchange-commons-java</artifactId>
-                <version>${mchange.version}</version>
-                <optional>true</optional>
-            </dependency>
-
-            <dependency>
                 <groupId>com.typesafe</groupId>
                 <artifactId>config</artifactId>
                 <version>${typesafe.version}</version>
