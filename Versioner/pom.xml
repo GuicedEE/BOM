@@ -381,6 +381,7 @@
 
         <microprofile.health.version>4.0.1</microprofile.health.version>
         <microprofile.fault-tolerance.version>4.1</microprofile.fault-tolerance.version>
+        <microprofile.jwt.version>2.1</microprofile.jwt.version>
 
         <!-- Snapshots → GitHub (standard deploy), Releases → Central (central-publishing plugin) -->
         <central.publishing.skip>true</central.publishing.skip>
