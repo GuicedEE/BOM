@@ -5,13 +5,13 @@
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>versioner</artifactId>
-        <version>2.0.0-RC9</version>
+        <version>2.0.0-RC10</version>
         <relativePath>Versioner</relativePath>
     </parent>
 
     <groupId>com.guicedee</groupId>
     <artifactId>guicedee-bom</artifactId>
-    <version>2.0.0-RC9</version>
+    <version>2.0.0-RC10</version>
 
     <packaging>pom</packaging>
 
@@ -600,6 +600,12 @@
             <dependency>
                 <groupId>com.guicedee.modules.services</groupId>
                 <artifactId>hazelcast-all</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>vertx-hazelcast</artifactId>
                 <version>${guicedee.version}</version>
             </dependency>
 
