@@ -4,7 +4,7 @@
 
     <groupId>com.guicedee</groupId>
     <artifactId>versioner</artifactId>
-    <version>2.0.0-RC11</version>
+    <version>2.0.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
@@ -22,7 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
-        <guicedee.version>2.0.0-RC11</guicedee.version>
+        <guicedee.version>2.0.1-SNAPSHOT</guicedee.version>
 
         <expressly.version>6.0.0</expressly.version>
 
@@ -192,7 +192,7 @@
         <wss4j.version>4.0.1</wss4j.version>
         <xmlsec.version>4.0.4</xmlsec.version>
         <wss4j.security.common.version>4.0.1</wss4j.security.common.version>
-        <wss4j.bindings.version>2.0.0-RC11</wss4j.bindings.version>
+        <wss4j.bindings.version>2.0.0</wss4j.bindings.version>
         <wss4j.policy.version>4.0.1</wss4j.policy.version>
 
         <velocity.engine.version>2.4.1</velocity.engine.version>
