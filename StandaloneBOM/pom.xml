@@ -964,6 +964,24 @@
                 <version>${vertx.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-grpc-server</artifactId>
+                <version>${vertx.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-grpc-client</artifactId>
+                <version>${vertx.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-grpc-common</artifactId>
+                <version>${vertx.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>io.vertx</groupId>
