@@ -191,6 +191,12 @@
             </dependency>
 
             <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>vertx-cassandra</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.guicedee</groupId>
                 <artifactId>vertx</artifactId>
                 <version>${guicedee.version}</version>
@@ -292,6 +298,13 @@
             <dependency>
                 <groupId>com.guicedee</groupId>
                 <artifactId>openapi</artifactId>
+                <version>${guicedee.version}</version>
+
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>graphql</artifactId>
                 <version>${guicedee.version}</version>
 
             </dependency>
@@ -442,20 +455,6 @@
                 <artifactId>json</artifactId>
                 <version>${guicedee.version}</version>
                 <!--<version>${org.json.version}</version>-->
-            </dependency>
-
-            <dependency>
-                <groupId>com.entityassist</groupId>
-                <artifactId>entity-assist</artifactId>
-                <version>${guicedee.version}</version>
-
-            </dependency>
-
-            <dependency>
-                <groupId>com.entityassist</groupId>
-                <artifactId>entity-assist-reactive</artifactId>
-                <version>${guicedee.version}</version>
-
             </dependency>
 
             <dependency>
