@@ -303,13 +303,6 @@
 
             </dependency>
 
-            <dependency>
-                <groupId>com.guicedee.persistence</groupId>
-                <artifactId>guiced-persistence-c3p0</artifactId>
-                <version>${guicedee.version}</version>
-
-                <scope>compile</scope>
-            </dependency>
 
             <dependency>
                 <groupId>com.guicedee.persistence</groupId>
