@@ -311,7 +311,7 @@
 
             <dependency>
                 <groupId>com.guicedee</groupId>
-                <artifactId>guiced-swagger-ui</artifactId>
+                <artifactId>swagger-ui</artifactId>
                 <version>${guicedee.version}</version>
 
             </dependency>
