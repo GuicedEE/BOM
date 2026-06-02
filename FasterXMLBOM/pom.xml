@@ -5,19 +5,43 @@
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>versioner</artifactId>
-        <version>2.1.0</version>
+        <version>2.1.1-SNAPSHOT</version>
         <relativePath>../Versioner</relativePath>
     </parent>
 
 
     <groupId>com.guicedee</groupId>
     <artifactId>fasterxml-bom</artifactId>
-    <version>2.1.0</version>
+    <version>2.1.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
     <name>FasterXML BOM</name>
-    <description>The BOM for FasterXML Artefacts</description>
+    <description>The BOM for FasterXML Artefacts</description>    <url>https://guicedee.com</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/GuicedEE/BOM</url>
+        <connection>scm:git:https://github.com/GuicedEE/BOM.git</connection>
+        <developerConnection>scm:git:https://github.com/GuicedEE/BOM.git</developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <id>GedMarc</id>
+            <name>Marc Magon</name>
+            <email>marc.magon@gmail.com</email>
+            <url>https://github.com/GedMarc</url>
+        </developer>
+    </developers>
+
+    <properties>
+        <project.scm.nameUrl>/GuicedEE/BOM</project.scm.nameUrl>
+    </properties>
 
     <dependencyManagement>
         <dependencies>

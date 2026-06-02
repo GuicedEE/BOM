@@ -4,7 +4,7 @@
 
     <groupId>com.guicedee</groupId>
     <artifactId>versioner</artifactId>
-    <version>2.1.0</version>
+    <version>2.1.1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
@@ -14,7 +14,7 @@
     <properties>
         <project.scm.baseUrl>https://github.com</project.scm.baseUrl>
         <project.scm.repoUrl>https://maven.pkg.github.com</project.scm.repoUrl>
-        <project.scm.nameUrl>/GuicedEE/GuicedEE-BOM</project.scm.nameUrl>
+        <project.scm.nameUrl>/GuicedEE/BOM</project.scm.nameUrl>
         <project.scm.packages>/GuicedEE/Packages</project.scm.packages>
 
         <project.baseUrl>${project.scm.baseUrl}${project.scm.nameUrl}</project.baseUrl>
@@ -22,7 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
-        <guicedee.version>2.1.0</guicedee.version>
+        <guicedee.version>2.1.1-SNAPSHOT</guicedee.version>
 
         <expressly.version>6.0.0</expressly.version>
 
