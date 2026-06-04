@@ -85,6 +85,25 @@
             </dependency>
 
             <dependency>
+                <groupId>org.reactivestreams</groupId>
+                <artifactId>reactive-streams</artifactId>
+                <version>${reactive.streams.version}</version>
+            </dependency>
+
+            <!-- GraphQL-Java and its data loader (shaded into JPMS modules under com.guicedee.modules.services) -->
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphql-java</artifactId>
+                <version>${graphql.java.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>java-dataloader</artifactId>
+                <version>${java.dataloader.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.mozilla</groupId>
                 <artifactId>rhino</artifactId>
                 <version>${rhino.version}</version>
@@ -1019,6 +1038,28 @@
 
             <dependency>
                 <groupId>io.vertx</groupId>
+                <artifactId>vertx-web-graphql</artifactId>
+                <version>${vertx.version}</version>
+                <exclusions>
+                    <!-- Use the GuicedEE shaded JPMS modules instead of the automatic-module jars -->
+                    <exclusion>
+                        <groupId>com.graphql-java</groupId>
+                        <artifactId>graphql-java</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.graphql-java</groupId>
+                        <artifactId>java-dataloader</artifactId>
+                    </exclusion>
+                    <!-- Automatic module: replaced by the shaded JPMS module org.reactivestreams -->
+                    <exclusion>
+                        <groupId>org.reactivestreams</groupId>
+                        <artifactId>reactive-streams</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>io.vertx</groupId>
                 <artifactId>vertx-dropwizard-metrics</artifactId>
                 <version>${vertx.version}</version>
                 <exclusions>
@@ -1106,6 +1147,30 @@
                         <artifactId>vertx-bridge-common</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+
+            <!--
+                Pin EVERY io.vertx artifact to ${vertx.version}.
+                The explicit io.vertx entries above keep precedence (they are declared first);
+                this depchain import only fills the gaps for the client artifacts that are NOT
+                listed individually (vertx-web-client, vertx-sql-client, vertx-mail-client,
+                vertx-mongo-client, the mysql/mssql/oracle/db2 clients, vertx-config,
+                vertx-amqp-client, vertx-bridge-common, vertx-web-common, etc.).
+
+                Without this, a standalone consumer importing only standalone-bom would get
+                vertx-core pinned to ${vertx.version} while the unmanaged client artifacts
+                floated to whatever stale version a transitive dependency dragged in. That
+                split (e.g. core 5.1.0 + web-client 5.0.x) produced
+                NoClassDefFoundError: io/vertx/core/http/HttpClientConfig (rest-client),
+                and the equivalent persistence (vertx-sql-client) / health failures.
+                Keep this import LAST so the curated explicit entries win.
+            -->
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-stack-depchain</artifactId>
+                <version>${vertx.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
         </dependencies>

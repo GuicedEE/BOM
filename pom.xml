@@ -619,6 +619,26 @@
                 <version>${guicedee.version}</version>
             </dependency>
 
+            <!-- GraphQL shaded JPMS services (modules com.graphqljava and org.dataloader) -->
+            <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>graphql-java</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>java-dataloader</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <!-- Reactive Streams shaded JPMS service (module org.reactivestreams) -->
+            <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>reactive-streams</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.guicedee.modules.services</groupId>
                 <artifactId>hibernate-validator</artifactId>
@@ -1017,18 +1037,27 @@
             </dependency>
 
 
+            <!--
+                Import the Vert.x depchain FIRST so every io.vertx artifact is pinned to
+                ${vertx.version}. The smallrye vertx-mutiny-clients-bom only manages the
+                io.smallrye.reactive:smallrye-mutiny-vertx-* binding artifacts, but importing
+                the depchain first guarantees the underlying io.vertx clients (vertx-web-client,
+                vertx-sql-client, vertx-mail-client, etc.) can never float to a stale version
+                and produce splits such as core 5.1.0 + web-client 5.0.x
+                (NoClassDefFoundError: io/vertx/core/http/HttpClientConfig).
+            -->
             <dependency>
-                <groupId>io.smallrye.reactive</groupId>
-                <artifactId>vertx-mutiny-clients-bom</artifactId>
-                <version>${smallrye.reactive.version}</version>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-stack-depchain</artifactId>
+                <version>${vertx.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
 
             <dependency>
-                <groupId>io.vertx</groupId>
-                <artifactId>vertx-stack-depchain</artifactId>
-                <version>${vertx.version}</version>
+                <groupId>io.smallrye.reactive</groupId>
+                <artifactId>vertx-mutiny-clients-bom</artifactId>
+                <version>${smallrye.reactive.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
