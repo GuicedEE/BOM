@@ -171,7 +171,6 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>failureaccess</artifactId>
                 <version>${failureacces.version}</version>
-                <optional>true</optional>
             </dependency>
 
             <dependency>

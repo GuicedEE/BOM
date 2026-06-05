@@ -44,6 +44,25 @@
 
     <dependencyManagement>
         <dependencies>
+            <!--
+                Pin guava explicitly BEFORE any BOM imports (notably vertx-stack-depchain /
+                vertx-dependencies, which manages com.google.guava:guava to a stale 32.1.2-jre).
+                Maven dependencyManagement uses the FIRST declaration for a given GA, so declaring
+                guava here guarantees consumers of standalone-bom (e.g. inject) resolve it to
+                ${guava.version} instead of the version dragged in by the Vert.x depchain.
+            -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>listenablefuture</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
             <dependency>
                 <groupId>io.micrometer</groupId>
                 <artifactId>micrometer-bom</artifactId>
