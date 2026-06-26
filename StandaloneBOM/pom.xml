@@ -326,7 +326,7 @@
                         <artifactId>slf4j-api</artifactId>
                     </exclusion>
                     <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
+                        <groupId>tools.jackson.core</groupId>
                         <artifactId>jackson-databind</artifactId>
                     </exclusion>
                 </exclusions>
@@ -343,7 +343,7 @@
                         <artifactId>slf4j-api</artifactId>
                     </exclusion>
                     <exclusion>
-                        <groupId>com.fasterxml.jackson.core</groupId>
+                        <groupId>tools.jackson.core</groupId>
                         <artifactId>jackson-databind</artifactId>
                     </exclusion>
                 </exclusions>
@@ -1164,6 +1164,22 @@
                     <exclusion>
                         <groupId>io.vertx</groupId>
                         <artifactId>vertx-bridge-common</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-mongo-client</artifactId>
+                <version>${vertx.version}</version>
+                <exclusions>
+                    <!-- Use the GuicedEE shaded JPMS module
+                         (com.guicedee.modules.services:commons-collections4) instead of the
+                         raw jar, otherwise two modules named org.apache.commons.collections4
+                         land on the module path. -->
+                    <exclusion>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>commons-collections4</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
