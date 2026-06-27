@@ -794,7 +794,7 @@
 
             <dependency>
                 <groupId>com.guicedee.modules.services</groupId>
-                <artifactId>openapi</artifactId>
+                <artifactId>swagger</artifactId>
                 <version>${guicedee.version}</version>
                 <!--<version>${io.swagger.version}</version>-->
             </dependency>
