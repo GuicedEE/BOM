@@ -5,13 +5,13 @@
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>versioner</artifactId>
-        <version>2.2.0</version>
+        <version>2.2.2</version>
         <relativePath>Versioner</relativePath>
     </parent>
 
     <groupId>com.guicedee</groupId>
     <artifactId>guicedee-bom</artifactId>
-    <version>2.2.0</version>
+    <version>2.2.2</version>
 
     <packaging>pom</packaging>
 
@@ -190,7 +190,7 @@
             <dependency>
                 <groupId>com.guicedee.microprofile</groupId>
                 <artifactId>config</artifactId>
-                <version>${guicedee.version}</version>
+                <version>${guicedee.config.version}</version>
             </dependency>
 
             <dependency>
@@ -639,6 +639,33 @@
                 <version>${guicedee.version}</version>
             </dependency>
 
+            <!-- MongoDB driver chain, shaded into named JPMS modules so jlink images stay clean. -->
+            <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>bson</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>bson-record-codec</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>mongodb-driver-core</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>mongodb-driver-reactivestreams</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>reactor-core</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.guicedee.modules.services</groupId>
                 <artifactId>hibernate-validator</artifactId>
@@ -837,11 +864,20 @@
 
 
             <!-- ==========================  -->
-            <!-- Explicit overrides BEFORE BOM imports to resolve version/scope conflicts -->
+            <!-- Explicit overrides BEFORE BOM imports to resolve version/scope conflicts.
+                 NOTE: these must stay byte-for-byte consistent (version + scope + optional +
+                 exclusions) with the same GA declared in the imported sub-BOMs, otherwise Maven 4
+                 reports "Ignored POM import" model problems. -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>listenablefuture</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.yaml</groupId>
@@ -960,11 +996,13 @@
                 <groupId>org.junit.platform</groupId>
                 <artifactId>junit-platform-commons</artifactId>
                 <version>${junit.jupiter.version}</version>
+                <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.junit.platform</groupId>
                 <artifactId>junit-platform-engine</artifactId>
                 <version>${junit.jupiter.version}</version>
+                <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.junit.platform</groupId>

@@ -5,13 +5,13 @@
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>versioner</artifactId>
-        <version>2.2.0</version>
+        <version>2.2.2</version>
         <relativePath>../Versioner</relativePath>
     </parent>
 
     <groupId>com.guicedee</groupId>
     <artifactId>standalone-bom</artifactId>
-    <version>2.2.0</version>
+    <version>2.2.2</version>
 
     <packaging>pom</packaging>
 
@@ -45,6 +45,24 @@
     <dependencyManagement>
         <dependencies>
             <!--
+                Import the Jackson 3 BOM FIRST, before any other import (notably
+                vertx-stack-depchain / vertx-dependencies, which imports tools.jackson:jackson-bom
+                at its own pinned Jackson 3 LTS). Maven dependencyManagement uses the FIRST
+                declaration for a given GA, so importing it here makes ${jackson.version} the
+                single source of truth for every tools.jackson.* artifact and for the Jackson 2.x
+                com.fasterxml.jackson.core:jackson-annotations module it manages (JSTEP-1).
+                Without this, standalone-bom silently resolved Jackson to the Vert.x pin while
+                fasterxml-bom resolved ${jackson.version}, producing a split graph.
+            -->
+            <dependency>
+                <groupId>tools.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>${jackson.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--
                 Pin guava explicitly BEFORE any BOM imports (notably vertx-stack-depchain /
                 vertx-dependencies, which manages com.google.guava:guava to a stale 32.1.2-jre).
                 Maven dependencyManagement uses the FIRST declaration for a given GA, so declaring
@@ -59,6 +77,44 @@
                     <exclusion>
                         <groupId>com.google.guava</groupId>
                         <artifactId>listenablefuture</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!--
+                Same reasoning as guava: guava-parent / the Vert.x depchain drag in a stale
+                error_prone_annotations. Declare it here so ${errorprone.version} wins everywhere.
+                Scope/optional MUST match google-bom's declaration or Maven 4 reports an
+                "Ignored POM import" model problem.
+            -->
+            <dependency>
+                <groupId>com.google.errorprone</groupId>
+                <artifactId>error_prone_annotations</artifactId>
+                <version>${errorprone.version}</version>
+                <scope>provided</scope>
+                <optional>true</optional>
+            </dependency>
+
+            <!--
+                vertx-opentelemetry is declared here with the same exclusions as guicedee-bom so
+                both agree; the OpenTelemetry API/SDK come from the OTel BOM, not the Vert.x module.
+            -->
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-opentelemetry</artifactId>
+                <version>${vertx.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.opentelemetry</groupId>
+                        <artifactId>opentelemetry-sdk-trace</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
@@ -107,6 +163,34 @@
                 <groupId>org.reactivestreams</groupId>
                 <artifactId>reactive-streams</artifactId>
                 <version>${reactive.streams.version}</version>
+            </dependency>
+
+            <!-- MongoDB driver chain + Reactor (shaded into JPMS modules under
+                 com.guicedee.modules.services - all of these are automatic modules upstream). -->
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>bson</artifactId>
+                <version>${mongodb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>bson-record-codec</artifactId>
+                <version>${mongodb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>mongodb-driver-core</artifactId>
+                <version>${mongodb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>mongodb-driver-reactivestreams</artifactId>
+                <version>${mongodb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.projectreactor</groupId>
+                <artifactId>reactor-core</artifactId>
+                <version>${reactor.core.version}</version>
             </dependency>
 
             <!-- GraphQL-Java and its data loader (shaded into JPMS modules under com.guicedee.modules.services) -->
@@ -195,6 +279,15 @@
                 <groupId>org.yaml</groupId>
                 <artifactId>snakeyaml</artifactId>
                 <version>${snakeyaml.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <!-- SnakeYAML Engine - distinct from org.yaml:snakeyaml above. Required by Jackson 3's
+                 jackson-dataformat-yaml (package org.snakeyaml.engine.v2). -->
+            <dependency>
+                <groupId>org.snakeyaml</groupId>
+                <artifactId>snakeyaml-engine</artifactId>
+                <version>${snakeyaml.engine.version}</version>
                 <optional>true</optional>
             </dependency>
 
