@@ -21,6 +21,7 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
+        <maven.consumer.pom>false</maven.consumer.pom>
 
         <guicedee.version>2.2.3</guicedee.version>
         <guicedee.config.version>2.2.4</guicedee.config.version>
@@ -436,6 +437,9 @@
         <!-- Snapshots → GitHub (standard deploy), Releases → Central (central-publishing plugin) -->
         <central.publishing.skip>true</central.publishing.skip>
 
+        <keycloak.version>26.6.3</keycloak.version>
+        <webauthn4j.version>0.31.10.RELEASE</webauthn4j.version>
+
     </properties>
 
     <url>https://guicedee.com</url>
@@ -513,10 +517,17 @@
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>${maven.install.version}</version>
+                </plugin>
+
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-plugin-plugin</artifactId>
                     <version>${maven.plugin.plugin.version}</version>
                     <configuration>
-                        <goalPrefix>$[artifactId}-plugin</goalPrefix>
+                        <goalPrefix>${artifactId}-plugin</goalPrefix>
                     </configuration>
                     <executions>
                         <execution>

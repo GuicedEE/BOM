@@ -626,6 +626,13 @@
                 <version>${guicedee.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.guicedee.modules.services</groupId>
+                <artifactId>keycloak-api</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+
             <!-- GraphQL shaded JPMS services (modules com.graphqljava and org.dataloader) -->
             <dependency>
                 <groupId>com.guicedee.modules.services</groupId>

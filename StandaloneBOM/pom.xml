@@ -16,7 +16,8 @@
     <packaging>pom</packaging>
 
     <name>Standalone BOM</name>
-    <description>The BOM for Standalone Artefacts</description>    <url>https://guicedee.com</url>
+    <description>The BOM for Standalone Artefacts</description>
+    <url>https://guicedee.com</url>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -228,6 +229,39 @@
                 <groupId>com.github.stephenc.jcip</groupId>
                 <artifactId>jcip-annotations</artifactId>
                 <version>${jcip.annotations.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-services</artifactId>
+                <version>${keycloak.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-core</artifactId>
+                <version>${keycloak.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-common</artifactId>
+                <version>${keycloak.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-server-spi</artifactId>
+                <version>${keycloak.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-server-spi-private</artifactId>
+                <version>${keycloak.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.webauthn4j</groupId>
+                <artifactId>webauthn4j-core</artifactId>
+                <version>${webauthn4j.version}</version>
             </dependency>
 
             <!-- GraphQL-Java and its data loader (shaded into JPMS modules under com.guicedee.modules.services) -->
@@ -1327,6 +1361,7 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+
 
             <!--
                 Pin EVERY io.vertx artifact to ${vertx.version}.
