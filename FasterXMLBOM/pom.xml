@@ -17,7 +17,8 @@
     <packaging>pom</packaging>
 
     <name>FasterXML BOM</name>
-    <description>The BOM for FasterXML Artefacts</description>    <url>https://guicedee.com</url>
+    <description>The BOM for FasterXML Artefacts</description>
+    <url>https://guicedee.com</url>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -43,37 +44,75 @@
         <project.scm.nameUrl>/GuicedEE/BOM</project.scm.nameUrl>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${flatten-maven-plugin.version}</version>
+                <configuration>
+                    <flattenMode>bom</flattenMode>
+                    <pomElements>
+                        <properties>remove</properties>
+                        <dependencies>resolve</dependencies>
+                        <dependencyManagement>resolve</dependencyManagement>
+                    </pomElements>
+                    <detail>true</detail>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenedPomFilename>flatter.pom</flattenedPomFilename>
+                </configuration>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>com.guicedee</groupId>
-                <artifactId>standalone-bom</artifactId>
-                <version>${guicedee.version}</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
-
-            <dependency>
-                <groupId>com.guicedee</groupId>
-                <artifactId>jakarta-bom</artifactId>
-                <version>${guicedee.version}</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
-
-
             <dependency>
                 <groupId>com.fasterxml.woodstox</groupId>
                 <artifactId>woodstox-core</artifactId>
                 <version>${woodstox.version}</version>
             </dependency>
 
+            <!--
+         Import the Jackson 3 BOM FIRST, before any other import (notably
+         vertx-stack-depchain / vertx-dependencies, which imports tools.jackson:jackson-bom
+         at its own pinned Jackson 3 LTS). Maven dependencyManagement uses the FIRST
+         declaration for a given GA, so importing it here makes ${jackson.version} the
+         single source of truth for every tools.jackson.* artifact and for the Jackson 2.x
+         com.fasterxml.jackson.core:jackson-annotations module it manages (JSTEP-1).
+         Without this, standalone-bom silently resolved Jackson to the Vert.x pin while
+         fasterxml-bom resolved ${jackson.version}, producing a split graph.
+     -->
             <dependency>
                 <groupId>tools.jackson</groupId>
                 <artifactId>jackson-bom</artifactId>
                 <version>${jackson.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.fasterxml.jackson</groupId>
+                        <artifactId>jackson-bom</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
         </dependencies>

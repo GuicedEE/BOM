@@ -16,7 +16,8 @@
     <packaging>pom</packaging>
 
     <name>Hibernate BOM</name>
-    <description>The BOM for Hibernate</description>    <url>https://guicedee.com</url>
+    <description>The BOM for Hibernate</description>
+    <url>https://guicedee.com</url>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -41,6 +42,46 @@
     <properties>
         <project.scm.nameUrl>/GuicedEE/BOM</project.scm.nameUrl>
     </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${flatten-maven-plugin.version}</version>
+                <configuration>
+                    <flattenMode>bom</flattenMode>
+                    <pomElements>
+                        <properties>remove</properties>
+                        <dependencies>resolve</dependencies>
+                        <dependencyManagement>resolve</dependencyManagement>
+                    </pomElements>
+                    <detail>true</detail>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenedPomFilename>flatter.pom</flattenedPomFilename>
+                </configuration>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencyManagement>
         <dependencies>
 
@@ -49,13 +90,13 @@
                 <groupId>net.bytebuddy</groupId>
                 <artifactId>byte-buddy</artifactId>
                 <version>${bytebuddy.version}</version>
-                <optional>true</optional>
+                
             </dependency>
-            <dependency>
+      <!--      <dependency>
                 <groupId>com.fasterxml</groupId>
                 <artifactId>classmate</artifactId>
                 <version>${classmate.version}</version>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>io.micrometer</groupId>
                 <artifactId>micrometer-core</artifactId>
@@ -95,8 +136,9 @@
                 <artifactId>expressly</artifactId>
                 <version>${expressly.version}</version>
                 <scope>provided</scope>
-                <optional>true</optional>
+                
             </dependency>
+<!--
 
             <dependency>
                 <groupId>com.guicedee</groupId>
@@ -106,12 +148,13 @@
                 <type>pom</type>
             </dependency>
 
+-->
 
             <dependency>
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr4-runtime</artifactId>
                 <version>${antlr4-runtime.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -154,7 +197,7 @@
                         <groupId>org.dom4j</groupId>
                     </exclusion>
                 </exclusions>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -185,7 +228,7 @@
                         <groupId>org.jboss</groupId>
                     </exclusion>
                 </exclusions>
-                <optional>true</optional>
+                
             </dependency>
 
 
@@ -193,28 +236,28 @@
                 <groupId>org.hibernate.orm</groupId>
                 <artifactId>hibernate-jcache</artifactId>
                 <version>${maven.hibernate.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.hibernate.validator</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>${maven.hibernate.validator.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.hibernate.orm</groupId>
                 <artifactId>hibernate-jpamodelgen</artifactId>
                 <version>${maven.hibernate.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>com.typesafe</groupId>
                 <artifactId>config</artifactId>
                 <version>${typesafe.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -231,7 +274,7 @@
                         <artifactId>ehcache</artifactId>
                     </exclusion>
                 </exclusions>
-                <optional>true</optional>
+                
             </dependency>
             <dependency>
                 <groupId>org.hibernate.orm</groupId>
@@ -251,14 +294,14 @@
                 <groupId>com.hazelcast</groupId>
                 <artifactId>hazelcast</artifactId>
                 <version>${hazelcast.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>com.hazelcast</groupId>
                 <artifactId>hazelcast-hibernate53</artifactId>
                 <version>${hazelcast.hibernate.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
         </dependencies>

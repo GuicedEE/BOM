@@ -16,7 +16,8 @@
     <packaging>pom</packaging>
 
     <name>Swagger BOM</name>
-    <description>The BOM for Swagger</description>    <url>https://guicedee.com</url>
+    <description>The BOM for Swagger</description>
+    <url>https://guicedee.com</url>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -42,83 +43,112 @@
         <project.scm.nameUrl>/GuicedEE/BOM</project.scm.nameUrl>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${flatten-maven-plugin.version}</version>
+                <configuration>
+                    <flattenMode>bom</flattenMode>
+                    <pomElements>
+                        <properties>remove</properties>
+                        <dependencies>resolve</dependencies>
+                        <dependencyManagement>resolve</dependencyManagement>
+                    </pomElements>
+                    <detail>true</detail>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenedPomFilename>flatter.pom</flattenedPomFilename>
+                </configuration>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencyManagement>
-       <dependencies>
+        <dependencies>
+            <!-- Swagger runtime dependencies -->
+            <dependency>
+                <groupId>io.github.vpelikh</groupId>
+                <artifactId>swagger-jaxrs2-jakarta</artifactId>
+                <version>${io.swagger.jakarta.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>javassist</artifactId>
+                        <groupId>org.javassist</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
 
-           <dependency>
-               <groupId>com.guicedee</groupId>
-               <artifactId>standalone-bom</artifactId>
-               <version>${guicedee.version}</version>
-               <scope>import</scope>
-               <type>pom</type>
-           </dependency>
+            <dependency>
+                <groupId>io.github.vpelikh</groupId>
+                <artifactId>swagger-core</artifactId>
+                <version>${io.swagger.version}</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>javassist</artifactId>
+                        <groupId>org.javassist</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
 
+            <dependency>
+                <groupId>io.github.vpelikh</groupId>
+                <artifactId>swagger-models</artifactId>
+                <version>${io.swagger.version}</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>javassist</artifactId>
+                        <groupId>org.javassist</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
 
-           <!-- Swagger runtime dependencies -->
-           <dependency>
-               <groupId>io.github.vpelikh</groupId>
-               <artifactId>swagger-jaxrs2-jakarta</artifactId>
-               <version>${io.swagger.jakarta.version}</version>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>javassist</artifactId>
-                       <groupId>org.javassist</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
+            <dependency>
+                <groupId>io.github.vpelikh</groupId>
+                <artifactId>swagger-integration</artifactId>
+                <version>${io.swagger.version}</version>
+                <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>javassist</artifactId>
+                        <groupId>org.javassist</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
 
-           <dependency>
-               <groupId>io.github.vpelikh</groupId>
-               <artifactId>swagger-core</artifactId>
-               <version>${io.swagger.version}</version>
-               <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>javassist</artifactId>
-                       <groupId>org.javassist</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
+            <dependency>
+                <groupId>io.github.vpelikh</groupId>
+                <artifactId>swagger-annotations-jakarta</artifactId>
+                <version>${io.swagger.jakarta.version}</version>
+            </dependency>
 
-           <dependency>
-               <groupId>io.github.vpelikh</groupId>
-               <artifactId>swagger-models</artifactId>
-               <version>${io.swagger.version}</version>
-               <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>javassist</artifactId>
-                       <groupId>org.javassist</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
+            <dependency>
+                <groupId>io.github.vpelikh</groupId>
+                <artifactId>swagger-jaxrs2-servlet-initializer-jakarta</artifactId>
+                <version>${io.swagger.jakarta.version}</version>
+            </dependency>
 
-           <dependency>
-               <groupId>io.github.vpelikh</groupId>
-               <artifactId>swagger-integration</artifactId>
-               <version>${io.swagger.version}</version>
-               <optional>true</optional>
-               <exclusions>
-                   <exclusion>
-                       <artifactId>javassist</artifactId>
-                       <groupId>org.javassist</groupId>
-                   </exclusion>
-               </exclusions>
-           </dependency>
-
-           <dependency>
-               <groupId>io.github.vpelikh</groupId>
-               <artifactId>swagger-annotations-jakarta</artifactId>
-               <version>${io.swagger.jakarta.version}</version>
-           </dependency>
-
-           <dependency>
-               <groupId>io.github.vpelikh</groupId>
-               <artifactId>swagger-jaxrs2-servlet-initializer-jakarta</artifactId>
-               <version>${io.swagger.jakarta.version}</version>
-           </dependency>
-
-       </dependencies>
+        </dependencies>
     </dependencyManagement>
 
 </project>

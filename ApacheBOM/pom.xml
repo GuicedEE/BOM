@@ -16,7 +16,8 @@
     <packaging>pom</packaging>
 
     <name>Apache BOM</name>
-    <description>The BOM for Apache </description>    <url>https://guicedee.com</url>
+    <description>The BOM for Apache</description>
+    <url>https://guicedee.com</url>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -41,178 +42,209 @@
     <properties>
         <project.scm.nameUrl>/GuicedEE/BOM</project.scm.nameUrl>
     </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${flatten-maven-plugin.version}</version>
+                <configuration>
+                    <flattenMode>bom</flattenMode>
+                    <pomElements>
+                        <properties>remove</properties>
+                        <dependencies>resolve</dependencies>
+                        <dependencyManagement>resolve</dependencyManagement>
+                    </pomElements>
+                    <detail>true</detail>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenedPomFilename>flatter.pom</flattenedPomFilename>
+                </configuration>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencyManagement>
-       <dependencies>
-           <dependency>
-               <groupId>com.guicedee</groupId>
-               <artifactId>standalone-bom</artifactId>
-               <version>${guicedee.version}</version>
-               <scope>import</scope>
-               <type>pom</type>
-           </dependency>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>fontbox</artifactId>
+                <version>${fontbox.version}</version>
+                <optional>true</optional>
+            </dependency>
 
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.pdfbox</groupId>
-               <artifactId>fontbox</artifactId>
-               <version>${fontbox.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${codec.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.httpcomponents</groupId>
-               <artifactId>httpclient</artifactId>
-               <version>${httpclient.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${collections.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>commons-codec</groupId>
-               <artifactId>commons-codec</artifactId>
-               <version>${codec.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>${compress.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.commons</groupId>
-               <artifactId>commons-collections4</artifactId>
-               <version>${collections.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-csv</artifactId>
+                <version>${csv.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.commons</groupId>
-               <artifactId>commons-compress</artifactId>
-               <version>${compress.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${fileupload.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.commons</groupId>
-               <artifactId>commons-csv</artifactId>
-               <version>${csv.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${io.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>commons-fileupload</groupId>
-               <artifactId>commons-fileupload</artifactId>
-               <version>${fileupload.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${lang.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>commons-io</groupId>
-               <artifactId>commons-io</artifactId>
-               <version>${io.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${logging.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.commons</groupId>
-               <artifactId>commons-lang3</artifactId>
-               <version>${lang.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-math3</artifactId>
+                <version>${math.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>commons-logging</groupId>
-               <artifactId>commons-logging</artifactId>
-               <version>${logging.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-text</artifactId>
+                <version>${text.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.commons</groupId>
-               <artifactId>commons-math3</artifactId>
-               <version>${math.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${beanutils.version}</version>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.commons</groupId>
-               <artifactId>commons-text</artifactId>
-               <version>${text.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>org.brotli</groupId>
+                <artifactId>dec</artifactId>
+                <version>${dec.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>commons-beanutils</groupId>
-               <artifactId>commons-beanutils</artifactId>
-               <version>${beanutils.version}</version>
-           </dependency>
+            <dependency>
+                <groupId>org.tukaani</groupId>
+                <artifactId>xz</artifactId>
+                <version>${xz.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.brotli</groupId>
-               <artifactId>dec</artifactId>
-               <version>${dec.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>portlet-api</groupId>
+                <artifactId>portlet-api</artifactId>
+                <version>${portlet.api.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.tukaani</groupId>
-               <artifactId>xz</artifactId>
-               <version>${xz.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>portlet-api</groupId>
-               <artifactId>portlet-api</artifactId>
-               <version>${portlet.api.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.poi</groupId>
-               <artifactId>poi</artifactId>
-               <version>${poi.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml-full</artifactId>
+                <version>${poi.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.poi</groupId>
-               <artifactId>poi-ooxml</artifactId>
-               <version>${poi.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-scratchpad</artifactId>
+                <version>${poi.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.poi</groupId>
-				<artifactId>poi-ooxml-full</artifactId>
-               <version>${poi.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>com.twelvemonkeys.imageio</groupId>
+                <artifactId>imageio-tiff</artifactId>
+                <version>${imageio-tiff.version}</version>
+                <optional>true</optional>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.poi</groupId>
-               <artifactId>poi-scratchpad</artifactId>
-               <version>${poi.version}</version>
-               <optional>true</optional>
-           </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>fop</artifactId>
+                <version>${fop.version}</version>
+                <optional>true</optional>
 
-           <dependency>
-               <groupId>com.twelvemonkeys.imageio</groupId>
-               <artifactId>imageio-tiff</artifactId>
-               <version>${imageio-tiff.version}</version>
-               <optional>true</optional>
-           </dependency>
+            </dependency>
 
-           <dependency>
-               <groupId>org.apache.xmlgraphics</groupId>
-               <artifactId>fop</artifactId>
-               <version>${fop.version}</version>
-               <optional>true</optional>
+            <dependency>
+                <groupId>org.apache.xmlbeans</groupId>
+                <artifactId>xmlbeans</artifactId>
+                <version>${xmlbeans.version}</version>
+            </dependency>
 
-           </dependency>
-
-           <dependency>
-               <groupId>org.apache.xmlbeans</groupId>
-               <artifactId>xmlbeans</artifactId>
-               <version>${xmlbeans.version}</version>
-           </dependency>
-
-       </dependencies>
+        </dependencies>
     </dependencyManagement>
 
 </project>

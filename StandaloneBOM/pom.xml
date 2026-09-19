@@ -43,26 +43,48 @@
         <project.scm.nameUrl>/GuicedEE/BOM</project.scm.nameUrl>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${flatten-maven-plugin.version}</version>
+                <configuration>
+                    <flattenMode>bom</flattenMode>
+                    <pomElements>
+                        <properties>remove</properties>
+                        <dependencies>resolve</dependencies>
+                        <dependencyManagement>resolve</dependencyManagement>
+                    </pomElements>
+                    <detail>true</detail>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenedPomFilename>flatter.pom</flattenedPomFilename>
+
+                </configuration>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencyManagement>
         <dependencies>
-            <!--
-                Import the Jackson 3 BOM FIRST, before any other import (notably
-                vertx-stack-depchain / vertx-dependencies, which imports tools.jackson:jackson-bom
-                at its own pinned Jackson 3 LTS). Maven dependencyManagement uses the FIRST
-                declaration for a given GA, so importing it here makes ${jackson.version} the
-                single source of truth for every tools.jackson.* artifact and for the Jackson 2.x
-                com.fasterxml.jackson.core:jackson-annotations module it manages (JSTEP-1).
-                Without this, standalone-bom silently resolved Jackson to the Vert.x pin while
-                fasterxml-bom resolved ${jackson.version}, producing a split graph.
-            -->
-            <dependency>
-                <groupId>tools.jackson</groupId>
-                <artifactId>jackson-bom</artifactId>
-                <version>${jackson.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
             <!--
                 Pin guava explicitly BEFORE any BOM imports (notably vertx-stack-depchain /
                 vertx-dependencies, which manages com.google.guava:guava to a stale 32.1.2-jre).
@@ -93,7 +115,7 @@
                 <artifactId>error_prone_annotations</artifactId>
                 <version>${errorprone.version}</version>
                 <scope>provided</scope>
-                <optional>true</optional>
+                
             </dependency>
 
             <!--
@@ -322,35 +344,35 @@
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct</artifactId>
                 <version>${mapstruct.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-jdk8</artifactId>
                 <version>${mapstruct.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>net.bytebuddy</groupId>
                 <artifactId>byte-buddy</artifactId>
                 <version>${bytebuddy.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.yaml</groupId>
                 <artifactId>snakeyaml</artifactId>
                 <version>${snakeyaml.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <!-- SnakeYAML Engine - distinct from org.yaml:snakeyaml above. Required by Jackson 3's
@@ -359,28 +381,28 @@
                 <groupId>org.snakeyaml</groupId>
                 <artifactId>snakeyaml-engine</artifactId>
                 <version>${snakeyaml.engine.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>com.zaxxer</groupId>
                 <artifactId>SparseBitSet</artifactId>
                 <version>${sparsebitset.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>com.neuronrobotics</groupId>
                 <artifactId>nrjavaserial</artifactId>
                 <version>${nrjavaserial.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>net.java.dev.jna</groupId>
                 <artifactId>jna-platform</artifactId>
                 <version>${jna.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -400,7 +422,7 @@
                 <groupId>joda-time</groupId>
                 <artifactId>joda-time</artifactId>
                 <version>${joda.time.version}</version>
-                <optional>true</optional>
+                
                 <scope>provided</scope>
             </dependency>
 
@@ -414,7 +436,7 @@
                 <groupId>org.terracotta</groupId>
                 <artifactId>statistics</artifactId>
                 <version>${terracota.statistics.version}</version>
-                <optional>true</optional>
+                
                 <scope>provided</scope>
             </dependency>
 
@@ -424,7 +446,7 @@
                 <artifactId>osgi.core</artifactId>
                 <version>${osgi.version}</version>
                 <scope>provided</scope>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -432,7 +454,7 @@
                 <artifactId>org.osgi.service.component.annotations</artifactId>
                 <version>${osgi.annotations.version}</version>
                 <scope>provided</scope>
-                <optional>true</optional>
+                
             </dependency>
 
 
@@ -440,7 +462,7 @@
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-base</artifactId>
                 <version>${javafx.version}</version>
-                <optional>true</optional>
+                
                 <scope>provided</scope>
             </dependency>
 
@@ -483,7 +505,7 @@
                 <groupId>com.rabbitmq</groupId>
                 <artifactId>amqp-client</artifactId>
                 <version>${amqp.client.version}</version>
-                <optional>true</optional>
+                
                 <exclusions>
                     <exclusion>
                         <groupId>org.slf4j</groupId>
@@ -500,7 +522,7 @@
                 <groupId>io.dropwizard.metrics</groupId>
                 <artifactId>metrics-core</artifactId>
                 <version>${dropwizard.metrics-core.version}</version>
-                <optional>true</optional>
+                
                 <exclusions>
                     <exclusion>
                         <groupId>org.slf4j</groupId>
@@ -529,28 +551,28 @@
                 <groupId>org.dom4j</groupId>
                 <artifactId>dom4j</artifactId>
                 <version>${dom4j.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>xalan</groupId>
                 <artifactId>serializer</artifactId>
-                <version>2.7.3</version>
-                <optional>true</optional>
+                <version>${xalan.version}</version>
+                
             </dependency>
 
             <dependency>
                 <groupId>xalan</groupId>
                 <artifactId>xalan</artifactId>
-                <version>2.7.3</version>
-                <optional>true</optional>
+                <version>${xalan.version}</version>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.ehcache</groupId>
                 <artifactId>ehcache</artifactId>
                 <version>${ehcache.version}</version>
-                <optional>true</optional>
+                
                 <exclusions>
                     <exclusion>
                         <groupId>org.slf4j</groupId>
@@ -681,14 +703,14 @@
                 <groupId>org.apache.ant</groupId>
                 <artifactId>ant</artifactId>
                 <version>${ant.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
                 <artifactId>ehcache</artifactId>
                 <version>${net.sf.ehcache.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -725,7 +747,7 @@
                 <groupId>com.github.waffle</groupId>
                 <artifactId>waffle-jna</artifactId>
                 <version>${waffle-jna.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -738,28 +760,28 @@
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpcore</artifactId>
                 <version>${http.core.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpcore-nio</artifactId>
                 <version>${http.nio.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.jasypt</groupId>
                 <artifactId>jasypt</artifactId>
                 <version>${jasypt.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>com.github.luben</groupId>
                 <artifactId>zstd-jni</artifactId>
                 <version>${zstdjni.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -773,22 +795,22 @@
                 <groupId>org.javassist</groupId>
                 <artifactId>javassist</artifactId>
                 <version>${javassist.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
 
             <dependency>
                 <groupId>net.glxn</groupId>
                 <artifactId>qrgen</artifactId>
-                <version>1.4</version>
-                <optional>true</optional>
+                <version>${qrgen.version}</version>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.jdom</groupId>
                 <artifactId>jdom2</artifactId>
                 <version>${jdom.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -801,7 +823,7 @@
                         <groupId>org.jdom</groupId>
                     </exclusion>
                 </exclusions>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -814,7 +836,7 @@
                         <groupId>org.jdom</groupId>
                     </exclusion>
                 </exclusions>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -827,48 +849,48 @@
                         <groupId>com.google.guava</groupId>
                     </exclusion>
                 </exclusions>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>net.sf.barcode4j</groupId>
                 <artifactId>barcode4j-light</artifactId>
-                <version>2.0</version>
+                <version>${barcode4j.version}</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>xml-apis</artifactId>
                         <groupId>xml-apis</groupId>
                     </exclusion>
                 </exclusions>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>com.github.javaparser</groupId>
                 <artifactId>javaparser-core</artifactId>
                 <version>${javaparser-core}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.owasp.encoder</groupId>
                 <artifactId>encoder</artifactId>
-                <version>1.4.0</version>
-                <optional>true</optional>
+                <version>${owasp.encoder.version}</version>
+                
             </dependency>
 
             <dependency>
                 <groupId>net.sf.saxon</groupId>
                 <artifactId>Saxon-B</artifactId>
-                <version>9.0</version>
-                <optional>true</optional>
+                <version>${saxon.b.version}</version>
+                
             </dependency>
 
             <dependency>
                 <groupId>net.sf.saxon</groupId>
                 <artifactId>saxon-dom</artifactId>
-                <version>8.7</version>
-                <optional>true</optional>
+                <version>${saxon.dom.version}</version>
+                
                 <exclusions>
                     <exclusion>
                         <groupId>net.sf.saxon</groupId>
@@ -881,7 +903,7 @@
                 <groupId>net.shibboleth.utilities</groupId>
                 <artifactId>java-support</artifactId>
                 <version>${java-support.version}</version>
-                <optional>true</optional>
+                
                 <exclusions>
                     <exclusion>
                         <groupId>com.google.guava</groupId>
@@ -901,22 +923,22 @@
             <dependency>
                 <groupId>com.github.albfernandez</groupId>
                 <artifactId>juniversalchardet</artifactId>
-                <version>2.5.0</version>
-                <optional>true</optional>
+                <version>${juniversalchardet.version}</version>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.apache.geronimo.specs</groupId>
                 <artifactId>geronimo-jms_1.1_spec</artifactId>
                 <version>${jms.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>jaxen</groupId>
                 <artifactId>jaxen</artifactId>
                 <version>${jaxen.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
 
@@ -924,36 +946,36 @@
                 <groupId>org.jboss.jdeparser</groupId>
                 <artifactId>jdeparser</artifactId>
                 <version>${jdeparser.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
 
             <dependency>
                 <groupId>net.sourceforge.barbecue</groupId>
                 <artifactId>barbecue</artifactId>
-                <version>1.5-beta1</version>
-                <optional>true</optional>
+                <version>${barbecue.version}</version>
+                
             </dependency>
 
             <dependency>
                 <groupId>jfree</groupId>
                 <artifactId>jfreechart</artifactId>
-                <version>1.0.1</version>
-                <optional>true</optional>
+                <version>${jfreechart.version}</version>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.json</groupId>
                 <artifactId>json</artifactId>
                 <version>${org.json.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.apache.kafka</groupId>
                 <artifactId>kafka-clients</artifactId>
                 <version>${kafka.client.version}</version>
-                <optional>true</optional>
+                
                 <exclusions>
                     <exclusion>
                         <groupId>com.github.luben</groupId>
@@ -966,14 +988,14 @@
                 <groupId>org.xerial.snappy</groupId>
                 <artifactId>snappy-java</artifactId>
                 <version>${snappy.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.lz4</groupId>
                 <artifactId>lz4-java</artifactId>
                 <version>${lz4.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
 
@@ -1026,7 +1048,7 @@
                 <groupId>com.github.librepdf</groupId>
                 <artifactId>openpdf</artifactId>
                 <version>${openpdf.version}</version>
-                <optional>true</optional>
+                
                 <exclusions>
                     <exclusion>
                         <groupId>org.bouncycastle</groupId>
@@ -1063,28 +1085,28 @@
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs</artifactId>
                 <version>${spotbugs.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>com.ibm.mq</groupId>
                 <artifactId>com.ibm.mq.jakarta.client</artifactId>
                 <version>${ibm.mq.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>com.ibm.mq</groupId>
                 <artifactId>com.ibm.mq.allclient</artifactId>
                 <version>${ibm.mq.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>org.fusesource.hawtbuf</groupId>
                 <artifactId>hawtbuf</artifactId>
-                <version>1.11</version>
-                <optional>true</optional>
+                <version>${hawtbuf.version}</version>
+                
             </dependency>
 
             <dependency>
@@ -1103,56 +1125,56 @@
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-auth-oauth2</artifactId>
                 <version>${vertx.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-auth-jwt</artifactId>
                 <version>${vertx.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-auth-abac</artifactId>
                 <version>${vertx.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-auth-otp</artifactId>
                 <version>${vertx.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-auth-properties</artifactId>
                 <version>${vertx.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-auth-ldap</artifactId>
                 <version>${vertx.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-auth-htpasswd</artifactId>
                 <version>${vertx.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-auth-htdigest</artifactId>
                 <version>${vertx.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -1197,14 +1219,14 @@
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-service-resolver</artifactId>
                 <version>${vertx.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-web</artifactId>
                 <version>${vertx.version}</version>
-                <optional>true</optional>
+                
             </dependency>
 
             <dependency>
@@ -1385,6 +1407,22 @@
                 <version>${vertx.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.smallrye.reactive</groupId>
+                <artifactId>vertx-mutiny-clients-bom</artifactId>
+                <version>${smallrye.reactive.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+            <dependency>
+                <groupId>io.smallrye.common</groupId>
+                <artifactId>smallrye-common-bom</artifactId>
+                <version>${smallrye.commons.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
 
         </dependencies>

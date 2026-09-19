@@ -50,6 +50,9 @@
         <maven.gpg.version>3.2.8</maven.gpg.version>
         <maven.plugin.plugin.version>3.15.2</maven.plugin.plugin.version>
         <maven.enforcer.plugin.version>3.6.2</maven.enforcer.plugin.version>
+        <maven.antrun.plugin.version>3.1.0</maven.antrun.plugin.version>
+        <copy.rename.maven.plugin.version>1.0</copy.rename.maven.plugin.version>
+        <maven.shade.transformers.version>0.0.4</maven.shade.transformers.version>
 
         <maven.war.version>3.5.1</maven.war.version>
         <maven.ear.version>3.4.0</maven.ear.version>
@@ -131,6 +134,16 @@
 
         <javassist.version>3.33.0-GA</javassist.version>
         <spotbugs.version>4.10.4</spotbugs.version>
+        <xalan.version>2.7.3</xalan.version>
+        <qrgen.version>1.4</qrgen.version>
+        <barcode4j.version>2.0</barcode4j.version>
+        <owasp.encoder.version>1.4.0</owasp.encoder.version>
+        <saxon.b.version>9.0</saxon.b.version>
+        <saxon.dom.version>8.7</saxon.dom.version>
+        <juniversalchardet.version>2.5.0</juniversalchardet.version>
+        <barbecue.version>1.5-beta1</barbecue.version>
+        <jfreechart.version>1.0.1</jfreechart.version>
+        <hawtbuf.version>1.11</hawtbuf.version>
 
         <bouncycastle.version>1.86</bouncycastle.version>
         <!-- Also controls telemetry-core's opentelemetry-api-incubator ${opentelemetry.version}-alpha.
@@ -229,6 +242,7 @@
              pin. Verify that the effective BOM imports resolve all Jackson 3 artifacts to
              this version after each update. -->
         <jackson.version>3.2.2</jackson.version>
+        <jackson.2.version>2.22.2</jackson.2.version>
         <!-- Kept in step with the annotations version jackson-bom ${jackson.version} manages. -->
         <jackson.annotations.version>2.22</jackson.annotations.version>
 
@@ -329,6 +343,7 @@
         <logging.processor.version>3.0.4.Final</logging.processor.version>
         <logmanager.processor.version>3.0.4.Final</logmanager.processor.version>
         <logmanager.version>3.2.2.Final</logmanager.version>
+        <log4j2.jboss.logmanager.version>2.0.1.Final</log4j2.jboss.logmanager.version>
         <jbosslog.version>3.6.3.Final</jbosslog.version>
 
         <io.swagger.version>3.0.0</io.swagger.version>
@@ -408,8 +423,8 @@
         <!-- Keep aligned with the Vert.x release used by the SmallRye bindings parent:
              io.smallrye.reactive:smallrye-mutiny-vertx-bindings-projects 4.0.2 uses Vert.x 5.1.8.
              Check that parent POM before updating either family. -->
-        <vertx.version>5.1.8</vertx.version>
-        <vertx.mtuiny.version>3.23.1</vertx.mtuiny.version>
+        <vertx.version>5.2.0</vertx.version>
+        <vertx.mutiny.version>3.23.1</vertx.mutiny.version>
         <jboss-marshalling.version>2.3.0</jboss-marshalling.version>
         <netty-tcnative.version>2.0.84.Final</netty-tcnative.version>
 
@@ -714,7 +729,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>${maven.antrun.plugin.version}</version>
                 </plugin>
 
 

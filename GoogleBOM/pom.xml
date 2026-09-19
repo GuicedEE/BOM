@@ -16,7 +16,8 @@
     <packaging>pom</packaging>
 
     <name>Google BOM</name>
-    <description>The BOM for Google Libraries</description>    <url>https://guicedee.com</url>
+    <description>The BOM for Google Libraries</description>
+    <url>https://guicedee.com</url>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -42,15 +43,47 @@
         <project.scm.nameUrl>/GuicedEE/BOM</project.scm.nameUrl>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${flatten-maven-plugin.version}</version>
+                <configuration>
+                    <flattenMode>bom</flattenMode>
+                    <pomElements>
+                        <properties>remove</properties>
+                        <dependencies>resolve</dependencies>
+                        <dependencyManagement>resolve</dependencyManagement>
+                    </pomElements>
+                    <detail>true</detail>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenedPomFilename>flatter.pom</flattenedPomFilename>
+                </configuration>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>com.guicedee</groupId>
-                <artifactId>standalone-bom</artifactId>
-                <version>${guicedee.version}</version>
-                <scope>import</scope>
-                <type>pom</type>
-            </dependency>
 
             <dependency>
                 <groupId>com.google.code.findbugs</groupId>

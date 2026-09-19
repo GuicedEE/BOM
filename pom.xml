@@ -47,6 +47,45 @@
         <project.scm.nameUrl>/GuicedEE/BOM</project.scm.nameUrl>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${flatten-maven-plugin.version}</version>
+                <configuration>
+                    <flattenMode>bom</flattenMode>
+                    <pomElements>
+                        <properties>remove</properties>
+                        <dependencies>resolve</dependencies>
+                        <dependencyManagement>resolve</dependencyManagement>
+                    </pomElements>
+                    <detail>true</detail>
+                    <updatePomFile>true</updatePomFile>
+                    <flattenedPomFilename>flatter.pom</flattenedPomFilename>
+                </configuration>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -1044,8 +1083,9 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <!-- ==========================  -->
-            <dependency>
+           <!-- <dependency>
                 <groupId>com.guicedee</groupId>
                 <artifactId>apache-bom</artifactId>
                 <version>${guicedee.version}</version>
@@ -1086,7 +1126,7 @@
                 <version>${guicedee.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
-            </dependency>
+            </dependency>-->
 
 
             <!--
@@ -1098,7 +1138,7 @@
                 and produce splits such as core 5.1.0 + web-client 5.0.x
                 (NoClassDefFoundError: io/vertx/core/http/HttpClientConfig).
             -->
-            <dependency>
+<!--            <dependency>
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-stack-depchain</artifactId>
                 <version>${vertx.version}</version>
@@ -1120,7 +1160,7 @@
                 <version>${smallrye.commons.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
-            </dependency>
+            </dependency>-->
 
         </dependencies>
     </dependencyManagement>
