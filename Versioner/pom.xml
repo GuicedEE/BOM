@@ -421,7 +421,7 @@
         <ibm.mq.version>10.0.0.0</ibm.mq.version>
 
         <!-- Keep aligned with the Vert.x release used by the SmallRye bindings parent:
-             io.smallrye.reactive:smallrye-mutiny-vertx-bindings-projects 4.0.2 uses Vert.x 5.1.8.
+             io.smallrye.reactive:smallrye-mutiny-vertx-bindings-projects 4.0.2 uses Vert.x 5.2.0.
              Check that parent POM before updating either family. -->
         <vertx.version>5.2.0</vertx.version>
         <vertx.mutiny.version>3.23.1</vertx.mutiny.version>
