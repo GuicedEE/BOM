@@ -4,7 +4,7 @@
 
     <groupId>com.guicedee</groupId>
     <artifactId>versioner</artifactId>
-    <version>2.2.3</version>
+    <version>2.3.0</version>
 
     <packaging>pom</packaging>
 
@@ -23,8 +23,8 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
         <maven.consumer.pom>false</maven.consumer.pom>
 
-        <guicedee.version>2.2.3</guicedee.version>
-        <guicedee.config.version>2.2.4</guicedee.config.version>
+        <guicedee.version>2.3.0</guicedee.version>
+        <guicedee.config.version>2.3.0</guicedee.config.version>
 
         <expressly.version>6.0.0</expressly.version>
 
@@ -32,25 +32,25 @@
         <maven-project-info-reports-plugin.version>3.9.0</maven-project-info-reports-plugin.version>
         <maven.jar.version>3.5.0</maven.jar.version>
         <maven.clean.version>3.5.0</maven.clean.version>
-        <maven.dependency.version>3.10.0</maven.dependency.version>
+        <maven.dependency.version>3.11.0</maven.dependency.version>
         <maven.javadoc.version>3.12.0</maven.javadoc.version>
-        <maven.deploy.version>3.1.4</maven.deploy.version>
-        <maven.install.version>3.1.4</maven.install.version>
+        <maven.deploy.version>3.2.0</maven.deploy.version>
+        <maven.install.version>3.2.0</maven.install.version>
         <maven.source.version>3.4.0</maven.source.version>
         <maven.site.version>4.0.0-M16</maven.site.version>
         <maven.shade.version>3.6.1</maven.shade.version>
         <maven.compiler.version>3.14.1</maven.compiler.version>
         <maven.surefire.version>3.5.5</maven.surefire.version>
         <maven.failsafe.version>3.5.5</maven.failsafe.version>
-        <maven.resources.version>3.3.1</maven.resources.version>
+        <maven.resources.version>3.5.0</maven.resources.version>
         <maven.release.version>3.3.1</maven.release.version>
-        <maven.versions.version>2.21.0</maven.versions.version>
+        <maven.versions.version>2.22.0</maven.versions.version>
         <maven.verifyier.version>1.1</maven.verifyier.version>
         <maven.asm.version>9.10.1</maven.asm.version>
         <maven.gpg.version>3.2.8</maven.gpg.version>
-        <maven.plugin.plugin.version>3.15.2</maven.plugin.plugin.version>
-        <maven.enforcer.plugin.version>3.6.2</maven.enforcer.plugin.version>
-        <maven.antrun.plugin.version>3.1.0</maven.antrun.plugin.version>
+        <maven.plugin.plugin.version>3.16.0</maven.plugin.plugin.version>
+        <maven.enforcer.plugin.version>3.6.3</maven.enforcer.plugin.version>
+        <maven.antrun.plugin.version>3.2.0</maven.antrun.plugin.version>
         <copy.rename.maven.plugin.version>1.0</copy.rename.maven.plugin.version>
         <maven.shade.transformers.version>0.0.4</maven.shade.transformers.version>
 
@@ -63,17 +63,17 @@
         <javaparser-core>3.28.2</javaparser-core>
         <aop.version>1.0.0</aop.version>
 
-        <build.helper.maven.plugin.version>3.6.1</build.helper.maven.plugin.version>
+        <build.helper.maven.plugin.version>3.6.2</build.helper.maven.plugin.version>
         <netbeans.hint.license>apache20</netbeans.hint.license>
         <license.dir>${basedir}</license.dir>
 
-        <sonarqube.version>5.6.0.6792</sonarqube.version>
+        <sonarqube.version>5.8.0.7211</sonarqube.version>
         <java-support.version>8.4.1</java-support.version>
 
-        <jacoco.version>0.8.14</jacoco.version>
+        <jacoco.version>0.8.15</jacoco.version>
         <sonar.exclusions>**bower_components,**src/test,**/test/**,**/module-info.java,**/jar-resources
         </sonar.exclusions>
-        <central.publishing.maven.plugin.version>0.10.0</central.publishing.maven.plugin.version>
+        <central.publishing.maven.plugin.version>0.11.0</central.publishing.maven.plugin.version>
         <jdk.release>25</jdk.release>
         <mapstruct.version>1.6.3</mapstruct.version>
         <moditect.maven.plugin.version>1.3.0.Final</moditect.maven.plugin.version>
@@ -90,9 +90,9 @@
         <ehcache.version>3.12.0</ehcache.version>
         <net.sf.ehcache.version>2.10.9.2</net.sf.ehcache.version>
         <esapi.version>2.7.0.0</esapi.version>
-        <classgraph.version>4.8.195</classgraph.version>
+        <classgraph.version>4.8.196</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
-        <amqp.client.version>5.35.0</amqp.client.version>
+        <amqp.client.version>5.36.0</amqp.client.version>
 
         <batik.version>1.19</batik.version>
 
@@ -112,7 +112,7 @@
         <slf4j.version>2.0.19</slf4j.version>
         <log4j2.version>2.26.1</log4j2.version>
         <slf4j.log4j2.version>2.26.1</slf4j.log4j2.version>
-        <bytebuddy.version>1.18.13</bytebuddy.version>
+        <bytebuddy.version>1.18.14</bytebuddy.version>
         <snakeyaml.version>2.7</snakeyaml.version>
         <!-- SnakeYAML Engine (org.snakeyaml, package org.snakeyaml.engine.v2) is a DIFFERENT
              artifact to org.yaml:snakeyaml. Jackson 3's tools.jackson.dataformat:jackson-dataformat-yaml
@@ -120,7 +120,7 @@
              jackson-dataformat-yaml ${jackson.version} declares. -->
         <snakeyaml.engine.version>3.1.1</snakeyaml.engine.version>
         <sparsebitset.version>1.3</sparsebitset.version>
-        <zstdjni.version>1.5.7-15</zstdjni.version>
+        <zstdjni.version>1.5.7-20</zstdjni.version>
         <tica.version>3.3.2</tica.version>
         <typescript4j.version>0.4.0</typescript4j.version>
         <rhino.version>1.9.1</rhino.version>
@@ -241,8 +241,8 @@
              Track the latest stable minor/patch release independently of Vert.x's older LTS
              pin. Verify that the effective BOM imports resolve all Jackson 3 artifacts to
              this version after each update. -->
-        <jackson.version>3.2.2</jackson.version>
-        <jackson.2.version>2.22.2</jackson.2.version>
+        <jackson.version>3.2.3</jackson.version>
+        <jackson.2.version>2.22.3</jackson.2.version>
         <!-- Kept in step with the annotations version jackson-bom ${jackson.version} manages. -->
         <jackson.annotations.version>2.22</jackson.annotations.version>
 
@@ -370,21 +370,21 @@
         <okhttp.version>5.5.0</okhttp.version>
         <okio.version>3.18.2</okio.version>
 
-        <flatten-maven-plugin.version>1.7.3</flatten-maven-plugin.version>
+        <flatten-maven-plugin.version>1.8.0</flatten-maven-plugin.version>
 
         <postgres.version>42.7.13</postgres.version>
         <scram.version>3.4</scram.version>
         <scram.sasl.version>2.4</scram.sasl.version>
         <snappy.version>1.1.10.8</snappy.version>
 
-        <exec-maven-plugin.version>3.6.3</exec-maven-plugin.version>
+        <exec-maven-plugin.version>3.6.4</exec-maven-plugin.version>
         <doxia-site-renderer.version>2.1.0</doxia-site-renderer.version>
-        <waffle-jna.version>3.6.0</waffle-jna.version>
+        <waffle-jna.version>3.7.0</waffle-jna.version>
         <javax.money.moneta.version>1.4.5</javax.money.moneta.version>
         <javax.money.version>1.1</javax.money.version>
         <javafx.version>21.0.12</javafx.version>
         <ojdbc.version>23.26.3.0.0</ojdbc.version>
-        <joda.time.version>2.14.3</joda.time.version>
+        <joda.time.version>2.14.4</joda.time.version>
         <paranamer.version>2.8.3</paranamer.version>
         <offheap.version>2.5.6</offheap.version>
         <osgi.version>8.0.0</osgi.version>
@@ -403,7 +403,7 @@
 
         <!-- Nimbus versions resolved by NE1 World; keep the SDK and JOSE aligned. -->
         <nimbus.oauth2.oidc.version>11.38.2</nimbus.oauth2.oidc.version>
-        <nimbus.jose.jwt.version>10.9.1</nimbus.jose.jwt.version>
+        <nimbus.jose.jwt.version>10.10</nimbus.jose.jwt.version>
         <nimbus.content.type.version>2.3</nimbus.content.type.version>
         <nimbus.lang.tag.version>1.7</nimbus.lang.tag.version>
         <json.smart.version>2.6.0</json.smart.version>
@@ -416,9 +416,9 @@
         <microprofile.config.version>3.1.1</microprofile.config.version>
         <microprofile.metrics.version>5.1.2</microprofile.metrics.version>
         <smallrye.metrics.version>5.1.0</smallrye.metrics.version>
-        <smallrye.commons.version>2.20.0</smallrye.commons.version>
+        <smallrye.commons.version>2.21.1</smallrye.commons.version>
 
-        <ibm.mq.version>10.0.0.0</ibm.mq.version>
+        <ibm.mq.version>10.0.0.5</ibm.mq.version>
 
         <!-- Keep aligned with the Vert.x release used by the SmallRye bindings parent:
              io.smallrye.reactive:smallrye-mutiny-vertx-bindings-projects 4.0.2 uses Vert.x 5.2.0.
@@ -435,7 +435,7 @@
                "automatic module cannot be used with jlink: org.mongodb.bson.record.codec"
              They arrive transitively via io.vertx:vertx-mongo-client and are shaded into
              named modules under com.guicedee.modules.services. -->
-        <mongodb.version>5.11.1</mongodb.version>
+        <mongodb.version>5.12.0</mongodb.version>
         <reactor.core.version>3.8.7</reactor.core.version>
 
         <testcontainers.version>2.0.5</testcontainers.version>
@@ -452,7 +452,7 @@
         <!-- Snapshots → GitHub (standard deploy), Releases → Central (central-publishing plugin) -->
         <central.publishing.skip>true</central.publishing.skip>
 
-        <keycloak.version>26.6.3</keycloak.version>
+        <keycloak.version>26.7.4</keycloak.version>
         <webauthn4j.version>0.31.10.RELEASE</webauthn4j.version>
 
     </properties>
