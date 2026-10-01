@@ -459,8 +459,8 @@
         <!-- Service wrapper dependencies: runtime versions are managed by StandaloneBOM. -->
         <adal4j.version>1.6.7</adal4j.version>
         <affinity.version>3.23.3</affinity.version>
-        <azure-identity.version>1.12.2</azure-identity.version>
-        <azure-security-keyvault-keys.version>4.7.3</azure-security-keyvault-keys.version>
+        <azure-identity.version>1.18.4</azure-identity.version>
+        <azure-security-keyvault-keys.version>4.10.6</azure-security-keyvault-keys.version>
         <cglib.version>3.3.0</cglib.version>
         <curvesapi.version>1.08</curvesapi.version>
         <datastax.driver.version>4.15.0</datastax.driver.version>
