@@ -455,6 +455,104 @@
         <keycloak.version>26.7.4</keycloak.version>
         <webauthn4j.version>0.31.10.RELEASE</webauthn4j.version>
 
+
+        <!-- Service wrapper dependencies: runtime versions are managed by StandaloneBOM. -->
+        <adal4j.version>1.6.7</adal4j.version>
+        <affinity.version>3.23.3</affinity.version>
+        <azure-identity.version>1.12.2</azure-identity.version>
+        <azure-security-keyvault-keys.version>4.7.3</azure-security-keyvault-keys.version>
+        <cglib.version>3.3.0</cglib.version>
+        <curvesapi.version>1.08</curvesapi.version>
+        <datastax.driver.version>4.15.0</datastax.driver.version>
+        <fastdoubleparser.version>1.0.0</fastdoubleparser.version>
+        <fastinfoset.version>2.1.1</fastinfoset.version>
+        <graphics2d.version>3.0.1</graphics2d.version>
+        <groovy-all.version>2.4.21</groovy-all.version>
+        <jakarta.mail.api.version>2.1.2</jakarta.mail.api.version>
+        <jetbrains.annotations.version>26.0.2</jetbrains.annotations.version>
+        <jline.version>3.25.0</jline.version>
+        <micrometer.context.propagation.version>1.2.1</micrometer.context.propagation.version>
+        <microprofile.context.propagation.version>1.3</microprofile.context.propagation.version>
+        <msal4j-persistence-extension.version>1.2.0</msal4j-persistence-extension.version>
+        <msal4j.version>1.15.1</msal4j.version>
+        <opentelemetry.instrumentation.alpha.version>2.23.0-alpha</opentelemetry.instrumentation.alpha.version>
+        <pdfbox.version>3.0.1</pdfbox.version>
+        <spotbugs.annotations.version>4.8.3</spotbugs.annotations.version>
+        <xml.resolver.version>1.2</xml.resolver.version>
+        <xmlresolver.version>5.2.2</xmlresolver.version>
+
+        <!-- Upstream source/Javadoc compatibility lanes; these do not set runtime versions. -->
+        <javadoc.assertj-core.version>3.26.3</javadoc.assertj-core.version>
+        <javadoc.auto-value-annotations.version>1.10.4</javadoc.auto-value-annotations.version>
+        <javadoc.awaitility.version>4.2.2</javadoc.awaitility.version>
+        <javadoc.bc-fips.version>1.0.2.5</javadoc.bc-fips.version>
+        <javadoc.commons-validator.version>1.8.0</javadoc.commons-validator.version>
+        <javadoc.compress-lzf.version>1.1.2</javadoc.compress-lzf.version>
+        <javadoc.docker-java-core.version>3.4.1</javadoc.docker-java-core.version>
+        <javadoc.grpc-api.version>1.64.0</javadoc.grpc-api.version>
+        <javadoc.grpc-stub.version>1.64.0</javadoc.grpc-stub.version>
+        <javadoc.guava.version>33.2.1-jre</javadoc.guava.version>
+        <javadoc.handy-uri-templates.version>2.1.8</javadoc.handy-uri-templates.version>
+        <javadoc.httpclient5.version>5.3.1</javadoc.httpclient5.version>
+        <javadoc.httpcore5.version>5.2.4</javadoc.httpcore5.version>
+        <javadoc.jackson-annotations.version>2.17.2</javadoc.jackson-annotations.version>
+        <javadoc.jackson-core.version>2.17.2</javadoc.jackson-core.version>
+        <javadoc.jackson-databind.version>2.17.2</javadoc.jackson-databind.version>
+        <javadoc.jakarta.annotation.2.1.version>2.1.1</javadoc.jakarta.annotation.2.1.version>
+        <javadoc.jakarta.xml.bind-api.version>4.0.2</javadoc.jakarta.xml.bind-api.version>
+        <javadoc.java-support.7.5.version>7.5.2</javadoc.java-support.7.5.version>
+        <javadoc.java-support.8.4.version>8.4.2</javadoc.java-support.8.4.version>
+        <javadoc.javassist.version>3.30.2-GA</javadoc.javassist.version>
+        <javadoc.javax.servlet.3.0.version>3.0.1</javadoc.javax.servlet.3.0.version>
+        <javadoc.javax.servlet.4.0.version>4.0.1</javadoc.javax.servlet.4.0.version>
+        <javadoc.jboss-logging.version>3.6.1.Final</javadoc.jboss-logging.version>
+        <javadoc.jboss-logmanager.version>3.0.4.Final</javadoc.jboss-logmanager.version>
+        <javadoc.jboss.logging.tools.version>2.2.1.Final</javadoc.jboss.logging.tools.version>
+        <javadoc.jing.version>20091111</javadoc.jing.version>
+        <javadoc.jna-platform.version>5.14.0</javadoc.jna-platform.version>
+        <javadoc.jna.version>5.14.0</javadoc.jna.version>
+        <javadoc.joda-time.version>2.12.7</javadoc.joda-time.version>
+        <javadoc.junit-jupiter-api.version>5.11.4</javadoc.junit-jupiter-api.version>
+        <javadoc.jython-standalone.version>2.7.4</javadoc.jython-standalone.version>
+        <javadoc.jzlib.version>1.1.3</javadoc.jzlib.version>
+        <javadoc.log4j-core.version>2.23.1</javadoc.log4j-core.version>
+        <javadoc.log4j.version>1.2.17</javadoc.log4j.version>
+        <javadoc.lz4.version>1.3.0</javadoc.lz4.version>
+        <javadoc.metrics-core.version>4.2.25</javadoc.metrics-core.version>
+        <javadoc.metrics-healthchecks.version>4.2.25</javadoc.metrics-healthchecks.version>
+        <javadoc.micrometer-commons.version>1.13.2</javadoc.micrometer-commons.version>
+        <javadoc.micrometer-core.1.12.version>1.12.5</javadoc.micrometer-core.1.12.version>
+        <javadoc.micrometer-core.1.13.version>1.13.2</javadoc.micrometer-core.1.13.version>
+        <javadoc.micrometer-observation.version>1.13.2</javadoc.micrometer-observation.version>
+        <javadoc.msv-core.version>2022.7</javadoc.msv-core.version>
+        <javadoc.offheap-store.version>2.5.0</javadoc.offheap-store.version>
+        <javadoc.ojdbc-provider-jackson-oson.version>1.0.6</javadoc.ojdbc-provider-jackson-oson.version>
+        <javadoc.opensaml3.version>3.4.6</javadoc.opensaml3.version>
+        <javadoc.opensaml4.version>4.3.0</javadoc.opensaml4.version>
+        <javadoc.opentelemetry-api.version>1.38.0</javadoc.opentelemetry-api.version>
+        <javadoc.opentelemetry-proto.version>1.5.0-alpha</javadoc.opentelemetry-proto.version>
+        <javadoc.opentelemetry-sdk-trace.version>1.38.0</javadoc.opentelemetry-sdk-trace.version>
+        <javadoc.opentelemetry-sdk.version>1.38.0</javadoc.opentelemetry-sdk.version>
+        <javadoc.org.osgi.service.jdbc.version>1.1.0</javadoc.org.osgi.service.jdbc.version>
+        <javadoc.picocli.version>4.7.6</javadoc.picocli.version>
+        <javadoc.protobuf-java.version>4.29.3</javadoc.protobuf-java.version>
+        <javadoc.re2j.version>1.7</javadoc.re2j.version>
+        <javadoc.reactor-pool.version>1.0.6</javadoc.reactor-pool.version>
+        <javadoc.relaxng-datatype.version>4.0.5</javadoc.relaxng-datatype.version>
+        <javadoc.scram-client.version>3.2</javadoc.scram-client.version>
+        <javadoc.scram-common.version>3.2</javadoc.scram-common.version>
+        <javadoc.simpleclient.version>0.16.0</javadoc.simpleclient.version>
+        <javadoc.siv-mode.1.5.version>1.5.2</javadoc.siv-mode.1.5.version>
+        <javadoc.siv-mode.1.6.version>1.6.1</javadoc.siv-mode.1.6.version>
+        <javadoc.slf4j-api.version>2.0.13</javadoc.slf4j-api.version>
+        <javadoc.snakeyaml.version>2.3</javadoc.snakeyaml.version>
+        <javadoc.terracotta-utilities-tools.version>0.0.19</javadoc.terracotta-utilities-tools.version>
+        <javadoc.tink.version>1.12.0</javadoc.tink.version>
+        <javadoc.trilead-ssh2.version>1.0.0-build222</javadoc.trilead-ssh2.version>
+        <javadoc.value.version>2.10.1</javadoc.value.version>
+        <javadoc.vertx-auth-webauthn.version>5.0.0.CR2</javadoc.vertx-auth-webauthn.version>
+        <javadoc.xercesImpl.version>2.12.2</javadoc.xercesImpl.version>
+        <javadoc.zt-exec.version>1.12</javadoc.zt-exec.version>
     </properties>
 
     <url>https://guicedee.com</url>
