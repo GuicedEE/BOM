@@ -92,7 +92,7 @@
         <esapi.version>2.7.0.0</esapi.version>
         <classgraph.version>4.8.196</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
-        <amqp.client.version>5.36.0</amqp.client.version>
+        <amqp.client.version>5.37.0</amqp.client.version>
 
         <batik.version>1.19</batik.version>
 
@@ -101,7 +101,7 @@
 
         <ant.version>1.10.18</ant.version>
         <stax.version>2.1.0</stax.version>
-        <stax2.api.version>4.3.0</stax2.api.version>
+        <stax2.api.version>4.3.1</stax2.api.version>
         <bcprov.15.version>1.70</bcprov.15.version>
         <bcprov.16.version>1.46</bcprov.16.version>
         <bcprov.18.version>1.86</bcprov.18.version>
@@ -109,7 +109,7 @@
         <http.core.version>4.4.16</http.core.version>
         <http.nio.version>4.4.16</http.nio.version>
         <jasypt.version>1.9.3</jasypt.version>
-        <slf4j.version>2.0.19</slf4j.version>
+        <slf4j.version>2.0.20</slf4j.version>
         <log4j2.version>2.26.1</log4j2.version>
         <slf4j.log4j2.version>2.26.1</slf4j.log4j2.version>
         <bytebuddy.version>1.18.14</bytebuddy.version>
@@ -118,7 +118,7 @@
              artifact to org.yaml:snakeyaml. Jackson 3's tools.jackson.dataformat:jackson-dataformat-yaml
              requires it (Jackson 2 used org.yaml:snakeyaml). Keep in step with what
              jackson-dataformat-yaml ${jackson.version} declares. -->
-        <snakeyaml.engine.version>3.1.1</snakeyaml.engine.version>
+        <snakeyaml.engine.version>3.2</snakeyaml.engine.version>
         <sparsebitset.version>1.3</sparsebitset.version>
         <zstdjni.version>1.5.7-20</zstdjni.version>
         <tica.version>3.3.2</tica.version>
@@ -126,7 +126,7 @@
         <rhino.version>1.9.1</rhino.version>
         <rome.version>2.1.0</rome.version>
 
-        <h2.db.api>2.5.250</h2.db.api>
+        <h2.db.api>2.5.252</h2.db.api>
 
         <nrjavaserial.version>5.2.1</nrjavaserial.version>
         <jserialcomm.version>2.11.4</jserialcomm.version>
@@ -137,7 +137,7 @@
         <xalan.version>2.7.3</xalan.version>
         <qrgen.version>1.4</qrgen.version>
         <barcode4j.version>2.0</barcode4j.version>
-        <owasp.encoder.version>1.4.0</owasp.encoder.version>
+        <owasp.encoder.version>1.5.0</owasp.encoder.version>
         <saxon.b.version>9.0</saxon.b.version>
         <saxon.dom.version>8.7</saxon.dom.version>
         <juniversalchardet.version>2.5.0</juniversalchardet.version>
@@ -151,20 +151,19 @@
         <opentelemetry.version>1.64.0</opentelemetry.version>
 
         <!--  Hibernate -->
-        <maven.hibernate.validator.version>9.1.3.Final</maven.hibernate.validator.version>
+        <maven.hibernate.validator.version>9.1.4.Final</maven.hibernate.validator.version>
         <!-- Track the latest stable minor/patch releases of ORM, Reactive and Models.
              Check Reactive's supported ORM series and verify compatibility with its declared
-             baseline: Reactive 4.5.5.Final declares ORM 7.4.5.Final; we manage ORM 7.4.7.Final.
-             Keep the enhancement plugin and processor aligned with the selected ORM release. -->
-        <maven.hibernate.version>7.4.7.Final</maven.hibernate.version>
-        <maven.hibernate.reactive.version>4.5.5.Final</maven.hibernate.reactive.version>
-        <maven.hibernate.models.version>1.3.1</maven.hibernate.models.version>
+             baseline: Reactive 4.5.8.Final declares ORM 7.4.9.Final; we manage ORM 7.4.12.Final.
+             Keep the processor aligned with ORM; the enhancement plugin is pinned separately. -->
+        <maven.hibernate.version>7.4.12.Final</maven.hibernate.version>
+        <maven.hibernate.reactive.version>4.5.8.Final</maven.hibernate.reactive.version>
+        <maven.hibernate.models.version>1.3.4</maven.hibernate.models.version>
         <maven.hibernate.commons.annotations.version>7.0.7.Final</maven.hibernate.commons.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
-        <!-- org.hibernate.orm:hibernate-maven-plugin (bytecode enhancement) and
-             org.hibernate.orm:hibernate-processor (static metamodel Entity_ generation).
-             Keep aligned with ${maven.hibernate.version} so generated/enhanced bytecode
-             matches the ORM actually on the runtime module path. -->
+        <!-- org.hibernate.orm:hibernate-maven-plugin (bytecode enhancement) has a separate pin.
+             org.hibernate.orm:hibernate-processor (static metamodel Entity_ generation)
+             follows ${maven.hibernate.version} in HibernateBOM. -->
         <maven.hibernate.enhance.version>7.4.7.Final</maven.hibernate.enhance.version>
         <antlr4-runtime.version>4.13.2</antlr4-runtime.version>
 
@@ -176,7 +175,7 @@
         <!-- Apache -->
         <poi.version>5.5.1</poi.version>
         <fop.version>2.11</fop.version>
-        <imageio-tiff.version>3.15.0</imageio-tiff.version>
+        <imageio-tiff.version>3.15.2</imageio-tiff.version>
 
         <httpclient.version>4.5.14</httpclient.version>
 
@@ -186,7 +185,7 @@
         <csv.version>1.14.1</csv.version>
         <fileupload.version>1.6.0</fileupload.version>
         <io.version>2.22.0</io.version>
-        <lang.version>3.20.0</lang.version>
+        <lang.version>3.21.0</lang.version>
         <logging.version>1.4.0</logging.version>
         <math.version>3.6.1</math.version>
         <text.version>1.15.0</text.version>
@@ -195,7 +194,7 @@
         <xz.version>1.12</xz.version>
         <portlet.api.version>1.0</portlet.api.version>
 
-        <xmlbeans.version>5.4.0</xmlbeans.version>
+        <xmlbeans.version>5.4.1</xmlbeans.version>
         <fontbox.version>3.0.8</fontbox.version>
 
         <!--<xerces.version>2.12.0</xerces.version>-->
@@ -212,14 +211,14 @@
         <wsdl4j.version>1.6.3</wsdl4j.version>
 
         <opensaml.openws.version>1.5.6</opensaml.openws.version>
-        <neethi.version>3.2.3</neethi.version>
+        <neethi.version>3.2.4</neethi.version>
         <oauth.version>20100527</oauth.version>
-        <xmlschema.core.version>2.3.2</xmlschema.core.version>
-        <wss4j.version>4.0.1</wss4j.version>
+        <xmlschema.core.version>2.3.3</xmlschema.core.version>
+        <wss4j.version>4.0.2</wss4j.version>
         <xmlsec.version>4.0.4</xmlsec.version>
-        <wss4j.security.common.version>4.0.1</wss4j.security.common.version>
+        <wss4j.security.common.version>4.0.2</wss4j.security.common.version>
         <wss4j.bindings.version>2.0.0</wss4j.bindings.version>
-        <wss4j.policy.version>4.0.1</wss4j.policy.version>
+        <wss4j.policy.version>4.0.2</wss4j.policy.version>
 
         <velocity.engine.version>2.4.1</velocity.engine.version>
         <opensaml.version>5.1.1</opensaml.version>
@@ -229,7 +228,7 @@
         <relaxng.datatype>4.0.9</relaxng.datatype>
 
         <!-- FasterXML  -->
-        <woodstox.version>7.2.2</woodstox.version>
+        <woodstox.version>7.3.0</woodstox.version>
         <!-- Jackson 3.x (groupId tools.jackson.*). Per JSTEP-1 the annotations module
              remains Jackson 2.x (com.fasterxml.jackson.core:jackson-annotations) and is
              managed transitively by tools.jackson:jackson-bom.
@@ -250,15 +249,15 @@
 
         <jsr305.version>3.0.2</jsr305.version>
         <findbugs.annotation.version>3.0.1</findbugs.annotation.version>
-        <checkerqual.version>4.2.3</checkerqual.version>
+        <checkerqual.version>4.3.0</checkerqual.version>
         <errorprone.version>2.50.0</errorprone.version>
         <listenablefuture.version>9999.0-empty-to-avoid-conflict-with-guava</listenablefuture.version>
         <j2obc.version>3.1</j2obc.version>
         <animalsniffer.version>1.28</animalsniffer.version>
         <failureacces.version>1.0.3</failureacces.version>
 
-        <guava.version>33.7.1-jre</guava.version>
-        <protobuf.version>4.36.1</protobuf.version>
+        <guava.version>33.7.2-jre</guava.version>
+        <protobuf.version>4.36.2</protobuf.version>
 
         <guice.version>7.0.0</guice.version>
         <zxing.version>3.5.4</zxing.version>
@@ -272,7 +271,7 @@
         <jakarta.com.sun.activation.version>2.0.1</jakarta.com.sun.activation.version>
         <jakarta.validation.version>3.1.1</jakarta.validation.version>
         <jakarta.faces.version>4.1.3</jakarta.faces.version>
-        <glassfish.faces.version>4.1.16</glassfish.faces.version>
+        <glassfish.faces.version>4.1.17</glassfish.faces.version>
         <jakarta.json.version>2.1.3</jakarta.json.version>
         <jakarta.json.bind.version>3.0.3</jakarta.json.bind.version>
         <jakarta.cdi.api.version>4.1.0</jakarta.cdi.api.version>
@@ -353,18 +352,18 @@
         <junit.platform.version>6.1.3</junit.platform.version>
         <hamcrest.version>1.3</hamcrest.version>
         <assertj.version>3.27.7</assertj.version>
-        <mockito.version>5.23.0</mockito.version>
+        <mockito.version>5.24.0</mockito.version>
 
         <aspectj.version>1.9.25.1</aspectj.version>
 
         <junit.version>4.13.2</junit.version>
 
 
-        <selenium.version>4.49.0</selenium.version>
-        <selenium.drivers.version>4.49.0</selenium.drivers.version>
+        <selenium.version>4.50.0</selenium.version>
+        <selenium.drivers.version>4.50.0</selenium.drivers.version>
         <selenium.jupiter.version>5.1.1</selenium.jupiter.version>
         <bonigarcia.selenium.jupiter.version>6.3.2</bonigarcia.selenium.jupiter.version>
-        <webdrivermanager.version>6.3.4</webdrivermanager.version>
+        <webdrivermanager.version>6.4.0</webdrivermanager.version>
 
         <jmh.version>1.37</jmh.version>
         <okhttp.version>5.5.0</okhttp.version>
@@ -375,7 +374,7 @@
         <postgres.version>42.7.13</postgres.version>
         <scram.version>3.4</scram.version>
         <scram.sasl.version>2.4</scram.sasl.version>
-        <snappy.version>1.1.10.8</snappy.version>
+        <snappy.version>1.1.10.10</snappy.version>
 
         <exec-maven-plugin.version>3.6.4</exec-maven-plugin.version>
         <doxia-site-renderer.version>2.1.0</doxia-site-renderer.version>
@@ -384,7 +383,7 @@
         <javax.money.version>1.1</javax.money.version>
         <javafx.version>21.0.12</javafx.version>
         <ojdbc.version>23.26.3.0.0</ojdbc.version>
-        <joda.time.version>2.14.4</joda.time.version>
+        <joda.time.version>2.15.0</joda.time.version>
         <paranamer.version>2.8.3</paranamer.version>
         <offheap.version>2.5.6</offheap.version>
         <osgi.version>8.0.0</osgi.version>
@@ -413,7 +412,7 @@
         <smallrye.mutiny.version>3.3.0</smallrye.mutiny.version>
         <smallrye.reactive.version>4.0.2</smallrye.reactive.version>
         <smallrye.config.version>3.18.3</smallrye.config.version>
-        <microprofile.config.version>3.1.1</microprofile.config.version>
+        <microprofile.config.version>3.1.2</microprofile.config.version>
         <microprofile.metrics.version>5.1.2</microprofile.metrics.version>
         <smallrye.metrics.version>5.1.0</smallrye.metrics.version>
         <smallrye.commons.version>2.21.1</smallrye.commons.version>
@@ -435,7 +434,7 @@
                "automatic module cannot be used with jlink: org.mongodb.bson.record.codec"
              They arrive transitively via io.vertx:vertx-mongo-client and are shaded into
              named modules under com.guicedee.modules.services. -->
-        <mongodb.version>5.12.0</mongodb.version>
+        <mongodb.version>5.13.0</mongodb.version>
         <reactor.core.version>3.8.7</reactor.core.version>
 
         <testcontainers.version>2.0.5</testcontainers.version>
@@ -445,41 +444,41 @@
         <duct.tape.version>1.0.8</duct.tape.version>
         <jose4j.version>0.9.7</jose4j.version>
 
-        <microprofile.health.version>4.0.1</microprofile.health.version>
+        <microprofile.health.version>4.0.2</microprofile.health.version>
         <microprofile.fault-tolerance.version>4.1.2</microprofile.fault-tolerance.version>
         <microprofile.jwt.version>2.2</microprofile.jwt.version>
 
         <!-- Snapshots → GitHub (standard deploy), Releases → Central (central-publishing plugin) -->
         <central.publishing.skip>true</central.publishing.skip>
 
-        <keycloak.version>26.7.4</keycloak.version>
-        <webauthn4j.version>0.31.10.RELEASE</webauthn4j.version>
+        <keycloak.version>26.8.0</keycloak.version>
+        <webauthn4j.version>0.31.11.RELEASE</webauthn4j.version>
 
 
         <!-- Service wrapper dependencies: runtime versions are managed by StandaloneBOM. -->
         <adal4j.version>1.6.7</adal4j.version>
         <affinity.version>3.23.3</affinity.version>
-        <azure-identity.version>1.18.4</azure-identity.version>
-        <azure-security-keyvault-keys.version>4.10.6</azure-security-keyvault-keys.version>
+        <azure-identity.version>1.18.7</azure-identity.version>
+        <azure-security-keyvault-keys.version>4.11.2</azure-security-keyvault-keys.version>
         <cglib.version>3.3.0</cglib.version>
         <curvesapi.version>1.08</curvesapi.version>
-        <datastax.driver.version>4.15.0</datastax.driver.version>
-        <fastdoubleparser.version>1.0.0</fastdoubleparser.version>
+        <datastax.driver.version>4.17.0</datastax.driver.version>
+        <fastdoubleparser.version>1.0.90</fastdoubleparser.version>
         <fastinfoset.version>2.1.1</fastinfoset.version>
-        <graphics2d.version>3.0.1</graphics2d.version>
+        <graphics2d.version>3.0.5</graphics2d.version>
         <groovy-all.version>2.4.21</groovy-all.version>
-        <jakarta.mail.api.version>2.1.2</jakarta.mail.api.version>
-        <jetbrains.annotations.version>26.0.2</jetbrains.annotations.version>
-        <jline.version>3.25.0</jline.version>
+        <jakarta.mail.api.version>2.1.5</jakarta.mail.api.version>
+        <jetbrains.annotations.version>26.1.0</jetbrains.annotations.version>
+        <jline.version>3.30.17</jline.version>
         <micrometer.context.propagation.version>1.2.1</micrometer.context.propagation.version>
         <microprofile.context.propagation.version>1.3</microprofile.context.propagation.version>
-        <msal4j-persistence-extension.version>1.2.0</msal4j-persistence-extension.version>
-        <msal4j.version>1.15.1</msal4j.version>
+        <msal4j-persistence-extension.version>1.3.0</msal4j-persistence-extension.version>
+        <msal4j.version>1.26.0</msal4j.version>
         <opentelemetry.instrumentation.alpha.version>2.23.0-alpha</opentelemetry.instrumentation.alpha.version>
-        <pdfbox.version>3.0.1</pdfbox.version>
-        <spotbugs.annotations.version>4.8.3</spotbugs.annotations.version>
+        <pdfbox.version>3.0.8</pdfbox.version>
+        <spotbugs.annotations.version>4.10.4</spotbugs.annotations.version>
         <xml.resolver.version>1.2</xml.resolver.version>
-        <xmlresolver.version>5.2.2</xmlresolver.version>
+        <xmlresolver.version>5.3.3</xmlresolver.version>
 
         <!-- Upstream source/Javadoc compatibility lanes; these do not set runtime versions. -->
         <javadoc.assertj-core.version>3.26.3</javadoc.assertj-core.version>

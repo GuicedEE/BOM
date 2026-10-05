@@ -286,7 +286,7 @@
             <dependency>
                 <groupId>org.hibernate.orm</groupId>
                 <artifactId>hibernate-processor</artifactId>
-                <version>${maven.hibernate.enhance.version}</version>
+                <version>${maven.hibernate.version}</version>
                 <scope>provided</scope>
             </dependency>
 
