@@ -1208,6 +1208,15 @@
             </dependency>
 
             <!-- ==========================  -->
+            <!-- Applications and generated projects import this BOM directly.
+                 Include the complete Vert.x family after our Jackson override. -->
+            <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>vertx-bom</artifactId>
+                <version>${guicedee.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
            <!-- <dependency>
                 <groupId>com.guicedee</groupId>
                 <artifactId>apache-bom</artifactId>
