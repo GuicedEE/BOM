@@ -464,6 +464,12 @@
             </dependency>
 
             <dependency>
+                <groupId>com.guicedee</groupId>
+                <artifactId>hazelcast</artifactId>
+                <version>${guicedee.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.guicedee.modules.representations</groupId>
                 <artifactId>excel-representation</artifactId>
                 <version>${guicedee.version}</version>
