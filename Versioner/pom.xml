@@ -4,7 +4,7 @@
 
     <groupId>com.guicedee</groupId>
     <artifactId>versioner</artifactId>
-    <version>2.3.0</version>
+    <version>2.4.0</version>
 
     <packaging>pom</packaging>
 
@@ -23,8 +23,8 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
         <maven.consumer.pom>false</maven.consumer.pom>
 
-        <guicedee.version>2.3.0</guicedee.version>
-        <guicedee.config.version>2.3.0</guicedee.config.version>
+        <guicedee.version>2.4.0</guicedee.version>
+        <guicedee.config.version>2.4.0</guicedee.config.version>
 
         <expressly.version>6.0.0</expressly.version>
 
@@ -46,7 +46,7 @@
         <maven.release.version>3.3.1</maven.release.version>
         <maven.versions.version>2.22.0</maven.versions.version>
         <maven.verifyier.version>1.1</maven.verifyier.version>
-        <maven.asm.version>9.10.1</maven.asm.version>
+        <maven.asm.version>9.11</maven.asm.version>
         <maven.gpg.version>3.2.8</maven.gpg.version>
         <maven.plugin.plugin.version>3.16.0</maven.plugin.plugin.version>
         <maven.enforcer.plugin.version>3.6.3</maven.enforcer.plugin.version>
@@ -83,7 +83,7 @@
 
         <!-- Standalone -->
         <lombok.version>1.18.48</lombok.version>
-        <owasp.html.sanitizer.version>20260924.2</owasp.html.sanitizer.version>
+        <owasp.html.sanitizer.version>20261011.1</owasp.html.sanitizer.version>
         <jdeparser.version>2.1.0</jdeparser.version>
         <classmate.version>1.8.0</classmate.version>
         <dom4j.version>2.2.0</dom4j.version>
@@ -112,7 +112,7 @@
         <slf4j.version>2.0.20</slf4j.version>
         <log4j2.version>2.26.1</log4j2.version>
         <slf4j.log4j2.version>2.26.1</slf4j.log4j2.version>
-        <bytebuddy.version>1.18.14</bytebuddy.version>
+        <bytebuddy.version>1.18.15</bytebuddy.version>
         <snakeyaml.version>2.7</snakeyaml.version>
         <!-- SnakeYAML Engine (org.snakeyaml, package org.snakeyaml.engine.v2) is a DIFFERENT
              artifact to org.yaml:snakeyaml. Jackson 3's tools.jackson.dataformat:jackson-dataformat-yaml
@@ -121,7 +121,7 @@
         <snakeyaml.engine.version>3.2</snakeyaml.engine.version>
         <sparsebitset.version>1.3</sparsebitset.version>
         <zstdjni.version>1.5.7-20</zstdjni.version>
-        <tica.version>3.3.2</tica.version>
+        <tica.version>3.3.3</tica.version>
         <typescript4j.version>0.4.0</typescript4j.version>
         <rhino.version>1.9.1</rhino.version>
         <rome.version>2.1.0</rome.version>
@@ -133,7 +133,7 @@
         <jna.version>5.19.1</jna.version>
 
         <javassist.version>3.33.0-GA</javassist.version>
-        <spotbugs.version>4.10.4</spotbugs.version>
+        <spotbugs.version>4.10.5</spotbugs.version>
         <xalan.version>2.7.3</xalan.version>
         <qrgen.version>1.4</qrgen.version>
         <barcode4j.version>2.0</barcode4j.version>
@@ -151,7 +151,7 @@
         <opentelemetry.version>1.67.0</opentelemetry.version>
 
         <!--  Hibernate -->
-        <maven.hibernate.validator.version>9.1.4.Final</maven.hibernate.validator.version>
+        <maven.hibernate.validator.version>9.1.5.Final</maven.hibernate.validator.version>
         <!-- Track the latest stable minor/patch releases of ORM, Reactive and Models.
              Check Reactive's supported ORM series and verify compatibility with its declared
              baseline: Reactive 4.5.10.Final declares ORM 7.4.9.Final; we manage ORM 7.4.13.Final.
@@ -180,7 +180,7 @@
         <httpclient.version>4.5.14</httpclient.version>
 
         <collections.version>4.6.0</collections.version>
-        <codec.version>1.22.1</codec.version>
+        <codec.version>1.23.0</codec.version>
         <compress.version>1.28.0</compress.version>
         <csv.version>1.14.1</csv.version>
         <fileupload.version>1.6.0</fileupload.version>
@@ -273,7 +273,7 @@
         <jakarta.faces.version>4.1.3</jakarta.faces.version>
         <glassfish.faces.version>4.1.18</glassfish.faces.version>
         <jakarta.json.version>2.1.3</jakarta.json.version>
-        <jakarta.json.bind.version>3.0.3</jakarta.json.bind.version>
+        <jakarta.json.bind.version>3.0.4</jakarta.json.bind.version>
         <jakarta.cdi.api.version>4.1.0</jakarta.cdi.api.version>
         <jakarta.ejb.version>4.0.1</jakarta.ejb.version>
         <jakarta.el.version>6.0.1</jakarta.el.version>
@@ -307,7 +307,7 @@
         <jandex.version>3.6.0</jandex.version>
         <jaxen.version>2.0.6</jaxen.version>
         <org.json.version>20260814</org.json.version>
-        <kafka.client.version>4.3.1</kafka.client.version>
+        <kafka.client.version>4.4.0</kafka.client.version>
         <openpdf.version>3.0.5</openpdf.version>
         <primefaces.version>11.0.24</primefaces.version>
         <qdox.version>2.2.0</qdox.version>
@@ -390,7 +390,7 @@
         <osgi.annotations.version>1.5.1</osgi.annotations.version>
         <terracota.statistics.version>2.1.3</terracota.statistics.version>
 
-        <spring.version>6.2.19</spring.version>
+        <spring.version>7.0.9</spring.version>
 
         <jspecify.version>1.0.1</jspecify.version>
         <reactive.streams.version>1.0.4</reactive.streams.version>
@@ -417,7 +417,7 @@
         <smallrye.metrics.version>5.1.0</smallrye.metrics.version>
         <smallrye.commons.version>2.21.1</smallrye.commons.version>
 
-        <ibm.mq.version>10.0.0.5</ibm.mq.version>
+        <ibm.mq.version>10.0.1.0</ibm.mq.version>
 
         <!-- Vert.x is explicitly managed above the SmallRye bindings baseline.
              Review io.smallrye.reactive:smallrye-mutiny-vertx-bindings-projects
@@ -427,7 +427,7 @@
         <jboss-marshalling.version>2.3.0</jboss-marshalling.version>
         <netty-tcnative.version>2.0.84.Final</netty-tcnative.version>
 
-        <cloudevents.version>5.0.0</cloudevents.version>
+        <cloudevents.version>5.1.0</cloudevents.version>
 
         <!-- MongoDB driver chain. Every one of these jars ships as an automatic module
              (or, for reactor-core, with no descriptor at all), which jlink refuses:
@@ -451,7 +451,7 @@
         <!-- Snapshots → GitHub (standard deploy), Releases → Central (central-publishing plugin) -->
         <central.publishing.skip>true</central.publishing.skip>
 
-        <keycloak.version>26.8.0</keycloak.version>
+        <keycloak.version>26.8.1</keycloak.version>
         <webauthn4j.version>0.31.11.RELEASE</webauthn4j.version>
 
 
@@ -463,7 +463,7 @@
         <cglib.version>3.3.0</cglib.version>
         <curvesapi.version>1.08</curvesapi.version>
         <datastax.driver.version>4.17.0</datastax.driver.version>
-        <fastdoubleparser.version>1.0.90</fastdoubleparser.version>
+        <fastdoubleparser.version>2.0.1</fastdoubleparser.version>
         <fastinfoset.version>2.1.1</fastinfoset.version>
         <graphics2d.version>3.0.5</graphics2d.version>
         <groovy-all.version>2.4.21</groovy-all.version>
@@ -476,7 +476,7 @@
         <msal4j.version>1.26.0</msal4j.version>
         <opentelemetry.instrumentation.alpha.version>2.32.0-alpha</opentelemetry.instrumentation.alpha.version>
         <pdfbox.version>3.0.8</pdfbox.version>
-        <spotbugs.annotations.version>4.10.4</spotbugs.annotations.version>
+        <spotbugs.annotations.version>4.10.5</spotbugs.annotations.version>
         <xml.resolver.version>1.2</xml.resolver.version>
         <xmlresolver.version>5.3.3</xmlresolver.version>
 

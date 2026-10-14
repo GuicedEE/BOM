@@ -5,13 +5,13 @@
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>versioner</artifactId>
-        <version>2.3.0</version>
+        <version>2.4.0</version>
         <relativePath>../Versioner</relativePath>
     </parent>
 
     <groupId>com.guicedee</groupId>
     <artifactId>apache-cxf-bom</artifactId>
-    <version>2.3.0</version>
+    <version>2.4.0</version>
 
     <packaging>pom</packaging>
 
@@ -84,6 +84,14 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <dependency>
                 <groupId>com.sun.xml.messaging.saaj</groupId>
