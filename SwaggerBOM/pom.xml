@@ -86,8 +86,8 @@
         <dependencies>
             <!-- Swagger runtime dependencies -->
             <dependency>
-                <groupId>io.github.vpelikh</groupId>
-                <artifactId>swagger-jaxrs2-jakarta</artifactId>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-rest</artifactId>
                 <version>${io.swagger.jakarta.version}</version>
                 <exclusions>
                     <exclusion>
@@ -98,7 +98,7 @@
             </dependency>
 
             <dependency>
-                <groupId>io.github.vpelikh</groupId>
+                <groupId>io.swagger.core.v3</groupId>
                 <artifactId>swagger-core</artifactId>
                 <version>${io.swagger.version}</version>
                 <optional>true</optional>
@@ -111,7 +111,7 @@
             </dependency>
 
             <dependency>
-                <groupId>io.github.vpelikh</groupId>
+                <groupId>io.swagger.core.v3</groupId>
                 <artifactId>swagger-models</artifactId>
                 <version>${io.swagger.version}</version>
                 <optional>true</optional>
@@ -124,7 +124,7 @@
             </dependency>
 
             <dependency>
-                <groupId>io.github.vpelikh</groupId>
+                <groupId>io.swagger.core.v3</groupId>
                 <artifactId>swagger-integration</artifactId>
                 <version>${io.swagger.version}</version>
                 <optional>true</optional>
@@ -137,14 +137,14 @@
             </dependency>
 
             <dependency>
-                <groupId>io.github.vpelikh</groupId>
-                <artifactId>swagger-annotations-jakarta</artifactId>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-annotations</artifactId>
                 <version>${io.swagger.jakarta.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>io.github.vpelikh</groupId>
-                <artifactId>swagger-jaxrs2-servlet-initializer-jakarta</artifactId>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-rest-servlet-initializer</artifactId>
                 <version>${io.swagger.jakarta.version}</version>
             </dependency>
 

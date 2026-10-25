@@ -344,8 +344,10 @@
         <log4j2.jboss.logmanager.version>2.0.1.Final</log4j2.jboss.logmanager.version>
         <jbosslog.version>3.6.3.Final</jbosslog.version>
 
-        <io.swagger.version>3.0.0</io.swagger.version>
-        <io.swagger.jakarta.version>3.0.0</io.swagger.jakarta.version>
+        <!-- Official Jackson 3 snapshot; pin the tested build until 3.0.0 is released.
+             https://github.com/swagger-api/swagger-core/issues/4991 -->
+        <io.swagger.version>3.0.0-20261023.100341-12</io.swagger.version>
+        <io.swagger.jakarta.version>${io.swagger.version}</io.swagger.jakarta.version>
 
         <junit.jupiter.version>6.1.3</junit.jupiter.version>
         <junit.platform.version>6.1.3</junit.platform.version>
