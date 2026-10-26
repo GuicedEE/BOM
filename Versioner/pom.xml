@@ -4,7 +4,7 @@
 
     <groupId>com.guicedee</groupId>
     <artifactId>versioner</artifactId>
-    <version>2.4.1</version>
+    <version>2.4.2</version>
 
     <packaging>pom</packaging>
 
@@ -23,7 +23,7 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
         <maven.consumer.pom>false</maven.consumer.pom>
 
-        <guicedee.version>2.4.1</guicedee.version>
+        <guicedee.version>2.4.2</guicedee.version>
         <guicedee.config.version>2.4.0</guicedee.config.version>
 
         <expressly.version>6.0.0</expressly.version>
@@ -924,7 +924,8 @@
                         <configuration>
                             <rules>
                                 <requireMavenVersion>
-                                    <version>[4.0.0-rc-5,)</version>
+                                    <!-- rc-6 fails on the model 4.1.0 update -->
+                                    <version>[4.0.0-rc-7,)</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
                                     <version>[25,)</version>
