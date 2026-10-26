@@ -1,6 +1,6 @@
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.1.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/xsd/maven-4.1.0.xsd">
+    <modelVersion>4.1.0</modelVersion>
 
     <groupId>com.guicedee</groupId>
     <artifactId>versioner</artifactId>
@@ -44,14 +44,14 @@
         <maven.failsafe.version>3.5.5</maven.failsafe.version>
         <maven.resources.version>3.5.0</maven.resources.version>
         <maven.release.version>3.3.1</maven.release.version>
-        <maven.versions.version>2.22.0</maven.versions.version>
+        <maven.versions.version>2.23.0</maven.versions.version>
         <maven.verifyier.version>1.1</maven.verifyier.version>
-        <maven.asm.version>9.11</maven.asm.version>
+        <maven.asm.version>9.11.1</maven.asm.version>
         <maven.gpg.version>3.2.8</maven.gpg.version>
         <maven.plugin.plugin.version>3.16.0</maven.plugin.plugin.version>
         <maven.enforcer.plugin.version>3.6.3</maven.enforcer.plugin.version>
         <maven.antrun.plugin.version>3.2.0</maven.antrun.plugin.version>
-        <copy.rename.maven.plugin.version>1.0</copy.rename.maven.plugin.version>
+        <copy.rename.maven.plugin.version>1.0.1</copy.rename.maven.plugin.version>
         <maven.shade.transformers.version>0.0.4</maven.shade.transformers.version>
 
         <maven.war.version>3.5.1</maven.war.version>
@@ -73,7 +73,7 @@
         <jacoco.version>0.8.15</jacoco.version>
         <sonar.exclusions>**bower_components,**src/test,**/test/**,**/module-info.java,**/jar-resources
         </sonar.exclusions>
-        <central.publishing.maven.plugin.version>0.11.0</central.publishing.maven.plugin.version>
+        <central.publishing.maven.plugin.version>0.12.0</central.publishing.maven.plugin.version>
         <jdk.release>25</jdk.release>
         <mapstruct.version>1.6.3</mapstruct.version>
         <moditect.maven.plugin.version>1.3.0.Final</moditect.maven.plugin.version>
@@ -94,9 +94,9 @@
         <antlr.version>2.7.7</antlr.version>
         <amqp.client.version>5.37.0</amqp.client.version>
 
-        <batik.version>1.19</batik.version>
+        <batik.version>1.20</batik.version>
 
-        <micrometer.version>1.17.1</micrometer.version>
+        <micrometer.version>1.17.2</micrometer.version>
         <dropwizard.version>4.2.40</dropwizard.version>
 
         <ant.version>1.10.18</ant.version>
@@ -112,7 +112,7 @@
         <slf4j.version>2.0.20</slf4j.version>
         <log4j2.version>2.26.1</log4j2.version>
         <slf4j.log4j2.version>2.26.1</slf4j.log4j2.version>
-        <bytebuddy.version>1.18.15</bytebuddy.version>
+        <bytebuddy.version>1.18.16</bytebuddy.version>
         <snakeyaml.version>2.7</snakeyaml.version>
         <!-- SnakeYAML Engine (org.snakeyaml, package org.snakeyaml.engine.v2) is a DIFFERENT
              artifact to org.yaml:snakeyaml. Jackson 3's tools.jackson.dataformat:jackson-dataformat-yaml
@@ -140,7 +140,7 @@
         <owasp.encoder.version>1.6.0</owasp.encoder.version>
         <saxon.b.version>9.0</saxon.b.version>
         <saxon.dom.version>8.7</saxon.dom.version>
-        <juniversalchardet.version>2.5.1</juniversalchardet.version>
+        <juniversalchardet.version>2.5.2</juniversalchardet.version>
         <barbecue.version>1.5-beta1</barbecue.version>
         <jfreechart.version>1.0.1</jfreechart.version>
         <hawtbuf.version>1.11</hawtbuf.version>
@@ -154,17 +154,17 @@
         <maven.hibernate.validator.version>9.1.5.Final</maven.hibernate.validator.version>
         <!-- Track the latest stable minor/patch releases of ORM, Reactive and Models.
              Check Reactive's supported ORM series and verify compatibility with its declared
-             baseline: Reactive 4.5.11.Final declares ORM 7.4.13.Final; we manage ORM 7.4.13.Final.
+             baseline: Reactive 4.5.12.Final declares ORM 7.4.13.Final; we manage ORM 7.4.14.Final.
              Keep the processor aligned with ORM; the enhancement plugin is pinned separately. -->
-        <maven.hibernate.version>7.4.13.Final</maven.hibernate.version>
-        <maven.hibernate.reactive.version>4.5.11.Final</maven.hibernate.reactive.version>
+        <maven.hibernate.version>7.4.14.Final</maven.hibernate.version>
+        <maven.hibernate.reactive.version>4.5.12.Final</maven.hibernate.reactive.version>
         <maven.hibernate.models.version>1.3.4</maven.hibernate.models.version>
         <maven.hibernate.commons.annotations.version>7.0.7.Final</maven.hibernate.commons.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
         <!-- org.hibernate.orm:hibernate-maven-plugin (bytecode enhancement) has a separate pin.
              org.hibernate.orm:hibernate-processor (static metamodel Entity_ generation)
              follows ${maven.hibernate.version} in HibernateBOM. -->
-        <maven.hibernate.enhance.version>7.4.7.Final</maven.hibernate.enhance.version>
+        <maven.hibernate.enhance.version>7.4.14.Final</maven.hibernate.enhance.version>
         <antlr4-runtime.version>4.13.2</antlr4-runtime.version>
 
         <typesafe.version>1.4.9</typesafe.version>
@@ -174,7 +174,7 @@
 
         <!-- Apache -->
         <poi.version>5.5.1</poi.version>
-        <fop.version>2.11</fop.version>
+        <fop.version>2.12</fop.version>
         <imageio-tiff.version>3.15.3</imageio-tiff.version>
 
         <httpclient.version>4.5.14</httpclient.version>
@@ -249,7 +249,7 @@
         <jsr305.version>3.0.2</jsr305.version>
         <findbugs.annotation.version>3.0.1</findbugs.annotation.version>
         <checkerqual.version>4.3.1</checkerqual.version>
-        <errorprone.version>2.50.0</errorprone.version>
+        <errorprone.version>2.51.0</errorprone.version>
         <listenablefuture.version>9999.0-empty-to-avoid-conflict-with-guava</listenablefuture.version>
         <j2obc.version>3.1</j2obc.version>
         <animalsniffer.version>1.28</animalsniffer.version>
@@ -261,7 +261,7 @@
         <guice.version>7.0.0</guice.version>
         <zxing.version>3.5.4</zxing.version>
 
-        <gson.version>2.14.0</gson.version>
+        <gson.version>2.15.0</gson.version>
 
         <!-- Jakarta -->
 
@@ -270,7 +270,7 @@
         <jakarta.com.sun.activation.version>2.0.1</jakarta.com.sun.activation.version>
         <jakarta.validation.version>3.1.1</jakarta.validation.version>
         <jakarta.faces.version>4.1.3</jakarta.faces.version>
-        <glassfish.faces.version>4.1.18</glassfish.faces.version>
+        <glassfish.faces.version>4.1.19</glassfish.faces.version>
         <jakarta.json.version>2.1.3</jakarta.json.version>
         <jakarta.json.bind.version>3.0.4</jakarta.json.bind.version>
         <jakarta.cdi.api.version>4.1.0</jakarta.cdi.api.version>
@@ -355,7 +355,7 @@
         <assertj.version>3.27.7</assertj.version>
         <mockito.version>5.24.0</mockito.version>
 
-        <aspectj.version>1.9.25.1</aspectj.version>
+        <aspectj.version>1.9.26</aspectj.version>
 
         <junit.version>4.13.2</junit.version>
 
@@ -367,10 +367,10 @@
         <webdrivermanager.version>6.4.0</webdrivermanager.version>
 
         <jmh.version>1.37</jmh.version>
-        <okhttp.version>5.5.0</okhttp.version>
+        <okhttp.version>5.5.1</okhttp.version>
         <okio.version>3.18.2</okio.version>
 
-        <flatten-maven-plugin.version>1.8.0</flatten-maven-plugin.version>
+        <flatten-maven-plugin.version>2.0</flatten-maven-plugin.version>
 
         <postgres.version>42.7.14</postgres.version>
         <scram.version>3.4</scram.version>
@@ -382,7 +382,7 @@
         <waffle-jna.version>3.7.0</waffle-jna.version>
         <javax.money.moneta.version>1.4.5</javax.money.moneta.version>
         <javax.money.version>1.1</javax.money.version>
-        <javafx.version>21.0.12</javafx.version>
+        <javafx.version>21.0.13</javafx.version>
         <ojdbc.version>23.26.3.0.0</ojdbc.version>
         <joda.time.version>2.15.0</joda.time.version>
         <paranamer.version>2.8.3</paranamer.version>
@@ -391,7 +391,7 @@
         <osgi.annotations.version>1.5.1</osgi.annotations.version>
         <terracota.statistics.version>2.1.3</terracota.statistics.version>
 
-        <spring.version>7.0.9</spring.version>
+        <spring.version>7.0.10</spring.version>
 
         <jspecify.version>1.0.1</jspecify.version>
         <reactive.streams.version>1.0.4</reactive.streams.version>
@@ -410,10 +410,10 @@
         <jcip.annotations.version>1.0-1</jcip.annotations.version>
 
 
-        <smallrye.mutiny.version>3.3.0</smallrye.mutiny.version>
-        <smallrye.reactive.version>4.0.2</smallrye.reactive.version>
+        <smallrye.mutiny.version>3.3.1</smallrye.mutiny.version>
+        <smallrye.reactive.version>4.1.0</smallrye.reactive.version>
         <smallrye.config.version>3.18.3</smallrye.config.version>
-        <microprofile.config.version>3.1.2</microprofile.config.version>
+        <microprofile.config.version>3.1.3</microprofile.config.version>
         <microprofile.metrics.version>5.1.2</microprofile.metrics.version>
         <smallrye.metrics.version>5.1.0</smallrye.metrics.version>
         <smallrye.commons.version>2.21.1</smallrye.commons.version>
@@ -423,7 +423,7 @@
         <!-- Vert.x is explicitly managed above the SmallRye bindings baseline.
              Review io.smallrye.reactive:smallrye-mutiny-vertx-bindings-projects
              compatibility when updating either family. -->
-        <vertx.version>5.2.1</vertx.version>
+        <vertx.version>5.2.2</vertx.version>
         <vertx.mutiny.version>3.23.1</vertx.mutiny.version>
         <jboss-marshalling.version>2.3.0</jboss-marshalling.version>
         <netty-tcnative.version>2.0.84.Final</netty-tcnative.version>
@@ -436,7 +436,7 @@
              They arrive transitively via io.vertx:vertx-mongo-client and are shaded into
              named modules under com.guicedee.modules.services. -->
         <mongodb.version>5.13.0</mongodb.version>
-        <reactor.core.version>3.8.7</reactor.core.version>
+        <reactor.core.version>3.8.8</reactor.core.version>
 
         <testcontainers.version>2.0.5</testcontainers.version>
         <testcontainers.oraclefree.version>2.0.5</testcontainers.oraclefree.version>
@@ -819,7 +819,7 @@
                 </plugin>
 
                 <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
+                    <groupId>com.guicedee.maven</groupId>
                     <artifactId>flatten-maven-plugin</artifactId>
                     <version>${flatten-maven-plugin.version}</version>
                 </plugin>
