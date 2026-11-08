@@ -44,7 +44,7 @@
         <maven.failsafe.version>3.5.5</maven.failsafe.version>
         <maven.resources.version>3.5.0</maven.resources.version>
         <maven.release.version>3.3.1</maven.release.version>
-        <maven.versions.version>2.23.0</maven.versions.version>
+        <maven.versions.version>2.24.0</maven.versions.version>
         <maven.verifyier.version>1.1</maven.verifyier.version>
         <maven.asm.version>9.11.1</maven.asm.version>
         <maven.gpg.version>3.2.8</maven.gpg.version>
@@ -52,7 +52,7 @@
         <maven.enforcer.plugin.version>3.6.3</maven.enforcer.plugin.version>
         <maven.antrun.plugin.version>3.2.0</maven.antrun.plugin.version>
         <copy.rename.maven.plugin.version>1.0.1</copy.rename.maven.plugin.version>
-        <maven.shade.transformers.version>0.0.4</maven.shade.transformers.version>
+        <maven.shade.transformers.version>0.0.5</maven.shade.transformers.version>
 
         <maven.war.version>3.5.1</maven.war.version>
         <maven.ear.version>3.4.0</maven.ear.version>
@@ -63,14 +63,14 @@
         <javaparser-core>3.28.2</javaparser-core>
         <aop.version>1.0.0</aop.version>
 
-        <build.helper.maven.plugin.version>3.6.2</build.helper.maven.plugin.version>
+        <build.helper.maven.plugin.version>3.7.0</build.helper.maven.plugin.version>
         <netbeans.hint.license>apache20</netbeans.hint.license>
         <license.dir>${basedir}</license.dir>
 
         <sonarqube.version>5.8.0.7211</sonarqube.version>
         <java-support.version>8.4.1</java-support.version>
 
-        <jacoco.version>0.8.15</jacoco.version>
+        <jacoco.version>0.8.16</jacoco.version>
         <sonar.exclusions>**bower_components,**src/test,**/test/**,**/module-info.java,**/jar-resources
         </sonar.exclusions>
         <central.publishing.maven.plugin.version>0.12.0</central.publishing.maven.plugin.version>
@@ -90,9 +90,9 @@
         <ehcache.version>3.12.0</ehcache.version>
         <net.sf.ehcache.version>2.10.9.2</net.sf.ehcache.version>
         <esapi.version>2.7.0.0</esapi.version>
-        <classgraph.version>6.0.0</classgraph.version>
+        <classgraph.version>6.0.2</classgraph.version>
         <antlr.version>2.7.7</antlr.version>
-        <amqp.client.version>5.37.0</amqp.client.version>
+        <amqp.client.version>5.37.1</amqp.client.version>
 
         <batik.version>1.20</batik.version>
 
@@ -112,7 +112,7 @@
         <slf4j.version>2.0.20</slf4j.version>
         <log4j2.version>2.26.1</log4j2.version>
         <slf4j.log4j2.version>2.26.1</slf4j.log4j2.version>
-        <bytebuddy.version>1.18.16</bytebuddy.version>
+        <bytebuddy.version>1.18.17</bytebuddy.version>
         <snakeyaml.version>2.7</snakeyaml.version>
         <!-- SnakeYAML Engine (org.snakeyaml, package org.snakeyaml.engine.v2) is a DIFFERENT
              artifact to org.yaml:snakeyaml. Jackson 3's tools.jackson.dataformat:jackson-dataformat-yaml
@@ -123,7 +123,7 @@
         <zstdjni.version>1.5.7-20</zstdjni.version>
         <tica.version>3.3.3</tica.version>
         <typescript4j.version>0.4.0</typescript4j.version>
-        <rhino.version>1.9.1</rhino.version>
+        <rhino.version>1.9.2</rhino.version>
         <rome.version>2.1.0</rome.version>
 
         <h2.db.api>2.5.252</h2.db.api>
@@ -148,26 +148,26 @@
         <bouncycastle.version>1.86</bouncycastle.version>
         <!-- Also controls telemetry-core's opentelemetry-api-incubator ${opentelemetry.version}-alpha.
              Review that prerelease before updating this otherwise stable version property. -->
-        <opentelemetry.version>1.67.0</opentelemetry.version>
+        <opentelemetry.version>1.68.0</opentelemetry.version>
 
         <!--  Hibernate -->
-        <maven.hibernate.validator.version>9.1.5.Final</maven.hibernate.validator.version>
+        <maven.hibernate.validator.version>9.1.6.Final</maven.hibernate.validator.version>
         <!-- Track the latest stable minor/patch releases of ORM, Reactive and Models.
              Check Reactive's supported ORM series and verify compatibility with its declared
              baseline: Reactive 4.5.12.Final declares ORM 7.4.13.Final; we manage ORM 7.4.14.Final.
              Keep the processor aligned with ORM; the enhancement plugin is pinned separately. -->
-        <maven.hibernate.version>7.4.14.Final</maven.hibernate.version>
-        <maven.hibernate.reactive.version>4.5.12.Final</maven.hibernate.reactive.version>
+        <maven.hibernate.version>7.4.15.Final</maven.hibernate.version>
+        <maven.hibernate.reactive.version>4.5.14.Final</maven.hibernate.reactive.version>
         <maven.hibernate.models.version>1.3.4</maven.hibernate.models.version>
         <maven.hibernate.commons.annotations.version>7.0.7.Final</maven.hibernate.commons.annotations.version>
         <maven.hibernate.jpa.persistence.version>1.0.2.Final</maven.hibernate.jpa.persistence.version>
         <!-- org.hibernate.orm:hibernate-maven-plugin (bytecode enhancement) has a separate pin.
              org.hibernate.orm:hibernate-processor (static metamodel Entity_ generation)
              follows ${maven.hibernate.version} in HibernateBOM. -->
-        <maven.hibernate.enhance.version>7.4.14.Final</maven.hibernate.enhance.version>
+        <maven.hibernate.enhance.version>7.4.15.Final</maven.hibernate.enhance.version>
         <antlr4-runtime.version>4.13.2</antlr4-runtime.version>
 
-        <typesafe.version>1.4.9</typesafe.version>
+        <typesafe.version>1.4.10</typesafe.version>
 
         <hazelcast.version>5.7.0</hazelcast.version>
         <hazelcast.hibernate.version>5.2.0</hazelcast.hibernate.version>
@@ -240,7 +240,7 @@
              Track the latest stable minor/patch release independently of Vert.x's older LTS
              pin. Verify that the effective BOM imports resolve all Jackson 3 artifacts to
              this version after each update. -->
-        <jackson.version>3.2.4</jackson.version>
+        <jackson.version>3.3.0</jackson.version>
         <!-- Kept in step with the annotations version jackson-bom ${jackson.version} manages. -->
         <jackson.annotations.version>2.22</jackson.annotations.version>
 
@@ -248,14 +248,14 @@
 
         <jsr305.version>3.0.2</jsr305.version>
         <findbugs.annotation.version>3.0.1</findbugs.annotation.version>
-        <checkerqual.version>4.3.1</checkerqual.version>
-        <errorprone.version>2.51.0</errorprone.version>
+        <checkerqual.version>4.4.0</checkerqual.version>
+        <errorprone.version>2.52.0</errorprone.version>
         <listenablefuture.version>9999.0-empty-to-avoid-conflict-with-guava</listenablefuture.version>
         <j2obc.version>3.1</j2obc.version>
-        <animalsniffer.version>1.28</animalsniffer.version>
+        <animalsniffer.version>1.29</animalsniffer.version>
         <failureacces.version>1.0.3</failureacces.version>
 
-        <guava.version>33.7.2-jre</guava.version>
+        <guava.version>33.8.0-jre</guava.version>
         <protobuf.version>4.36.2</protobuf.version>
 
         <guice.version>7.0.0</guice.version>
@@ -270,7 +270,7 @@
         <jakarta.com.sun.activation.version>2.0.1</jakarta.com.sun.activation.version>
         <jakarta.validation.version>3.1.1</jakarta.validation.version>
         <jakarta.faces.version>4.1.3</jakarta.faces.version>
-        <glassfish.faces.version>4.1.19</glassfish.faces.version>
+        <glassfish.faces.version>4.1.20</glassfish.faces.version>
         <jakarta.json.version>2.1.3</jakarta.json.version>
         <jakarta.json.bind.version>3.0.4</jakarta.json.bind.version>
         <jakarta.cdi.api.version>4.1.0</jakarta.cdi.api.version>
@@ -318,7 +318,7 @@
         <dropwizard.metrics-core.version>4.2.40</dropwizard.metrics-core.version>
         <jdom.version>2.0.6.1</jdom.version>
 
-        <mssql.jdbc>13.6.1</mssql.jdbc>
+        <mssql.jdbc>13.6.2</mssql.jdbc>
         <mssql.driver.jdbc>11.2.4</mssql.driver.jdbc>
 
         <!-- JBoss -->
@@ -355,13 +355,13 @@
         <assertj.version>3.27.7</assertj.version>
         <mockito.version>5.24.0</mockito.version>
 
-        <aspectj.version>1.9.26</aspectj.version>
+        <aspectj.version>1.9.27</aspectj.version>
 
         <junit.version>4.13.2</junit.version>
 
 
-        <selenium.version>4.51.0</selenium.version>
-        <selenium.drivers.version>4.51.0</selenium.drivers.version>
+        <selenium.version>4.52.0</selenium.version>
+        <selenium.drivers.version>4.52.0</selenium.drivers.version>
         <selenium.jupiter.version>5.1.1</selenium.jupiter.version>
         <bonigarcia.selenium.jupiter.version>6.3.2</bonigarcia.selenium.jupiter.version>
         <webdrivermanager.version>6.4.0</webdrivermanager.version>
@@ -383,8 +383,8 @@
         <javax.money.moneta.version>1.4.5</javax.money.moneta.version>
         <javax.money.version>1.1</javax.money.version>
         <javafx.version>21.0.13</javafx.version>
-        <ojdbc.version>23.26.3.0.0</ojdbc.version>
-        <joda.time.version>2.15.0</joda.time.version>
+        <ojdbc.version>23.26.4.0.0</ojdbc.version>
+        <joda.time.version>2.15.1</joda.time.version>
         <paranamer.version>2.8.3</paranamer.version>
         <offheap.version>2.5.6</offheap.version>
         <osgi.version>8.0.0</osgi.version>
@@ -402,11 +402,11 @@
         <java.dataloader.version>6.0.0</java.dataloader.version>
 
         <!-- Nimbus versions resolved by NE1 World; keep the SDK and JOSE aligned. -->
-        <nimbus.oauth2.oidc.version>11.38.2</nimbus.oauth2.oidc.version>
+        <nimbus.oauth2.oidc.version>11.39</nimbus.oauth2.oidc.version>
         <nimbus.jose.jwt.version>10.10</nimbus.jose.jwt.version>
         <nimbus.content.type.version>2.3</nimbus.content.type.version>
         <nimbus.lang.tag.version>1.7</nimbus.lang.tag.version>
-        <json.smart.version>2.6.0</json.smart.version>
+        <json.smart.version>2.6.1</json.smart.version>
         <jcip.annotations.version>1.0-1</jcip.annotations.version>
 
 
@@ -423,10 +423,10 @@
         <!-- Vert.x is explicitly managed above the SmallRye bindings baseline.
              Review io.smallrye.reactive:smallrye-mutiny-vertx-bindings-projects
              compatibility when updating either family. -->
-        <vertx.version>5.2.2</vertx.version>
+        <vertx.version>5.2.3</vertx.version>
         <vertx.mutiny.version>3.23.1</vertx.mutiny.version>
         <jboss-marshalling.version>2.3.0</jboss-marshalling.version>
-        <netty-tcnative.version>2.0.84.Final</netty-tcnative.version>
+        <netty-tcnative.version>2.0.85.Final</netty-tcnative.version>
 
         <cloudevents.version>5.1.0</cloudevents.version>
 
@@ -435,7 +435,7 @@
                "automatic module cannot be used with jlink: org.mongodb.bson.record.codec"
              They arrive transitively via io.vertx:vertx-mongo-client and are shaded into
              named modules under com.guicedee.modules.services. -->
-        <mongodb.version>5.13.0</mongodb.version>
+        <mongodb.version>5.14.0</mongodb.version>
         <reactor.core.version>3.8.8</reactor.core.version>
 
         <testcontainers.version>2.0.5</testcontainers.version>
@@ -452,15 +452,15 @@
         <!-- Snapshots → GitHub (standard deploy), Releases → Central (central-publishing plugin) -->
         <central.publishing.skip>true</central.publishing.skip>
 
-        <keycloak.version>26.8.1</keycloak.version>
-        <webauthn4j.version>0.31.11.RELEASE</webauthn4j.version>
+        <keycloak.version>26.8.2</keycloak.version>
+        <webauthn4j.version>0.32.0.RELEASE</webauthn4j.version>
 
 
         <!-- Service wrapper dependencies: runtime versions are managed by StandaloneBOM. -->
         <adal4j.version>1.6.7</adal4j.version>
         <affinity.version>3.23.3</affinity.version>
-        <azure-identity.version>1.18.7</azure-identity.version>
-        <azure-security-keyvault-keys.version>4.11.3</azure-security-keyvault-keys.version>
+        <azure-identity.version>1.19.0</azure-identity.version>
+        <azure-security-keyvault-keys.version>4.12.1</azure-security-keyvault-keys.version>
         <cglib.version>3.3.0</cglib.version>
         <curvesapi.version>1.08</curvesapi.version>
         <datastax.driver.version>4.17.0</datastax.driver.version>
@@ -475,7 +475,7 @@
         <microprofile.context.propagation.version>1.3</microprofile.context.propagation.version>
         <msal4j-persistence-extension.version>1.3.0</msal4j-persistence-extension.version>
         <msal4j.version>1.26.0</msal4j.version>
-        <opentelemetry.instrumentation.alpha.version>2.32.0-alpha</opentelemetry.instrumentation.alpha.version>
+        <opentelemetry.instrumentation.alpha.version>2.33.1-alpha</opentelemetry.instrumentation.alpha.version>
         <pdfbox.version>3.0.8</pdfbox.version>
         <spotbugs.annotations.version>4.10.5</spotbugs.annotations.version>
         <xml.resolver.version>1.2</xml.resolver.version>
