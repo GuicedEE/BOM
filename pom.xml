@@ -87,7 +87,10 @@
     </build>
 
     <dependencyManagement>
-        <dependencies>
+        <dependencies><dependency><groupId>com.guicedee.modules.services</groupId><artifactId>okio</artifactId><version>${guicedee.version}</version></dependency>
+            <dependency><groupId>com.guicedee.modules.services</groupId><artifactId>zstd-jni</artifactId><version>${guicedee.version}</version></dependency>
+            <dependency><groupId>com.guicedee.modules.services</groupId><artifactId>commercetools</artifactId><version>${guicedee.version}</version></dependency>
+            <dependency><groupId>com.guicedee.modules.services</groupId><artifactId>firebase-admin</artifactId><version>${guicedee.version}</version></dependency>
             <!-- Service wrapper versions also exported by StandaloneBOM.
                  Keep these managed here while the broad StandaloneBOM import below is disabled. -->
             <dependency>
