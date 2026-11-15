@@ -87,7 +87,10 @@
     </build>
 
     <dependencyManagement>
-        <dependencies><dependency><groupId>com.guicedee.modules.services</groupId><artifactId>okio</artifactId><version>${guicedee.version}</version></dependency>
+        <dependencies>
+            <dependency><groupId>com.guicedee</groupId><artifactId>kotlin</artifactId><version>${guicedee.version}</version></dependency>
+            <dependency><groupId>com.guicedee.modules.services</groupId><artifactId>vertx-lang-kotlin-coroutines</artifactId><version>${guicedee.version}</version></dependency>
+            <dependency><groupId>com.guicedee.modules.services</groupId><artifactId>okio</artifactId><version>${guicedee.version}</version></dependency>
             <dependency><groupId>com.guicedee.modules.services</groupId><artifactId>zstd-jni</artifactId><version>${guicedee.version}</version></dependency>
             <dependency><groupId>com.guicedee.modules.services</groupId><artifactId>commercetools</artifactId><version>${guicedee.version}</version></dependency>
             <dependency><groupId>com.guicedee.modules.services</groupId><artifactId>firebase-admin</artifactId><version>${guicedee.version}</version></dependency>
