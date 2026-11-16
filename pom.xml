@@ -89,6 +89,8 @@
     <dependencyManagement>
         <dependencies>
             <dependency><groupId>com.guicedee</groupId><artifactId>kotlin</artifactId><version>${guicedee.version}</version></dependency>
+            <dependency><groupId>com.guicedee</groupId><artifactId>cdi</artifactId><version>${guicedee.version}</version></dependency>
+            <dependency><groupId>com.guicedee</groupId><artifactId>native-image</artifactId><version>${guicedee.version}</version></dependency>
             <dependency><groupId>com.guicedee</groupId><artifactId>kotlin-mutiny</artifactId><version>${guicedee.version}</version></dependency>
             <dependency><groupId>com.guicedee.modules.services</groupId><artifactId>mutiny-kotlin</artifactId><version>${guicedee.version}</version></dependency>
             <dependency><groupId>com.guicedee.modules.services</groupId><artifactId>vertx-lang-kotlin-coroutines</artifactId><version>${guicedee.version}</version></dependency>
